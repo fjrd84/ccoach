@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+.testInfos{
+	margin: 5px;
+	float: left;
+	width: 200px;
+	height: 200px;
+	background-color: grey;
+}
