@@ -34,6 +34,32 @@
 <div class="note dflatnote">Db</div>
 <div class="note gflatnote">Gb</div>
 </div>
-
+<div class="notes">
+<div class="note">Degrees</div>
+<div class="note degi">I</div>
+<div class="note degisharp">I#</div>
+<div class="note degii">II</div>
+<div class="note degiisharp">II#</div>
+<div class="note degiii">III</div>
+<div class="note degiv">IV</div>
+<div class="note degivsharp">IV#</div>
+<div class="note degv">V</div>
+<div class="note degvsharp">V#</div>
+<div class="note degvi">VI</div>
+<div class="note degvisharp">VI#</div>
+<div class="note degvii">VII</div>
+</div>
+<div class="notes">
+<div class="note">Degrees/Areas</div>
+<div class="note">Tonic</div>
+<div class="note degi">I</div>
+<div class="note degiii">III</div>
+<div class="note degvi">VI</div>
+<div class="note">Subdominant</div>
+<div class="note degii">II</div>
+<div class="note degiv">IV</div>
+<div class="note">Dominant</div>
+<div class="note degv">V</div>
+<div class="note degvii">VII</div>
 </body>
 </html>
