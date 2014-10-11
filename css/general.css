@@ -1,0 +1,66 @@
+@CHARSET "ISO-8859-1";
+
+.notes{
+	margin: 5px;
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+.note{
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.note:nth-child(odd){
+	/* background-color: grey; */
+}
+
+.cnote{
+	background-color: rgb(31, 255, 0);
+}
+
+.dnote{
+	background-color: #FFFF02;
+}
+
+.enote{
+	background-color: rgb(255, 112, 0);
+}
+
+.fnote{
+	background-color: rgb(0, 255, 112);
+}
+
+.gnote{
+	background-color: #ADFF00;
+}
+
+.anote{
+	background-color: rgb(255, 163, 0);
+}
+
+.bnote{
+	background-color: red;
+}
+
+.csharpnote, .dflatnote{
+	background-color: rgb(143, 0, 255);
+}
+
+.dsharpnote, .eflatnote{
+	background-color: rgb(0, 102, 255);
+}
+
+.fsharpnote, .gflatnote{
+	background-color: rgb(235, 0, 255);
+}
+
+.gsharpnote, .aflatnote{
+	background-color: blue;
+}
+
+.asharpnote, .bflatnote{
+	background-color: rgb(0, 255, 214);
+}
