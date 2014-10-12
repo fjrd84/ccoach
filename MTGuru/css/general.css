@@ -78,7 +78,7 @@ body{
 .currentScale{
     position: absolute;
     /* background-color: grey; */
-    left: 45%;
+    left: 49%;
     /* right: 50%; */
 }
 .yourLevel{
@@ -98,9 +98,18 @@ body{
 }
 .gameContent{
     position: absolute;
-    background-color: rgb(197, 197, 197);
     top: 150px;
     left: 75px;
     width: 810px;
     height: 400px;
+}
+
+.loading{
+    background-image: url("../gfx/ajax-loader.gif");
+    width: 55px;
+    height: 55px;
+    margin: auto;
+    top: 30%;
+    left: 50%;
+    position: absolute;
 }

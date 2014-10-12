@@ -16,12 +16,18 @@ function printMainGame($data = "ThisIsTheGame")
         <div class="currentScale">Ionian</div>
         <div class="yourLevel">Level 2</div>
         <div class="remainingTime"></div>
-        <div class="gameContent">MAIN GAME</div>
+        <div class="gameContent">
+            <div class="loading"></div>
+            <div class="result"></div>
+        </div>
         <div class="button bottomRight">
             <a href="index.php">GO HOME!</a>
         </div>
     </div>
     </body>
+<script>
+    startGame();
+</script>
     </html>
 <?php
 }
