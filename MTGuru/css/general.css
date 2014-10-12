@@ -1,9 +1,106 @@
 @CHARSET "ISO-8859-1";
 
 .testInfos{
-	margin: 5px;
-	float: left;
-	width: 200px;
-	height: 200px;
-	background-color: grey;
+    margin: 5px;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+}
+
+.home{
+    position: relative;
+    margin: 100px auto;
+    width: 400px;
+    padding: 80px;
+    background-color: lightgreen;
+    magin: auto;
+    text-align: center;
+}
+
+.bottomRight{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.mainGame{
+    position: relative;
+    margin: 100px auto;
+    min-height: 461px;
+    min-width: 800px;
+    width: 400px;
+    padding: 80px;
+    background-color: lightgreen;
+    magin: auto;
+    text-align: center;
+}
+
+.button{
+    margin: 15px 0 0 0;
+}
+
+.button a{
+    text-decoration: none;
+    padding: 4px 10px 4px 10px;
+    width: 155px;
+    margin: auto;
+    color: white;
+    background-color: lightseagreen;
+    transition: 0.4s background-color;
+}
+
+.button a:hover{
+    background-color: lightslategray;
+}
+
+.welcome{
+
+}
+
+.points{
+
+}
+
+.level{
+
+}
+
+body{
+    background-color: lightblue;
+}
+
+.yourPoints{
+    position: absolute;
+    /* background-color: grey; */
+    left: 75px;
+}
+.currentScale{
+    position: absolute;
+    /* background-color: grey; */
+    left: 45%;
+    /* right: 50%; */
+}
+.yourLevel{
+    position: absolute;
+    right: 200px;
+    /* background-color: grey; */
+}
+.remainingTime{
+    position: absolute;
+    background-image: url("../gfx/clock.png");
+    right: 75px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    float: right;
+    /*background-color: grey;*/
+}
+.gameContent{
+    position: absolute;
+    background-color: rgb(197, 197, 197);
+    top: 150px;
+    left: 75px;
+    width: 810px;
+    height: 400px;
 }
