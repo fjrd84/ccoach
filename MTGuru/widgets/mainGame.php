@@ -18,7 +18,17 @@ function printMainGame($data = "ThisIsTheGame")
         <div class="remainingTime"></div>
         <div class="gameContent">
             <div class="loading"></div>
-            <div class="result"></div>
+            <div class="question">
+                <div class="question notesOfChord" style="display:none">
+                    <a href="javascript:hideQuestion()">NEXT!!</a>
+                </div>
+                <div class="question degreeOfChord" style="display:none">
+                    <a href="javascript:hideQuestion()">NEXT!!</a>
+                </div>
+                <div class="question areaOfChord" style="display:none">
+                    <a href="javascript:hideQuestion()">NEXT!!</a>
+                </div>
+            </div>
         </div>
         <div class="button bottomRight">
             <a href="index.php">GO HOME!</a>

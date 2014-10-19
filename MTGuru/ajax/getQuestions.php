@@ -1,4 +1,6 @@
 <?php
+$test = 1123;
+$thisIsAnotherThing = "";
 echo '{
         questions: [
                     {
