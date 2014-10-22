@@ -6,6 +6,29 @@ var questions;
 var currentQuestion = 0;
 var currentQDiv;
 
+// Event listeners
+$( ".answerNote" ).click(function() {
+    $(this).removeClass("answerNote");
+    $(this).addClass("answeredNote");
+});
+
+// Event listeners
+$( ".answerDegree" ).click(function() {
+    $(this).removeClass("answerDegree");
+    $(this).addClass("answeredDegree");
+});
+
+$( ".answerArea" ).click(function() {
+    $(this).removeClass("answerArea");
+    $(this).addClass("answeredArea");
+});
+
+// Event listeners
+$( ".answerChord" ).click(function() {
+    $(this).removeClass("answerChord");
+    $(this).addClass("answeredChord");
+});
+
 function startGame() {
     //alert("Game is starting! :D");
     $.get("ajax/getQuestions.php", { "choices[]": ["Jon", "Susan"] }, function (data) {
@@ -46,11 +69,14 @@ function nextQuestion() {
                 // area of chord...
                 areaOfChord();
                 break;
+            case "substitutionOfChord":
+                // area of chord...
+                substitutionOfChord();
+                break;
             default:
                 //default behaviour...
                 break;
         }
-
 }
 
 function notesOfChord() {
@@ -78,6 +104,14 @@ function areaOfChord() {
     var questionDiv = $(".areaOfChord");
     currentQDiv = questionDiv;
     questionDiv.append("AREA OF CHORD!!");
+    //$(".question").fadeOut(0);
+    questionDiv.fadeIn(1000);
+}
+
+function substitutionOfChord() {
+    var questionDiv = $(".substitutionOfChord");
+    currentQDiv = questionDiv;
+    questionDiv.append("SUBSTITUTION OF CHORD!!");
     //$(".question").fadeOut(0);
     questionDiv.fadeIn(1000);
 }

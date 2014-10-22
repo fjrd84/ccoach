@@ -26,5 +26,13 @@ echo '{
                     type: "areaOfChord",
                     chord: "G7",
                     expected: "Dominant"
+                    },
+                    {
+                    key: "C",
+                    mode: "ionian",
+                    text: "Select the right chord substitution",
+                    type: "substitutionOfChord",
+                    chord: "CMaj7",
+                    expected: "Am7"
                     }
                     ]}';
