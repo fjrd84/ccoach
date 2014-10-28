@@ -1,6 +1,14 @@
 <?php
 $test = 1123;
 $thisIsAnotherThing = "";
+/*
+
+More questions:
+Intervals
+Given the notes, say the chord.
+Which of the given notes does not belong to the scale?
+
+*/
 echo '{
         questions: [
                     {

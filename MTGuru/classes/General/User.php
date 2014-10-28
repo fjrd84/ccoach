@@ -1,5 +1,5 @@
 <?php
-
+namespace classes\General;
 
 class User{
 	public $userName;
