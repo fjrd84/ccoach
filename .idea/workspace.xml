@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="958b2608-082e-45ee-8186-644805d64856" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTGuru/js/game.js" afterPath="$PROJECT_DIR$/MTGuru/js/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTGuru/css/general.css" afterPath="$PROJECT_DIR$/MTGuru/css/general.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTGuru/ajax/getQuestions.php" afterPath="$PROJECT_DIR$/MTGuru/ajax/getQuestions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTGuru/widgets/mainGame.php" afterPath="$PROJECT_DIR$/MTGuru/widgets/mainGame.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="s4l.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MTGuru/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="1" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="4053">
+            <state line="54" column="3" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.20379147" vertical-offset="962" max-vertical-offset="4095">
               <folding />
             </state>
           </provider>
@@ -65,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainGame.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mainGame.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MTGuru/widgets/mainGame.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="62" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.45721272" vertical-offset="510" max-vertical-offset="1717">
+            <state line="52" column="62" selection-start="2727" selection-end="2727" vertical-scroll-proportion="-22.23077" vertical-offset="306" max-vertical-offset="1717">
               <folding>
                 <element signature="e#800#820#0" expanded="true" />
                 <element signature="e#2042#2062#0" expanded="true" />
@@ -134,9 +130,9 @@
         <option value="$PROJECT_DIR$/MTGuru/config/config.php" />
         <option value="$PROJECT_DIR$/MTGuru/widgets/home.php" />
         <option value="$PROJECT_DIR$/MTGuru/css/general.css" />
-        <option value="$PROJECT_DIR$/MTGuru/js/game.js" />
         <option value="$PROJECT_DIR$/MTGuru/ajax/getQuestions.php" />
         <option value="$PROJECT_DIR$/MTGuru/widgets/mainGame.php" />
+        <option value="$PROJECT_DIR$/MTGuru/js/game.js" />
       </list>
     </option>
   </component>
@@ -450,7 +446,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -856,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MTGuru/js/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="1" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="4053">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MTGuru/ajax/getQuestions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="21" selection-start="386" selection-end="386" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="731">
@@ -872,13 +861,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MTGuru/widgets/mainGame.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="62" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.45721272" vertical-offset="510" max-vertical-offset="1717">
+        <state line="52" column="62" selection-start="2727" selection-end="2727" vertical-scroll-proportion="-22.23077" vertical-offset="306" max-vertical-offset="1717">
           <folding>
             <element signature="e#800#820#0" expanded="true" />
             <element signature="e#2042#2062#0" expanded="true" />
             <element signature="e#2936#2956#0" expanded="true" />
             <element signature="e#3566#3586#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MTGuru/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="3" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.20379147" vertical-offset="962" max-vertical-offset="4095">
+          <folding />
         </state>
       </provider>
     </entry>

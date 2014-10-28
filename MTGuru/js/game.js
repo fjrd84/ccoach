@@ -6,7 +6,7 @@ var questions;
 var currentQuestion = -1;
 var currentAnswer = 0;
 var currentQDiv;
-var counter = 50;
+var counter = 99;
 var answers = new Array();
 var rightAnswers = new Array();
 
@@ -98,7 +98,10 @@ function nextQuestion() {
 
     if (++currentQuestion >= questions.questions.length) {
         finishRound();
+        return;
     }
+
+    counter = 20;
 
     currentAnswer = 0;
 
@@ -126,7 +129,6 @@ function nextQuestion() {
 }
 
 function hideQuestion() {
-    counter = 50;
     if (currentQDiv != null) {
         currentQDiv.hide("fast", nextQuestion());
     }
@@ -184,5 +186,5 @@ function substitutionOfChord() {
 
 function finishRound() {
     alert("Se acabó lo que se daba!");
-    counter = 10000000000;
+    counter = -1;
 }
