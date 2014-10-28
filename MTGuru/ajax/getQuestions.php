@@ -25,7 +25,7 @@ echo '{
                     text: "Select the right area",
                     type: "areaOfChord",
                     chord: "G7",
-                    expected: "Dominant"
+                    expected: "D"
                     },
                     {
                     key: "C",

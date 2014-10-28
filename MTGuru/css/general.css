@@ -8,6 +8,14 @@
     background-color: grey;
 }
 
+.mainGame *{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    cursor: default;
+}
+
 .home{
     position: relative;
     margin: 100px auto;
@@ -81,6 +89,11 @@ body{
     left: 49%;
     /* right: 50%; */
 }
+
+.currentKey{
+    position: absolute;
+    left: 60%;
+}
 .yourLevel{
     position: absolute;
     right: 200px;
@@ -88,7 +101,7 @@ body{
 }
 .remainingTime{
     position: absolute;
-    background-image: url("../gfx/clock.png");
+    /*background-image: url("../gfx/clock.png");*/
     right: 75px;
     top: 50px;
     width: 100px;
@@ -137,7 +150,13 @@ body{
     font-weight: bold;
 }
 
-.answerNotes, .answerDegrees, .answerAreas, .answerChords {
+.feedbackDiv{
+    position: absolute;
+    left: 672px;
+    top: 187px;
+}
+
+.answerItems, .answerNotes, .answerDegrees, .answerAreas, .answerChords {
     position: absolute;
     left: 179px;
     top: 111px;
@@ -146,7 +165,7 @@ body{
 }
 
 
-.answerNote, .answerDegree, .answerArea, .answerChord{
+.answerItem, .answerNote, .answerDegree, .answerArea, .answerChord{
     position: relative;
     float: left;
     margin: 5px;
@@ -156,12 +175,12 @@ body{
     background-color: #53ae2c;
 }
 
-.answerNote:hover, .answerDegree:hover, .answerArea:hover, .answerChord:hover{
+.answerItem:hover, .answerNote:hover, .answerDegree:hover, .answerArea:hover, .answerChord:hover{
     background-color: #5dcd34;
     transition: 0.4s background-color;
 }
 
-.answeredNote, .answeredDegree, .answeredArea, .answeredChord{
+.answeredItem, .answeredNote, .answeredDegree, .answeredArea, .answeredChord{
     position: relative;
     float: left;
     margin: 5px;
