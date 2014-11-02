@@ -7,6 +7,8 @@ More questions:
 Intervals
 Given the notes, say the chord.
 Which of the given notes does not belong to the scale?
+Which scale sounds now?
+Which chord/interval sounds now?
 
 */
 echo '{
