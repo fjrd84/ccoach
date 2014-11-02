@@ -7,11 +7,39 @@ require_once "classes/General/Knowledge.php";
 function runTests(){
     $knowledge = \classes\General\Knowledge::getInstance();
     $knowledge->readFiles();
-    intervalTests();
-
+    distanceTests();
+    noteIntervalTests();
+    noteScalesTests();
+    noteChordTests();
 }
 
-function intervalTests(){
+function noteChordTests(){
+    $knowledge = \classes\General\Knowledge::getInstance();
+    $test3 = $knowledge->getNotesChord('C#Maj7');
+    $test3 = $knowledge->getNotesChord('Em7');
+    $test3 = $knowledge->getNotesChord('A7');
+    $test3 = $knowledge->getNotesChord('Eb7');
+}
+
+function noteScalesTests(){
+    $knowledge = \classes\General\Knowledge::getInstance();
+    $test2 = $knowledge->getNotesScale('Db', 'ionian');
+    $test2 = $knowledge->getNotesScale('F', 'ionian');
+    $test2 = $knowledge->getNotesScale('D', 'dorian');
+    $test2 = $knowledge->getNotesScale('D', 'ionian');
+}
+
+function noteIntervalTests(){
+    $knowledge = \classes\General\Knowledge::getInstance();
+    $test2 = $knowledge->getNoteInterval('C','3m'); // Eb
+    $test2 = $knowledge->getNoteInterval('C','3M'); // E
+    $test2 = $knowledge->getNoteInterval('C','5J'); // G
+    $test2 = $knowledge->getNoteInterval('C','7m'); // Bb
+    $test2 = $knowledge->getNoteInterval('C','7M'); // B
+    $test2 = $knowledge->getNoteInterval('A','4+'); // D#
+}
+
+function distanceTests(){
     $knowledge = \classes\General\Knowledge::getInstance();
     $test1 = $knowledge->getDistance("D", "A"); // 3.5
     $test1 = $knowledge->getDistance("A", "D"); // 2.5

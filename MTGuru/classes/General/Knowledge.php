@@ -21,7 +21,6 @@ class Knowledge
     // getInstance method
     public static function getInstance()
     {
-
         if (!self::$instance) {
             self::$instance = new self();
         }
@@ -64,7 +63,63 @@ class Knowledge
      */
     public function getNotesChord($chord)
     {
-        // TODO
+        $tonic = substr($chord, 0, 1);
+        $alteration = substr($chord, 1, 1);
+        // the tonic might be flat or sharp
+        if ($alteration === 'b' || $alteration === '#') {
+            $tonic .= $alteration;
+            $chordType = substr($chord, 2);
+        } else {
+            $chordType = substr($chord, 1);
+        }
+        $notes = array();
+        $notes[0] = $tonic;
+        $numChords = count($this->chords);
+        $chordIndex = -1;
+        for ($i = 0; $i < $numChords; $i++) {
+            if ($this->chords[$i][0] === $chordType) {
+                $chordIndex = $i;
+                break;
+            }
+        }
+        // Unknown chord
+        if ($chordIndex == -1) {
+            return -1;
+        }
+        $numIntervals = count($this->chords[$chordIndex]);
+        for ($i = 1; $i < $numIntervals; $i++) {
+            $notes[$i] = $this->getNoteInterval($tonic, $this->chords[$chordIndex][$i]);
+        }
+        return $notes;
+    }
+
+    /**
+     * It returns the notes of the scale
+     * @param $tonic
+     * @param $scale
+     * @return array|int
+     */
+    public function getNotesScale($tonic, $scale)
+    {
+        $notes = array();
+        $notes[0] = $tonic;
+        $numScales = count($this->scales);
+        $scaleIndex = -1;
+        for ($i = 0; $i < $numScales; $i++) {
+            if ($this->scales[$i][0] === $scale) {
+                $scaleIndex = $i;
+                break;
+            }
+        }
+        // Unknown scale
+        if ($scaleIndex == -1) {
+            return -1;
+        }
+        $numIntervals = count($this->scales[$scaleIndex]);
+        for ($i = 1; $i < $numIntervals; $i++) {
+            $notes[$i] = $this->getNoteInterval($tonic, $this->scales[$scaleIndex][$i]);
+        }
+        return $notes;
     }
 
     /**
@@ -75,11 +130,33 @@ class Knowledge
      */
     public function getNoteInterval($tonic, $intervalType)
     {
+        $numIntervals = count($this->intervals);
+        $distance = 0;
+        // The tone distance for this interval is looked up
+        for ($i = 0; $i < $numIntervals; $i++) {
+            if ($this->intervals[$i][0] === $intervalType) {
+                $distance = $this->intervals[$i][1];
+                break;
+            }
+        }
+        // If the interval is unknown, -1 is returned
+        if ($distance == 0) {
+            return -1;
+        }
+
         $tonicIndex = $this->indexOfNote(substr($tonic, 0, 1));
-        $intNote = $this->notes[($tonicIndex + substr($intervalType, 0, 1)) % 7];
-        $baseDistance = $this->getDistance($tonic, $intNote);
-        // TODO
-        return "C";
+        $intervalIndex = substr($intervalType, 0, 1) - 1;
+        $intervalNote = $this->notes[($tonicIndex + $intervalIndex) % 7][0];
+        $baseDistance = $this->getDistance($tonic, $intervalNote);
+        if ($baseDistance == $distance) {
+            return $intervalNote;
+        } elseif ($baseDistance == $distance + 0.5) {
+            return $intervalNote . 'b';
+        } elseif ($baseDistance == $distance - 0.5) {
+            return $intervalNote . '#';
+        } else {
+            return -1;
+        }
     }
 
     /**
@@ -92,33 +169,34 @@ class Knowledge
     {
         $distance = 0;
         // same note
-        if($note1===$note2){
+        if ($note1 === $note2) {
             return 0;
         }
         // flat note 1
-        if(strrpos($note1,'b')>-1){
-            $distance+=0.5;
+        if (strrpos($note1, 'b') > -1) {
+            $distance += 0.5;
         }
         // sharp note 1
-        if(strrpos($note1,'#')>-1){
-            $distance-=0.5;
+        if (strrpos($note1, '#') > -1) {
+            $distance -= 0.5;
         }
         // flat note 2
-        if(strrpos($note2,'b')>-1){
-            $distance-=0.5;
+        if (strrpos($note2, 'b') > -1) {
+            $distance -= 0.5;
         }
         // sharp note 2
-        if(strrpos($note2,'#')>-1){
-            $distance+=0.5;
+        if (strrpos($note2, '#') > -1) {
+            $distance += 0.5;
         }
         // same note, different alteration
-        if(substr($note1,0,1)==substr($note2,0,1)){
+        if (substr($note1, 0, 1) == substr($note2, 0, 1)) {
             return $distance;
         }
-        $index1 = $this->indexOfNote(substr($note1,0,1));
+        // different notes: distance calculation
+        $index1 = $this->indexOfNote(substr($note1, 0, 1));
         while ($distance < 6) {
             $distance += $this->distances[$index1][2];
-            if ($this->distances[$index1][1] === substr($note2,0,1)) {
+            if ($this->distances[$index1][1] === substr($note2, 0, 1)) {
                 return $distance;
             } else {
                 $index1 = ($index1 + 1) % 7;
