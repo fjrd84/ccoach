@@ -6,16 +6,12 @@ var questions;
 var currentQuestion = -1;
 var currentAnswer = 0;
 var currentQDiv;
+var currentType;
 var counter = 99;
+var resetCounter = 99;
+var delayAfter = 300;
 var answers = new Array();
 var rightAnswers = new Array();
-
-// Event listeners
-$(".answerItem").click(function () {
-    addAnswer($(this).data("item"));
-    $(this).removeClass("answerItem");
-    $(this).addClass("answeredItem");
-});
 
 // Timer events
 setInterval(function () {
@@ -34,13 +30,13 @@ function addAnswer(answer) {
     answers[currentQuestion][currentAnswer++] = answer;
     if ($.inArray(answer, rightAnswers) === -1) {
         showBad();
-        hideQuestion();
+        setTimeout(nextQuestion, delayAfter);
         return;
     }
     showGood();
     // When all the right answers have been given, the next question is shown.
     if (currentAnswer == rightAnswers.length) {
-        hideQuestion();
+        setTimeout(nextQuestion, delayAfter);
     }
 }
 
@@ -60,7 +56,7 @@ function showBad() {
     $(".feedbackDiv").text("Bad!!");
 }
 
-function showTooLate(){
+function showTooLate() {
     $(".feedbackDiv").text("Too Late!!");
 }
 
@@ -69,13 +65,13 @@ function timerDown() {
         text(counter--);
     if (counter == 0) {
         showTooLate();
-        hideQuestion();
+        nextQuestion();
     }
 }
 
 function startGame() {
     //alert("Game is starting! :D");
-    $.get("ajax/getQuestions.php", { "choices[]": ["Jon", "Susan"] }, function (data) {
+    $.get("ajax/getQuestions.php", {"choices[]": ["Jon", "Susan"]}, function (data) {
         //$( ".result" ).html( data );
         //alert( "Load was performed." );
         processData(JSON.parse(JSON.stringify(eval("(" + data + ")"))));
@@ -101,11 +97,25 @@ function nextQuestion() {
         return;
     }
 
-    counter = 20;
-
     currentAnswer = 0;
+// && questions.questions[currentQuestion].type != currentType
+    if (currentQDiv != null) {
+        currentQDiv.fadeOut(400);
+    }
+    $(".answeredItem").each(function () {
+        $(this).removeClass("answeredItem");
+        $(this).addClass("answerItem");
+    });
+    setTimeout(nextQuestionCont, 400);
+}
 
-    switch (questions.questions[currentQuestion].type) {
+function nextQuestionCont() {
+
+    counter = resetCounter;
+
+    currentType = questions.questions[currentQuestion].type;
+
+    switch (currentType) {
         case "notesOfChord":
             // notes of chord...
             notesOfChord();
@@ -126,15 +136,15 @@ function nextQuestion() {
             //default behaviour...
             break;
     }
+    // Event listeners
+    $(".answerItem").click(function () {
+        addAnswer($(this).data("item"));
+        $(this).removeClass("answerItem");
+        $(this).addClass("answeredItem");
+    });
 }
 
-function hideQuestion() {
-    if (currentQDiv != null) {
-        currentQDiv.hide("fast", nextQuestion());
-    }
-}
-
-function updateCommon(){
+function updateCommon() {
     var currentKey = $(".currentKey");
     var currentScale = $(".currentScale");
     currentKey.text(questions.questions[currentQuestion]['key']);
@@ -143,6 +153,12 @@ function updateCommon(){
 
 function notesOfChord() {
     var questionDiv = $(".notesOfChord");
+    questionDiv.find(".answerItems").empty();
+    var shown = (questions.questions[currentQuestion]['shown']).split(",");
+    for (var i = 0; i < shown.length; i++) {
+        var newDiv = '<div class="answerItem" data-item="' + shown[i] + '">' + shown[i] + '</div>';
+        questionDiv.find(".answerItems").append(newDiv);
+    }
     currentQDiv = questionDiv;
     updateCommon();
     questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);

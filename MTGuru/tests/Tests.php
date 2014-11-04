@@ -19,6 +19,8 @@ function noteChordTests(){
     $test3 = $knowledge->getNotesChord('Em7');
     $test3 = $knowledge->getNotesChord('A7');
     $test3 = $knowledge->getNotesChord('Eb7');
+    $test3 = $knowledge->getNotesChord('G#7');
+    $test3 = $knowledge->getNotesChord('D#M');
 }
 
 function noteScalesTests(){

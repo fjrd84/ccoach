@@ -38,7 +38,7 @@ function printMainGame($data = "ThisIsTheGame")
                         <div class="answerItem" data-item="A#">A#</div>
                         <div class="answerItem" data-item="B">B</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:hideQuestion()">NEXT!!</a></div>
+                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>
                 <div class="question degreeOfChord" style="display:none">
                     <div class="questionText">Question text</div>
@@ -52,7 +52,7 @@ function printMainGame($data = "ThisIsTheGame")
                         <div class="answerItem" data-item="VI">VI</div>
                         <div class="answerItem" data-item="VII">VII</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:hideQuestion()">NEXT!!</a></div>
+                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>
                 <div class="question areaOfChord" style="display:none">
                     <div class="questionText">Question text</div>
@@ -62,7 +62,7 @@ function printMainGame($data = "ThisIsTheGame")
                         <div class="answerItem" data-item="SD">Subdominant</div>
                         <div class="answerItem" data-item="D">Dominant</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:hideQuestion()">NEXT!!</a></div>
+                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>
                 <div class="question substitutionOfChord" style="display:none">
                     <div class="questionText">Question text</div>
@@ -76,7 +76,7 @@ function printMainGame($data = "ThisIsTheGame")
                         <div class="answerItem" data-item="Am7">Am7</div>
                         <div class="answerItem" data-item="B7">B7</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:hideQuestion()">NEXT!!</a></div>
+                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>
             </div>
         </div>

@@ -52,7 +52,9 @@ class Knowledge
         $numData = count($data);
         $parsed = array();
         for ($i = 0; $i < $numData; $i++) {
-            $parsed[$i] = explode(" ", $data[$i]);
+            if ($data[$i] != "") {
+                $parsed[$i] = explode(" ", $data[$i]);
+            }
         }
         return $parsed;
     }
@@ -154,7 +156,11 @@ class Knowledge
             return $intervalNote . 'b';
         } elseif ($baseDistance == $distance - 0.5) {
             return $intervalNote . '#';
-        } else {
+        } elseif ($baseDistance == $distance - 1 ){ // Double sharp case (the next note will be selected)
+            $intervalNote = $this->notes[($tonicIndex + $intervalIndex + 1) % 7][0];
+            return $intervalNote;
+        }
+        else {
             return -1;
         }
     }
@@ -218,5 +224,72 @@ class Knowledge
             }
         }
         return -1;
+    }
+
+    /**
+     * It returns a random note
+     * @return string
+     */
+    public function getRandomNote()
+    {
+        // TODO: Adapt to the new notes schema
+        $index = rand(0, 6); // random note
+        $alteration = rand(0, 2); // random alteration
+        $note = $this->notes[$index][0];
+        if ($alteration == 0 && $note != "C" && $note != "F") {
+            return $note . "b";
+        } elseif ($alteration == 1 && $note != "E" && $note != "B") {
+            return $note . "#";
+        }
+        return $note;
+    }
+
+    /**
+     * It returns a random chord
+     * @return string
+     */
+    public function getRandomChord($note = null)
+    {
+        if ($note == null) {
+            $note = $this->getRandomNote();
+        }
+        $chordType = $this->chords[rand(0, count($this->chords) - 1)][0];
+        return $note . $chordType;
+    }
+
+    /**
+     * It returns an array with all the notes (including alterations)
+     */
+    public function getAllNotes($references)
+    {
+        $notes = array();
+        $alteration = -1;
+        $numReferences = count($references);
+        // If any of the references is a flat or a sharp note, it will be used as default alteration
+        for ($i = 0; $i < $numReferences; $i++) {
+            if (strpos($references[$i], "#") > -1) {
+                $alteration = 1;
+            } elseif (strpos($references[$i], "b") > -1) {
+                $alteration = 2;
+            }
+        }
+        // If no alteration has been found, a random one will be used.
+        if ($alteration == -1) {
+            // If the given reference note has no alteration, flat or sharp alterations might be shown
+            $alteration = rand(1, 2);
+        }
+        $numNotes = count($this->notes);
+        for ($i = 0; $i < $numNotes; $i++) {
+            if($alteration == 1) {
+                $notes[] = $this->notes[$i][0];
+            }
+            if ($this->notes[$i][$alteration] != -1) {
+                $notes[] = $this->notes[$i][$alteration];
+            }
+            if($alteration == 2){
+                $notes[] = $this->notes[$i][0];
+            }
+        }
+        return $notes;
     }
 } 
