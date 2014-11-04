@@ -13,11 +13,11 @@ function printMainGame($data = "ThisIsTheGame")
     <body>
     <div class="mainGame">
         <div class="yourPoints">12345</div>
-        <div class="currentScale">Ionian</div>
-        <div class="currentKey">C</div>
+        <div class="currentScale"></div>
+        <div class="currentKey"></div>
         <div class="yourLevel">Level 2</div>
         <div class="remainingTime"></div>
-        <div class="feedbackDiv">Feedback...</div>
+        <div class="feedbackDiv"></div>
         <div class="gameContent">
             <div class="loading"></div>
             <div class="question">
@@ -26,17 +26,6 @@ function printMainGame($data = "ThisIsTheGame")
                     <div class="questionChord">CMaj7</div>
                     <div class="answerItems">
                         <div class="answerItem" data-item="C">C</div>
-                        <div class="answerItem" data-item="C#">C#</div>
-                        <div class="answerItem" data-item="D">D</div>
-                        <div class="answerItem" data-item="D#">D#</div>
-                        <div class="answerItem" data-item="E">E</div>
-                        <div class="answerItem" data-item="F">F</div>
-                        <div class="answerItem" data-item="F#">F#</div>
-                        <div class="answerItem" data-item="G">G</div>
-                        <div class="answerItem" data-item="G#">G#</div>
-                        <div class="answerItem" data-item="A">A</div>
-                        <div class="answerItem" data-item="A#">A#</div>
-                        <div class="answerItem" data-item="B">B</div>
                     </div>
                     <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>

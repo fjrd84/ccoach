@@ -21,7 +21,7 @@
     margin: 100px auto;
     width: 400px;
     padding: 80px;
-    background-color: lightgreen;
+    background-color: rgb(239, 239, 239);
     magin: auto;
     text-align: center;
 }
@@ -39,7 +39,7 @@
     min-width: 800px;
     width: 400px;
     padding: 80px;
-    background-color: lightgreen;
+    background-color: rgb(239, 239, 239);
     magin: auto;
     text-align: center;
 }
@@ -75,7 +75,7 @@
 }
 
 body{
-    background-color: lightblue;
+    background-color: rgb(216, 216, 216);
 }
 
 .yourPoints{
@@ -86,13 +86,16 @@ body{
 .currentScale{
     position: absolute;
     /* background-color: grey; */
-    left: 49%;
+    /* left: 49%; */
     /* right: 50%; */
+    left: 590px;
+    top: 225px;
 }
 
 .currentKey{
     position: absolute;
-    left: 60%;
+    left: 590px;
+    top: 255px;
 }
 .yourLevel{
     position: absolute;
@@ -128,7 +131,7 @@ body{
 }
 
 .question{
-    background-color: rgba(105, 105, 105, 0.16);
+    /* background-color: rgba(105, 105, 105, 0.16); */
     width: 100%;
     height: 100%;
     position: relative;
@@ -137,29 +140,30 @@ body{
 .questionText{
     position: absolute;
     left: 40px;
-    top: 50px;
+    top: 63px;
     font-size: 20px;
     font-weight: bold;
 }
 
 .questionChord{
     position: absolute;
-    left: 60px;
-    top: 80px;
-    font-size: 20px;
+    left: 336px;
+    top: 95px;
+    font-size: 38px;
     font-weight: bold;
 }
 
 .feedbackDiv{
     position: absolute;
-    left: 672px;
-    top: 187px;
+    left: 326px;
+    top: 127px;
+    font-size: 50;
 }
 
 .answerItems, .answerNotes, .answerDegrees, .answerAreas, .answerChords {
     position: absolute;
-    left: 179px;
-    top: 111px;
+    left: 105px;
+    top: 191px;
     width: 670px;
     height: 242px;
 }

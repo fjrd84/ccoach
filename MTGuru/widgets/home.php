@@ -10,7 +10,7 @@ function printHome()
     <body>
     <div class="home">
         <div class="welcome">
-            <?php echo $GLOBALS['txt'][$_SESSION['lang']]['home']['welcome'] . ' ' . $_SESSION['currentUser']['userName'] . '!!';?>
+            <?php echo $_SESSION['txt'][$_SESSION['lang']]['home']['welcome'] . ' ' . $_SESSION['currentUser']['userName'] . '!!';?>
         </div>
         <div class="points"><?php echo 'Points: ' . $_SESSION['currentUser']['points']; ?></div>
         <div class="level"><?php echo 'Level: ' . $_SESSION['currentUser']['level']; ?></div>

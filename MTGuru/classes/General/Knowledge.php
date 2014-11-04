@@ -149,19 +149,27 @@ class Knowledge
         $tonicIndex = $this->indexOfNote(substr($tonic, 0, 1));
         $intervalIndex = substr($intervalType, 0, 1) - 1;
         $intervalNote = $this->notes[($tonicIndex + $intervalIndex) % 7][0];
+        // The distance of the notes without alterations is calculated
         $baseDistance = $this->getDistance($tonic, $intervalNote);
         if ($baseDistance == $distance) {
             return $intervalNote;
-        } elseif ($baseDistance == $distance + 0.5) {
-            return $intervalNote . 'b';
-        } elseif ($baseDistance == $distance - 0.5) {
-            return $intervalNote . '#';
-        } elseif ($baseDistance == $distance - 1 ){ // Double sharp case (the next note will be selected)
+        } elseif ($baseDistance - 0.5 == $distance) {
+            if ($intervalNote != 'C' && $intervalNote != 'F') { // Cb and Fb make no sense.
+                return $intervalNote . 'b';
+            } else {
+                return $this->notes[($tonicIndex + $intervalIndex - 1) % 7][0];
+            }
+        } elseif ($baseDistance + 0.5 == $distance) {
+            if ($intervalNote != 'E' && $intervalNote != 'B') { // E# and B# make no sense
+                return $intervalNote . '#';
+            } else {
+                return $this->notes[($tonicIndex + $intervalIndex + 1) % 7][0];
+            }
+        } elseif ($baseDistance + 1 == $distance) { // Double sharp case (the next note will be selected)
             $intervalNote = $this->notes[($tonicIndex + $intervalIndex + 1) % 7][0];
             return $intervalNote;
-        }
-        else {
-            return -1;
+        } else {
+            return -1; // it means something went wrong
         }
     }
 
@@ -280,13 +288,13 @@ class Knowledge
         }
         $numNotes = count($this->notes);
         for ($i = 0; $i < $numNotes; $i++) {
-            if($alteration == 1) {
+            if ($alteration == 1) {
                 $notes[] = $this->notes[$i][0];
             }
             if ($this->notes[$i][$alteration] != -1) {
                 $notes[] = $this->notes[$i][$alteration];
             }
-            if($alteration == 2){
+            if ($alteration == 2) {
                 $notes[] = $this->notes[$i][0];
             }
         }

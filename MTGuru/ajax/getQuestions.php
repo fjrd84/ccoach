@@ -82,7 +82,7 @@ function getQuestionType($knowledge)
     //$questionTypes[]="degreeOfChord";
     //$questionTypes[]="areaOfChord";
     //$questionTypes[]="substitutionOfChord";
-    $index = rand(0, count($questionTypes));
+    $index = rand(0, count($questionTypes)-1);
     return $questionTypes[$index];
 }
 
@@ -101,6 +101,7 @@ function notesOfChordQuestion($knowledge){
     $chordQuestion["key"]="C"; // TODO
     $chordQuestion["mode"]="ionian"; // TODO
     $chordQuestion["type"]="notesOfChord";
+    $chordQuestion["text"]=$_SESSION['txt'][$_SESSION['lang']]['questions']['notesOfChord'];
     $note = $knowledge->getRandomNote();
     $chord = $knowledge->getRandomChord($note);
     $chordQuestion["chord"]=$chord;

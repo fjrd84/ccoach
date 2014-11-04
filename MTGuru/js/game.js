@@ -7,11 +7,12 @@ var currentQuestion = -1;
 var currentAnswer = 0;
 var currentQDiv;
 var currentType;
-var counter = 99;
-var resetCounter = 99;
+var counter = 9999;
+var resetCounter = 9999;
 var delayAfter = 300;
 var answers = new Array();
 var rightAnswers = new Array();
+var feedbackTime = 500;
 
 // Timer events
 setInterval(function () {
@@ -29,7 +30,10 @@ function addAnswer(answer) {
     }
     answers[currentQuestion][currentAnswer++] = answer;
     if ($.inArray(answer, rightAnswers) === -1) {
+        // When a bad answer is given, we advance automatically to the next question
+        // (but this one will be asked again later).
         showBad();
+        questions.questions[questions.questions.length] = questions.questions[currentQuestion];
         setTimeout(nextQuestion, delayAfter);
         return;
     }
@@ -44,20 +48,31 @@ function addAnswer(answer) {
  * It shows a "Well done" message
  */
 function showGood() {
-    // TODO
-    $(".feedbackDiv").text("Good!!");
+    var feedbackDiv = $(".feedbackDiv");
+    feedbackDiv.fadeIn(1000);
+    feedbackDiv.text("Good!!");
+    window.setTimeout(hideFeedback,feedbackTime);
 }
 
 /**
  * It shows a "You made a mistake" message
  */
 function showBad() {
-    // TODO
-    $(".feedbackDiv").text("Bad!!");
+    var feedbackDiv = $(".feedbackDiv");
+    feedbackDiv.fadeIn(1000);
+    feedbackDiv.text("That was wrong!!");
+    window.setTimeout(hideFeedback,feedbackTime);
 }
 
 function showTooLate() {
-    $(".feedbackDiv").text("Too Late!!");
+    var feedbackDiv = $(".feedbackDiv");
+    feedbackDiv.fadeIn(500);
+    feedbackDiv.text("Too late!!");
+    window.setTimeout(hideFeedback,feedbackTime);
+}
+
+function hideFeedback(){
+    $(".feedbackDiv").fadeOut(500);
 }
 
 function timerDown() {
