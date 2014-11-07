@@ -13,6 +13,9 @@ for ($i = 0; $i < $numberOfQuestions; $i++) {
         case "notesOfChord":
             $questions[] = notesOfChordQuestion($knowledge);
             break;
+        case "chordOfNotes":
+            $questions[] = chordOfNotesQuestion($knowledge);
+            break;
         case "degreeOfChord":
             $questions[] = degreeOfChordQuestion($knowledge);
             break;
@@ -67,7 +70,7 @@ echo '{
                     ]}';*/
 
 
-function getQuestionType($knowledge)
+function getQuestionType()
 {
     /*
     More questions:
@@ -79,6 +82,7 @@ function getQuestionType($knowledge)
     */
     $questionTypes = array();
     $questionTypes[] = "notesOfChord";
+    $questionTypes[] = "chordOfNotes";
     //$questionTypes[]="degreeOfChord";
     //$questionTypes[]="areaOfChord";
     //$questionTypes[]="substitutionOfChord";
@@ -95,11 +99,10 @@ function getQuestionType($knowledge)
  * chord: "CMaj7",
  * expected: "C,E,G,B"
  */
-
 function notesOfChordQuestion($knowledge){
     $chordQuestion = array();
-    $chordQuestion["key"]="C"; // TODO
-    $chordQuestion["mode"]="ionian"; // TODO
+    $chordQuestion["key"]="key"; // TODO
+    $chordQuestion["mode"]="mode"; // TODO
     $chordQuestion["type"]="notesOfChord";
     $chordQuestion["text"]=$_SESSION['txt'][$_SESSION['lang']]['questions']['notesOfChord'];
     $note = $knowledge->getRandomNote();
@@ -109,5 +112,27 @@ function notesOfChordQuestion($knowledge){
     $allNotes = $knowledge->getAllNotes($notes);
     $chordQuestion["expected"]=implode(",",$notes);
     $chordQuestion["shown"]=implode(",",$allNotes);
+    return $chordQuestion;
+}
+
+/**
+ * The notes of a random chord are shown and the player must guess which chord it is.
+ * @param $knowledge
+ * @return array
+ */
+function chordOfNotesQuestion($knowledge){
+    $chordQuestion = array();
+    $chordQuestion["key"]="key"; // TODO
+    $chordQuestion["mode"]="mode"; // TODO
+    $chordQuestion["type"]="chordOfNotes";
+    $chordQuestion["text"]=$_SESSION['txt'][$_SESSION['lang']]['questions']['chordOfNotes'];
+    $chord = $knowledge->getRandomChord();
+    list($tonic, $chordType) = $knowledge->getTonicAndTypeOfChord($chord);
+    $notes = $knowledge->getNotesChord($chord);
+    shuffle($notes); // The notes are randomly ordered
+    $chordQuestion["questionElement"]=implode(",",$notes);
+    $allChordTypes = $knowledge->getAllChordTypes();
+    $chordQuestion["expected"]=$tonic.",".$chordType;
+    $chordQuestion["shown"]=implode(",",$notes).",".implode(",",$allChordTypes);
     return $chordQuestion;
 }

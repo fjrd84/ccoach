@@ -4,3 +4,4 @@ m 3m 5J
 m7 3m 5J 7m
 7 3M 5J 7m
 Maj7 3M 5J 7M
+mMaj7 3m 5J 7M

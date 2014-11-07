@@ -28,6 +28,7 @@ function addAnswer(answer) {
         answers[currentQuestion] = new Array();
         rightAnswers = questions.questions[currentQuestion]['expected'].split(",");
     }
+    
     answers[currentQuestion][currentAnswer++] = answer;
     if ($.inArray(answer, rightAnswers) === -1) {
         // When a bad answer is given, we advance automatically to the next question
@@ -148,7 +149,8 @@ function nextQuestionCont() {
             substitutionOfChord();
             break;
         default:
-            //default behaviour...
+            // generic question
+            genericQuestion();
             break;
     }
     // Event listeners
@@ -178,6 +180,22 @@ function notesOfChord() {
     updateCommon();
     questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
     questionDiv.find(".questionChord").text(questions.questions[currentQuestion]['chord']);
+    //questionDiv.append("NOTES OF CHORD!!");
+    questionDiv.fadeIn(1000);
+}
+
+function genericQuestion() {
+    var questionDiv = $(".genericQuestion");
+    questionDiv.find(".answerItems").empty();
+    var shown = (questions.questions[currentQuestion]['shown']).split(",");
+    for (var i = 0; i < shown.length; i++) {
+        var newDiv = '<div class="answerItem" data-item="' + shown[i] + '">' + shown[i] + '</div>';
+        questionDiv.find(".answerItems").append(newDiv);
+    }
+    currentQDiv = questionDiv;
+    updateCommon();
+    questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
+    questionDiv.find(".questionElement").text(questions.questions[currentQuestion]['questionElement']);
     //questionDiv.append("NOTES OF CHORD!!");
     questionDiv.fadeIn(1000);
 }

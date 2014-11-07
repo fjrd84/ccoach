@@ -65,15 +65,7 @@ class Knowledge
      */
     public function getNotesChord($chord)
     {
-        $tonic = substr($chord, 0, 1);
-        $alteration = substr($chord, 1, 1);
-        // the tonic might be flat or sharp
-        if ($alteration === 'b' || $alteration === '#') {
-            $tonic .= $alteration;
-            $chordType = substr($chord, 2);
-        } else {
-            $chordType = substr($chord, 1);
-        }
+        list($tonic, $chordType) = $this->getTonicAndTypeOfChord($chord);
         $notes = array();
         $notes[0] = $tonic;
         $numChords = count($this->chords);
@@ -93,6 +85,23 @@ class Knowledge
             $notes[$i] = $this->getNoteInterval($tonic, $this->chords[$chordIndex][$i]);
         }
         return $notes;
+    }
+
+    /**
+     * It returns an array with the tonic and type of a given chord.
+     */
+    public function getTonicAndTypeOfChord($chord)
+    {
+        $tonic = substr($chord, 0, 1);
+        $alteration = substr($chord, 1, 1);
+        // the tonic might be flat or sharp
+        if ($alteration === 'b' || $alteration === '#') {
+            $tonic .= $alteration;
+            $chordType = substr($chord, 2);
+        } else {
+            $chordType = substr($chord, 1);
+        }
+        return array($tonic, $chordType);
     }
 
     /**
@@ -299,5 +308,18 @@ class Knowledge
             }
         }
         return $notes;
+    }
+
+    /**
+     * It returns an array with all the known chord types
+     */
+    public function getAllChordTypes()
+    {
+        $chordTypes = array();
+        $numberOfTypes = count($this->chords);
+        for ($i = 0; $i < $numberOfTypes; $i++) {
+            $chordTypes[$i] = $this->chords[$i][0];
+        }
+        return $chordTypes;
     }
 } 

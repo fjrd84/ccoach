@@ -137,10 +137,17 @@ body{
     position: relative;
 }
 
+.questionElement {
+    top: 100px;
+    left: 240px;
+    position: absolute;
+    font-size: 47px;
+}
+
 .questionText{
     position: absolute;
     left: 40px;
-    top: 63px;
+    top: 40px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -197,9 +204,10 @@ body{
 .nextButton{
     background-color: #53ae2c;
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 130px;
+    right: 131px;
     padding: 5px;
+    z-index: 2;
 }
 
 .nextButton a{

@@ -18,6 +18,7 @@ function printMainGame($data = "ThisIsTheGame")
         <div class="yourLevel">Level 2</div>
         <div class="remainingTime"></div>
         <div class="feedbackDiv"></div>
+        <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
         <div class="gameContent">
             <div class="loading"></div>
             <div class="question">
@@ -27,21 +28,14 @@ function printMainGame($data = "ThisIsTheGame")
                     <div class="answerItems">
                         <div class="answerItem" data-item="C">C</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
+
                 </div>
                 <div class="question degreeOfChord" style="display:none">
                     <div class="questionText">Question text</div>
                     <div class="questionChord">CMaj7</div>
                     <div class="answerItems">
                         <div class="answerItem" data-item="I">I</div>
-                        <div class="answerItem" data-item="II">II</div>
-                        <div class="answerItem" data-item="III">III</div>
-                        <div class="answerItem" data-item="IV">IV</div>
-                        <div class="answerItem" data-item="V">V</div>
-                        <div class="answerItem" data-item="VI">VI</div>
-                        <div class="answerItem" data-item="VII">VII</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>
                 <div class="question areaOfChord" style="display:none">
                     <div class="questionText">Question text</div>
@@ -51,21 +45,20 @@ function printMainGame($data = "ThisIsTheGame")
                         <div class="answerItem" data-item="SD">Subdominant</div>
                         <div class="answerItem" data-item="D">Dominant</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
                 </div>
                 <div class="question substitutionOfChord" style="display:none">
                     <div class="questionText">Question text</div>
                     <div class="questionChord">CMaj7</div>
                     <div class="answerItems">
                         <div class="answerItem" data-item="CMaj7">CMaj7</div>
-                        <div class="answerItem" data-item="Dm7">Dm7</div>
-                        <div class="answerItem" data-item="Em7">Em7</div>
-                        <div class="answerItem" data-item="FMaj7">FMaj7</div>
-                        <div class="answerItem" data-item="G7">G7</div>
-                        <div class="answerItem" data-item="Am7">Am7</div>
-                        <div class="answerItem" data-item="B7">B7</div>
                     </div>
-                    <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
+                </div>
+                <div class="question genericQuestion" style="display:none">
+                    <div class="questionText">Question text</div>
+                    <div class="questionElement"></div>
+                    <div class="answerItems">
+                        <div class="answerItem" data-item="CMaj7">CMaj7</div>
+                    </div>
                 </div>
             </div>
         </div>
