@@ -177,8 +177,11 @@ class Knowledge
         } elseif ($baseDistance + 1 == $distance) { // Double sharp case (the next note will be selected)
             $intervalNote = $this->notes[($tonicIndex + $intervalIndex + 1) % 7][0];
             return $intervalNote;
+        } elseif ($baseDistance - 1 == $distance) { // Double flat case (the previous note will be selected)
+            $intervalNote = $this->notes[($tonicIndex + $intervalIndex - 1) % 7][0];
+            return $intervalNote;
         } else {
-            return -1; // it means something went wrong
+            return -1; // it means something went wrong (obviously, it SHOULDN'T happen...)
         }
     }
 
@@ -229,6 +232,20 @@ class Knowledge
     }
 
     /**
+     * It returns the distance in tones for a given interval
+     * @param $interval
+     */
+    public function getIntervalDistance($interval)
+    {
+        $numOfIntervals = count($this->intervals);
+        for ($i = 0; $i < $numOfIntervals; $i++) {
+            if ($this->intervals[$i][0] == $interval) {
+                return $this->intervals[$i][1];
+            }
+        }
+    }
+
+    /**
      * It returns the numeric index of a note
      * @param $note C, D, E, F, G...
      * @return int 0, 1, 2, 3, 4...
@@ -272,6 +289,32 @@ class Knowledge
         }
         $chordType = $this->chords[rand(0, count($this->chords) - 1)][0];
         return $note . $chordType;
+    }
+
+    /**
+     * It returns a random chord
+     * @return string
+     */
+    public function getRandomInterval()
+    {
+        return $this->intervals[rand(0, count($this->intervals) - 1)][0];;
+    }
+
+    /**
+     * It returns an array with all the equivalent intervals (the parameter interval included).
+     * @param $interval
+     */
+    public function getEquivalentIntervals($interval)
+    {
+        $equivalents = array();
+        $intervalDistance = $this->getIntervalDistance($interval);
+        $numIntervals = count($this->intervals);
+        for ($i = 0; $i < $numIntervals; $i++){
+            if($this->intervals[$i][1]==$intervalDistance){
+                $equivalents[]=$this->intervals[$i][0];
+            }
+        }
+        return $equivalents;
     }
 
     /**
@@ -321,5 +364,19 @@ class Knowledge
             $chordTypes[$i] = $this->chords[$i][0];
         }
         return $chordTypes;
+    }
+
+
+    /**
+     * It returns an array with all the known intervals
+     */
+    public function getAllIntervals()
+    {
+        $intervals = array();
+        $numberOfTypes = count($this->intervals);
+        for ($i = 0; $i < $numberOfTypes; $i++) {
+            $intervals[$i] = $this->intervals[$i][0];
+        }
+        return $intervals;
     }
 } 

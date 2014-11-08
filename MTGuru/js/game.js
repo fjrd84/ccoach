@@ -18,17 +18,22 @@ var feedbackTime = 500;
 setInterval(function () {
     timerDown()
 }, 500);
-
+ 
 /**
  * It adds the given answer to the array of answers and checks if it is right.
- * @param answer
+ * @param answer 
  */
 function addAnswer(answer) {
     if (currentAnswer === 0) {
         answers[currentQuestion] = new Array();
-        rightAnswers = questions.questions[currentQuestion]['expected'].split(",");
+        if (questions.questions[currentQuestion]['expected'].indexOf(',') == -1) {
+            rightAnswers = new Array();
+            rightAnswers[0] = questions.questions[currentQuestion]['expected'];
+        } else {
+            rightAnswers = questions.questions[currentQuestion]['expected'].split(",");
+        }
     }
-    
+
     answers[currentQuestion][currentAnswer++] = answer;
     if ($.inArray(answer, rightAnswers) === -1) {
         // When a bad answer is given, we advance automatically to the next question
@@ -52,7 +57,7 @@ function showGood() {
     var feedbackDiv = $(".feedbackDiv");
     feedbackDiv.fadeIn(1000);
     feedbackDiv.text("Good!!");
-    window.setTimeout(hideFeedback,feedbackTime);
+    window.setTimeout(hideFeedback, feedbackTime);
 }
 
 /**
@@ -62,17 +67,17 @@ function showBad() {
     var feedbackDiv = $(".feedbackDiv");
     feedbackDiv.fadeIn(1000);
     feedbackDiv.text("That was wrong!!");
-    window.setTimeout(hideFeedback,feedbackTime);
+    window.setTimeout(hideFeedback, feedbackTime);
 }
 
 function showTooLate() {
     var feedbackDiv = $(".feedbackDiv");
     feedbackDiv.fadeIn(500);
     feedbackDiv.text("Too late!!");
-    window.setTimeout(hideFeedback,feedbackTime);
+    window.setTimeout(hideFeedback, feedbackTime);
 }
 
-function hideFeedback(){
+function hideFeedback() {
     $(".feedbackDiv").fadeOut(500);
 }
 
