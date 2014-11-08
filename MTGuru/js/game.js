@@ -21,7 +21,7 @@ setInterval(function () {
  
 /**
  * It adds the given answer to the array of answers and checks if it is right.
- * @param answer 
+ * @param answer
  */
 function addAnswer(answer) {
     if (currentAnswer === 0) {
@@ -35,7 +35,7 @@ function addAnswer(answer) {
     }
 
     answers[currentQuestion][currentAnswer++] = answer;
-    if ($.inArray(answer, rightAnswers) === -1) {
+    if ($.inArray(answer.toString(), rightAnswers) === -1) {
         // When a bad answer is given, we advance automatically to the next question
         // (but this one will be asked again later).
         showBad();
