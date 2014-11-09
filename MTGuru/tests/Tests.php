@@ -21,7 +21,11 @@ function possibleChordsTests(){
     $notes[] = "E";
     $notes[] = "G";
     $notes[] = "B";
-    $test4 = $knowledge->getAllPossibleChords($notes);
+    $test4 = $knowledge->getAllPossibleChords($notes, true); // CMaj7
+    $notes[] = "D";
+    $notes[] = "F";
+    $notes[] = "A";
+    $test4 = $knowledge->getAllPossibleChords($notes, false); // All chords of C ionian
 }
 
 function noteChordTests(){

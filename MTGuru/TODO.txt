@@ -1,9 +1,9 @@
 *Sistema de reconocimiento de acordes por notas.
+Escalas y tonalidades.
 Conocimiento de sustitución de acordes equivalentes.
 Preguntas con audio.
 Representación americana y en partitura.
 Encuadre de acordes en modos y escalas.
-Escalas y tonalidades.
 Inclusión en framework (symfony).
 Gestion de usuarios.
 Sistema de puntuación.
