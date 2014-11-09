@@ -186,6 +186,24 @@ class Knowledge
     }
 
     /**
+     * It returns all possible intervals with the given notes (the first one as a tonic!)
+     */
+    public function getIntervalsNotes($tonic, $note)
+    {
+        $intervals = array();
+        $currentDistance = $this->getDistance($tonic, $note);
+        $numIntervals = count($this->intervals);
+        for ($i = 0; $i < $numIntervals; $i++) {
+            // Right intervals are considered all that match the tone distance
+            if($currentDistance==$this->intervals[$i][1]){
+                $intervals[]=$this->intervals[$i][0];
+            }
+        }
+        // There will be none, one or two elements
+        return $intervals;
+    }
+
+    /**
      * It returns the tone distance between two notes
      * @param $note1 C, D, E, F...
      * @param $note2 C, D, E, F...
@@ -309,9 +327,9 @@ class Knowledge
         $equivalents = array();
         $intervalDistance = $this->getIntervalDistance($interval);
         $numIntervals = count($this->intervals);
-        for ($i = 0; $i < $numIntervals; $i++){
-            if($this->intervals[$i][1]==$intervalDistance){
-                $equivalents[]=$this->intervals[$i][0];
+        for ($i = 0; $i < $numIntervals; $i++) {
+            if ($this->intervals[$i][1] == $intervalDistance) {
+                $equivalents[] = $this->intervals[$i][0];
             }
         }
         return $equivalents;
@@ -379,4 +397,121 @@ class Knowledge
         }
         return $intervals;
     }
-} 
+
+    /**
+     * It calculates all the possible known chords that can be formed with ALL the given notes.
+     */
+    public function getAllPossibleChords($notes)
+    {
+        //in_arrray($note, $notes);
+        $allPossibleChords = array();
+        // With each note as a tonic, compute all possible intervals
+        $numNotes = count($notes);
+        // An array with the following structure will be created:
+        // $possibleIntervalsWithTonicAndNote
+        // [0][1][0]=4+
+        // [0][1][1]=5-
+        // [0][2][0]=3M
+        // [0][3][0]=7m
+        // [1][0][0]=4-
+        // [1][0][1]=5+
+        // [1][2][0]...
+        // ...
+        // Where the [index1][index2] stand for the notes index in the $notes array and [index3] are the possible
+        // intervals with this note
+        // Another array with only the tonic and all its possible intervals is also created
+        // $possibleIntervalsWithTonic
+        $possibleIntervalsWithTonicAndNote = array();
+        $possibleIntervalsWithTonic = array();
+        for ($tonicIndex = 0; $tonicIndex < $numNotes; $tonicIndex++) {
+            $currentTonic = $notes[$tonicIndex];
+            $possibleIntervalsWithTonicAndNote[$tonicIndex]=array();
+            // With all possible intervals, compute all possible chords (using ALL of the available intervals)
+            for($noteIndex = 0; $noteIndex < $numNotes; $noteIndex++){
+                // Only intervals between different notes will be computed
+                if($tonicIndex!=$noteIndex){
+                    $currentPossibleIntervals = $this->getIntervalsNotes($currentTonic,$notes[$noteIndex]);
+                    $possibleIntervalsWithTonicAndNote[$tonicIndex][$noteIndex]=$currentPossibleIntervals;
+                    $possibleIntervalsWithTonic[$tonicIndex].=implode(",",$currentPossibleIntervals).",";
+                }
+            }
+        }
+        // Now we must find which of the known chords match all their intervals with a tonic and all of the other notes
+        for($tonicIndex= 0; $tonicIndex < $numNotes; $tonicIndex++){
+            $allFoundChords = $this->findChordWithIntervals(explode(",",$possibleIntervalsWithTonic[$tonicIndex]));
+            $numFoundChords = count($allFoundChords);
+            for($indexFoundChord = 0; $indexFoundChord < $numFoundChords; $indexFoundChord++){
+                $numIntervalsFoundChord = count($this->chords[$this->getIndexOfChord($allFoundChords[$indexFoundChord])]);
+                // If the number of intervals of a found chord is the same as the number of notes we have, the chords uses
+                // all the notes. Both include the tonic!!
+                if($numIntervalsFoundChord == $numNotes){
+                    $allPossibleChords[]=$notes[$tonicIndex].$allFoundChords[$indexFoundChord];
+                }
+            }
+        }
+        //$allIndexes=range(0,$numNotes);
+        /*foreach($array as $element){
+            unset($currentElement);
+        }*/
+        return $allPossibleChords;
+    }
+
+    public function getIndexOfChord($chordType){
+        $numChords = count($this->chords);
+        for($chordIndex = 0; $chordIndex<$numChords; $chordIndex++){
+            if($chordType==$this->chords[$chordIndex][0]){
+                return $chordIndex;
+            }
+        }
+        // If the chord is unknown
+        return -1;
+    }
+
+    /**
+     * It returns an array with the chords that can be formed with ALL OR SOME of the passed intervals.
+     * @param $intervals Array with intervals
+     */
+    public function findChordWithIntervals($intervals){
+        $possibleChords = array();
+        $numChords = count($this->chords);
+        for($chordIndex = 0; $chordIndex < $numChords; $chordIndex++){
+            $numIntervals = count($this->chords[$chordIndex]);
+            $allIntervalsFound = true;
+            for($intervalIndex = 1; $intervalIndex < $numIntervals; $intervalIndex++){
+                if(!in_array($this->chords[$chordIndex][$intervalIndex],$intervals)){
+                    $allIntervalsFound = false;
+                }
+            }
+            if($allIntervalsFound){
+                $possibleChords[]=$this->chords[$chordIndex][0];
+            }
+        }
+        return $possibleChords;
+    }
+
+    /**
+     * It returns an array with the chords that can be formed with ALL OR SOME of the passed intervals.
+     * @param $intervals Array with intervals
+     */
+    public function findChordWithAllIntervals($intervals){
+        $possibleChords = array();
+        $numChords = count($this->chords);
+        for($chordIndex = 0; $chordIndex < $numChords; $chordIndex++){
+            $numIntervalsChord = count($this->chords[$chordIndex]);
+            // we must add one because the first element of chords is the chord name, and no interval
+            if($numIntervalsChord<count($intervals)+1){
+                continue; // In case not all of the passed intervals form a chord, it is not interesting.
+            }
+            $allIntervalsFound = true;
+            for($intervalIndex = 1; $intervalIndex < $numIntervalsChord; $intervalIndex++){
+                if(!in_array($this->chords[$chordIndex][$intervalIndex],$intervals)){
+                    $allIntervalsFound = false;
+                }
+            }
+            if($allIntervalsFound){
+                $possibleChords[]=$this->chords[$chordIndex][0];
+            }
+        }
+        return $possibleChords;
+    }
+}

@@ -1,0 +1,16 @@
+*Sistema de reconocimiento de acordes por notas.
+Conocimiento de sustitución de acordes equivalentes.
+Preguntas con audio.
+Representación americana y en partitura.
+Encuadre de acordes en modos y escalas.
+Escalas y tonalidades.
+Inclusión en framework (symfony).
+Gestion de usuarios.
+Sistema de puntuación.
+Estadísticas de respuestas de usuarios.
+División de preguntas en niveles.
+Páginas de aclaraciones teóricas para niveles.
+Modalidad de entrenamiento para preguntas específicas.
+Layout.
+Ranking con puntuaciones.
+Explicación de respuestas.

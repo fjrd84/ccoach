@@ -11,6 +11,17 @@ function runTests(){
     noteIntervalTests();
     noteScalesTests();
     noteChordTests();
+    possibleChordsTests();
+}
+
+function possibleChordsTests(){
+    $knowledge = \classes\General\Knowledge::getInstance();
+    $notes = array();
+    $notes[] = "C";
+    $notes[] = "E";
+    $notes[] = "G";
+    $notes[] = "B";
+    $test4 = $knowledge->getAllPossibleChords($notes);
 }
 
 function noteChordTests(){
