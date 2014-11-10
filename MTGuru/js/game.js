@@ -26,9 +26,9 @@ setInterval(function () {
 function addAnswer(answer) {
     if (currentAnswer === 0) {
         answers[currentQuestion] = new Array();
-        if (questions.questions[currentQuestion]['expected'].indexOf(',') == -1) {
+        if (questions.questions[currentQuestion]['expected'].toString().indexOf(',') == -1) {
             rightAnswers = new Array();
-            rightAnswers[0] = questions.questions[currentQuestion]['expected'];
+            rightAnswers[0] = questions.questions[currentQuestion]['expected'].toString();
         } else {
             rightAnswers = questions.questions[currentQuestion]['expected'].split(",");
         }
@@ -137,7 +137,7 @@ function nextQuestionCont() {
     currentType = questions.questions[currentQuestion].type;
 
     switch (currentType) {
-        case "notesOfChord":
+        /*case "notesOfChord":
             // notes of chord...
             notesOfChord();
             break;
@@ -152,7 +152,7 @@ function nextQuestionCont() {
         case "substitutionOfChord":
             // area of chord...
             substitutionOfChord();
-            break;
+            break;*/
         default:
             // generic question
             genericQuestion();

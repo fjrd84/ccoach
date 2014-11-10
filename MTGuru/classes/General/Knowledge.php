@@ -460,6 +460,9 @@ class Knowledge
                 if ($tonicIndex != $noteIndex) {
                     $currentPossibleIntervals = $this->getIntervalsNotes($currentTonic, $notes[$noteIndex]);
                     $possibleIntervalsWithTonicAndNote[$tonicIndex][$noteIndex] = $currentPossibleIntervals;
+                    if(!isset($possibleIntervalsWithTonic[$tonicIndex])){
+                        $possibleIntervalsWithTonic[$tonicIndex] = "";
+                    }
                     $possibleIntervalsWithTonic[$tonicIndex] .= implode(",", $currentPossibleIntervals) . ",";
                 }
             }
