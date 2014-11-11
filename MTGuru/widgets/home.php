@@ -17,6 +17,9 @@ function printHome()
         <div class="button">
             <a href="game.php"><?= $_SESSION['txt'][$_SESSION['lang']]['home']['play'] ?></a>
         </div>
+        <div class="button">
+            <a href="training.php"><?= $_SESSION['txt'][$_SESSION['lang']]['home']['training'] ?></a>
+        </div>
     </div>
     </body>
     </html>

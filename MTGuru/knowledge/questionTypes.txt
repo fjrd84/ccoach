@@ -1,0 +1,7 @@
+notesOfChord
+chordOfNotes
+intervalOfNotes
+notesOfInterval
+degreeOfChord
+notesOfScale
+chordBelongsToScale

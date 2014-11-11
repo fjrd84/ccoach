@@ -102,7 +102,13 @@ function timerDown() {
 
 function startGame() {
     //alert("Game is starting! :D");
-    $.get("ajax/getQuestions.php", {"choices[]": ["Jon", "Susan"]}, function (data) {
+    var getVars = "";
+    if(typeof trainingQuestionType === "undefined"){
+        getVars = "";
+    }else{
+        getVars = {"questionType": trainingQuestionType};
+    }
+    $.get("ajax/getQuestions.php", getVars, function (data) {
         //$( ".result" ).html( data );
         //alert( "Load was performed." );
         processData(JSON.parse(JSON.stringify(eval("(" + data + ")"))));

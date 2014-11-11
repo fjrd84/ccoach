@@ -9,6 +9,7 @@ class Knowledge
     private $chords;
     private $notes;
     private $scales;
+    private $questionTypes;
     // singleton instance
     private static $instance;
 
@@ -37,7 +38,27 @@ class Knowledge
         $this->chords = $this->parseFile('knowledge/chords.txt');
         $this->notes = $this->parseFile('knowledge/notes.txt');
         $this->scales = $this->parseFile('knowledge/scales.txt');
+        $this->questionTypes = $this->parseFile('knowledge/questionTypes.txt');
     }
+
+    function getRandomQuestionType()
+    {
+        /*
+        More questions:
+        Which of the given notes does not belong to the scale?
+        Which scale sounds now?
+        Which chord/interval sounds now?
+        */
+        //$questionTypes[]='areaOfChord';
+        //$questionTypes[]='substitutionOfChord';
+        $index = rand(0, count($this->questionTypes) - 1);
+        return $this->questionTypes[$index][0];
+    }
+
+    function getQuestionTypes(){
+        return $this->questionTypes;
+    }
+
 
     /**
      * It parses a knowledge file

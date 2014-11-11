@@ -9,7 +9,11 @@ $knowledge = \classes\General\Knowledge::getInstance();
 $knowledge->readFiles();
 $questions = array();
 for ($i = 0; $i < $numberOfQuestions; $i++) {
-    $questionType = getQuestionType();
+    if (!isset($_GET['questionType'])) {
+        $questionType = $knowledge->getRandomQuestionType();
+    }else{
+        $questionType = $_GET['questionType'];
+    }
     switch ($questionType) {
         case 'notesOfChord':
             $questions[] = notesOfChordQuestion($knowledge);
@@ -44,30 +48,6 @@ for ($i = 0; $i < $numberOfQuestions; $i++) {
 $result = json_encode(array('questions' => $questions));
 
 echo $result;
-
-function getQuestionType()
-{
-    /*
-    More questions:
-    Intervals
-    Given the notes, say the chord.
-    Which of the given notes does not belong to the scale?
-    Which scale sounds now?
-    Which chord/interval sounds now?
-    */
-    $questionTypes = array();
-    $questionTypes[] = 'notesOfChord';
-    $questionTypes[] = 'chordOfNotes';
-    $questionTypes[] = 'intervalOfNotes';
-    $questionTypes[] = 'notesOfInterval';
-    $questionTypes[] = 'degreeOfChord';
-    $questionTypes[] = 'notesOfScale';
-    $questionTypes[] = 'chordBelongsToScale';
-    //$questionTypes[]='areaOfChord';
-    //$questionTypes[]='substitutionOfChord';
-    $index = rand(0, count($questionTypes) - 1);
-    return $questionTypes[$index];
-}
 
 /**
  *
@@ -216,7 +196,7 @@ function chordBelongsToScaleQuestion($knowledge)
     $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordBelongsToScale'];
     $question['questionElement'] = 'Chord: ' . $randomChord;
     $question['expected'] = $belongsToScale;
-    $question['shown'] = $yes.','.$no;
+    $question['shown'] = $yes . ',' . $no;
     return $question;
 }
 
