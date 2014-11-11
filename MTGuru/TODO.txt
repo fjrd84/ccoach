@@ -1,16 +1,37 @@
-*Sistema de reconocimiento de acordes por notas.
-Escalas y tonalidades.
+TEORÍA Y PREGUNTAS
+Progresiones y cadencias.
 Conocimiento de sustitución de acordes equivalentes.
+Modulación.
 Preguntas con audio.
 Representación americana y en partitura.
-Encuadre de acordes en modos y escalas.
-Inclusión en framework (symfony).
-Gestion de usuarios.
-Sistema de puntuación.
-Estadísticas de respuestas de usuarios.
-División de preguntas en niveles.
-Páginas de aclaraciones teóricas para niveles.
-Modalidad de entrenamiento para preguntas específicas.
-Layout.
+Avanzado: mostrar standard, hacer memorizar y preguntar huecos, arreglos, etc.
+
+PÁGINAS Y DISEÑO
+Página principal (unlogged) describiendo la utilidad y motivación.
+Página principal de usuario con estadísticas, acceso al juego, a los modos de entrenamiento y vista de los rankings.
+Layout de to.do
+Páginas con introducciones teóricas previas a cada nivel.
+Teoría accesible a cada momento.
 Ranking con puntuaciones.
+
+MEJORAS TÉCNICAS
+Inclusión en framework (zend).
+Gestion de usuarios.
+
+SISTEMA DE JUEGO
+Sistema de puntuación:
+    Solo puntúa en modo de juego. El modo de entrenamiento sirve para mejorar la tasa de acierto.
+    Solo se pasa de nivel tras X puntos y con una tasa de acierto X en todos los objetivos.
+    Si no se cumple la tasa de acierto (de las últimas X preguntas), se dejará de puntuar hasta que se cumpla (más efectivo el modo de entrenamiento)
+    Una vez cumplidos los objetivos de acierto, se pasa de nivel y se vuelve a puntuar.
+Estadísticas de respuestas de usuarios: semanales, mensuales, de las últimas X preguntas y totales.
+División de preguntas en niveles.
+Modalidad de entrenamiento para preguntas específicas: mejora la tasa de acierto, pero no puntúa.
 Explicación de respuestas.
+
+...........................................................................
+
+YA HECHO
+Sistema de reconocimiento de acordes por notas.
+Escalas y tonalidades.
+Encuadre de acordes en modos y escalas.

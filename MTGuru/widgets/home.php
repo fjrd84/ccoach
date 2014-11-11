@@ -14,7 +14,7 @@ function printHome()
         </div>
         <div class="points"><?php echo 'Points: ' . $_SESSION['currentUser']['points']; ?></div>
         <div class="level"><?php echo 'Level: ' . $_SESSION['currentUser']['level']; ?></div>
-        <div href="game.php" class="button">
+        <div class="button">
             <a href="game.php"><?= $_SESSION['txt'][$_SESSION['lang']]['home']['play'] ?></a>
         </div>
     </div>

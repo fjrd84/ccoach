@@ -171,6 +171,13 @@ body{
     font-size: 50;
 }
 
+.feedbackText{
+    position: absolute;
+    width: 405px;
+    left: 0px;
+    top: 0px;
+}
+
 .answerItems, .answerNotes, .answerDegrees, .answerAreas, .answerChords {
     position: absolute;
     left: 105px;

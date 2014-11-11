@@ -8,6 +8,6 @@ $_SESSION['txt']['en']['questions']['intervalOfNotes'] = 'Which interval is form
 $_SESSION['txt']['en']['questions']['notesOfInterval'] = 'Which note forms this interval with the given tonic?';
 $_SESSION['txt']['en']['questions']['degreeOfChord'] = "Tell me the degree of this chord";
 $_SESSION['txt']['en']['questions']['notesOfScale'] = "Tell me the notes of this scale";
-$_SESSION['txt']['en']['questions']['chordBelongToScale'] = "Does this chord belong to the scale?";
+$_SESSION['txt']['en']['questions']['chordBelongsToScale'] = "Does this chord belong to the scale?";
 $_SESSION['txt']['en']['questions']['yes'] = "Yes";
 $_SESSION['txt']['en']['questions']['no'] = "No";

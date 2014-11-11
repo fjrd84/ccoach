@@ -12,13 +12,13 @@ var resetCounter = 9999;
 var delayAfter = 300;
 var answers = new Array();
 var rightAnswers = new Array();
-var feedbackTime = 500;
+var feedbackTime = 1000;
 
 // Timer events
 setInterval(function () {
     timerDown()
 }, 500);
- 
+
 /**
  * It adds the given answer to the array of answers and checks if it is right.
  * @param answer
@@ -54,31 +54,41 @@ function addAnswer(answer) {
  * It shows a "Well done" message
  */
 function showGood() {
+    showFeedback("Good!!");
+}
+
+function showFeedback(message){
     var feedbackDiv = $(".feedbackDiv");
-    feedbackDiv.fadeIn(1000);
-    feedbackDiv.text("Good!!");
-    window.setTimeout(hideFeedback, feedbackTime);
+    var div = document.createElement("div");
+    var className = (Math.floor(Math.random() * 1000)).toString();
+    div.className = "feedbackText " + className;
+    div.style.display = "none";
+    div.innerHTML = message;
+    feedbackDiv.append(div);
+    $("." + className).fadeIn(1000);
+    //feedbackDiv.text("Good!!");
+    window.setTimeout(function () {
+        hideFeedback(className);
+    }, feedbackTime);
 }
 
 /**
  * It shows a "You made a mistake" message
  */
 function showBad() {
-    var feedbackDiv = $(".feedbackDiv");
-    feedbackDiv.fadeIn(1000);
-    feedbackDiv.text("That was wrong!!");
-    window.setTimeout(hideFeedback, feedbackTime);
+    showFeedback("That was wrong!!");
 }
 
 function showTooLate() {
-    var feedbackDiv = $(".feedbackDiv");
-    feedbackDiv.fadeIn(500);
-    feedbackDiv.text("Too late!!");
-    window.setTimeout(hideFeedback, feedbackTime);
+    showFeedback("Too late!!");
 }
 
-function hideFeedback() {
-    $(".feedbackDiv").fadeOut(500);
+function hideFeedback(divClass) {
+    if (typeof divClass != 'undefined') {
+        $("." + divClass).fadeOut(500);
+    } else {
+        $(".feedbackDiv").fadeOut(500);
+    }
 }
 
 function timerDown() {
@@ -138,21 +148,21 @@ function nextQuestionCont() {
 
     switch (currentType) {
         /*case "notesOfChord":
-            // notes of chord...
-            notesOfChord();
-            break;
-        case "degreeOfChord":
-            // degree of chord...
-            degreeOfChord();
-            break;
-        case "areaOfChord":
-            // area of chord...
-            areaOfChord();
-            break;
-        case "substitutionOfChord":
-            // area of chord...
-            substitutionOfChord();
-            break;*/
+         // notes of chord...
+         notesOfChord();
+         break;
+         case "degreeOfChord":
+         // degree of chord...
+         degreeOfChord();
+         break;
+         case "areaOfChord":
+         // area of chord...
+         areaOfChord();
+         break;
+         case "substitutionOfChord":
+         // area of chord...
+         substitutionOfChord();
+         break;*/
         default:
             // generic question
             genericQuestion();

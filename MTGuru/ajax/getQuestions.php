@@ -20,8 +20,8 @@ for ($i = 0; $i < $numberOfQuestions; $i++) {
         case 'chordOfNotes':
             $questions[] = chordOfNotesQuestion($knowledge);
             break;
-        case 'chordBelongToScale':
-            $questions[] = chordBelongToScaleQuestion($knowledge);
+        case 'chordBelongsToScale':
+            $questions[] = chordBelongsToScaleQuestion($knowledge);
             break;
         case 'notesOfInterval':
             $questions[] = notesOfIntervalQuestion($knowledge);
@@ -62,7 +62,7 @@ function getQuestionType()
     $questionTypes[] = 'notesOfInterval';
     $questionTypes[] = 'degreeOfChord';
     $questionTypes[] = 'notesOfScale';
-    $questionTypes[] = 'chordBelongToScale';
+    $questionTypes[] = 'chordBelongsToScale';
     //$questionTypes[]='areaOfChord';
     //$questionTypes[]='substitutionOfChord';
     $index = rand(0, count($questionTypes) - 1);
@@ -87,7 +87,7 @@ function notesOfChordQuestion($knowledge)
     $chordQuestion['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['notesOfChord'];
     $note = $knowledge->getRandomNote();
     $chord = $knowledge->getRandomChord($note);
-    $chordQuestion['chord'] = $chord;
+    $chordQuestion['questionElement'] = $chord;
     $notes = $knowledge->getNotesChord($chord);
     $allNotes = $knowledge->getAllNotes($notes);
     $chordQuestion['expected'] = implode(',', $notes);
@@ -103,8 +103,8 @@ function notesOfChordQuestion($knowledge)
 function chordOfNotesQuestion($knowledge)
 {
     $chordQuestion = array();
-    $chordQuestion['key'] = 'key';
-    $chordQuestion['mode'] = 'mode';
+    $chordQuestion['key'] = '';
+    $chordQuestion['mode'] = '';
     $chordQuestion['type'] = 'chordOfNotes';
     $chordQuestion['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordOfNotes'];
     $chord = $knowledge->getRandomChord();
@@ -191,7 +191,7 @@ function degreeOfChordQuestion($knowledge)
  * A chord, a key and an scale is shown, and the user must say which degree it belongs to.
  * @param $knowledge
  */
-function chordBelongToScaleQuestion($knowledge)
+function chordBelongsToScaleQuestion($knowledge)
 {
     $tonic = $knowledge->getRandomNote();
     $scale = $knowledge->getRandomScale();
@@ -212,8 +212,8 @@ function chordBelongToScaleQuestion($knowledge)
     $question = array();
     $question['key'] = 'Key: ' . $tonic;
     $question['mode'] = 'Scale: ' . $scale;
-    $question['type'] = 'chordBelongToScale';
-    $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordBelongToScale'];
+    $question['type'] = 'chordBelongsToScale';
+    $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordBelongsToScale'];
     $question['questionElement'] = 'Chord: ' . $randomChord;
     $question['expected'] = $belongsToScale;
     $question['shown'] = $yes.','.$no;
