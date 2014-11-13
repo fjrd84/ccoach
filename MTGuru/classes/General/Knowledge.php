@@ -318,6 +318,23 @@ class Knowledge
     }
 
     /**
+     * It returns all the possible alterations for a given note (no matter if the note itself is altered).
+     * The input note will be included in the output (if the input note 'makes sense').
+     */
+    public function getAllAlterationsOfNote($note){
+        $basisNote = substr($note,0,1);
+        $notes = array();
+        if($basisNote!="C" && $basisNote != "F"){
+            $notes[]=$basisNote."b";
+        }
+        $notes[]=$basisNote;
+        if($basisNote!="E" && $basisNote != "B"){
+            $notes[]=$basisNote."#";
+        }
+        return $notes;
+    }
+
+    /**
      * It returns a random chord
      * @return string
      */
@@ -429,6 +446,19 @@ class Knowledge
         return $chordTypes;
     }
 
+    /**
+     * It returns an array with all the scales
+     * @return array
+     */
+    public function getAllScales()
+    {
+        $scales = array();
+        $numberOfTypes = count($this->scales);
+        for ($i = 0; $i < $numberOfTypes; $i++) {
+            $scales[$i] = $this->scales[$i][0];
+        }
+        return $scales;
+    }
 
     /**
      * It returns an array with all the known intervals

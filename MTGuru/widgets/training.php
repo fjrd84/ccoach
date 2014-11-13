@@ -14,16 +14,18 @@ function printTraining($knowledge)
         </div>
         <div class="points"><?php echo 'Points: ' . $_SESSION['currentUser']['points']; ?></div>
         <div class="level"><?php echo 'Level: ' . $_SESSION['currentUser']['level']; ?></div>
+        <div class="trainingButtons">
         <?php
         $questionTypes = $knowledge->getQuestionTypes();
         $numQuestionTypes = count($questionTypes);
         for ($questionTypeIndex = 0; $questionTypeIndex < $numQuestionTypes; $questionTypeIndex++) {
-            echo '<div class="button">';
+            echo '<div class="trainingTypeButton">';
             echo '<a href="game.php?questionType='.$questionTypes[$questionTypeIndex][0].'">' . $questionTypes[$questionTypeIndex][0] . '</a>';
             echo '</div>';
         }
         ?>
-        <div class="button">
+        </div>
+        <div class="button" style="clear:both">
             <a href="index.php"><?= $_SESSION['txt'][$_SESSION['lang']]['home']['home'] ?></a>
         </div>
     </div>

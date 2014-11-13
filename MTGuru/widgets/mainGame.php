@@ -22,42 +22,13 @@ function printMainGame($data = "ThisIsTheGame")
         <div class="gameContent">
             <div class="loading"></div>
             <div class="question">
-                <div class="question notesOfChord" style="display:none">
-                    <div class="questionText">Question text</div>
-                    <div class="questionChord">CMaj7</div>
-                    <div class="answerItems">
-                        <div class="answerItem" data-item="C">C</div>
-                    </div>
-
-                </div>
-                <div class="question degreeOfChord" style="display:none">
-                    <div class="questionText">Question text</div>
-                    <div class="questionChord">CMaj7</div>
-                    <div class="answerItems">
-                        <div class="answerItem" data-item="I">I</div>
-                    </div>
-                </div>
-                <div class="question areaOfChord" style="display:none">
-                    <div class="questionText">Question text</div>
-                    <div class="questionChord">CMaj7</div>
-                    <div class="answerItems">
-                        <div class="answerItem" data-item="T">Tonic</div>
-                        <div class="answerItem" data-item="SD">Subdominant</div>
-                        <div class="answerItem" data-item="D">Dominant</div>
-                    </div>
-                </div>
-                <div class="question substitutionOfChord" style="display:none">
-                    <div class="questionText">Question text</div>
-                    <div class="questionChord">CMaj7</div>
-                    <div class="answerItems">
-                        <div class="answerItem" data-item="CMaj7">CMaj7</div>
-                    </div>
-                </div>
                 <div class="question genericQuestion" style="display:none">
                     <div class="questionText">Question text</div>
                     <div class="questionElement"></div>
-                    <div class="answerItems">
-                        <div class="answerItem" data-item="CMaj7">CMaj7</div>
+                    <div id="answerItemsWrapper">
+                        <div class="answerItems">
+                            <div class="answerItem" data-item="CMaj7">CMaj7</div>
+                        </div>
                     </div>
                 </div>
             </div>

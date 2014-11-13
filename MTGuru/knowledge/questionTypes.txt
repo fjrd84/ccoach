@@ -3,5 +3,7 @@ chordOfNotes
 intervalOfNotes
 notesOfInterval
 degreeOfChord
+chordOfDegree
 notesOfScale
+scaleOfNotes
 chordBelongsToScale

@@ -11,7 +11,7 @@ $questions = array();
 for ($i = 0; $i < $numberOfQuestions; $i++) {
     if (!isset($_GET['questionType'])) {
         $questionType = $knowledge->getRandomQuestionType();
-    }else{
+    } else {
         $questionType = $_GET['questionType'];
     }
     switch ($questionType) {
@@ -20,6 +20,9 @@ for ($i = 0; $i < $numberOfQuestions; $i++) {
             break;
         case 'notesOfScale':
             $questions[] = notesOfScaleQuestion($knowledge);
+            break;
+        case 'scaleOfNotes':
+            $questions[] = scaleOfNotesQuestion($knowledge);
             break;
         case 'chordOfNotes':
             $questions[] = chordOfNotesQuestion($knowledge);
@@ -35,6 +38,9 @@ for ($i = 0; $i < $numberOfQuestions; $i++) {
             break;
         case 'degreeOfChord':
             $questions[] = degreeOfChordQuestion($knowledge);
+            break;
+        case 'chordOfDegree':
+            $questions[] = chordOfDegreeQuestion($knowledge);
             break;
         case 'areaOfChord':
             $questions[] = areaOfChordQuestion($knowledge);
@@ -143,7 +149,7 @@ function notesOfIntervalQuestion($knowledge)
 }
 
 /**
- * A chord, a key and an scale is shown, and the user must say which degree it belongs to.
+ * A chord, a key and an scale are shown, and the user must say which degree it belongs to.
  * @param $knowledge
  */
 function degreeOfChordQuestion($knowledge)
@@ -168,7 +174,54 @@ function degreeOfChordQuestion($knowledge)
 }
 
 /**
- * A chord, a key and an scale is shown, and the user must say which degree it belongs to.
+ * A scale and a degree are shown, and the user must specify which of the proposed chords
+ * are a right choice for that degree in that scale.
+ * @param $knowledge
+ */
+function chordOfDegreeQuestion($knowledge)
+{
+    $tonic = $knowledge->getRandomNote();
+    $scale = $knowledge->getRandomScale();
+    $notesScale = $knowledge->getNotesScale($tonic, $scale);
+    $allPossibleChords = $knowledge->getAllPossibleChords($notesScale, false);
+    $randomChord = $allPossibleChords[rand(0, count($allPossibleChords) - 1)];
+    list($tonicOfChord, $chordType) = $knowledge->getTonicAndTypeOfChord($randomChord);
+    $degree = array_search($tonicOfChord, $notesScale) + 1;
+    // Now we get only the valid chords of this degree for the given scale
+    $numPossibleChords = count($allPossibleChords);
+    $validChords = array();
+    for ($possibleChordIndex = 0; $possibleChordIndex < $numPossibleChords; $possibleChordIndex++) {
+        list($tonicOfCurrentChord, $chordType) = $knowledge->getTonicAndTypeOfChord($allPossibleChords[$possibleChordIndex]);
+        if ($tonicOfCurrentChord == $tonicOfChord) {
+            $validChords[] = $allPossibleChords[$possibleChordIndex];
+        }
+    }
+
+    // Preparation of the shown question elements
+    $allAlterations = $knowledge->getAllAlterationsOfNote($tonicOfChord);
+    $chordTypes = $knowledge->getAllChordTypes();
+    $shownElements = array();
+    $numPossibleTonics = count($allAlterations);
+    $numChordTypes = count($chordTypes);
+    for ($baseNoteIndex = 0; $baseNoteIndex < $numPossibleTonics; $baseNoteIndex++) {
+        for ($chordTypeIndex = 0; $chordTypeIndex < $numChordTypes; $chordTypeIndex++) {
+            $shownElements[] = $allAlterations[$baseNoteIndex] . $chordTypes[$chordTypeIndex];
+        }
+    }
+
+    $question = array();
+    $question['key'] = 'Key: ' . $tonic;
+    $question['mode'] = 'Scale: ' . $scale;
+    $question['type'] = 'chordOfDegree';
+    $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordOfDegree'];
+    $question['questionElement'] = 'Degree: ' . $degree;
+    $question['expected'] = implode(',', $validChords);
+    $question['shown'] = implode(',', $shownElements);
+    return $question;
+}
+
+/**
+ * A chord, a key and an scale are shown, and the user must say which degree it belongs to.
  * @param $knowledge
  */
 function chordBelongsToScaleQuestion($knowledge)
@@ -218,5 +271,27 @@ function notesOfScaleQuestion($knowledge)
     $question['questionElement'] = '';
     $question['expected'] = implode(',', $notesScale);
     $question['shown'] = implode(',', $allNotes);
+    return $question;
+}
+
+/**
+ * The name of the scale for a given group of notes is asked
+ * @param $knowledge
+ */
+function scaleOfNotesQuestion($knowledge)
+{
+    $tonic = $knowledge->getRandomNote();
+    $scale = $knowledge->getRandomScale();
+    $notesScale = $knowledge->getNotesScale($tonic, $scale);
+    $allNotes = $knowledge->getAllNotes($notesScale);
+    $allScales = $knowledge->getAllScales();
+    $question = array();
+    $question['key'] = '';
+    $question['mode'] = '';
+    $question['type'] = 'notesOfScale';
+    $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['scaleOfNotes'];
+    $question['questionElement'] = implode(',', $notesScale);
+    $question['expected'] = $scale;
+    $question['shown'] = implode(',', $allScales);
     return $question;
 }

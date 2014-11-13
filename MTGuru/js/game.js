@@ -152,23 +152,8 @@ function nextQuestionCont() {
 
     currentType = questions.questions[currentQuestion].type;
 
+    // In case a specific question type requires a special treatment, it will be performed here.
     switch (currentType) {
-        /*case "notesOfChord":
-         // notes of chord...
-         notesOfChord();
-         break;
-         case "degreeOfChord":
-         // degree of chord...
-         degreeOfChord();
-         break;
-         case "areaOfChord":
-         // area of chord...
-         areaOfChord();
-         break;
-         case "substitutionOfChord":
-         // area of chord...
-         substitutionOfChord();
-         break;*/
         default:
             // generic question
             genericQuestion();
@@ -189,22 +174,6 @@ function updateCommon() {
     currentScale.text(questions.questions[currentQuestion]['mode']);
 }
 
-function notesOfChord() {
-    var questionDiv = $(".notesOfChord");
-    questionDiv.find(".answerItems").empty();
-    var shown = (questions.questions[currentQuestion]['shown']).split(",");
-    for (var i = 0; i < shown.length; i++) {
-        var newDiv = '<div class="answerItem" data-item="' + shown[i] + '">' + shown[i] + '</div>';
-        questionDiv.find(".answerItems").append(newDiv);
-    }
-    currentQDiv = questionDiv;
-    updateCommon();
-    questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
-    questionDiv.find(".questionChord").text(questions.questions[currentQuestion]['chord']);
-    //questionDiv.append("NOTES OF CHORD!!");
-    questionDiv.fadeIn(1000);
-}
-
 function genericQuestion() {
     var questionDiv = $(".genericQuestion");
     questionDiv.find(".answerItems").empty();
@@ -218,39 +187,6 @@ function genericQuestion() {
     questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
     questionDiv.find(".questionElement").text(questions.questions[currentQuestion]['questionElement']);
     //questionDiv.append("NOTES OF CHORD!!");
-    questionDiv.fadeIn(1000);
-}
-
-function degreeOfChord() {
-    var questionDiv = $(".degreeOfChord");
-    currentQDiv = questionDiv;
-    updateCommon();
-    questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
-    questionDiv.find(".questionChord").text(questions.questions[currentQuestion]['chord']);
-    //questionDiv.append("DEGREE OF CHORD!!");
-    //$(".question").fadeOut(0);
-    questionDiv.fadeIn(1000);
-}
-
-function areaOfChord() {
-    var questionDiv = $(".areaOfChord");
-    currentQDiv = questionDiv;
-    updateCommon();
-    questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
-    questionDiv.find(".questionChord").text(questions.questions[currentQuestion]['chord']);
-    //questionDiv.append("AREA OF CHORD!!");
-    //$(".question").fadeOut(0);
-    questionDiv.fadeIn(1000);
-}
-
-function substitutionOfChord() {
-    var questionDiv = $(".substitutionOfChord");
-    currentQDiv = questionDiv;
-    updateCommon();
-    questionDiv.find(".questionText").text(questions.questions[currentQuestion]['text']);
-    questionDiv.find(".questionChord").text(questions.questions[currentQuestion]['chord']);
-    //questionDiv.append("SUBSTITUTION OF CHORD!!");
-    //$(".question").fadeOut(0);
     questionDiv.fadeIn(1000);
 }
 
