@@ -1,0 +1,8 @@
+M 3M 5J
+m 3m 5J
+dim 3m 5-
+m7 3m 5J 7m
+7 3M 5J 7m
+Maj7 3M 5J 7M
+mMaj7 3m 5J 7M
+dim7 3m 5- 7m

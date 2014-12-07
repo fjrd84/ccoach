@@ -1,6 +1,9 @@
 TEORÍA Y PREGUNTAS
+Preguntar insistentemente sobre unas alteraciones concretas.
 Preguntar insistentemente sobre una escala concreta (grado de escala)
+Preguntar distancia de intervalos e intervalos de distancias.
 Progresiones y cadencias.
+Dada una secuencia armónica en un tono, pedir el cambio a otro tono y hacer preguntas sobre ambos.
 Conocimiento de sustitución de acordes equivalentes.
 Modulación.
 Preguntas con audio.
@@ -18,6 +21,7 @@ Ranking con puntuaciones.
 MEJORAS TÉCNICAS
 Inclusión en framework (zend).
 Gestion de usuarios.
+Integración con PHPUnit
 
 SISTEMA DE JUEGO
 Sistema de puntuación:
