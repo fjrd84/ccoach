@@ -1,7 +1,0 @@
-ionian 2M 3M 4J 5J 6M 7M
-dorian 2M 3m 4J 5J 6M 7m
-phrygian 2m 3m 4J 5J 6m 7m
-lydian 2M 3M 4+ 5J 6M 7M
-myxolidian 2M 3M 4J 5J 6M 7m
-aeolian 2M 3m 4J 5J 6m 7m
-locrian 2m 3m 4J 5- 6m 7m
