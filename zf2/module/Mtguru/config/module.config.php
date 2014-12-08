@@ -83,8 +83,20 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'MTGuru\Controller\Index' => 'MTGuru\Controller\IndexController',
-            'MTGuru\Controller\Ajax' => 'MTGuru\Controller\AjaxController',
+            /*'MTGuru\Controller\Index' => 'MTGuru\Controller\IndexController',*/
+            /*'MTGuru\Controller\Ajax' => 'MTGuru\Controller\AjaxController',*/
+        ),
+        'factories' => array(
+            'MTGuru\Controller\Index' => function($sm) {
+                    $translator = $sm->getServiceLocator()->get('translator');
+                    $controller = new MTGuru\Controller\IndexController($translator);
+                    return $controller;
+                },
+            'MTGuru\Controller\Ajax' => function($sm) {
+                    $translator = $sm->getServiceLocator()->get('translator');
+                    $controller = new MTGuru\Controller\AjaxController($translator);
+                    return $controller;
+                },
         ),
     ),
     'view_manager' => array(

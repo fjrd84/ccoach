@@ -12,30 +12,33 @@ namespace MTGuru\Controller;
 use MTGuru\Classes\General\QuestionsGenerator;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Zend\Mvc\I18n\Translator;
+use MTGuru\Classes\General\Knowledge;
 
 class IndexController extends AbstractActionController
 {
+
+    protected $translator;
+
+    public function __construct(Translator $translator)
+    {
+        $this->translator = $translator;
+    }
+
     public function indexAction()
     {
-        $questionsGenerator = new QuestionsGenerator();
-        // TODO: Move the initial configuration to the framework
-        $questionsGenerator->loadMigrationConfig();
         return new ViewModel();
     }
     public function gameAction()
     {
-        $questionsGenerator = new QuestionsGenerator();
-        // TODO: Move the initial configuration to the framework
-        $questionsGenerator->loadMigrationConfig();
         return new ViewModel();
     }
 
     public function trainingAction()
     {
-        $questionsGenerator = new QuestionsGenerator();
-        // TODO: Move the initial configuration to the framework
-        $questionsGenerator->loadMigrationConfig();
-        $_SESSION['questionTypes'] = $questionsGenerator->knowledge->getQuestionTypes();;
+        $knowledge = Knowledge::getInstance();
+        $knowledge->readFiles();
+        $_SESSION['questionTypes'] = $knowledge->getQuestionTypes($this->translator);;
         return new ViewModel();
     }
 }

@@ -3,48 +3,16 @@
 namespace MTGuru\Classes\General;
 
 use MTGuru\Classes\General\Knowledge;
+use Zend\I18n\Translator\Translator;
+
 class QuestionsGenerator
 {
-
     public $knowledge;
-    /**
-     * Temporary function to keep the configuration previous to the migration
-     */
-    public function loadMigrationConfig(){
-        // Lang (TODO: move to language folder)
-        $_SESSION['txt']['en']['home']['home'] = 'Home';
-        $_SESSION['txt']['en']['home']['welcome'] = 'Welcome';
-        $_SESSION['txt']['en']['home']['play'] = 'Play!';
-        $_SESSION['txt']['en']['home']['training'] = 'Training!';
-        $_SESSION['txt']['en']['scale']['ionian'] = 'Ionian';
-        $_SESSION['txt']['en']['questions']['notesOfChord'] = 'Tell me the notes of this chord';
-        $_SESSION['txt']['en']['questions']['chordOfNotes'] = 'Which chord is formed by the following notes?';
-        $_SESSION['txt']['en']['questions']['intervalOfNotes'] = 'Which interval is formed by the following notes?';
-        $_SESSION['txt']['en']['questions']['notesOfInterval'] = 'Which note forms this interval with the given tonic?';
-        $_SESSION['txt']['en']['questions']['degreeOfChord'] = "Tell me the degree of this chord";
-        $_SESSION['txt']['en']['questions']['chordOfDegree'] = "Tell me the chords that belong to the following degree in the given scale";
-        $_SESSION['txt']['en']['questions']['notesOfScale'] = "Tell me the notes of this scale";
-        $_SESSION['txt']['en']['questions']['scaleOfNotes'] = "Which scale type belongs to the following sequence?";
-        $_SESSION['txt']['en']['questions']['chordBelongsToScale'] = "Does this chord belong to the scale?";
-        $_SESSION['txt']['en']['questions']['yes'] = "Yes";
-        $_SESSION['txt']['en']['questions']['no'] = "No";
-        // Configuration. TODO: Use ACL
-        $_SESSION['currentUser']['userName'] = 'jdonado';
-        $_SESSION['currentUser']['pass'] = 'pass';
-        $_SESSION['currentUser']['points'] = '12345';
-        $_SESSION['currentUser']['level'] = '2';
-        $_SESSION['lang']='en';
-        //
-        $knowledge = Knowledge::getInstance();
-        $knowledge->readFiles();
-        $this->knowledge = $knowledge;
-    }
+    public $translator;
 
-    public function generateQuestion()
+    public function generateQuestion($translator)
     {
-        //require_once '../config/config.php';
-        //require_once 'classes/General/Knowledge.php';
-        $currentDir = getcwd();
+        $this->translator = $translator;
         $numberOfQuestions = 10;
         $maxNotesChord = 4;
         $knowledge = Knowledge::getInstance();
@@ -114,7 +82,7 @@ class QuestionsGenerator
         $chordQuestion['key'] = '';
         $chordQuestion['mode'] = '';
         $chordQuestion['type'] = 'notesOfChord';
-        $chordQuestion['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['notesOfChord'];
+        $chordQuestion['text'] = $this->translator->translate('questions_notesOfChord');
         $note = $knowledge->getRandomNote();
         $chord = $knowledge->getRandomChord($note);
         $chordQuestion['questionElement'] = $chord;
@@ -136,7 +104,7 @@ class QuestionsGenerator
         $chordQuestion['key'] = '';
         $chordQuestion['mode'] = '';
         $chordQuestion['type'] = 'chordOfNotes';
-        $chordQuestion['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordOfNotes'];
+        $chordQuestion['text'] = $this->translator->translate('questions_chordOfNotes');
         $chord = $knowledge->getRandomChord();
         list($tonic, $chordType) = $knowledge->getTonicAndTypeOfChord($chord);
         $notes = $knowledge->getNotesChord($chord);
@@ -163,7 +131,7 @@ class QuestionsGenerator
         $intervalQuestion['key'] = '';
         $intervalQuestion['mode'] = '';
         $intervalQuestion['type'] = 'intervalOfNotes';
-        $intervalQuestion['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['intervalOfNotes'];
+        $intervalQuestion['text'] = $this->translator->translate('questions_intervalOfNotes');
         $intervalQuestion['questionElement'] = $tonic . ' ' . $intervalNote;
         $intervalQuestion['expected'] = implode(',', $knowledge->getEquivalentIntervals($interval));
         $intervalQuestion['shown'] = implode(',', $allIntervals);
@@ -185,7 +153,7 @@ class QuestionsGenerator
         $intervalQuestion['key'] = '';
         $intervalQuestion['mode'] = '';
         $intervalQuestion['type'] = 'notesOfInterval';
-        $intervalQuestion['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['notesOfInterval'];
+        $intervalQuestion['text'] = $this->translator->translate('questions_notesOfInterval');
         $intervalQuestion['questionElement'] = 'Tonic: ' . $tonic . ', interval:' . $interval;
         $intervalQuestion['expected'] = $intervalNote;
         $intervalQuestion['shown'] = implode(',', $allNotes);
@@ -210,7 +178,7 @@ class QuestionsGenerator
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
         $question['type'] = 'degreeOfChord';
-        $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['degreeOfChord'];
+        $question['text'] = $this->translator->translate('questions_degreeOfChord');
         $question['questionElement'] = 'Chord: ' . $randomChord;
         $question['expected'] = $degree;
         $question['shown'] = implode(',', $allDegrees);
@@ -257,7 +225,7 @@ class QuestionsGenerator
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
         $question['type'] = 'chordOfDegree';
-        $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordOfDegree'];
+        $question['text'] = $this->translator->translate('questions_chordOfDegree');
         $question['questionElement'] = 'Degree: ' . $degree;
         $question['expected'] = implode(',', $validChords);
         $question['shown'] = implode(',', $shownElements);
@@ -272,8 +240,8 @@ class QuestionsGenerator
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
-        $yes = $belongsToScale = $_SESSION['txt'][$_SESSION['lang']]['questions']['yes'];
-        $no = $belongsToScale = $_SESSION['txt'][$_SESSION['lang']]['questions']['no'];
+        $yes = $belongsToScale = $this->translator->translate('questions_yes');
+        $no = $belongsToScale = $this->translator->translate('questions_no');
         $notesScale = $knowledge->getNotesScale($tonic, $scale);
         $allPossibleChords = $knowledge->getAllPossibleChords($notesScale, false);
         $randomChord = $allPossibleChords[rand(0, count($allPossibleChords) - 1)];
@@ -290,7 +258,7 @@ class QuestionsGenerator
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
         $question['type'] = 'chordBelongsToScale';
-        $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['chordBelongsToScale'];
+        $question['text'] = $this->translator->translate('questions_chordBelongsToScale');
         $question['questionElement'] = 'Chord: ' . $randomChord;
         $question['expected'] = $belongsToScale;
         $question['shown'] = $yes . ',' . $no;
@@ -311,7 +279,7 @@ class QuestionsGenerator
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
         $question['type'] = 'notesOfScale';
-        $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['notesOfScale'];
+        $question['text'] = $this->translator->translate('questions_notesOfScale');
         $question['questionElement'] = '';
         $question['expected'] = implode(',', $notesScale);
         $question['shown'] = implode(',', $allNotes);
@@ -333,7 +301,7 @@ class QuestionsGenerator
         $question['key'] = '';
         $question['mode'] = '';
         $question['type'] = 'notesOfScale';
-        $question['text'] = $_SESSION['txt'][$_SESSION['lang']]['questions']['scaleOfNotes'];
+        $question['text'] = $this->translator->translate('questions_scaleOfNotes');
         $question['questionElement'] = implode(',', $notesScale);
         $question['expected'] = $scale;
         $question['shown'] = implode(',', $allScales);

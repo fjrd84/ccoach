@@ -1,3 +1,7 @@
+MEJORAS TÉCNICAS
+Gestion de usuarios.
+Integración con PHPUnit
+
 TEORÍA Y PREGUNTAS
 Preguntar insistentemente sobre unas alteraciones concretas.
 Preguntar insistentemente sobre una escala concreta (grado de escala)
@@ -18,11 +22,6 @@ Páginas con introducciones teóricas previas a cada nivel.
 Teoría accesible a cada momento.
 Ranking con puntuaciones.
 
-MEJORAS TÉCNICAS
-Inclusión en framework (zend).
-Gestion de usuarios.
-Integración con PHPUnit
-
 SISTEMA DE JUEGO
 Sistema de puntuación:
     Solo puntúa en modo de juego. El modo de entrenamiento sirve para mejorar la tasa de acierto.
@@ -37,6 +36,7 @@ Explicación de respuestas.
 ...........................................................................
 
 YA HECHO
+Inclusión en framework (zend).
 Sistema de reconocimiento de acordes por notas.
 Escalas y tonalidades.
 Encuadre de acordes en modos y escalas.
