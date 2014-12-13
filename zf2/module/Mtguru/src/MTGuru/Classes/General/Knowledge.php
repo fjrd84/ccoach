@@ -33,13 +33,13 @@ class Knowledge
      */
     public function readFiles()
     {
-        $path = getcwd();
-        $this->distances = $this->parseFile('knowledge/distances.txt');
-        $this->intervals = $this->parseFile('knowledge/intervals.txt');
-        $this->chords = $this->parseFile('knowledge/chords.txt');
-        $this->notes = $this->parseFile('knowledge/notes.txt');
-        $this->scales = $this->parseFile('knowledge/scales.txt');
-        $this->questionTypes = $this->parseFile('knowledge/questionTypes.txt');
+        $pathToFiles = 'knowledge/';
+        $this->distances = $this->parseFile($pathToFiles . 'distances.txt');
+        $this->intervals = $this->parseFile($pathToFiles . 'intervals.txt');
+        $this->chords = $this->parseFile($pathToFiles . 'chords.txt');
+        $this->notes = $this->parseFile($pathToFiles . 'notes.txt');
+        $this->scales = $this->parseFile($pathToFiles . 'scales.txt');
+        $this->questionTypes = $this->parseFile($pathToFiles . 'questionTypes.txt');
     }
 
     function getRandomQuestionType()
@@ -56,7 +56,8 @@ class Knowledge
         return $this->questionTypes[$index][0];
     }
 
-    function getQuestionTypes(){
+    function getQuestionTypes()
+    {
         return $this->questionTypes;
     }
 
@@ -322,15 +323,16 @@ class Knowledge
      * It returns all the possible alterations for a given note (no matter if the note itself is altered).
      * The input note will be included in the output (if the input note 'makes sense').
      */
-    public function getAllAlterationsOfNote($note){
-        $basisNote = substr($note,0,1);
+    public function getAllAlterationsOfNote($note)
+    {
+        $basisNote = substr($note, 0, 1);
         $notes = array();
-        if($basisNote!="C" && $basisNote != "F"){
-            $notes[]=$basisNote."b";
+        if ($basisNote != "C" && $basisNote != "F") {
+            $notes[] = $basisNote . "b";
         }
-        $notes[]=$basisNote;
-        if($basisNote!="E" && $basisNote != "B"){
-            $notes[]=$basisNote."#";
+        $notes[] = $basisNote;
+        if ($basisNote != "E" && $basisNote != "B") {
+            $notes[] = $basisNote . "#";
         }
         return $notes;
     }
@@ -371,10 +373,11 @@ class Knowledge
      * @param $scale name of the scale
      * @return int index of the scale.
      */
-    public function getScaleIndex($scale){
+    public function getScaleIndex($scale)
+    {
         $numScales = count($this->scales);
-        for($index = 0; $index < $numScales; $index++){
-            if($this->scales[$index][0]==$scale){
+        for ($index = 0; $index < $numScales; $index++) {
+            if ($this->scales[$index][0] == $scale) {
                 return $index;
             }
         }
@@ -512,7 +515,7 @@ class Knowledge
                 if ($tonicIndex != $noteIndex) {
                     $currentPossibleIntervals = $this->getIntervalsNotes($currentTonic, $notes[$noteIndex]);
                     $possibleIntervalsWithTonicAndNote[$tonicIndex][$noteIndex] = $currentPossibleIntervals;
-                    if(!isset($possibleIntervalsWithTonic[$tonicIndex])){
+                    if (!isset($possibleIntervalsWithTonic[$tonicIndex])) {
                         $possibleIntervalsWithTonic[$tonicIndex] = "";
                     }
                     $possibleIntervalsWithTonic[$tonicIndex] .= implode(",", $currentPossibleIntervals) . ",";
@@ -531,7 +534,7 @@ class Knowledge
                     if ($numIntervalsFoundChord == $numNotes) {
                         $allPossibleChords[] = $notes[$tonicIndex] . $allFoundChords[$indexFoundChord];
                     }
-                }else{
+                } else {
                     $allPossibleChords[] = $notes[$tonicIndex] . $allFoundChords[$indexFoundChord];
                 }
             }
