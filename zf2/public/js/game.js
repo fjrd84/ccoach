@@ -183,7 +183,6 @@ function nextQuestion() {
 
 function startGame() {
     'use strict';
-    //alert("Game is starting! :D");
     var getVars = "";
     if (trainingQuestionType === "undefined") {
         getVars = "";
@@ -191,9 +190,8 @@ function startGame() {
         getVars = {"questionType": trainingQuestionType};
     }
     $.get(baseUrl + '/mtguru/ajax/game', getVars, function (data) {
-        //$( ".result" ).html( data );
-        //alert( "Load was performed." );
-        processData(JSON.parse(JSON.stringify(eval("(" + data + ")"))));
+        // TODO: Handle errors in data
+        processData(JSON.parse(data));
     });
 }
 
