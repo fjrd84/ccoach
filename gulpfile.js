@@ -1,5 +1,5 @@
 // Include gulp
-var gulp = require('gulp'); 
+var gulp = require('gulp');
 
 // Include Our Plugins
 var jshint = require('gulp-jshint');
@@ -9,33 +9,33 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 // Lint Task
-gulp.task('lint', function() {
-    return gulp.src('MTGuru/js/*.js')
+gulp.task('lint', function () {
+    return gulp.src('zf2/public/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
 // Compile Our Sass
-gulp.task('sass', function() {
-    return gulp.src('MTGuru/scss/*.scss')
+gulp.task('sass', function () {
+    return gulp.src('zf2/public/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('zf2/public/dist/css'));
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src('MTGuru/js/*.js')
+gulp.task('scripts', function () {
+    return gulp.src('zf2/public/js/*.js')
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('zf2/public/dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('zf2/public/dist'));
 });
 
 // Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('MTGuru/js/*.js', ['lint', 'scripts']);
-    gulp.watch('MTGuru/scss/*.scss', ['sass']);
+gulp.task('watch', function () {
+    gulp.watch('zf2/public/js/*.js', ['lint', 'scripts']);
+    gulp.watch('zf2/public/scss/*.scss', ['sass']);
 });
 
 // Default Task

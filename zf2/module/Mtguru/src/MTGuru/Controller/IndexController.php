@@ -34,6 +34,50 @@ class IndexController extends AbstractActionController
         return new ViewModel();
     }
 
+    public function doctrineAction(){
+        $objectManager = $this
+            ->getServiceLocator()
+            ->get('Doctrine\ORM\EntityManager');
+
+        $user = new \MTGuru\Entity\User();
+        $user->setFullName('Paco Porras');
+        $objectManager->persist($user); // $user is now "managed"
+
+        $user2 = new \MTGuru\Entity\User();
+        $user2->setFullName('Michaël Gallego');
+        $objectManager->persist($user2);
+
+        $objectManager->flush(); // commit changes to db
+
+        // Retrieve an object
+        $user1 = $objectManager->find('MTGuru\Entity\User', 1);
+
+        var_dump($user1->getFullName()); // Marco Pivetta
+
+        $user2 = $objectManager
+            ->getRepository('MTGuru\Entity\User')
+            ->findOneBy(array('fullName' => 'Michaël Gallego'));
+
+        var_dump($user2->getFullName()); // Michaël Gallego
+
+        // update an object
+        $user = $objectManager->find('MTGuru\Entity\User', 1);
+
+        $user->setFullName('Guilherme Blanco');
+
+        $objectManager->flush();
+
+        // Remove an object
+        $user = $objectManager->find('MTGuru\Entity\User', 1);
+
+        $objectManager->remove($user);
+
+        $objectManager->flush();
+
+
+        die(var_dump($user->getId())); // yes, I'm lazy
+    }
+
     public function trainingAction()
     {
         $knowledge = Knowledge::getInstance();

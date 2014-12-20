@@ -240,15 +240,16 @@ class QuestionsGenerator
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
-        $yes = $belongsToScale = $this->translator->translate('questions_yes');
-        $no = $belongsToScale = $this->translator->translate('questions_no');
+        $yes = $this->translator->translate('questions_yes');
+        $no  = $this->translator->translate('questions_no');
         $notesScale = $knowledge->getNotesScale($tonic, $scale);
         $allPossibleChords = $knowledge->getAllPossibleChords($notesScale, false);
         $randomChord = $allPossibleChords[rand(0, count($allPossibleChords) - 1)];
         $belongsToScale = $yes;
         list($tonicChord, $chordType) = $knowledge->getTonicAndTypeOfChord($randomChord);
         // Sometimes a random chord will be generated that might not belong to the scale
-        if (rand(0, 10) > 4) {
+        $randomNumber = rand(0,100);
+        if ($randomNumber > 50) {
             $randomChord = $knowledge->getRandomChord($tonicChord);
             if (!in_array($randomChord, $allPossibleChords)) {
                 $belongsToScale = $no;

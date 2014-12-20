@@ -54,22 +54,47 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse(empty($allQuestionTypes));
     }
 
-    public function testGeneralTheory(){
+    /**
+     * @depends testKnowledgeCanBeLoaded
+     */
+    public function testPossibleChords(){
         $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
-        $knowledge->readFiles();
-
-        // Todo: add assertions and divide into different tests
         // All possible chords tests
         $notes = array();
         $notes[] = "C";
         $notes[] = "E";
         $notes[] = "G";
         $notes[] = "B";
-        $test4 = $knowledge->getAllPossibleChords($notes, true); // CMaj7
+        $CMaj7 = $knowledge->getAllPossibleChords($notes, true); // CMaj7
+        $this->assertTrue(in_array('CMaj7', $CMaj7));
         $notes[] = "D";
         $notes[] = "F";
         $notes[] = "A";
-        $test4 = $knowledge->getAllPossibleChords($notes, false); // All chords of C ionian
+        $CIonianChords = $knowledge->getAllPossibleChords($notes, false); // All chords of C ionian
+        $expectedArray = array( 0 => 'CM',
+                                1 => 'CMaj7',
+                                2 => 'Em',
+                                3 => 'Em7',
+                                4 => 'GM',
+                                5 => 'G7',
+                                6 => 'Bdim',
+                                7 => 'Bdim7',
+                                8 => 'Dm',
+                                9 => 'Dm7',
+                                10 => 'FM',
+                                11 => 'FMaj7',
+                                12 => 'Am',
+                                13 => 'Am7');
+        $differentElements = count(array_diff($CIonianChords, $expectedArray));
+        $this->assertTrue($differentElements===0);
+    }
+
+    /**
+     * Tests the notes of a generated scale
+     * @depends testKnowledgeCanBeLoaded
+     */
+    public function testNotesChord(){
+        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
         // Notes of chords tests
         $knowledge->getNotesChord('C#Maj7');
         $knowledge->getNotesChord('Em7');
@@ -77,13 +102,35 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
         $knowledge->getNotesChord('Eb7');
         $knowledge->getNotesChord('G#7');
         $knowledge->getNotesChord('D#M');
+    }
 
+    /**
+     * Tests the notes of a generated scale
+     * @depends testKnowledgeCanBeLoaded
+     */
+    public function testNotesScale(){
+        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
         // Notes scales tests
-        $knowledge->getNotesScale('Db', 'ionian');
-        $knowledge->getNotesScale('F', 'ionian');
-        $knowledge->getNotesScale('D', 'dorian');
-        $knowledge->getNotesScale('D', 'ionian');
+        $DbIonian = $knowledge->getNotesScale('Db', 'ionian');
+        $this->assertTrue(in_array('Eb',$DbIonian));
+        $fIonian = $knowledge->getNotesScale('F', 'ionian');
+        $this->assertTrue(in_array('Bb',$fIonian));
+        $cIonian = $knowledge->getNotesScale('C', 'ionian');
+        $dDorian = $knowledge->getNotesScale('D', 'dorian');
+        $ePhrygian = $knowledge->getNotesScale('E', 'phrygian');
+        // C ionian and D dorian have the same notes
+        $differentElements = count(array_diff($cIonian, $dDorian));
+        $this->assertTrue($differentElements===0);
+        $differentElements = count(array_diff($cIonian, $ePhrygian));
+        $this->assertTrue($differentElements===0);
+    }
 
+    /**
+     * Tests some random intervals
+     * @depends testKnowledgeCanBeLoaded
+     */
+    public function testNoteInterval(){
+        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
         // Note intervals tests
         $this->assertEquals($knowledge->getNoteInterval('C', '3m'),'Eb');
         $this->assertEquals($knowledge->getNoteInterval('C', '3M'),'E');
@@ -92,6 +139,14 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($knowledge->getNoteInterval('C', '7M'),'B');
         $this->assertEquals($knowledge->getNoteInterval('A', '4+'),'D#');
 
+    }
+
+    /**
+     * Tests some random distances
+     * @depends testKnowledgeCanBeLoaded
+     */
+    public function testDistances(){
+        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
         // Distance Tests
         $this->assertEquals($knowledge->getDistance("D", "A"),3.5);
         $this->assertEquals($knowledge->getDistance("A", "D"),2.5);
@@ -100,6 +155,5 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($knowledge->getDistance("Eb", "E"), 0.5);
         $this->assertEquals($knowledge->getDistance("Db", "D#"), 1);
         $this->assertEquals($knowledge->getDistance("Db", "A#"), 4.5);
-
     }
 }

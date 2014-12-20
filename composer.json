@@ -1,0 +1,6 @@
+{
+    "require": {
+        "doctrine/doctrine-orm-module": "0.7.*",
+        "zendframework/zend-developer-tools": "dev-master"
+    }
+}
