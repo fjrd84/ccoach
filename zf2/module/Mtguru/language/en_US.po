@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MTGuru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-08 22:37+0100\n"
-"PO-Revision-Date: 2014-12-08 22:41+0100\n"
+"POT-Creation-Date: 2014-12-27 00:25+0100\n"
+"PO-Revision-Date: 2014-12-27 00:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
 "Language: en_US\n"
@@ -15,135 +15,147 @@ msgstr ""
 "X-Generator: Poedit 1.7.1\n"
 "X-Poedit-SearchPath-0: ../..\n"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:102
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:85
 msgid "questions_notesOfChord"
 msgstr "Tell me the notes of this chord"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:124
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:107
 msgid "questions_chordOfNotes"
 msgstr "Which chord is formed by the following notes?"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:151
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:134
 msgid "questions_intervalOfNotes"
 msgstr "Which interval is formed by the following notes?"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:173
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:156
 msgid "questions_notesOfInterval"
 msgstr "Which note forms this interval with the given tonic?"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:198
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:181
 msgid "questions_degreeOfChord"
 msgstr "Tell me the degree of this chord"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:245
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:228
 msgid "questions_chordOfDegree"
 msgstr "Tell me the chords that belong to the following degree in the given scale"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:260
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:243
 msgid "questions_yes"
 msgstr "Yes"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:261
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:244
 msgid "questions_no"
 msgstr "No"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:278
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:262
 msgid "questions_chordBelongsToScale"
 msgstr "Does this chord belong to the scale?"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:299
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:283
 msgid "questions_notesOfScale"
 msgstr "Tell me the notes of this scale"
 
-#: ../../Mtguru/src/MTGuru/Classes/General/QuestionsGenerator.php:321
+#: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:305
 msgid "questions_scaleOfNotes"
 msgstr "Which scale type belongs to the following sequence?"
 
-#: ../../Mtguru/view/error/404.phtml:1
+#: ../../MTGuru/view/error/404.phtml:1
 msgid "A 404 error occurred"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:10
+#: ../../MTGuru/view/error/404.phtml:10
 msgid "The requested controller was unable to dispatch the request."
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:13
+#: ../../MTGuru/view/error/404.phtml:13
 msgid "The requested controller could not be mapped to an existing controller class."
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:16
+#: ../../MTGuru/view/error/404.phtml:16
 msgid "The requested controller was not dispatchable."
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:19
+#: ../../MTGuru/view/error/404.phtml:19
 msgid "The requested URL could not be matched by routing."
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:22
+#: ../../MTGuru/view/error/404.phtml:22
 msgid "We cannot determine at this time why a 404 was generated."
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:34
+#: ../../MTGuru/view/error/404.phtml:34
 msgid "Controller"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:41
+#: ../../MTGuru/view/error/404.phtml:41
 #, php-format
 msgid "resolves to %s"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:53 ../../Mtguru/view/error/index.phtml:8
+#: ../../MTGuru/view/error/404.phtml:53 ../../MTGuru/view/error/index.phtml:8
 msgid "Additional information"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:56 ../../Mtguru/view/error/404.phtml:80
-#: ../../Mtguru/view/error/index.phtml:11
-#: ../../Mtguru/view/error/index.phtml:35
+#: ../../MTGuru/view/error/404.phtml:56 ../../MTGuru/view/error/404.phtml:80
+#: ../../MTGuru/view/error/index.phtml:11
+#: ../../MTGuru/view/error/index.phtml:35
 msgid "File"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:60 ../../Mtguru/view/error/404.phtml:84
-#: ../../Mtguru/view/error/index.phtml:15
-#: ../../Mtguru/view/error/index.phtml:39
+#: ../../MTGuru/view/error/404.phtml:60 ../../MTGuru/view/error/404.phtml:84
+#: ../../MTGuru/view/error/index.phtml:15
+#: ../../MTGuru/view/error/index.phtml:39
 msgid "Message"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:64 ../../Mtguru/view/error/404.phtml:88
-#: ../../Mtguru/view/error/index.phtml:19
-#: ../../Mtguru/view/error/index.phtml:43
+#: ../../MTGuru/view/error/404.phtml:64 ../../MTGuru/view/error/404.phtml:88
+#: ../../MTGuru/view/error/index.phtml:19
+#: ../../MTGuru/view/error/index.phtml:43
 msgid "Stack trace"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:74 ../../Mtguru/view/error/index.phtml:29
+#: ../../MTGuru/view/error/404.phtml:74 ../../MTGuru/view/error/index.phtml:29
 msgid "Previous exceptions"
 msgstr ""
 
-#: ../../Mtguru/view/error/404.phtml:103
-#: ../../Mtguru/view/error/index.phtml:58
+#: ../../MTGuru/view/error/404.phtml:103
+#: ../../MTGuru/view/error/index.phtml:58
 msgid "No Exception available"
 msgstr ""
 
-#: ../../Mtguru/view/error/index.phtml:1
+#: ../../MTGuru/view/error/index.phtml:1
 msgid "An error occurred"
 msgstr ""
 
-#: ../../Mtguru/view/layout/layout.phtml:12
+#: ../../MTGuru/view/layout/layout.phtml:12
 msgid "MT Guru"
 msgstr "MT Guru"
 
-#: ../../Mtguru/view/mt-guru/index/index.phtml:3
-#: ../../Mtguru/view/mt-guru/index/training/index.phtml:3
+#: ../../MTGuru/view/mt-guru/index/index.phtml:3
+#: ../../MTGuru/view/mt-guru/index/training/index.phtml:3
 msgid "home_welcome"
 msgstr "Welcome"
 
-#: ../../Mtguru/view/mt-guru/index/index.phtml:8
+#: ../../MTGuru/view/mt-guru/index/index.phtml:5
+msgid "points"
+msgstr "Points: "
+
+#: ../../MTGuru/view/mt-guru/index/index.phtml:6
+msgid "level"
+msgstr "Level: "
+
+#: ../../MTGuru/view/mt-guru/index/index.phtml:8
 msgid "home_play"
 msgstr "Play!"
 
-#: ../../Mtguru/view/mt-guru/index/index.phtml:11
+#: ../../MTGuru/view/mt-guru/index/index.phtml:11
 msgid "home_training"
 msgstr "Training!"
 
-#: ../../Mtguru/view/mt-guru/index/training/index.phtml:19
+#: ../../MTGuru/view/mt-guru/index/index.phtml:14
+msgid "logout"
+msgstr ""
+
+#: ../../MTGuru/view/mt-guru/index/training/index.phtml:19
 msgid "home_home"
 msgstr "Home"

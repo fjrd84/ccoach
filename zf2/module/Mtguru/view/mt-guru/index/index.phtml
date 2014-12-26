@@ -1,14 +1,17 @@
 <div class="home">
     <div class="welcome">
-        <?php echo $this->translate('home_welcome') . ' ' . 'USERNAME' . '!!'; ?>
+        <?php echo $this->translate('home_welcome') . ' ' . $ident . '!!'; ?>
     </div>
-    <div class="points"><?php echo 'Points: ' . 'CURRENT POINTS'; ?></div>
-    <div class="level"><?php echo 'Level: ' . 'CURRENT LEVEL'; ?></div>
+    <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
+    <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
     <div class="button">
         <a href="<?php echo $this->basePath() ?>/mtguru/index/game"><?php echo $this->translate('home_play') ?></a>
     </div>
     <div class="button">
         <a href="<?php echo $this->basePath() ?>/mtguru/index/training"><?php echo $this->translate('home_training') ?></a>
+    </div>
+    <div class="button">
+        <a href="<?php echo $this->basePath() ?>/auth/logout"><?php echo $this->translate('logout') ?></a>
     </div>
 </div>
 
