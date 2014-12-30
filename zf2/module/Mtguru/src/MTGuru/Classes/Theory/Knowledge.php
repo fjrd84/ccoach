@@ -1,5 +1,5 @@
 <?php
-namespace MTGuru\Classes\General;
+namespace MTGuru\Classes\Theory;
 
 class Knowledge
 {
@@ -42,7 +42,7 @@ class Knowledge
         $this->questionTypes = $this->parseFile($pathToFiles . 'questionTypes.txt');
     }
 
-    function getRandomQuestionType()
+    function getRandomQuestionType($level)
     {
         /*
         More questions:

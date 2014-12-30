@@ -9,7 +9,8 @@
 
 namespace MTGuru\Controller;
 
-use MTGuru\Classes\General\QuestionsGenerator;
+use MTGuru\Classes\Utilities\UserManagement;
+use MTGuru\Classes\Theory\QuestionsGenerator;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Mvc\I18n\Translator;
@@ -28,7 +29,9 @@ class AjaxController extends AbstractActionController
     {
         $request = $this->getRequest();
         $response = $this->getResponse();
-        $questionsGenerator = new QuestionsGenerator();
+        $userManagement = new UserManagement($this->getServiceLocator());
+        $currentUser = $userManagement->getCurrentUser();
+        $questionsGenerator = new QuestionsGenerator($userManagement);
         $question = $questionsGenerator->generateQuestion($this->translator);
         //if ($request->isPost()) {
         //$response->setContent(\Zend\Json\Json::encode(array('response' => true, 'new_note_id' => "test")));

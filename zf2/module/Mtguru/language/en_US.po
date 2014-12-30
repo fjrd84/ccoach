@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MTGuru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-27 00:25+0100\n"
-"PO-Revision-Date: 2014-12-27 00:25+0100\n"
+"PO-Revision-Date: 2014-12-28 23:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
 "Language: en_US\n"
@@ -29,7 +29,7 @@ msgstr "Which interval is formed by the following notes?"
 
 #: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:156
 msgid "questions_notesOfInterval"
-msgstr "Which note forms this interval with the given tonic?"
+msgstr "Which note does this interval form with the given tonic?"
 
 #: ../../MTGuru/src/MTGuru/Classes/General/QuestionsGenerator.php:181
 msgid "questions_degreeOfChord"

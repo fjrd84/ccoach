@@ -48,7 +48,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
 
     public function testKnowledgeCanBeLoaded()
     {
-        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
+        $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         $knowledge->readFiles();
         $allQuestionTypes = $knowledge->getQuestionTypes();
         $this->assertFalse(empty($allQuestionTypes));
@@ -58,7 +58,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * @depends testKnowledgeCanBeLoaded
      */
     public function testPossibleChords(){
-        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
+        $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // All possible chords tests
         $notes = array();
         $notes[] = "C";
@@ -94,7 +94,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * @depends testKnowledgeCanBeLoaded
      */
     public function testNotesChord(){
-        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
+        $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Notes of chords tests
         $knowledge->getNotesChord('C#Maj7');
         $knowledge->getNotesChord('Em7');
@@ -109,7 +109,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * @depends testKnowledgeCanBeLoaded
      */
     public function testNotesScale(){
-        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
+        $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Notes scales tests
         $DbIonian = $knowledge->getNotesScale('Db', 'ionian');
         $this->assertTrue(in_array('Eb',$DbIonian));
@@ -130,7 +130,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * @depends testKnowledgeCanBeLoaded
      */
     public function testNoteInterval(){
-        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
+        $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Note intervals tests
         $this->assertEquals($knowledge->getNoteInterval('C', '3m'),'Eb');
         $this->assertEquals($knowledge->getNoteInterval('C', '3M'),'E');
@@ -146,7 +146,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * @depends testKnowledgeCanBeLoaded
      */
     public function testDistances(){
-        $knowledge = \MTGuru\Classes\General\Knowledge::getInstance();
+        $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Distance Tests
         $this->assertEquals($knowledge->getDistance("D", "A"),3.5);
         $this->assertEquals($knowledge->getDistance("A", "D"),2.5);

@@ -1,6 +1,30 @@
+Next Steps:
+tables:
+
+answersTable (a giant log with all answers)
+answerId; userId; questionTypeId; skill(0,1,2); right(yes,no)
+
+questionsType
+questionTypeId; questionIdent; level
+
+userAnswers (preprocessed info for level on each question type)
+userId; questionTypeId; currentSkill (0, 1, 2)
+
+*************************************************************
+
+Generate Questions:
+* more of lower skill
+* generate according to level and skill
+
+Process answers:
+* Update answersTable
+* Update currentSkill
+* If skill is at least 1 for all current types, advance level
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
 MEJORAS TÉCNICAS
-Gestion de usuarios.
-Integración con PHPUnit
+Logging
 
 TEORÍA Y PREGUNTAS
 Preguntar insistentemente sobre unas alteraciones concretas.
@@ -40,3 +64,5 @@ Inclusión en framework (zend).
 Sistema de reconocimiento de acordes por notas.
 Escalas y tonalidades.
 Encuadre de acordes en modos y escalas.
+Gestion de usuarios.
+Integración con PHPUnit

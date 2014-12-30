@@ -1,9 +1,9 @@
+notesOfInterval
+intervalOfNotes
 notesOfChord
 chordOfNotes
-intervalOfNotes
-notesOfInterval
-degreeOfChord
-chordOfDegree
 notesOfScale
 scaleOfNotes
+degreeOfChord
+chordOfDegree
 chordBelongsToScale

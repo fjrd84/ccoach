@@ -1,14 +1,25 @@
 <?php
 
-namespace MTGuru\Classes\General;
+namespace MTGuru\Classes\Theory;
 
-use MTGuru\Classes\General\Knowledge;
+use MTGuru\Classes\Theory\Knowledge;
 use Zend\I18n\Translator\Translator;
 
 class QuestionsGenerator
 {
     public $knowledge;
     public $translator;
+    private $currentUser;
+    private $userManagement;
+    private $currentSkills;
+
+    public function __construct($userManagement){
+        $this->userManagement = $userManagement;
+        $this->currentUser = $userManagement->getCurrentUser();
+        $test = $userManagement->getQuestionTypes();
+        $this->currentSkills = $userManagement->getUpdatedSkills();
+    }
+
 
     public function generateQuestion($translator)
     {
@@ -21,7 +32,7 @@ class QuestionsGenerator
         $questions = array();
         for ($i = 0; $i < $numberOfQuestions; $i++) {
             if (!isset($_GET['questionType'])) {
-                $questionType = $knowledge->getRandomQuestionType();
+                $questionType = $knowledge->getRandomQuestionType($this->currentUser->getLevel());
             } else {
                 $questionType = $_GET['questionType'];
             }

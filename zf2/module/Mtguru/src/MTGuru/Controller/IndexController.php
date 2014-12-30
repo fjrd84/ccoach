@@ -9,11 +9,12 @@
 
 namespace MTGuru\Controller;
 
-use MTGuru\Classes\General\QuestionsGenerator;
+use MTGuru\Classes\Theory\QuestionsGenerator;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Mvc\I18n\Translator;
-use MTGuru\Classes\General\Knowledge;
+use MTGuru\Classes\Theory\Knowledge;
+use MTGuru\Classes\Utilities\UserManagement;
 
 class IndexController extends AbstractActionController
 {
@@ -27,28 +28,51 @@ class IndexController extends AbstractActionController
 
     public function indexAction()
     {
-        $authService = $this->getServiceLocator()
-            ->get('AuthService');
-        $test = $authService->hasIdentity();
-        if(!$test){
-            return $this->redirect()->toRoute('login');
+        $userManagement = new UserManagement($this->getServiceLocator());
+        $currentUser = $userManagement->getCurrentUser();
+        if($currentUser == null){
+            $this->redirect()->toRoute('login');
+            return;
         }
-        $ident = $authService->getIdentity();
-
         $viewModel = new ViewModel();
-
-        $viewModel->setVariable('ident', $ident);
-        $viewModel->setVariable('numPoints', 1234);
-        $viewModel->setVariable('currentLevel', 5);
+        $viewModel->setVariable('ident', $currentUser->getFullName());
+        $viewModel->setVariable('numPoints', $currentUser->getPoints());
+        $viewModel->setVariable('currentLevel', $currentUser->getLevel());
 
         return $viewModel;
     }
+
+    public function trainingAction()
+    {
+        $knowledge = Knowledge::getInstance();
+        $knowledge->readFiles();
+        $questionTypes = $knowledge->getQuestionTypes($this->translator);
+        $userManagement = new UserManagement($this->getServiceLocator());
+        $currentUser = $userManagement->getCurrentUser();
+        if($currentUser == null){
+            $this->redirect()->toRoute('login');
+            return;
+        }
+        $viewModel = new ViewModel();
+        $viewModel->setVariable('ident', $currentUser->getFullName());
+        $viewModel->setVariable('numPoints', $currentUser->getPoints());
+        $viewModel->setVariable('currentLevel', $currentUser->getLevel());
+        $viewModel->setVariable('questionTypes', $questionTypes);
+
+        return $viewModel;
+    }
+
     public function gameAction()
     {
         return new ViewModel();
     }
 
-    public function doctrineAction(){
+    /**
+     * Only some doctrine examples!! Never run!!
+     */
+    public function doctrineAction()
+    {
+        /*
         $objectManager = $this
             ->getServiceLocator()
             ->get('Doctrine\ORM\EntityManager');
@@ -89,14 +113,7 @@ class IndexController extends AbstractActionController
         $objectManager->flush();
 
 
-        die(var_dump($user->getId())); // yes, I'm lazy
-    }
-
-    public function trainingAction()
-    {
-        $knowledge = Knowledge::getInstance();
-        $knowledge->readFiles();
-        $_SESSION['questionTypes'] = $knowledge->getQuestionTypes($this->translator);;
-        return new ViewModel();
+        die(var_dump($user->getId()));
+        */
     }
 }
