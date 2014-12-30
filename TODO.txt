@@ -1,27 +1,11 @@
 Next Steps:
-tables:
-
-answersTable (a giant log with all answers)
-answerId; userId; questionTypeId; skill(0,1,2); right(yes,no)
-
-questionsType
-questionTypeId; questionIdent; level
-
-userAnswers (preprocessed info for level on each question type)
-userId; questionTypeId; currentSkill (0, 1, 2)
-
 *************************************************************
-
-Generate Questions:
-* more of lower skill
-* generate according to level and skill
 
 Process answers:
 * Update answersTable
 * Update currentSkill
 * If skill is at least 1 for all current types, advance level
 
-/////////////////////////////////////////////////////////////////////////////////////////
 
 MEJORAS TÉCNICAS
 Logging
@@ -59,10 +43,28 @@ Explicación de respuestas.
 
 ...........................................................................
 
-YA HECHO
-Inclusión en framework (zend).
-Sistema de reconocimiento de acordes por notas.
-Escalas y tonalidades.
-Encuadre de acordes en modos y escalas.
-Gestion de usuarios.
-Integración con PHPUnit
+ALREADY DONE!
+
+Framework integration (zend)
+Chord recognition by using notes
+Scales and keys
+Fit chords in modes and scales
+User management
+PHPUnit integration
+tables:
+    answer (a giant log with all answers)
+    answerId; userId(manyToOne); questionTypeId(manyToOne); skill(0,1,2); right(yes,no); timestamp
+
+    questionsType
+    questionTypeId; questionName; level
+
+    userSkills (preprocessed info for level on each question type)
+    userId (manyToOne); questionTypeId(manyToOne); currentSkill (0, 1, 2)
+
+    User
+    userId; userSkills (oneToMany); answer (oneToMany)
+
+Generate Questions:
+* more of lower skill
+* check available skills for the user and update when necessary
+* generate according to level and skill

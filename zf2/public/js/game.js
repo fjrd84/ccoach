@@ -13,8 +13,19 @@ var questions,
 
 function finishRound() {
     'use strict';
-    alert("Se acabó lo que se daba!");
-    counter = -1;
+    var form = document.createElement("form"),
+        element1 = document.createElement("input");
+
+    form.method = "POST";
+    form.action = baseUrl + '/mtguru/index/results';
+
+    element1.value = JSON.stringify(answers);
+    element1.name = 'answers';
+    form.appendChild(element1);
+
+    document.body.appendChild(form);
+
+    form.submit();
 }
 
 function hideFeedback(divClass) {
@@ -107,16 +118,19 @@ function addAnswer(answer) {
         }
     }
 
-    answers[currentQuestion][currentAnswer] = answer;
+    //answers[currentQuestion][currentAnswer] = answer;
+    answers[currentQuestion][0] = questions.questions[currentQuestion].type;
     currentAnswer += 1;
     if ($.inArray(answer.toString(), rightAnswers) === -1) {
         // When a bad answer is given, we advance automatically to the next question
         // (but this one will be asked again later).
+        answers[currentQuestion].push('0');
         showBad();
         questions.questions[questions.questions.length] = questions.questions[currentQuestion];
         setTimeout(nextQuestion, delayAfter);
         return;
     }
+    answers[currentQuestion].push('1');
     showGood();
     // When all the right answers have been given, the next question is shown.
     if (currentAnswer === rightAnswers.length) {

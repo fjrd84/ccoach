@@ -8,6 +8,8 @@ class UserManagement
     private $serviceLocator;
     private $currentUser;
     private $objectManager;
+    private $expertRate = 0.8;
+    private $mediumRate = 0.4;
 
     public function __construct($serviceLocator)
     {
@@ -65,7 +67,7 @@ class UserManagement
     }
 
     /**
-     * It returns the skills for the current user
+     * It returns the skills for the current user, updating them when necessary.
      */
     public function getUpdatedSkills()
     {
@@ -75,18 +77,20 @@ class UserManagement
         $numSkills = count($currentSkills);
         if ($numQuestionTypes > $numSkills) {
             // new skills must be added for the current level
-            for($questionIdentIndex = 0; $questionIdentIndex < $numQuestionTypes; $questionIdentIndex++){
+            for ($questionIdentIndex = 0; $questionIdentIndex < $numQuestionTypes; $questionIdentIndex++) {
                 $newSkill = true;
-                for($skillIndex = 0; $skillIndex < $numSkills; $skillIndex++){
-                    if($currentSkills[$skillIndex]->getQuestionTypeId()==$currentQuestionTypes[$questionIdentIndex]->getId()){
+                for ($skillIndex = 0; $skillIndex < $numSkills; $skillIndex++) {
+                    if ($currentSkills[$skillIndex]->getQuestionType() == $currentQuestionTypes[$questionIdentIndex]) {
                         $newSkill = false;
                     }
                 }
-                if($newSkill){
+                if ($newSkill) {
                     $userSkill = new \MTGuru\Entity\UserSkill();
                     $userSkill->setUser($this->currentUser);
                     // The starting skill for any question type will be 0
                     $userSkill->setCurrentSkill(0);
+                    $userSkill->setNumberOfAnswers(0);
+                    $userSkill->setNumberRight(0);
                     $userSkill->setQuestionType($currentQuestionTypes[$questionIdentIndex]);
                     $this->objectManager->persist($userSkill);
                     $this->currentUser->addSkill($userSkill);
@@ -95,5 +99,65 @@ class UserManagement
             }
         }
         return $this->currentUser->getSkills();
+    }
+
+    public function addResults($questionType, $numAnswers, $answersRight)
+    {
+        if ($this->currentUser == null) {
+            $this->getCurrentUser();
+        }
+
+        $updatedSkills = $this->getUpdatedSkills();
+        foreach ($updatedSkills as $currentSkill) {
+            if ($currentSkill->getQuestionType()->getQuestionIdent() == $questionType) {
+                $currentPoints = $this->currentUser->getPoints() + $answersRight * 10;
+                $this->currentUser->setPoints($currentPoints);
+                $this->currentUser->setLevel($this->levelForPoints($currentPoints));
+                $currentAnswers = $currentSkill->getNumberOfAnswers() + $numAnswers;
+                $currentAnswersRight = $currentSkill->getNumberRight() + $answersRight;
+                $currentSkill->setNumberOfAnswers($currentAnswers);
+                $currentSkill->setNumberRight($currentAnswersRight);
+                if (($currentAnswersRight / $currentAnswers) > $this->expertRate) {
+                    $currentSkill->setCurrentSkill(2);
+                } elseif (($currentAnswersRight / $currentAnswers) > $this->mediumRate) {
+                    $currentSkill->setCurrentSkill(1);
+                } else {
+                    $currentSkill->setCurrentSkill(0);
+                }
+                $this->objectManager->flush();
+                return;
+            }
+        }
+    }
+
+    /**
+     * This function returns the level that belongs to a certain number of points.
+     * @param $points
+     * @return int
+     */
+    public function levelForPoints($points){
+        if($points>10000){
+            return 10;
+        }elseif($points>100000){
+            return 9;
+        }elseif($points>50000){
+            return 8;
+        }elseif($points>30000){
+            return 7;
+        }elseif($points>20000){
+            return 6;
+        }elseif($points>15000){
+            return 5;
+        }elseif($points>10000){
+            return 4;
+        }elseif($points>5000){
+            return 3;
+        }elseif($points>2000){
+            return 2;
+        }elseif($points>1000){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 } 

@@ -27,6 +27,12 @@ class UserSkill {
     /** @ORM\Column(type="integer") */
     protected $currentSkill;
 
+    /** @ORM\Column(type="integer") */
+    protected $numberOfAnswers;
+
+    /** @ORM\Column(type="integer") */
+    protected $numberRight;
+
     /**
      * @param mixed $currentSkill
      */
@@ -90,4 +96,38 @@ class UserSkill {
     {
         return $this->user;
     }
+
+    /**
+     * @param mixed $numberRight
+     */
+    public function setNumberRight($numberRight)
+    {
+        $this->numberRight = $numberRight;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumberRight()
+    {
+        return $this->numberRight;
+    }
+
+
+    /**
+     * @param mixed $numberOfAnswers
+     */
+    public function setNumberOfAnswers($numberOfAnswers)
+    {
+        $this->numberOfAnswers = $numberOfAnswers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumberOfAnswers()
+    {
+        return $this->numberOfAnswers;
+    }
+
 }

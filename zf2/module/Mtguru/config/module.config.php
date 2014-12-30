@@ -149,6 +149,7 @@ return array(
             'mt-guru/index/index' => __DIR__ . '/../view/mt-guru/index/index.phtml',
             'mt-guru/index/game' => __DIR__ . '/../view/mt-guru/index/game/index.phtml',
             'mt-guru/index/training' => __DIR__ . '/../view/mt-guru/index/training/index.phtml',
+            'mt-guru/index/results' => __DIR__ . '/../view/mt-guru/index/results/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),

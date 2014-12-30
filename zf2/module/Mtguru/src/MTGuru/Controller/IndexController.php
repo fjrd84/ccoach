@@ -30,7 +30,7 @@ class IndexController extends AbstractActionController
     {
         $userManagement = new UserManagement($this->getServiceLocator());
         $currentUser = $userManagement->getCurrentUser();
-        if($currentUser == null){
+        if ($currentUser == null) {
             $this->redirect()->toRoute('login');
             return;
         }
@@ -49,7 +49,7 @@ class IndexController extends AbstractActionController
         $questionTypes = $knowledge->getQuestionTypes($this->translator);
         $userManagement = new UserManagement($this->getServiceLocator());
         $currentUser = $userManagement->getCurrentUser();
-        if($currentUser == null){
+        if ($currentUser == null) {
             $this->redirect()->toRoute('login');
             return;
         }
@@ -65,6 +65,35 @@ class IndexController extends AbstractActionController
     public function gameAction()
     {
         return new ViewModel();
+    }
+
+    public function resultsAction()
+    {
+        $userManagement = new UserManagement($this->getServiceLocator());
+        $answers = json_decode($_POST['answers']);
+        $numAnswers = count($answers);
+        $means = array();
+        for ($indexAnswer = 0; $indexAnswer < $numAnswers; $indexAnswer++) {
+            $questionType = $answers[$indexAnswer][0];
+            $numResults = count($answers[$indexAnswer]);
+            if (!isset($means[$questionType])) {
+                $means[$questionType] = array();
+                $means[$questionType]['questionType'] = $questionType;
+                $means[$questionType]['numAnswers'] = 0;
+                $means[$questionType]['right'] = 0;
+            }
+            for ($indexResult = 1; $indexResult < $numResults; $indexResult++) {
+                $means[$questionType]['numAnswers'] += 1;
+                $means[$questionType]['right'] += $answers[$indexAnswer][$indexResult];
+            }
+        }
+        foreach($means as $results){
+            $userManagement->addResults($results['questionType'],$results['numAnswers'],$results['right']);
+        }
+        $results = json_encode($means);
+        $viewModel = new ViewModel();
+        $viewModel->setVariable('results', $results);
+        return $viewModel;
     }
 
     /**

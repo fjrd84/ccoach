@@ -13,7 +13,8 @@ class QuestionsGenerator
     private $userManagement;
     private $currentSkills;
 
-    public function __construct($userManagement){
+    public function __construct($userManagement)
+    {
         $this->userManagement = $userManagement;
         $this->currentUser = $userManagement->getCurrentUser();
         $test = $userManagement->getQuestionTypes();
@@ -24,51 +25,71 @@ class QuestionsGenerator
     public function generateQuestion($translator)
     {
         $this->translator = $translator;
-        $numberOfQuestions = 10;
-        $maxNotesChord = 4;
+        $numSkills = count($this->currentSkills);
+        $questionsPool = array();
+        $questionsPoolCount = 0;
+        // Only questions for the available skills for the current user will be generated
+        for ($i = 0; $i < $numSkills; $i++) {
+            $questionType = $this->currentSkills[$i]->getQuestionType()->getQuestionIdent();
+            $skill = $this->currentSkills[$i]->getCurrentSkill();
+            // Skill goes from 0 to 2
+            // Lesser skilled question types are more likely to appear
+            $weigh = 3 - $skill;
+            while ($weigh > 0) {
+                $questionsPool[$questionsPoolCount] = array();
+                $questionsPool[$questionsPoolCount]['questionType'] = $questionType;
+                $questionsPool[$questionsPoolCount]['skill'] = $skill;
+                ++$questionsPoolCount;
+                --$weigh;
+            }
+        }
+
+        $numberOfQuestions = 7; // There will be 7 random questions
         $knowledge = Knowledge::getInstance();
         $knowledge->readFiles();
         $this->knowledge = $knowledge;
         $questions = array();
         for ($i = 0; $i < $numberOfQuestions; $i++) {
             if (!isset($_GET['questionType'])) {
-                $questionType = $knowledge->getRandomQuestionType($this->currentUser->getLevel());
+                // A random question type is picked from the pool
+                $question = $questionsPool[rand(0,$questionsPoolCount-1)];
             } else {
+                // TODO...
                 $questionType = $_GET['questionType'];
             }
-            switch ($questionType) {
+            switch ($question['questionType']) {
                 case 'notesOfChord':
-                    $questions[] = $this->notesOfChordQuestion($knowledge);
+                    $questions[] = $this->notesOfChordQuestion($knowledge, $question['skill']);
                     break;
                 case 'notesOfScale':
-                    $questions[] = $this->notesOfScaleQuestion($knowledge);
+                    $questions[] = $this->notesOfScaleQuestion($knowledge, $question['skill']);
                     break;
                 case 'scaleOfNotes':
-                    $questions[] = $this->scaleOfNotesQuestion($knowledge);
+                    $questions[] = $this->scaleOfNotesQuestion($knowledge, $question['skill']);
                     break;
                 case 'chordOfNotes':
-                    $questions[] = $this->chordOfNotesQuestion($knowledge);
+                    $questions[] = $this->chordOfNotesQuestion($knowledge, $question['skill']);
                     break;
                 case 'chordBelongsToScale':
-                    $questions[] = $this->chordBelongsToScaleQuestion($knowledge);
+                    $questions[] = $this->chordBelongsToScaleQuestion($knowledge, $question['skill']);
                     break;
                 case 'notesOfInterval':
-                    $questions[] = $this->notesOfIntervalQuestion($knowledge);
+                    $questions[] = $this->notesOfIntervalQuestion($knowledge, $question['skill']);
                     break;
                 case 'intervalOfNotes':
-                    $questions[] = $this->intervalOfNotesQuestion($knowledge);
+                    $questions[] = $this->intervalOfNotesQuestion($knowledge, $question['skill']);
                     break;
                 case 'degreeOfChord':
-                    $questions[] = $this->degreeOfChordQuestion($knowledge);
+                    $questions[] = $this->degreeOfChordQuestion($knowledge, $question['skill']);
                     break;
                 case 'chordOfDegree':
-                    $questions[] = $this->chordOfDegreeQuestion($knowledge);
+                    $questions[] = $this->chordOfDegreeQuestion($knowledge, $question['skill']);
                     break;
                 case 'areaOfChord':
-                    $questions[] = $this->areaOfChordQuestion($knowledge);
+                    $questions[] = $this->areaOfChordQuestion($knowledge, $question['skill']);
                     break;
                 case 'substitutionOfChord':
-                    $questions[] = $this->substitutionOfChordQuestion($knowledge);
+                    $questions[] = $this->substitutionOfChordQuestion($knowledge, $question['skill']);
                     break;
             }
         }
@@ -87,7 +108,7 @@ class QuestionsGenerator
      * chord: 'CMaj7',
      * expected: 'C,E,G,B'
      */
-    public function notesOfChordQuestion($knowledge)
+    public function notesOfChordQuestion($knowledge, $skill)
     {
         $chordQuestion = array();
         $chordQuestion['key'] = '';
@@ -109,7 +130,7 @@ class QuestionsGenerator
      * @param $knowledge
      * @return array
      */
-    public function chordOfNotesQuestion($knowledge)
+    public function chordOfNotesQuestion($knowledge, $skill)
     {
         $chordQuestion = array();
         $chordQuestion['key'] = '';
@@ -132,9 +153,13 @@ class QuestionsGenerator
      * @param $knowledge
      * @return array
      */
-    public function intervalOfNotesQuestion($knowledge)
+    public function intervalOfNotesQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
+        // No alterations on the tonic for the basic skill
+        if($skill == 0){
+            $tonic = substr($tonic,0,1);
+        }
         $interval = $knowledge->getRandomInterval();
         $intervalNote = $knowledge->getNoteInterval($tonic, $interval);
         $allIntervals = $knowledge->getAllIntervals();
@@ -154,9 +179,13 @@ class QuestionsGenerator
      * @param $knowledge
      * @return array
      */
-    public function notesOfIntervalQuestion($knowledge)
+    public function notesOfIntervalQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
+        // No alterations on the tonic for the basic skill
+        if($skill == 0){
+            $tonic = substr($tonic,0,1);
+        }
         $interval = $knowledge->getRandomInterval();
         $intervalNote = $knowledge->getNoteInterval($tonic, $interval);
         $allNotes = $knowledge->getAllNotes(array($intervalNote));
@@ -175,7 +204,7 @@ class QuestionsGenerator
      * A chord, a key and an scale are shown, and the user must say which degree it belongs to.
      * @param $knowledge
      */
-    public function degreeOfChordQuestion($knowledge)
+    public function degreeOfChordQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
@@ -201,7 +230,7 @@ class QuestionsGenerator
      * are a right choice for that degree in that scale.
      * @param $knowledge
      */
-    public function chordOfDegreeQuestion($knowledge)
+    public function chordOfDegreeQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
@@ -247,19 +276,19 @@ class QuestionsGenerator
      * A chord, a key and an scale are shown, and the user must say which degree it belongs to.
      * @param $knowledge
      */
-    public function chordBelongsToScaleQuestion($knowledge)
+    public function chordBelongsToScaleQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
         $yes = $this->translator->translate('questions_yes');
-        $no  = $this->translator->translate('questions_no');
+        $no = $this->translator->translate('questions_no');
         $notesScale = $knowledge->getNotesScale($tonic, $scale);
         $allPossibleChords = $knowledge->getAllPossibleChords($notesScale, false);
         $randomChord = $allPossibleChords[rand(0, count($allPossibleChords) - 1)];
         $belongsToScale = $yes;
         list($tonicChord, $chordType) = $knowledge->getTonicAndTypeOfChord($randomChord);
         // Sometimes a random chord will be generated that might not belong to the scale
-        $randomNumber = rand(0,100);
+        $randomNumber = rand(0, 100);
         if ($randomNumber > 50) {
             $randomChord = $knowledge->getRandomChord($tonicChord);
             if (!in_array($randomChord, $allPossibleChords)) {
@@ -281,7 +310,7 @@ class QuestionsGenerator
      * The notes of a certain scale are asked.
      * @param $knowledge
      */
-    public function notesOfScaleQuestion($knowledge)
+    public function notesOfScaleQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
@@ -302,7 +331,7 @@ class QuestionsGenerator
      * The name of the scale for a given group of notes is asked
      * @param $knowledge
      */
-    public function scaleOfNotesQuestion($knowledge)
+    public function scaleOfNotesQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
         $scale = $knowledge->getRandomScale();
