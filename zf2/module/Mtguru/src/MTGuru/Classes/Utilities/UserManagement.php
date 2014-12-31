@@ -101,6 +101,13 @@ class UserManagement
         return $this->currentUser->getSkills();
     }
 
+    /**
+     * It adds the results of a game to the database and calculates the new skills,
+     * points and level of the user.
+     * @param $questionType
+     * @param $numAnswers
+     * @param $answersRight
+     */
     public function addResults($questionType, $numAnswers, $answersRight)
     {
         if ($this->currentUser == null) {
