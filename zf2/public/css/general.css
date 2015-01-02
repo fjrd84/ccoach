@@ -27,14 +27,95 @@ div#answerItemsWrapper {
 
 .home{
     position: relative;
-    margin: 100px auto;
-    width: 650px;
-    height: 400px;
-    padding: 80px;
-    background-color: rgb(239, 239, 239);
-    magin: auto;
+    margin: 39px auto;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 440px;
+    /* padding: 80px; */
+    background-image: url('../img/homeCassette.png');
     text-align: center;
 }
+
+.navBar{
+    width: 709px;
+    height: 95px;
+    position: relative;
+    margin: 22px auto;
+    background-image: url('../img/navBar.png');
+    background-repeat: no-repeat;
+}
+
+.homeLogout{
+    position: absolute;
+    background-image: url('../img/powerOffTr.png');
+    width: 40px;
+    height: 40px;
+    left: 653px;
+    top: 11px;
+    background-repeat: no-repeat;
+    -webkit-transition: background-image 0.6s linear;
+    -moz-transition: background-image 0.6s linear;
+    -ms-transition: background-image 0.6s linear;
+    -o-transition: background-image 0.6s linear;
+    transition: background-image 0.6s linear;
+}
+
+.homeLogout:hover{
+    background-repeat: no-repeat;
+    background-image: url('../img/powerOff.png');
+    -webkit-transition: background-image 0.6s linear;
+    -moz-transition: background-image 0.6s linear;
+    -ms-transition: background-image 0.6s linear;
+    -o-transition: background-image 0.6s linear;
+    transition: background-image 0.6s linear;
+}
+
+.homeTraining {
+    background-image: url('../img/homeCassetteRightDisabled.png');
+    background-repeat: no-repeat;
+    width: 187px;
+    height: 189px;
+    position: absolute;
+    top: 111px;
+    left: 404px;
+}
+
+.homeTraining:hover{
+    z-index: 3;
+    background-image: url('../img/homeCassetteRight.png');
+    -webkit-transition: width 0.6s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.6s;
+    -webkit-animation:backspin 4s linear infinite;
+    -moz-animation:backspin 4s linear infinite;
+    animation:backspin 4s linear infinite;
+}
+
+.homePlay {
+    background-image: url('../img/homeCassetteLeftDisabled.png');
+    background-repeat: no-repeat;
+    width: 288px;
+    height: 290px;
+    position: absolute;
+    top: 58px;
+    left: 64px;
+}
+
+.homePlay:hover{
+    z-index: 3;
+    background-image: url('../img/homeCassetteLeft.png');
+    -webkit-transition: width 0.6s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.6s;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes backspin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes backspin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes backspin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
 .trainingButtons {
     text-align: center;
@@ -91,6 +172,7 @@ div#answerItemsWrapper {
 
 .button{
     margin: 15px 0 0 0;
+    width: 140px;
 }
 
 .button a{
@@ -108,19 +190,33 @@ div#answerItemsWrapper {
 }
 
 .welcome{
+    top: 80px;
 
+    position: relative;
+    width: 280px;
+    left: 310px;
+    z-index: 2;
 }
 
 .points{
+    position: relative;
 
+    top: 250px;
+    left: 150px;
+    z-index: 2;
 }
 
 .level{
+    position: relative;  
+    top: 222px;  
 
+    width: 140px;
+    left: 40px;
+    z-index: 2;
 }
 
 body{
-    background-color: rgb(216, 216, 216);
+    background-color: black;
 }
 
 .yourPoints{

@@ -143,7 +143,7 @@ class UserManagement
      * @return int
      */
     public function levelForPoints($points){
-        if($points>10000){
+        if($points>200000){
             return 10;
         }elseif($points>100000){
             return 9;

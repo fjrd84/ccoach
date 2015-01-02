@@ -1,17 +1,11 @@
+<div class="navBar"><a href="<?php echo $this->basePath() ?>/auth/logout"><div class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div></a></div>
 <div class="home">
     <div class="welcome">
         <?php echo $this->translate('home_welcome') . ' ' . $ident; ?>
     </div>
     <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
     <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
-    <div class="button">
-        <a href="<?php echo $this->basePath() ?>/mtguru/index/game"><?php echo $this->translate('home_play') ?></a>
-    </div>
-    <div class="button">
-        <a href="<?php echo $this->basePath() ?>/mtguru/index/training"><?php echo $this->translate('home_training') ?></a>
-    </div>
-    <div class="button">
-        <a href="<?php echo $this->basePath() ?>/auth/logout"><?php echo $this->translate('logout') ?></a>
-    </div>
+    <a href="<?php echo $this->basePath() ?>/mtguru/index/game"><div class="homePlay"></div><?php /*echo $this->translate('home_play') */?></a>
+    <a href="<?php echo $this->basePath() ?>/mtguru/index/training"><div class="homeTraining"><?php /*echo $this->translate('home_training') */?></div></a>
 </div>
 
