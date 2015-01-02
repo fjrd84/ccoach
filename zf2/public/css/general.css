@@ -1,5 +1,23 @@
 @CHARSET "ISO-8859-1";
 
+@font-face {
+    font-family:"Digital7";
+    src: url("../fonts/digital-7.ttf") /* TTF file for CSS3 browsers */
+}
+
+*{
+    font-family:'Digital7', sans-serif;
+}
+
+div#navText {
+    position: absolute;
+    top: 19px;
+    left: 200px;
+    width: 330px;
+    color: white;
+    text-align: center;
+}
+
 .testInfos{
     margin: 5px;
     float: left;
@@ -200,28 +218,30 @@ div#answerItemsWrapper {
 }
 
 .welcome{
-    top: 80px;
+    top: 77px;
 
-    position: relative;
+    font-size: 33px;
+    position: absolute;
     width: 280px;
-    left: 310px;
+    left: 330px;
     z-index: 2;
 }
 
 .points{
-    position: relative;
+    position: absolute;
 
-    top: 250px;
-    left: 150px;
+    top: 276px;
+    width: 300px;
+    left: 420px;
     z-index: 2;
 }
 
 .level{
-    position: relative;  
-    top: 222px;  
+    position: absolute;  
+    top: 279px;  
 
-    width: 140px;
-    left: 40px;
+    width: 150px;
+    left: 20px;
     z-index: 2;
 }
 
