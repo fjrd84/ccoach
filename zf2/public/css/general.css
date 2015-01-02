@@ -78,6 +78,11 @@ div#answerItemsWrapper {
     position: absolute;
     top: 111px;
     left: 404px;
+    -webkit-transition: background-image 0.6s linear;
+    -moz-transition: background-image 0.6s linear;
+    -ms-transition: background-image 0.6s linear;
+    -o-transition: background-image 0.6s linear;
+    transition: background-image 0.6s linear;
 }
 
 .homeTraining:hover{
@@ -98,6 +103,11 @@ div#answerItemsWrapper {
     position: absolute;
     top: 58px;
     left: 64px;
+    -webkit-transition: background-image 0.6s linear;
+    -moz-transition: background-image 0.6s linear;
+    -ms-transition: background-image 0.6s linear;
+    -o-transition: background-image 0.6s linear;
+    transition: background-image 0.6s linear;
 }
 
 .homePlay:hover{
