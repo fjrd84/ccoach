@@ -1,20 +1,31 @@
-<div class="navBar">
-    <div id="navText"></div>
-    <a href="<?php echo $this->basePath() ?>/auth/logout">
-        <div class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
-    </a></div>
-<div class="home">
-    <div class="welcome">
-        <?php echo $this->translate('home_welcome') . ' ' . $ident; ?>
+<div class="mainDiv">
+    <div id="homeContainer" class="homeContainer">
+        <div class="front">
+        <div class="home">
+            <div class="welcome">
+                <?php echo $ident; ?>
+            </div>
+            <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
+            <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
+            <a href="<?php echo $this->basePath() ?>/mtguru/index/game">
+                <div class="homePlay"></div><?php /*echo $this->translate('home_play') */ ?></a>
+            <a href="javascript:showTraining()"><?php /*echo $this->basePath() ?>/mtguru/index/training*/ ?>
+                <div class="homeTraining"><?php /*echo $this->translate('home_training'); */ ?></div>
+            </a>
+        </div>
+        </div>
+        <div class="back">
+        <div style="display:none;" class="trainingView">
+            <a href="javascript:showHome()">
+                <div class="showHome"></div>
+            </a>
+        </div>
+        </div>
     </div>
-    <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
-    <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
-    <a href="<?php echo $this->basePath() ?>/mtguru/index/game">
-        <div class="homePlay"></div><?php /*echo $this->translate('home_play') */ ?></a>
-    <a href="<?php echo $this->basePath() ?>/mtguru/index/training">
-        <div class="homeTraining"><?php /*echo $this->translate('home_training') */ ?></div>
-    </a>
+    <div class="sideBar">
+        <div id="navText"></div>
+        <a href=" <?php echo $this->basePath() ?>/auth/logout">
+            <div class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
+        </a>
+    </div>
 </div>
-<div class="sideBar">
-</div>
-
