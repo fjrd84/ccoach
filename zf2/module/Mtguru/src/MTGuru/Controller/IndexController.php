@@ -34,10 +34,12 @@ class IndexController extends AbstractActionController
             $this->redirect()->toRoute('login');
             return;
         }
+        $questionTypes = $userManagement->getQuestionTypes();
         $viewModel = new ViewModel();
         $viewModel->setVariable('ident', $currentUser->getFullName());
         $viewModel->setVariable('numPoints', $currentUser->getPoints());
         $viewModel->setVariable('currentLevel', $currentUser->getLevel());
+        $viewModel->setVariable('questionTypes', $questionTypes);
 
         return $viewModel;
     }

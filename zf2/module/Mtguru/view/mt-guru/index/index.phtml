@@ -16,6 +16,15 @@
         </div>
         <div class="back">
         <div style="display:none;" class="trainingView">
+            <?php
+            //$questionTypes = $_SESSION['questionTypes'];
+            $numQuestionTypes = count($questionTypes);
+            for ($questionTypeIndex = 0; $questionTypeIndex < $numQuestionTypes; $questionTypeIndex++) {
+                echo '<div class="trainingTypeButton">';
+                echo '<a href="' . $this->basePath() . '/mtguru/index/game?questionType=' . $questionTypes[$questionTypeIndex]->getQuestionIdent() . '">' . $this->translate($questionTypes[$questionTypeIndex]->getQuestionIdent()) . '</a>';
+                echo '</div>';
+            }
+            ?>
             <a href="javascript:showHome()">
                 <div class="showHome"></div>
             </a>

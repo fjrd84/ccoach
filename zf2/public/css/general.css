@@ -20,10 +20,12 @@
 
 .showHome {
     position: absolute;
-    background-color: rgba(0, 0, 255, 0.32);
-    width: 30px;
-    height: 30px;
-    top: 200px;
+    background-repeat: no-repeat;
+    background-image: url('../img/homeIcon.png');
+    /* background-color: rgba(0, 0, 255, 0.32); */
+    width: 26px;
+    height: 34px;
+    top: 195px;
     left: 325px;
 }
 
@@ -96,6 +98,8 @@ div#answerItemsWrapper {
 
 .trainingView{
     position: relative;
+    padding-top: 50px;
+    font-size: 18px;
     /* margin: 0 0 0 106px; */
     background-repeat: no-repeat;
     width: 390px;
@@ -214,24 +218,21 @@ div#answerItemsWrapper {
 }
 
 .trainingTypeButton {
-    background-color: white;
-    color: grey;
-    width: 250px;
-    height: 30px;
     float: left;
-    margin: 5px;
+    /* background-color: white; */
+    color: grey;
+    width: 170px;
+    height: 14px;
+    margin: 0 0 0 5px;
     padding: 6px;
     position: relative;
 }
 
-.trainingTypeButton:hover {
-    background-color: rgb(234, 234, 234);
-}
 
 .trainingTypeButton a {
     color: rgb(49, 49, 49);
     text-decoration: none;
-    line-height: 30px;
+    line-height: 10px;
     width: inherit;
     height: inherit;
     position: relative;
