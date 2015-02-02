@@ -1,12 +1,39 @@
 @CHARSET "ISO-8859-1";
 
+*{
+    font-family: 'Arial';
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
 @font-face {
     font-family:"Digital7";
     src: url("../fonts/digital-7.ttf") /* TTF file for CSS3 browsers */
 }
 
-*{
+.mainDiv *{
     font-family:'Digital7', sans-serif;
+}
+
+.loginMessages {
+    background-color: white;
+    width: 310px;
+    padding: 5px;
+}
+
+.loginForm label {
+    float: left;
+    clear: both;
+    width: 240px;
+}
+
+.loginForm {
+    padding: 5px;
+    width: 310px;
+    min-height: 120px;
+    background-color: white;
 }
 
 .homeContainer {
@@ -23,10 +50,10 @@
     background-repeat: no-repeat;
     background-image: url('../img/homeIcon.png');
     /* background-color: rgba(0, 0, 255, 0.32); */
-    width: 26px;
-    height: 34px;
-    top: 195px;
-    left: 325px;
+    width: 22px;
+    height: 22px;
+    top: 207px;
+    left: 334px;
 }
 
 .mainDiv {
@@ -51,6 +78,7 @@
 
 div#navText {
     position: absolute;
+    font-size: 20px;
     top: 201px;
     left: 59px;
     width: 130px;
@@ -242,17 +270,19 @@ div#answerItemsWrapper {
 .bottomRight{
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    left: 30px;
+    padding: 5px;
 }
 
 .mainGame{
+    width: 815px;
+    height: 500px;
+    margin: auto;
+    top: 30px;
     position: relative;
-    margin: 100px auto;
-    min-height: 461px;
-    min-width: 800px;
-    width: 400px;
-    padding: 80px;
-    background-color: rgb(239, 239, 239);
+    /*margin: 100px auto;*/
+    /* padding: 80px; */
+    background-color: black;
     magin: auto;
     text-align: center;
 }
@@ -289,6 +319,7 @@ div#answerItemsWrapper {
 .points{
     position: absolute;
 
+    font-size: 20px;
     top: 152px;
     width: 300px;
     left: -70px;
@@ -297,7 +328,7 @@ div#answerItemsWrapper {
 
 .level{
     position: absolute;  
-    top: 279px;  
+    top: 43px;  
 
     width: 150px;
     left: 20px;
@@ -310,8 +341,9 @@ body{
 
 .yourPoints{
     position: absolute;
-    /* background-color: grey; */
-    left: 75px;
+    color: white;
+    left: 38px;
+    top: 70px;
 }
 .currentScale{
     position: absolute;
@@ -332,24 +364,22 @@ body{
     font-size: 20px;
 }
 .yourLevel{
+    color: #ffdbaa;
     position: absolute;
-    right: 200px;
-    /* background-color: grey; */
+    left: 40px;
+    top: 40px;
 }
 .remainingTime{
     position: absolute;
-    /*background-image: url("../gfx/clock.png");*/
-    right: 75px;
-    top: 50px;
+    color: white;
+    left: 665px;
+    top: 40px;
     width: 100px;
-    height: 100px;
-    float: right;
-    /*background-color: grey;*/
 }
 .gameContent{
     position: absolute;
-    top: 150px;
-    left: 75px;
+    top: 90px;
+    left: 35px;
     width: 810px;
     height: 400px;
 }
@@ -365,6 +395,7 @@ body{
 }
 
 .question{
+    position: absolute;
     /* background-color: rgba(105, 105, 105, 0.16); */
     width: 100%;
     height: 100%;
@@ -374,16 +405,18 @@ body{
 .questionElement {
     top: 100px;
     left: 240px;
+    color: white;
     position: absolute;
     font-size: 47px;
 }
 
 .questionText{
     position: absolute;
-    left: 40px;
-    top: 40px;
+    left: 130px;
+    color: white;
+    top: 20px;
     font-size: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .questionChord{
@@ -448,8 +481,8 @@ body{
 .nextButton{
     background-color: #53ae2c;
     position: absolute;
-    bottom: 130px;
-    right: 131px;
+    bottom: 20px;
+    right: 20px;
     padding: 5px;
     z-index: 2;
 }

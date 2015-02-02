@@ -7,8 +7,13 @@ Process answers:
 * If skill is at least 1 for all current types, advance level
 
 
-MEJORAS TÉCNICAS
-Logging
+GENERAL IMPROVEMENTS
+Add a register page for new users
+Add audio for the questions
+Add a musical score along with american notation.
+Show and compute statistics
+Show ranking on main page
+
 
 TEORÍA Y PREGUNTAS
 Preguntar insistentemente sobre unas alteraciones concretas.
@@ -18,17 +23,13 @@ Progresiones y cadencias.
 Dada una secuencia armónica en un tono, pedir el cambio a otro tono y hacer preguntas sobre ambos.
 Conocimiento de sustitución de acordes equivalentes.
 Modulación.
-Preguntas con audio.
-Representación americana y en partitura.
 Avanzado: mostrar standard, hacer memorizar y preguntar huecos, arreglos, etc.
 
 PÁGINAS Y DISEÑO
 Página principal (unlogged) describiendo la utilidad y motivación.
-Página principal de usuario con estadísticas, acceso al juego, a los modos de entrenamiento y vista de los rankings.
 Layout de to.do
 Páginas con introducciones teóricas previas a cada nivel.
 Teoría accesible a cada momento.
-Ranking con puntuaciones.
 
 SISTEMA DE JUEGO
 Sistema de puntuación:
@@ -49,8 +50,10 @@ Framework integration (zend)
 Chord recognition by using notes
 Scales and keys
 Fit chords in modes and scales
+Home page with access to the game, training mode and ranking view (only layout).
 User management
 PHPUnit integration
+
 tables:
     answer (a giant log with all answers)
     answerId; userId(manyToOne); questionTypeId(manyToOne); skill(0,1,2); right(yes,no); timestamp
@@ -68,3 +71,4 @@ Generate Questions:
 * more of lower skill
 * check available skills for the user and update when necessary
 * generate according to level and skill
+

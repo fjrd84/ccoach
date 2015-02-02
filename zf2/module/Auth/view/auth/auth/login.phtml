@@ -8,23 +8,28 @@ $actionUrl = $this->url(
 );
 
 if ($this->messages) {
+    echo '<div class="loginMessages">';
     echo '<ul>';
     foreach ($this->messages as $message) {
         echo '<li>' . $message . '</li>';
     }
     echo '</ul>';
+    echo '</div>';
 }
 ?>
 
-
-<form action="<?php echo $actionUrl ?>" method="POST" name="User" id="User">
-    <fieldset><label><span>Username:</span><input type="text" name="username" required="required" value=""
-                                                  hvkeyboarddefined="true"
-                                                  data-cip-id="cIPJQ342845639"></label><label><span>Password:</span><input
-                type="password" name="password" required="required" value="" hvkeyboarddefined="true"
-                data-cip-id="cIPJQ342845640"></label><label><span>Remember Me ?:</span><input type="hidden"
-                                                                                              name="rememberme"
-                                                                                              value="0"><input
-                type="checkbox" name="rememberme" value="1"></label><input type="submit" name="submit" value="Submit">
-    </fieldset>
-</form>
+<div class="loginForm">
+    <form action="<?php echo $actionUrl ?>" method="POST" name="User" id="User">
+        <fieldset><label><span>Username:</span><input type="text" name="username" required="required" value=""
+                                                      hvkeyboarddefined="true"
+                                                      data-cip-id="cIPJQ342845639"></label><label><span>Password:</span><input
+                    type="password" name="password" required="required" value="" hvkeyboarddefined="true"
+                    data-cip-id="cIPJQ342845640"></label><label><span>Remember Me ?:</span><input type="hidden"
+                                                                                                  name="rememberme"
+                                                                                                  value="0"><input
+                    type="checkbox" name="rememberme" value="1"></label><input style="float:left" type="submit"
+                                                                               name="submit"
+                                                                               value="Submit">
+        </fieldset>
+    </form>
+</div>

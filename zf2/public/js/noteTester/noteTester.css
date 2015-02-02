@@ -1,0 +1,149 @@
+.noteTesterWrapper{
+    width: 674px;
+    height: 291px;
+    background-color: black;
+    background-repeat: no-repeat;
+    padding: 210px 0 0 140px;
+}
+
+#noteTester{
+    position: relative;
+    width: 560px;
+    height: 200px;
+    /* background-color: rgba(121, 130, 255, 0.16); */
+}
+
+#noteTesterPiano{
+    position: absolute;
+    background-color: black;
+    width: 306px;
+    height: 115px;
+    margin: 64px 0 0 232px;
+}
+
+#noteTesterPiano .note{
+    background-color: white;
+    width: 20px;
+    height: 115px;
+    position: absolute;
+}
+
+#noteTesterPiano .note.C4Sharp, 
+#noteTesterPiano .note.D4Sharp, 
+#noteTesterPiano .note.F4Sharp, 
+#noteTesterPiano .note.G4Sharp, 
+#noteTesterPiano .note.A4Sharp, 
+#noteTesterPiano .note.C5Sharp, 
+#noteTesterPiano .note.D5Sharp, 
+#noteTesterPiano .note.F5Sharp, 
+#noteTesterPiano .note.G5Sharp, 
+#noteTesterPiano .note.A5Sharp{
+    height: 74px;
+    width: 12px;
+    z-index: 2;
+    background-color: black;
+}
+
+#noteTesterPiano .note.C4Sharp{
+    margin-left: 14px;
+}
+#noteTesterPiano .note.D4Sharp{
+    margin-left: 37px;
+}
+#noteTesterPiano .note.F4Sharp{
+    margin-left: 81px;
+}
+#noteTesterPiano .note.G4Sharp{
+    margin-left: 103px;
+}
+#noteTesterPiano .note.A4Sharp{
+    margin-left: 125px;
+}
+#noteTesterPiano .note.C5Sharp{
+    margin-left: 169px;
+}
+#noteTesterPiano .note.D5Sharp{
+    margin-left: 191px;
+}
+#noteTesterPiano .note.F5Sharp{
+    margin-left: 235px;
+}
+#noteTesterPiano .note.G5Sharp{
+    margin-left: 257px;
+} 
+#noteTesterPiano .note.A5Sharp{
+    margin-left: 279px;
+}
+
+#noteTesterPiano .note.D4{
+    margin-left: 22px;
+}
+
+#noteTesterPiano .note.E4{
+    margin-left: 44px;
+}
+
+#noteTesterPiano .note.F4{
+    margin-left: 66px;
+}
+
+#noteTesterPiano .note.G4{
+    margin-left: 88px;
+}
+
+#noteTesterPiano .note.A4{
+    margin-left: 110px;
+}
+
+#noteTesterPiano .note.B4{
+    margin-left: 132px;
+}
+
+#noteTesterPiano .note.C5{
+    margin-left: 154px;
+}
+
+#noteTesterPiano .note.D5{
+    margin-left: 176px;
+}
+
+#noteTesterPiano .note.E5{
+    margin-left: 198px;
+}
+
+#noteTesterPiano .note.F5{
+    margin-left: 220px;
+}
+
+#noteTesterPiano .note.G5{
+    margin-left: 242px;
+}
+
+#noteTesterPiano .note.A5{
+    margin-left: 264px;
+}
+
+#noteTesterPiano .note.B5{
+    margin-left: 286px;
+}
+
+#noteTesterPiano .note:hover{
+    background-color: rgb(255, 236, 211);
+}
+
+#noteTesterFeedback{
+    position: absolute;
+    width: 54px;
+    margin: 27px 0 0 357px;
+    height: 30px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#noteTesterScore{
+    position: absolute;
+    width: 175px;
+    height: 150px;
+    margin: 29px 0 0 23px;
+    background-image: url('noteTesterScoreBg.png');
+}

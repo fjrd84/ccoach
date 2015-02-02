@@ -77,9 +77,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="435.23811"
-     inkscape:cy="257.13471"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="117.80569"
+     inkscape:cy="457.85657"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -298,20 +298,10 @@
        x="-106.81664"
        y="645.7774" />
     <path
-       style="fill:#553100;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m -99.327311,777.39704 0,20.40625 5.21875,0 0,-16.875 18,0 0,16.875 5.21875,0 0,-20.40625 z"
-       id="rect3792"
+       style="fill:#805215;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m -75.538161,767.82844 c -6.91618,0 -12.52148,5.60529 -12.52148,12.52147 0,6.91618 5.60529,12.52148 12.52148,12.52148 6.91618,0 12.52147,-5.6053 12.52147,-12.52148 0,-6.91618 -5.60529,-12.52147 -12.52147,-12.52147 z m -0.0122,3.53739 2.68824,2.41233 0,-0.42731 3.01272,0 0,3.13175 4.79224,4.30004 -3.49955,0 0,7.16669 -4.43522,0 c 1.38087,-5.44721 -6.46562,-5.5469 -5.09515,0 l -4.43525,0 0,-7.17755 -3.49411,0 5.23035,-4.70025 5.23573,-4.7057 z"
+       id="path4438"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccc"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeIcon.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
-    <path
-       style="fill:#553100;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m -85.108561,759.49079 -14.21875,15.78125 5.21875,0 9,-9.78125 9,9.78125 5.21875,0 z"
-       id="rect3792-1"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccc"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeIcon.png"
        inkscape:export-xdpi="78.753075"
        inkscape:export-ydpi="78.753075" />
