@@ -1,6 +1,5 @@
 <!--This file shows the basic elements to use the noteTester.js-->
 <!DOCTYPE html>
-<script src="noteTester.js"></script>
 <link rel="stylesheet" type="text/css" href="noteTester.css">
 <html>
 <head>
@@ -24,6 +23,34 @@
             <div class="note G5" style="display:none"></div>
             <div class="note A5" style="display:none"></div>
             <div class="note B5" style="display:none"></div>
+            <div class="noteSharp C4" style="display:none"></div>
+            <div class="noteSharp D4" style="display:none"></div>
+            <div class="noteSharp E4" style="display:none"></div>
+            <div class="noteSharp F4" style="display:none"></div>
+            <div class="noteSharp G4" style="display:none"></div>
+            <div class="noteSharp A4" style="display:none"></div>
+            <div class="noteSharp B4" style="display:none"></div>
+            <div class="noteSharp C5" style="display:none"></div>
+            <div class="noteSharp D5" style="display:none"></div>
+            <div class="noteSharp E5" style="display:none"></div>
+            <div class="noteSharp F5" style="display:none"></div>
+            <div class="noteSharp G5" style="display:none"></div>
+            <div class="noteSharp A5" style="display:none"></div>
+            <div class="noteSharp B5" style="display:none"></div>
+            <div class="noteFlat C4" style="display:none"></div>
+            <div class="noteFlat D4" style="display:none"></div>
+            <div class="noteFlat E4" style="display:none"></div>
+            <div class="noteFlat F4" style="display:none"></div>
+            <div class="noteFlat G4" style="display:none"></div>
+            <div class="noteFlat A4" style="display:none"></div>
+            <div class="noteFlat B4" style="display:none"></div>
+            <div class="noteFlat C5" style="display:none"></div>
+            <div class="noteFlat D5" style="display:none"></div>
+            <div class="noteFlat E5" style="display:none"></div>
+            <div class="noteFlat F5" style="display:none"></div>
+            <div class="noteFlat G5" style="display:none"></div>
+            <div class="noteFlat A5" style="display:none"></div>
+            <div class="noteFlat B5" style="display:none"></div>
         </div>
         <div id="noteTesterPiano">
             <div class="note C4" data-note="C4"></div>
@@ -51,8 +78,12 @@
             <div class="note A5Sharp" data-note="A5#"></div>
             <div class="note B5" data-note="B5"></div>
         </div>
+        <div onclick="javascript:noteTester.resetNotes()" id="resetNotes">RESET</div>
         <div id="noteTesterFeedback"></div>
+        <div id="sendResults">SEND</div>
     </div>
 </div>
 </body>
 </html>
+<script src="../jquery-1.11.1.min.js"></script>
+<script src="noteTester.js"></script>
