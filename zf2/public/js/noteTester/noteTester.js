@@ -9,18 +9,29 @@ var noteTester = {
     },
     pressNote: function (noteObject) {
         'use strict';
-        var note = noteObject.data('note');
+        var note = noteObject.data('note'),
+            extraClass = '';
         if (!noteTester.useSharps) {
             note = noteTester.sharpToFlat(note);
+        }
+        if (note.indexOf('b') > -1) {
+            extraClass = 'flat';
+        } else if (note.indexOf('#') > -1) {
+            extraClass = 'sharp';
         }
         noteTester.showNote(note);
         // The note object is selected/unselected
         if (noteObject.hasClass('selected')) {
             noteObject.removeClass('selected');
             noteTester.addNote(note);
+            $('#noteTesterScore .note.' + note + '.' + extraClass).hide();
+            $('#noteTesterScore .note.' + note).removeClass('flat');
+            $('#noteTesterScore .note.' + note).removeClass('sharp');
         } else {
             noteObject.addClass('selected');
             noteTester.removeNote(note);
+            $('#noteTesterScore .note.' + note).show();
+            $('#noteTesterScore .note.' + note).addClass(extraClass);
         }
     },
     sharpToFlat: function (note) {
@@ -109,6 +120,7 @@ var noteTester = {
         $('.note.selected').each(function () {
             $(this).removeClass('selected');
         });
+        $('#noteTesterScore .note').hide();
     }
 };
 

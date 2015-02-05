@@ -187,3 +187,115 @@
     padding-left:3px;
     width: 110px;  text-align: center;
 }
+
+#noteTesterScore .note {
+width: 27px;
+background-image: url('img/natural.png');
+height: 22px;
+position: absolute;
+background-position-x: 0px;
+background-repeat: no-repeat;
+margin-left: 118px;
+}
+
+#noteTesterScore .note.C4, #noteTesterScore .note.A5{
+    background-image: url('img/naturalCrossed.png');
+}
+
+#noteTesterScore .note.sharp{
+    background-image: url('img/sharp.png');
+    background-position: 0px -3px;
+}
+
+#noteTesterScore .note.flat{
+    background-image: url('img/flat.png');
+}
+
+#noteTesterScore .note.doubleSharp{
+    background-image: url('img/doubleSharp.png');
+}
+
+#noteTesterScore .note.doubleFlat{
+    background-image: url('img/doubleFlat.png');
+}
+
+#noteTesterScore .note.C4.sharp{
+    background-image: url('img/sharpCrossed.png');
+}
+
+#noteTesterScore .note.C4.flat{
+    background-image: url('img/flatCrossed.png');
+}
+
+#noteTesterScore .note.doubleSharp{
+    background-image: url('img/doubleSharp.png');
+}
+
+#noteTesterScore .note.doubleFlat{
+    background-image: url('img/doubleFlat.png');
+}
+
+#noteTesterScore .note.C4{
+    margin-top: 103px;
+    margin-left: 94px;
+    content: 'paco';
+    color: black;
+}
+
+#noteTesterScore .note.D4{
+    margin-top: 99px;
+}
+
+#noteTesterScore .note.E4{
+    margin-top: 94px;
+    margin-left: 96px;
+}
+
+#noteTesterScore .note.F4{
+    margin-top: 89px;
+}
+
+#noteTesterScore .note.G4{
+    margin-top: 82.9px;
+    margin-left: 96px;
+}
+
+#noteTesterScore .note.A4{
+    margin-top: 78px;
+}
+
+#noteTesterScore .note.B4{
+    margin-top: 72px;
+    margin-left: 96px;
+}
+
+#noteTesterScore .note.C5{
+    margin-top: 67px;
+}
+
+#noteTesterScore .note.D5{
+    margin-top: 62px;
+    margin-left: 96px;
+}
+
+#noteTesterScore .note.E5{
+    margin-top: 56px;
+}
+
+#noteTesterScore .note.F5{
+    margin-top: 50px;
+    margin-left: 96px;
+}
+
+#noteTesterScore .note.G5{
+    margin-top: 45px;
+}
+
+#noteTesterScore .note.A5{
+    margin-top: 38px;
+    margin-left: 95px;
+}
+
+#noteTesterScore .note.B5{
+    margin-top: 34px;
+}
