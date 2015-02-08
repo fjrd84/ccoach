@@ -1,37 +1,79 @@
 var noteTester = {
-    useSharps: 'true',
+    useSharps: true,
     currentNotes: [],
+    allowEverything: false, // If false, a note and its sharped or flatted version cannot be pressed at the same time
+    // Note: if allowEverything is set to true, the score may not show all the pressed notes.
     addListeners: function () {
         'use strict';
         $('#noteTesterPiano .note').click(function () {
-            noteTester.pressNote($(this));
+            noteTester.pushKey($(this));
         });
     },
-    pressNote: function (noteObject) {
+    pushKey: function (keyObject) {
         'use strict';
-        var note = noteObject.data('note'),
-            extraClass = '';
+        var note,
+            extraClass = '',
+            noteNat;
+        if(keyObject.length == 0){
+            console.log('Non existing note pressed');
+            return;
+        }
+        note = keyObject.data('note');
         if (!noteTester.useSharps) {
             note = noteTester.sharpToFlat(note);
         }
+        if(!noteTester.allowEverything){
+            // The complementary note cannot be pressed at the same time 
+            noteTester.pullKey(noteTester.findComplementary(note));
+        }
+        noteNat = note.substr(0, 2);
         if (note.indexOf('b') > -1) {
-            extraClass = 'flat';
+            extraClass = '.flat';
         } else if (note.indexOf('#') > -1) {
-            extraClass = 'sharp';
+            extraClass = '.sharp';
         }
         noteTester.showNote(note);
         // The note object is selected/unselected
-        if (noteObject.hasClass('selected')) {
-            noteObject.removeClass('selected');
-            noteTester.addNote(note);
-            $('#noteTesterScore .note.' + note + '.' + extraClass).hide();
-            $('#noteTesterScore .note.' + note).removeClass('flat');
-            $('#noteTesterScore .note.' + note).removeClass('sharp');
-        } else {
-            noteObject.addClass('selected');
+        if (keyObject.hasClass('selected')) {
+            keyObject.removeClass('selected');
             noteTester.removeNote(note);
-            $('#noteTesterScore .note.' + note).show();
-            $('#noteTesterScore .note.' + note).addClass(extraClass);
+            $('#noteTesterScore .note.' + noteNat + extraClass).hide();
+        } else {
+            keyObject.addClass('selected');
+            noteTester.addNote(note);
+            $('#noteTesterScore .note.' + noteNat).addClass(extraClass.slice(1));
+            $('#noteTesterScore .note.' + noteNat).show();
+        }
+    },
+    pullKey: function (note) {
+        'use strict';
+        var cssClass,
+            noteNat = note.substr(0, 2),
+            noteSharp = noteTester.flatToSharp(note).replace('#', 'Sharp');
+        if (note.indexOf('b') > -1) {
+            cssClass = 'flat';
+        } else if (note.indexOf('#') > -1) {
+            cssClass = 'sharp';
+        }
+        noteTester.removeNote(note);
+        // On the piano only sharp notes are represented (thus the conversion to sharp)
+        $('#noteTesterPiano .note.' + noteSharp).removeClass('selected');
+        $('#noteTesterScore .note.' + noteNat).removeClass(cssClass);
+    },
+    findComplementary: function (note) {
+        'use strict';
+        if(note===undefined){
+            console.log('Non existing note pressed');
+            return;
+        }
+        if (note.indexOf('b') > -1) {
+            return note.replace('b', '');
+        } else if (note.indexOf('#') > -1) {
+            return note.replace('#', '');
+        } else if (noteTester.useSharps) {
+            return note + '#';
+        } else {
+            return note + 'b';
         }
     },
     sharpToFlat: function (note) {
@@ -99,9 +141,9 @@ var noteTester = {
             noteTester.currentNotes.splice(index, 1);
         }
     },
+    // It shows a note on the display panel
     showNote: function (note) {
         'use strict';
-        // It shows a note on the display panel
         $('#noteTesterFeedback').empty();
         $('#noteTesterFeedback').append('<div class="feedbackNote" style="display:none">' + note + '</div>');
         $('.feedbackNote').fadeIn(500);
@@ -109,10 +151,11 @@ var noteTester = {
             $('.feedbackNote').fadeOut(300);
         }, 800);
     },
-    simulatePress: function (note) {
+    // Used to simulate pressing a key on the keyboard for a specific note
+    pushNote: function (note) {
         'use strict';
         var cssClass = (noteTester.flatToSharp(note)).replace('#', 'Sharp');
-        noteTester.pressNote($('#noteTesterPiano .note.' + cssClass));
+        noteTester.pushKey($('#noteTesterPiano .note.' + cssClass));
     },
     resetNotes: function () {
         'use strict';
