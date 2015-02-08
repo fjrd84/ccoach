@@ -1,5 +1,6 @@
 /*global $, jQuery, alert*/
 var questions,
+    currentType = '',
     trainingQuestionType,
     currentQuestion = -1,
     currentAnswer = 0,
@@ -74,6 +75,9 @@ function showTooLate() {
     showFeedback("Too late!!");
 }
 
+/**
+ * It updates the common fields for every question.
+ */
 function updateCommon() {
     'use strict';
     var currentKey = $(".currentKey"),
@@ -99,6 +103,46 @@ function genericQuestion() {
     questionDiv.find(".questionText").text(questions.questions[currentQuestion].text);
     questionDiv.find(".questionElement").text(questions.questions[currentQuestion].questionElement);
     //questionDiv.append("NOTES OF CHORD!!");
+    questionDiv.fadeIn(1000);
+}
+
+/**
+ * It tells if sharps are between the right answers.
+ */
+function useSharps() {
+    var numAnswers = questions.questions[currentQuestion].expected.length,
+        i = 0;
+    for (; i < numAnswers; i += 1) {
+        if (questions.questions[currentQuestion].expected[i].indexOf('#') > -1) {
+            return true;
+        } else if (questions.questions[currentQuestion].expected[i].indexOf('b') > -1) {
+            return false;
+        }
+    }
+    // If no sharps nor flats are found, a random boolean is returned.
+    return Math.random() < .5;
+}
+
+function notesOfChord() {
+    'use strict';
+    var questionDiv = $(".genericQuestion"),
+        i,
+        newDiv,
+        shown = (questions.questions[currentQuestion].shown).split(",");
+
+    // The note tester is shown for the user to tell the answer notes
+    $('.noteTesterWrapper').fadeIn(300);
+    noteTester.resetNotes();
+    noteTester.useSharps = useSharps();
+    questionDiv.find(".answerItems").empty();
+    /*
+     for (i = 0; i < shown.length; i += 1) {
+     newDiv = '<div class="answerItem" data-item="' + shown[i] + '">' + shown[i] + '</div>';
+     questionDiv.find(".answerItems").append(newDiv);
+     }*/
+    currentQDiv = questionDiv;
+    questionDiv.find(".questionText").text(questions.questions[currentQuestion].text);
+    questionDiv.find(".questionElement").text(questions.questions[currentQuestion].questionElement);
     questionDiv.fadeIn(1000);
 }
 
@@ -141,11 +185,17 @@ function addAnswer(answer) {
 function nextQuestionCont() {
     'use strict';
     counter = resetCounter;
-
-    //currentType = questions.questions[currentQuestion].type;
+    currentType = questions.questions[currentQuestion].type;
 
     // In case a specific question type requires a special treatment, it will be performed here.
-    genericQuestion();
+    switch (currentType) {
+        case 'notesOfChord':
+            notesOfChord();
+            break;
+        default:
+            genericQuestion();
+    }
+
     // Event listeners
     $(".answerItem").click(function () {
         addAnswer($(this).data("item"));
@@ -177,6 +227,8 @@ setInterval(function () {
  */
 function nextQuestion() {
     'use strict';
+    // Answering tools are hidden
+    $('.noteTesterWrapper').fadeOut(300);
     currentQuestion += 1;
     if (currentQuestion >= questions.questions.length) {
         finishRound();
@@ -195,6 +247,9 @@ function nextQuestion() {
     setTimeout(nextQuestionCont, 400);
 }
 
+/**
+ * When starting the game, questions are retrieved from the server
+ */
 function startGame() {
     'use strict';
     var getVars = "";
@@ -219,3 +274,37 @@ function processData(data) {
     nextQuestion();
 }
 
+
+function rightAnswer() {
+    console.log('well done!!');
+}
+
+function wrongAnswer(expectedNotes) {
+    var numNotes = expectedNotes.length,
+        expectedNotesOct = noteTester.notesIntoOctaves(expectedNotes),
+        i;
+    noteTester.resetNotes();
+    for (i = 0; i < numNotes; i += 1) {
+        noteTester.pushNote(expectedNotesOct[i]);
+    }
+}
+
+function sendNotes() {
+    'use strict';
+    var answeredNotes = noteTester.getNotesNoOctaves(),
+        expectedNotes = questions.questions[currentQuestion].expected.split(','),
+        noteIndex,
+        i;
+    if (answeredNotes.length !== expectedNotes.length) {
+        wrongAnswer(expectedNotes);
+        return;
+    }
+    for (i = 0; i < answeredNotes.length; i += 1) {
+        noteIndex = $.inArray(answeredNotes[i], expectedNotes);
+        if (noteIndex === -1) {
+            wrongAnswer(expectedNotes);
+            return;
+        }
+    }
+    rightAnswer();
+}

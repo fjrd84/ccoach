@@ -57,7 +57,7 @@ class QuestionsGenerator
                 // TODO...
                 $questionType = $_GET['questionType'];
             }
-            switch ($question['questionType']) {
+            switch (/*$question['questionType']*/'notesOfChord') {
                 case 'notesOfChord':
                     $questions[] = $this->notesOfChordQuestion($knowledge, $question['skill']);
                     break;

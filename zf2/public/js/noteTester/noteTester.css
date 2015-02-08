@@ -29,7 +29,7 @@
 }
 
 #noteTesterPiano .note{
-    background-color: white;
+    background-color: #ffdbaa;
     width: 20px;
     height: 115px;
     position: absolute;
@@ -157,7 +157,7 @@
 }
 
 #noteTesterPiano .note.selected {
-    background-color: blue;
+    background-color: #805215;
     border: 1px solid black;
 }
 
