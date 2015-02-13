@@ -8,7 +8,13 @@ if (isset($_GET['questionType'])) {
     <div class="currentKey"></div>
     <div class="yourLevel">Level 2</div>
     <div class="remainingTime"></div>
-    <div class="feedbackDiv"></div>
+    <div class="toastMessage" style="display:none">WELL DONE!!</div>
+    <div class="feedbackDiv" style="display:none">
+        <div class="feedbackMessage">Feedback message</div>
+        <div class="feedbackText">Feedback text</div>
+        <div onclick="tryAgain()" class="buttonTryagain">Try again</div>
+        <div onclick="showSolution()" class="buttonShowSolution">Show solution</div>
+    </div>
     <div class="nextButton"><a href="javascript:nextQuestion()">NEXT!!</a></div>
     <div class="gameContent">
         <div class="loading"></div>
@@ -77,7 +83,6 @@ if (isset($_GET['questionType'])) {
             <div onclick="sendNotes()"  id="sendResults">SEND</div>
         </div>
     </div>
-
 </div>
 <script src="<?php echo $this->basePath() ?>/js/game.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->basePath() ?>/js/noteTester/noteTester.css">

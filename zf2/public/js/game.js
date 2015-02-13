@@ -10,7 +10,8 @@ var questions,
     delayAfter = 300,
     answers = [],
     rightAnswers = [],
-    feedbackTime = 1000;
+    feedbackTime = 1000,
+    solutionShown = false;
 
 function finishRound() {
     'use strict';
@@ -82,8 +83,8 @@ function updateCommon() {
     'use strict';
     var currentKey = $(".currentKey"),
         currentScale = $(".currentScale");
-    currentKey.text(questions.questions[currentQuestion].key);
-    currentScale.text(questions.questions[currentQuestion].mode);
+    currentKey.text(questions[currentQuestion].key);
+    currentScale.text(questions[currentQuestion].mode);
 }
 
 function genericQuestion() {
@@ -91,7 +92,7 @@ function genericQuestion() {
     var questionDiv = $(".genericQuestion"),
         i,
         newDiv,
-        shown = (questions.questions[currentQuestion].shown).split(",");
+        shown = (questions[currentQuestion].shown).split(",");
     questionDiv.find(".answerItems").empty();
 
     for (i = 0; i < shown.length; i += 1) {
@@ -100,8 +101,8 @@ function genericQuestion() {
     }
     currentQDiv = questionDiv;
     updateCommon();
-    questionDiv.find(".questionText").text(questions.questions[currentQuestion].text);
-    questionDiv.find(".questionElement").text(questions.questions[currentQuestion].questionElement);
+    questionDiv.find(".questionText").text(questions[currentQuestion].text);
+    questionDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
     //questionDiv.append("NOTES OF CHORD!!");
     questionDiv.fadeIn(1000);
 }
@@ -110,12 +111,12 @@ function genericQuestion() {
  * It tells if sharps are between the right answers.
  */
 function useSharps() {
-    var numAnswers = questions.questions[currentQuestion].expected.length,
+    var numAnswers = questions[currentQuestion].expected.length,
         i = 0;
     for (; i < numAnswers; i += 1) {
-        if (questions.questions[currentQuestion].expected[i].indexOf('#') > -1) {
+        if (questions[currentQuestion].expected[i].indexOf('#') > -1) {
             return true;
-        } else if (questions.questions[currentQuestion].expected[i].indexOf('b') > -1) {
+        } else if (questions[currentQuestion].expected[i].indexOf('b') > -1) {
             return false;
         }
     }
@@ -128,7 +129,7 @@ function notesOfChord() {
     var questionDiv = $(".genericQuestion"),
         i,
         newDiv,
-        shown = (questions.questions[currentQuestion].shown).split(",");
+        shown = (questions[currentQuestion].shown).split(",");
 
     // The note tester is shown for the user to tell the answer notes
     $('.noteTesterWrapper').fadeIn(300);
@@ -141,8 +142,8 @@ function notesOfChord() {
      questionDiv.find(".answerItems").append(newDiv);
      }*/
     currentQDiv = questionDiv;
-    questionDiv.find(".questionText").text(questions.questions[currentQuestion].text);
-    questionDiv.find(".questionElement").text(questions.questions[currentQuestion].questionElement);
+    questionDiv.find(".questionText").text(questions[currentQuestion].text);
+    questionDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
     questionDiv.fadeIn(1000);
 }
 
@@ -154,23 +155,23 @@ function addAnswer(answer) {
     'use strict';
     if (currentAnswer === 0) {
         answers[currentQuestion] = [];
-        if (questions.questions[currentQuestion].expected.toString().indexOf(',') === -1) {
+        if (questions[currentQuestion].expected.toString().indexOf(',') === -1) {
             rightAnswers = [];
-            rightAnswers[0] = questions.questions[currentQuestion].expected.toString();
+            rightAnswers[0] = questions[currentQuestion].expected.toString();
         } else {
-            rightAnswers = questions.questions[currentQuestion].expected.split(",");
+            rightAnswers = questions[currentQuestion].expected.split(",");
         }
     }
 
     //answers[currentQuestion][currentAnswer] = answer;
-    answers[currentQuestion][0] = questions.questions[currentQuestion].type;
+    answers[currentQuestion][0] = questions[currentQuestion].type;
     currentAnswer += 1;
     if ($.inArray(answer.toString(), rightAnswers) === -1) {
         // When a bad answer is given, we advance automatically to the next question
         // (but this one will be asked again later).
         answers[currentQuestion].push('0');
         showBad();
-        questions.questions[questions.questions.length] = questions.questions[currentQuestion];
+        questions[questions.length] = questions[currentQuestion];
         setTimeout(nextQuestion, delayAfter);
         return;
     }
@@ -185,7 +186,7 @@ function addAnswer(answer) {
 function nextQuestionCont() {
     'use strict';
     counter = resetCounter;
-    currentType = questions.questions[currentQuestion].type;
+    currentType = questions[currentQuestion].type;
 
     // In case a specific question type requires a special treatment, it will be performed here.
     switch (currentType) {
@@ -230,13 +231,13 @@ function nextQuestion() {
     // Answering tools are hidden
     $('.noteTesterWrapper').fadeOut(300);
     currentQuestion += 1;
-    if (currentQuestion >= questions.questions.length) {
+    if (currentQuestion >= questions.length) {
         finishRound();
         return;
     }
 
     currentAnswer = 0;
-// && questions.questions[currentQuestion].type != currentType
+// && questions[currentQuestion].type != currentType
     if (currentQDiv !== null) {
         currentQDiv.fadeOut(400);
     }
@@ -268,7 +269,7 @@ function processData(data) {
     'use strict';
     console.log(data);
     $(".loading").remove();
-    questions = data;
+    questions = data.questions;
     currentQuestion = -1;
     currentQDiv = null;
     nextQuestion();
@@ -276,13 +277,32 @@ function processData(data) {
 
 
 function rightAnswer() {
+    'use strict';
     console.log('well done!!');
+    $('.toastMessage').fadeIn(300);
+    setTimeout(function () {
+        $('.toastMessage').fadeOut(300);
+    }, 500);
+    nextQuestion();
 }
 
-function wrongAnswer(expectedNotes) {
-    var numNotes = expectedNotes.length,
+function wrongAnswer() {
+    'use strict';
+    console.log('wrong answer!');
+    $('.feedbackDiv').fadeIn(300);
+}
+
+function tryAgain() {
+    noteTester.resetNotes();
+    $('.feedbackDiv').fadeOut(300);
+}
+
+function showSolution() {
+    var expectedNotes = questions[currentQuestion].expected.split(','),
+        numNotes = expectedNotes.length,
         expectedNotesOct = noteTester.notesIntoOctaves(expectedNotes),
         i;
+    $('.feedbackDiv').fadeOut(300);
     noteTester.resetNotes();
     for (i = 0; i < numNotes; i += 1) {
         noteTester.pushNote(expectedNotesOct[i]);
@@ -292,7 +312,7 @@ function wrongAnswer(expectedNotes) {
 function sendNotes() {
     'use strict';
     var answeredNotes = noteTester.getNotesNoOctaves(),
-        expectedNotes = questions.questions[currentQuestion].expected.split(','),
+        expectedNotes = questions[currentQuestion].expected.split(','),
         noteIndex,
         i;
     if (answeredNotes.length !== expectedNotes.length) {
