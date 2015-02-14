@@ -8,6 +8,7 @@
     -o-user-select: none;
 }
 
+
 @font-face {
     font-family:"Digital7";
     src: url("../fonts/digital-7.ttf") /* TTF file for CSS3 browsers */
@@ -79,7 +80,7 @@
 div#navText {
     position: absolute;
     font-size: 20px;
-    top: 201px;
+    top: 204px;
     left: 59px;
     width: 130px;
     color: white;
@@ -100,6 +101,37 @@ div#navText {
     -webkit-user-select: none;
     -o-user-select: none;
     cursor: default;
+}
+
+.feedbackMessage {
+    position: absolute;
+    left: 250px;
+    top: 60px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.feedbackText {
+    position: absolute;
+    left: 110px;
+    top: 130px;
+    font-size: 20px;
+}
+
+.buttonTryagain {
+    position: absolute;
+    left: 100px;
+    top: 350px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.buttonShowSolution {
+    position: absolute;
+    left: 460px;
+    top: 350px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .toastMessage {
@@ -193,7 +225,7 @@ div#answerItemsWrapper {
 }
 
 .homeTraining {
-    background-image: url('../img/homeCassetteRightDisabled.png');
+    background-image: url('../img/homeCassetteRightAll.png');
     background-repeat: no-repeat;
     width: 107px;
     height: 107px;
@@ -209,7 +241,7 @@ div#answerItemsWrapper {
 
 .homeTraining:hover{
     z-index: 3;
-    background-image: url('../img/homeCassetteRight.png');
+    background-position: 0 -108px;
     -webkit-transition: width 0.6s; /* For Safari 3.1 to 6.0 */
     transition: width 0.6s;
     -webkit-animation:backspin 4s linear infinite;
@@ -218,7 +250,7 @@ div#answerItemsWrapper {
 }
 
 .homePlay {
-    background-image: url('../img/homeCassetteLeftDisabled.png');
+    background-image: url('../img/homeCassetteLeftAll.png');
     background-repeat: no-repeat;
     width: 162px;
     height: 164px;
@@ -234,7 +266,8 @@ div#answerItemsWrapper {
 
 .homePlay:hover{
     z-index: 3;
-    background-image: url('../img/homeCassetteLeft.png');
+    background-position: 0 -166px;
+    background-image: url('../img/homeCassetteLeftAll.png');
     -webkit-transition: width 0.6s; /* For Safari 3.1 to 6.0 */
     transition: width 0.6s;
     -webkit-animation:spin 4s linear infinite;
@@ -356,8 +389,9 @@ body{
 .yourPoints{
     position: absolute;
     color: white;
-    left: 38px;
-    top: 70px;
+    left: 40px;
+    top: 71px;
+    font-size: 25px;
 }
 .currentScale{
     position: absolute;
@@ -382,12 +416,13 @@ body{
     position: absolute;
     left: 40px;
     top: 40px;
+    font-size: 25px;
 }
 .remainingTime{
     position: absolute;
     color: white;
-    left: 665px;
-    top: 40px;
+    left: 705px;
+    top: 92px;
     width: 100px;
 }
 .gameContent{
@@ -419,7 +454,7 @@ body{
 .questionElement {
     top: 60px;
     left: 130px;
-    color: white;
+    color: #ffdbaa;
     position: absolute;
     font-size: 47px;
 }
@@ -447,15 +482,15 @@ body{
     left: 26px;
     height: 453px;
     top: 26px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.71);
     z-index: 5;
 }
 
-.feedbackText{
+{
     position: absolute;
     width: 405px;
     left: 0px;
-    top: 0px;
+    top: 170px;
 }
 
 .answerItems, .answerNotes, .answerDegrees, .answerAreas, .answerChords {
@@ -496,15 +531,34 @@ body{
 }
 
 .nextButton{
-    background-color: #53ae2c;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    bottom: 30px;
+    right: 30px;
     padding: 5px;
     z-index: 2;
+    background-image: url('../img/nextIconBig.png');
 }
 
-.nextButton a{
-    color: white;
-    text-decoration: none;
+.homeButton{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    bottom: 30px;
+    left: 40px;
+    padding: 5px;
+    z-index: 2;
+    background-image: url('../img/homeIconBig.png');
+}
+
+.timeCounter{
+    position: absolute;
+    width: 88px;
+    height: 62px;
+    background-image: url('../img/timeCounter.png');
+    right: 40px;
+    top: 40px;
 }

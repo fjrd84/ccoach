@@ -13,6 +13,11 @@ var questions,
     feedbackTime = 1000,
     solutionShown = false;
 
+function goHome() {
+    'use strict';
+    window.location = baseUrl;
+}
+
 function finishRound() {
     'use strict';
     var form = document.createElement("form"),
@@ -188,6 +193,8 @@ function nextQuestionCont() {
     counter = resetCounter;
     currentType = questions[currentQuestion].type;
 
+    $('.gameWrapper').fadeIn(300);
+
     // In case a specific question type requires a special treatment, it will be performed here.
     switch (currentType) {
         case 'notesOfChord':
@@ -229,7 +236,7 @@ setInterval(function () {
 function nextQuestion() {
     'use strict';
     // Answering tools are hidden
-    $('.noteTesterWrapper').fadeOut(300);
+    $('.gameWrapper').fadeOut(300);
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
         finishRound();
@@ -239,7 +246,7 @@ function nextQuestion() {
     currentAnswer = 0;
 // && questions[currentQuestion].type != currentType
     if (currentQDiv !== null) {
-        currentQDiv.fadeOut(400);
+        //currentQDiv.fadeOut(400);
     }
     $(".answeredItem").each(function () {
         $(this).removeClass("answeredItem");
@@ -281,8 +288,8 @@ function rightAnswer() {
     console.log('well done!!');
     $('.toastMessage').fadeIn(300);
     setTimeout(function () {
-        $('.toastMessage').fadeOut(300);
-    }, 500);
+        $('.toastMessage').fadeOut(500);
+    }, 600);
     nextQuestion();
 }
 

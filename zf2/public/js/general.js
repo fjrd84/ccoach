@@ -1,37 +1,39 @@
+function showInfoText(text){
+    $('#navText').empty();
+    $('#navText').append('<div class="newText" style="display:none">'+text+'</div>');
+    $('#navText .newText').fadeIn('300');
+}
+
 $('.homeLogout').mouseenter(function () {
     'use strict';
-    $('#navText').fadeIn('300');
-    $('#navText').text('Logout!');
+    showInfoText('Logout!');
 }).mouseleave(function () {
         'use strict';
-        $('#navText').fadeOut('50');
+        $('#navText .newText').fadeOut('50');
     });
 
 $('.showHome').mouseenter(function () {
     'use strict';
-    $('#navText').fadeIn('300');
-    $('#navText').text('Home!');
+    showInfoText('Home!');
 }).mouseleave(function () {
         'use strict';
-        $('#navText').fadeOut('50');
+        $('#navText .newText').fadeOut('50');
     });
 
 $('.homePlay').mouseenter(function () {
     'use strict';
-    $('#navText').fadeIn('300');
-    $('#navText').text('Play!');
+    showInfoText('Play!');
 }).mouseleave(function () {
         'use strict';
-        $('#navText').fadeOut('50');
+        $('#navText .newText').fadeOut('50');
     });
 
 $('.homeTraining').mouseenter(function () {
     'use strict';
-    $('#navText').fadeIn('300');
-    $('#navText').text('Training!');
+    showInfoText('Training!');
 }).mouseleave(function () {
         'use strict';
-        $('#navText').fadeOut('50');
+        $('#navText .newText').fadeOut('50');
     });
 
 function showTraining() {

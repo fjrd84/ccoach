@@ -164,6 +164,8 @@ var noteTester = {
             $(this).removeClass('selected');
         });
         $('#noteTesterScore .note').hide();
+        $('#noteTesterScore .note').removeClass('flat');
+        $('#noteTesterScore .note').removeClass('sharp');
     },
     // It returns the current notes without information about the octaves.
     getNotesNoOctaves: function(){
