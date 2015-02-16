@@ -5,8 +5,8 @@ var questions, // Array with all the questions
     currentQuestion = -1, // Position of the current question in the array
     currentAnswer = 0,
     currentQDiv,
-    counter = 5000, // Initial value of the counter (countdown)
-    resetCounter = 5000, // Amount to which the counter will be reset
+    counter = 100, // Initial value of the counter (countdown)
+    resetCounter = 100, // Amount to which the counter will be reset
     points, // Total number of points
     attemptsCount = 0, // Number of attempts for getting the right answer
     answers = [],
@@ -16,13 +16,13 @@ var questions, // Array with all the questions
 
 ///// FUNCTION DEFINITIONS ////////////////////////////////////////////////////////////////////////////
 
-function showFeedback(message){
+function showFeedback(message) {
     $('.toastMessage').empty();
     $('.toastMessage').append(message);
     $('.toastMessage').fadeIn(300);
-        setTimeout(function () {
-            $('.toastMessage').fadeOut(500);
-        }, 600);
+    setTimeout(function () {
+        $('.toastMessage').fadeOut(500);
+    }, 600);
 }
 
 /**
@@ -30,6 +30,8 @@ function showFeedback(message){
  */
 function goHome() {
     'use strict';
+    $('.mainGame').children().fadeOut(500); 
+    $('.loading').fadeIn(300);
     window.location = baseUrl;
 }
 
@@ -196,9 +198,17 @@ function nextQuestionCont() {
 
 function timerDown() {
     'use strict';
-    $(".remainingTime").
-        text(counter);
     counter = counter - 1;
+    if (counter / resetCounter < 0.1) {
+        $('.whiteDot1').fadeOut(300);
+    } else if (counter / resetCounter < 0.25) {
+        $('.whiteDot2').fadeOut(300);
+    } else if (counter / resetCounter < 0.50) {
+        $('.whiteDot3').fadeOut(300);
+    } else if (counter / resetCounter < 0.75) {
+        $('.whiteDot4').fadeOut(300);
+    }
+
     if (counter === 0) {
         showFeedback('Too late!!');
         showSolution();
@@ -208,7 +218,9 @@ function timerDown() {
 /**
  * It sets back the question parameters to default values.
  */
-function resetParameters(){
+function resetParameters() {
+    'use strict';
+    $('.whiteDot1, .whiteDot2, .whiteDot3, .whiteDot4').fadeIn(300);
     solutionShown = false;
     attemptsCount = 0;
 }
@@ -218,7 +230,7 @@ function resetParameters(){
  */
 function nextQuestion() {
     'use strict';
-    
+
     // For a new question, the control parameters are reset.
     resetParameters();
     // Answering tools are hidden
@@ -227,6 +239,7 @@ function nextQuestion() {
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
         alert('finished!');
+        startGame();
         //finishRound();
         return;
     }
@@ -257,7 +270,8 @@ function startGame() {
     });
 }
 
-function updatePoints(){
+function updatePoints() {
+    'use strict';
     $('.yourPoints').empty();
     $('.yourPoints').append(points);
 }
@@ -269,7 +283,7 @@ function updatePoints(){
 function processData(data) {
     'use strict';
     console.log(data);
-    $('.loading').remove();
+    $('.loading').hide();
     $('.yourLevel').append(data.user.level);
     // Only the points of the current session will be displayed
     points = 0;//data.user.points;
@@ -283,7 +297,7 @@ function processData(data) {
 /**
  * It updates the answers array with the results of the current question.
  */
-function updateAnswers(){
+function updateAnswers() {
     'use strict';
     // solutionShown? attemptsCount? question?
     var answerInfo = {};
@@ -301,13 +315,13 @@ function updateAnswers(){
 function rightAnswer() {
     'use strict';
     // When the solution has been shown, no points are added
-    if(!solutionShown){
+    if (!solutionShown) {
         console.log('well done!!');
         showFeedback('Well done!!');
-        if(attemptsCount==0){
+        if (attemptsCount == 0) {
             points += 10;
-        }else{
-            points += Math.floor(5/attemptsCount);
+        } else {
+            points += Math.floor(5 / attemptsCount);
         }
     }
     updateAnswers();

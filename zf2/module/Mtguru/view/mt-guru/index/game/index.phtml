@@ -3,9 +3,9 @@ if (isset($_GET['questionType'])) {
     echo '<script>var trainingQuestionType="' . $_GET['questionType'] . '";</script>';
 }?>
 <div class="mainGame">
+    <div class="loading"></div>
     <div class="gameWrapper">
         <div class="gameContent">
-            <div class="loading"></div>
             <div class="question">
                 <div class="question genericQuestion" style="display:none">
                     <div class="questionText">Question text</div>
@@ -73,8 +73,16 @@ if (isset($_GET['questionType'])) {
         <div class="yourPoints"></div>
         <div class="currentScale"></div>
         <div class="currentKey"></div>
-        <div class="yourLevel">Level </div>
-        <div class="timeCounter"></div>
+        <div class="yourLevel">Level</div>
+        <div class="timeCounter">
+            <div class="metroBack"></div>
+            <div class="metroFront"></div>
+            <div class="metroLine"></div>
+            <div class="whiteDot1"></div>
+            <div class="whiteDot2"></div>
+            <div class="whiteDot3"></div>
+            <div class="whiteDot4"></div>
+        </div>
         <div class="remainingTime"></div>
         <div class="toastMessage" style="display:none">WELL DONE!!</div>
         <div class="feedbackDiv" style="display:none">
@@ -84,7 +92,7 @@ if (isset($_GET['questionType'])) {
             <div onclick="showSolution()" class="buttonShowSolution">Show solution</div>
         </div>
     </div>
-    <div onclick="nextQuestion()" class="nextButton"></div>
+    <div onclick="sendNotes()" class="nextButton"></div>
     <div onclick="goHome()" class="homeButton"></div>
 </div>
 <script src="<?php echo $this->basePath() ?>/js/game.js"></script>

@@ -1,39 +1,42 @@
 <div class="mainDiv">
     <div id="homeContainer" class="homeContainer">
         <div class="front">
-        <div class="home">
-            <div class="welcome">
-                <?php echo $ident; ?>
+            <div class="home">
+                <div class="welcome">
+                    <?php echo $ident; ?>
+                </div>
+                <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
+                <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
+                <div class="loadingMain" style="display:none;"></div>
+                <a href="javascript:goPlay()">
+                    <div class="homePlay"></div><?php /*echo $this->translate('home_play') */ ?></a>
+
+                <div class="loadingTraining"></div>
+                <a href="javascript:showTraining()"><?php /*echo $this->basePath() ?>/mtguru/index/training*/ ?>
+                    <div class="homeTraining"><?php /*echo $this->translate('home_training'); */ ?></div>
+                </a>
             </div>
-            <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
-            <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
-            <a href="<?php echo $this->basePath() ?>/mtguru/index/game">
-                <div class="homePlay"></div><?php /*echo $this->translate('home_play') */ ?></a>
-            <a href="javascript:showTraining()"><?php /*echo $this->basePath() ?>/mtguru/index/training*/ ?>
-                <div class="homeTraining"><?php /*echo $this->translate('home_training'); */ ?></div>
-            </a>
-        </div>
         </div>
         <div class="back">
-        <div style="display:none;" class="trainingView">
-            <?php
-            //$questionTypes = $_SESSION['questionTypes'];
-            $numQuestionTypes = count($questionTypes);
-            for ($questionTypeIndex = 0; $questionTypeIndex < $numQuestionTypes; $questionTypeIndex++) {
-                echo '<div class="trainingTypeButton">';
-                echo '<a href="' . $this->basePath() . '/mtguru/index/game?questionType=' . $questionTypes[$questionTypeIndex]->getQuestionIdent() . '">' . $this->translate($questionTypes[$questionTypeIndex]->getQuestionIdent()) . '</a>';
-                echo '</div>';
-            }
-            ?>
-            <a href="javascript:showHome()">
-                <div class="showHome"></div>
-            </a>
-        </div>
+            <div style="display:none;" class="trainingView">
+                <?php
+                //$questionTypes = $_SESSION['questionTypes'];
+                $numQuestionTypes = count($questionTypes);
+                for ($questionTypeIndex = 0; $questionTypeIndex < $numQuestionTypes; $questionTypeIndex++) {
+                    echo '<div class="trainingTypeButton">';
+                    echo '<a href="' . $this->basePath() . '/mtguru/index/game?questionType=' . $questionTypes[$questionTypeIndex]->getQuestionIdent() . '">' . $this->translate($questionTypes[$questionTypeIndex]->getQuestionIdent()) . '</a>';
+                    echo '</div>';
+                }
+                ?>
+                <a href="javascript:showHome()">
+                    <div class="showHome"></div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="sideBar">
         <div id="navText"></div>
-        <a href=" <?php echo $this->basePath() ?>/auth/logout">
+        <a href="javascript:logoutMe()">
             <div class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
         </a>
     </div>

@@ -103,6 +103,55 @@ div#navText {
     cursor: default;
 }
 
+.whiteDot1, .whiteDot2, .whiteDot3, .whiteDot4 {
+    position: absolute;
+    left: 50px;
+    top: 21px;
+    background-image: url('../img/whiteDot.png');
+    width: 18px;
+    height: 18px;
+}
+
+.whiteDot2{
+    left: 70px;
+}
+
+.whiteDot3{
+    top: 41px;
+}
+
+.whiteDot4{
+    left: 70px;
+    top: 41px;
+}
+
+.metroBack {
+    position: absolute;
+    left: 0px;
+    background-image: url('../img/metronomeBack.png');
+    width: 45px;
+    height: 80px;
+}
+
+.metroFront {
+    position: absolute;
+    left: 0px;
+    background-image: url('../img/metronomeFront.png');
+    width: 45px;
+    height: 80px;
+    z-index: 5;
+}
+
+.metroLine {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    background-image: url('../img/metroLine.png');
+    width: 7px;
+    height: 41px;
+    z-index: 4;
+}
+
 .feedbackMessage {
     position: absolute;
     left: 250px;
@@ -454,7 +503,7 @@ body{
     position: absolute;
     color: white;
     left: 705px;
-    top: 92px;
+    top: 137px;
     width: 100px;
 }
 .gameContent{
@@ -465,14 +514,23 @@ body{
     height: 400px;
 }
 
-.loading{
+.loading, .loadingMain{
     background-image: url("../img/ajax-loader.gif");
-    width: 55px;
-    height: 55px;
+    width: 32px;
+    height: 32px;
     margin: auto;
-    top: 30%;
-    left: 50%;
     position: absolute;
+}
+
+.loading{
+    top: 45%;
+    left: 50%;
+}
+
+.loadingMain{
+    top: 204px;
+    left: 565px;
+    z-index: 1;
 }
 
 .question{
@@ -590,7 +648,21 @@ body{
     position: absolute;
     width: 88px;
     height: 62px;
-    background-image: url('../img/timeCounter.png');
-    right: 40px;
-    top: 40px;
+    right: 41px;
+    top: 27px;
+}
+
+.metroLine{
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: linear;
+  -webkit-transform-origin:0% 100%;
+  -webkit-animation-timing-function:ease-in-out; /* or make your custom easing */
+}
+
+@-webkit-keyframes rotate {
+  0%  { -webkit-transform: rotate(-30deg); }
+  50% { -webkit-transform: rotate(30deg); }
+  100% { -webkit-transform: rotate(-30deg); }
 }

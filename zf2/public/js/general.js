@@ -18,17 +18,17 @@ $('.showHome').mouseenter(function () {
     'use strict';
     showInfoText('Home!');
 }).mouseleave(function () {
-    'use strict';
-    $('#navText .newText').fadeOut('50');
-});
+        'use strict';
+        $('#navText .newText').fadeOut('50');
+    });
 
 $('.homePlay').mouseenter(function () {
     'use strict';
     showInfoText('Play!');
 }).mouseleave(function () {
-    'use strict';
-    $('#navText .newText').fadeOut('50');
-});
+        'use strict';
+        $('#navText .newText').fadeOut('50');
+    });
 
 $('.homeTraining').mouseenter(function () {
     'use strict';
@@ -52,4 +52,16 @@ function showHome() {
         $('.home').fadeIn(600);
     });
     //$('#homeContainer').flip();
+}
+
+function goPlay() {
+    'use strict';
+    $('.loadingMain').fadeIn(300);
+    window.location = baseUrl + '/index/game';
+}
+
+function logoutMe(){
+    'use strict';
+    $('.loadingMain').fadeIn(300);
+    window.location = baseUrl + '/auth/logout';
 }
