@@ -1,11 +1,14 @@
 <?php
 
 namespace MTGuru\Entity;
+
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+
 //use MTGuru\Entity\UserSkill;
 /** @ORM\Entity */
-class User {
+class User
+{
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -32,7 +35,8 @@ class User {
     /** @ORM\OneToMany(targetEntity="UserSkill", mappedBy="user", cascade={"remove"}) */
     protected $userSkills;
 
-    public function __construct(){
+    public function __construct()
+    {
         //$this->jobs = new ArrayCollection();
         $this->userSkills = new ArrayCollection();
     }
@@ -61,15 +65,15 @@ class User {
     }
 
     /**  Example
-    public function getCompanies()
-    {
-        return array_map(
-            function ($job) {
-                return $job->getCompany();
-            },
-            $this->jobs->toArray()
-        );
-    }*/
+     * public function getCompanies()
+     * {
+     * return array_map(
+     * function ($job) {
+     * return $job->getCompany();
+     * },
+     * $this->jobs->toArray()
+     * );
+     * }*/
 
     /**
      * @param mixed $level
@@ -150,4 +154,17 @@ class User {
     {
         return $this->id;
     }
+
+    /**
+     * Function that returns an array with the relevant information about the current user.
+     */
+    public function getUserParams()
+    {
+        $result = array();
+        $result['fullName'] = $this->fullName;
+        $result['points'] = $this->points;
+        $result['level'] = $this->level;
+        return $result;
+    }
+
 }

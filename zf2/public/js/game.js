@@ -1,23 +1,41 @@
-/*global $, jQuery, alert*/
-var questions,
+/*global $, baseUrl, jQuery, alert*/
+var questions, // Array with all the questions
     currentType = '',
     trainingQuestionType,
-    currentQuestion = -1,
+    currentQuestion = -1, // Position of the current question in the array
     currentAnswer = 0,
     currentQDiv,
-    counter = 9999,
-    resetCounter = 9999,
-    delayAfter = 300,
+    counter = 5000, // Initial value of the counter (countdown)
+    resetCounter = 5000, // Amount to which the counter will be reset
+    points, // Total number of points
+    attemptsCount = 0, // Number of attempts for getting the right answer
     answers = [],
-    rightAnswers = [],
-    feedbackTime = 1000,
-    solutionShown = false;
+    solutionShown = false; // It tells if the solution has been shown or not
+/*rightAnswers = [],
+ feedbackTime = 1000,*/
 
+///// FUNCTION DEFINITIONS ////////////////////////////////////////////////////////////////////////////
+
+function showFeedback(message){
+    $('.toastMessage').empty();
+    $('.toastMessage').append(message);
+    $('.toastMessage').fadeIn(300);
+        setTimeout(function () {
+            $('.toastMessage').fadeOut(500);
+        }, 600);
+}
+
+/**
+ * It redirects back home.
+ */
 function goHome() {
     'use strict';
     window.location = baseUrl;
 }
 
+/**
+ * When all the questions have been replied, the results are sent to the server.
+ */
 function finishRound() {
     'use strict';
     var form = document.createElement("form"),
@@ -35,52 +53,6 @@ function finishRound() {
     form.submit();
 }
 
-function hideFeedback(divClass) {
-    'use strict';
-    if (divClass !== 'undefined') {
-        $("." + divClass).fadeOut(500);
-    } else {
-        $(".feedbackDiv").fadeOut(500);
-    }
-}
-
-function showFeedback(message) {
-    'use strict';
-    var feedbackDiv = $(".feedbackDiv"),
-        div = document.createElement("div"),
-        className = (Math.floor(Math.random() * 1000)).toString();
-    div.className = "feedbackText " + className;
-    div.style.display = "none";
-    div.innerHTML = message;
-    feedbackDiv.append(div);
-    $("." + className).fadeIn(1000);
-    //feedbackDiv.text("Good!!");
-    window.setTimeout(function () {
-        hideFeedback(className);
-    }, feedbackTime);
-}
-
-/**
- * It shows a "Well done" message
- */
-function showGood() {
-    'use strict';
-    showFeedback("Good!!");
-}
-
-/**
- * It shows a "You made a mistake" message
- */
-function showBad() {
-    'use strict';
-    showFeedback("That was wrong!!");
-}
-
-function showTooLate() {
-    'use strict';
-    showFeedback("Too late!!");
-}
-
 /**
  * It updates the common fields for every question.
  */
@@ -92,6 +64,10 @@ function updateCommon() {
     currentScale.text(questions[currentQuestion].mode);
 }
 
+/**
+ * Used to display generic components for replying any question (only used if there's no specific
+ * treatment needed for a question).
+ */
 function genericQuestion() {
     'use strict';
     var questionDiv = $(".genericQuestion"),
@@ -113,22 +89,27 @@ function genericQuestion() {
 }
 
 /**
- * It tells if sharps are between the right answers.
+ * It tells if sharp notes are present among the right answers.
  */
 function useSharps() {
+    'use strict';
     var numAnswers = questions[currentQuestion].expected.length,
-        i = 0;
-    for (; i < numAnswers; i += 1) {
+        i;
+    for (i = 0; i < numAnswers; i += 1) {
         if (questions[currentQuestion].expected[i].indexOf('#') > -1) {
             return true;
-        } else if (questions[currentQuestion].expected[i].indexOf('b') > -1) {
+        }
+        if (questions[currentQuestion].expected[i].indexOf('b') > -1) {
             return false;
         }
     }
     // If no sharps nor flats are found, a random boolean is returned.
-    return Math.random() < .5;
+    return Math.random() < 0.5;
 }
 
+/**
+ * Used to display a question about the notes of a chord.
+ */
 function notesOfChord() {
     'use strict';
     var questionDiv = $(".genericQuestion"),
@@ -156,37 +137,37 @@ function notesOfChord() {
  * It adds the given answer to the array of answers and checks if it is right.
  * @param answer
  */
-function addAnswer(answer) {
-    'use strict';
-    if (currentAnswer === 0) {
-        answers[currentQuestion] = [];
-        if (questions[currentQuestion].expected.toString().indexOf(',') === -1) {
-            rightAnswers = [];
-            rightAnswers[0] = questions[currentQuestion].expected.toString();
-        } else {
-            rightAnswers = questions[currentQuestion].expected.split(",");
-        }
-    }
+/*function addAnswerOld(answer) {
+ 'use strict';
+ if (currentAnswer === 0) {
+ answers[currentQuestion] = [];
+ if (questions[currentQuestion].expected.toString().indexOf(',') === -1) {
+ rightAnswers = [];
+ rightAnswers[0] = questions[currentQuestion].expected.toString();
+ } else {
+ rightAnswers = questions[currentQuestion].expected.split(",");
+ }
+ }
 
-    //answers[currentQuestion][currentAnswer] = answer;
-    answers[currentQuestion][0] = questions[currentQuestion].type;
-    currentAnswer += 1;
-    if ($.inArray(answer.toString(), rightAnswers) === -1) {
-        // When a bad answer is given, we advance automatically to the next question
-        // (but this one will be asked again later).
-        answers[currentQuestion].push('0');
-        showBad();
-        questions[questions.length] = questions[currentQuestion];
-        setTimeout(nextQuestion, delayAfter);
-        return;
-    }
-    answers[currentQuestion].push('1');
-    showGood();
-    // When all the right answers have been given, the next question is shown.
-    if (currentAnswer === rightAnswers.length) {
-        setTimeout(nextQuestion, delayAfter);
-    }
-}
+ //answers[currentQuestion][currentAnswer] = answer;
+ answers[currentQuestion][0] = questions[currentQuestion].type;
+ currentAnswer += 1;
+ if ($.inArray(answer.toString(), rightAnswers) === -1) {
+ // When a bad answer is given, we advance automatically to the next question
+ // (but this one will be asked again later).
+ answers[currentQuestion].push('0');
+ showBad();
+ questions[questions.length] = questions[currentQuestion];
+ setTimeout(nextQuestion, delayAfter);
+ return;
+ }
+ answers[currentQuestion].push('1');
+ showGood();
+ // When all the right answers have been given, the next question is shown.
+ if (currentAnswer === rightAnswers.length) {
+ setTimeout(nextQuestion, delayAfter);
+ }
+ }*/
 
 function nextQuestionCont() {
     'use strict';
@@ -219,35 +200,39 @@ function timerDown() {
         text(counter);
     counter = counter - 1;
     if (counter === 0) {
-        showTooLate();
-        nextQuestion();
+        showFeedback('Too late!!');
+        showSolution();
     }
 }
 
-// Timer events
-setInterval(function () {
-    'use strict';
-    timerDown();
-}, 500);
+/**
+ * It sets back the question parameters to default values.
+ */
+function resetParameters(){
+    solutionShown = false;
+    attemptsCount = 0;
+}
 
 /**
  * The questions are asked to the user
  */
 function nextQuestion() {
     'use strict';
+    
+    // For a new question, the control parameters are reset.
+    resetParameters();
     // Answering tools are hidden
     $('.gameWrapper').fadeOut(300);
+
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
-        finishRound();
+        alert('finished!');
+        //finishRound();
         return;
     }
 
     currentAnswer = 0;
-// && questions[currentQuestion].type != currentType
-    if (currentQDiv !== null) {
-        //currentQDiv.fadeOut(400);
-    }
+
     $(".answeredItem").each(function () {
         $(this).removeClass("answeredItem");
         $(this).addClass("answerItem");
@@ -272,43 +257,94 @@ function startGame() {
     });
 }
 
+function updatePoints(){
+    $('.yourPoints').empty();
+    $('.yourPoints').append(points);
+}
+
+/**
+ * The incoming data for the questions is processed here.
+ * @param data
+ */
 function processData(data) {
     'use strict';
     console.log(data);
-    $(".loading").remove();
+    $('.loading').remove();
+    $('.yourLevel').append(data.user.level);
+    // Only the points of the current session will be displayed
+    points = 0;//data.user.points;
     questions = data.questions;
     currentQuestion = -1;
     currentQDiv = null;
+    updatePoints();
     nextQuestion();
 }
 
+/**
+ * It updates the answers array with the results of the current question.
+ */
+function updateAnswers(){
+    'use strict';
+    // solutionShown? attemptsCount? question?
+    var answerInfo = {};
+    answerInfo.type = questions[currentQuestion].type;
+    answerInfo.questionElement = questions[currentQuestion].questionElement;
+    answerInfo.solutionShown = solutionShown;
+    answerInfo.attemptsCount = attemptsCount;
+    answerInfo.timeLeft = counter;
+    answers.push(answerInfo);
+}
 
+/**
+ * A right answer has been given. The answers array is updated and the next question is displayed.
+ */
 function rightAnswer() {
     'use strict';
-    console.log('well done!!');
-    $('.toastMessage').fadeIn(300);
-    setTimeout(function () {
-        $('.toastMessage').fadeOut(500);
-    }, 600);
+    // When the solution has been shown, no points are added
+    if(!solutionShown){
+        console.log('well done!!');
+        showFeedback('Well done!!');
+        if(attemptsCount==0){
+            points += 10;
+        }else{
+            points += Math.floor(5/attemptsCount);
+        }
+    }
+    updateAnswers();
+    updatePoints();
     nextQuestion();
 }
 
+/**
+ * A wrong answer has been given, and feedback must be shown.
+ */
 function wrongAnswer() {
     'use strict';
+    attemptsCount += 1;
     console.log('wrong answer!');
+    // todo: feedback info about the current question
     $('.feedbackDiv').fadeIn(300);
 }
 
+/**
+ * The user gave a wrong response but wants to try again
+ */
 function tryAgain() {
+    'use strict';
     noteTester.resetNotes();
     $('.feedbackDiv').fadeOut(300);
 }
 
+/**
+ * The right solution is displayed on the noteTester
+ */
 function showSolution() {
+    'use strict';
     var expectedNotes = questions[currentQuestion].expected.split(','),
         numNotes = expectedNotes.length,
         expectedNotesOct = noteTester.notesIntoOctaves(expectedNotes),
         i;
+    solutionShown = true;
     $('.feedbackDiv').fadeOut(300);
     noteTester.resetNotes();
     for (i = 0; i < numNotes; i += 1) {
@@ -316,6 +352,9 @@ function showSolution() {
     }
 }
 
+/**
+ * The user sends the notes currently selected on the noteTester.
+ */
 function sendNotes() {
     'use strict';
     var answeredNotes = noteTester.getNotesNoOctaves(),
@@ -335,3 +374,12 @@ function sendNotes() {
     }
     rightAnswer();
 }
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+// Timer events
+setInterval(function () {
+    'use strict';
+    timerDown();
+}, 500);

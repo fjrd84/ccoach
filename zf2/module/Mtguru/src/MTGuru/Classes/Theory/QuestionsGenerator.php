@@ -94,7 +94,7 @@ class QuestionsGenerator
             }
         }
 
-        $result = json_encode(array('questions' => $questions));
+        $result = json_encode(array('questions' => $questions, 'user' => $this->currentUser->getUserParams()));
 
         return $result;
     }

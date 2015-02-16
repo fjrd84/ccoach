@@ -232,11 +232,10 @@ div#answerItemsWrapper {
     position: absolute;
     top: 61px;
     left: 224px;
-    -webkit-transition: background-image 0.6s linear;
-    -moz-transition: background-image 0.6s linear;
-    -ms-transition: background-image 0.6s linear;
-    -o-transition: background-image 0.6s linear;
-    transition: background-image 0.6s linear;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
 }
 
 .homeTraining:hover{
@@ -249,6 +248,39 @@ div#answerItemsWrapper {
     animation:backspin 4s linear infinite;
 }
 
+@keyframes fadein {
+    from {
+        opacity:0.5;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0.5;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0.5;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .homePlay {
     background-image: url('../img/homeCassetteLeftAll.png');
     background-repeat: no-repeat;
@@ -257,15 +289,15 @@ div#answerItemsWrapper {
     position: absolute;
     top: 33px;
     left: 34px;
-    -webkit-transition: background-image 0.6s linear;
-    -moz-transition: background-image 0.6s linear;
-    -ms-transition: background-image 0.6s linear;
-    -o-transition: background-image 0.6s linear;
-    transition: background-image 0.6s linear;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
 }
 
 .homePlay:hover{
     z-index: 3;
+    opacity: 0.99;
     background-position: 0 -166px;
     background-image: url('../img/homeCassetteLeftAll.png');
     -webkit-transition: width 0.6s; /* For Safari 3.1 to 6.0 */

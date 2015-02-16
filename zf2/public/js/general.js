@@ -1,6 +1,8 @@
-function showInfoText(text){
+/*global $, baseUrl, jQuery, alert*/
+function showInfoText(text) {
+    'use strict';
     $('#navText').empty();
-    $('#navText').append('<div class="newText" style="display:none">'+text+'</div>');
+    $('#navText').append('<div class="newText" style="display:none">' + text + '</div>');
     $('#navText .newText').fadeIn('300');
 }
 
@@ -16,17 +18,17 @@ $('.showHome').mouseenter(function () {
     'use strict';
     showInfoText('Home!');
 }).mouseleave(function () {
-        'use strict';
-        $('#navText .newText').fadeOut('50');
-    });
+    'use strict';
+    $('#navText .newText').fadeOut('50');
+});
 
 $('.homePlay').mouseenter(function () {
     'use strict';
     showInfoText('Play!');
 }).mouseleave(function () {
-        'use strict';
-        $('#navText .newText').fadeOut('50');
-    });
+    'use strict';
+    $('#navText .newText').fadeOut('50');
+});
 
 $('.homeTraining').mouseenter(function () {
     'use strict';
