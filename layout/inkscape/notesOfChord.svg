@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1052.3622"
@@ -14,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="noteOfInterval.svg">
+   sodipodi:docname="notesOfChord.svg">
   <defs
      id="defs4">
     <inkscape:path-effect
@@ -61,9 +62,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="470.75369"
-     inkscape:cy="335.29993"
+     inkscape:zoom="0.7"
+     inkscape:cx="455.98269"
+     inkscape:cy="231.71091"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -89,6 +90,19 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.2677)">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="288.90363"
+       y="200.63242"
+       id="text4098"
+       sodipodi:linespacing="125%"
+       transform="translate(0,308.2677)"><tspan
+         sodipodi:role="line"
+         id="tspan4100"
+         x="288.90363"
+         y="200.63242"
+         style="fill:#ffffff;fill-opacity:1">Which</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.95769507;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4491"
@@ -99,216 +113,6 @@
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
        inkscape:export-xdpi="89.08316"
        inkscape:export-ydpi="89.08316" />
-    <path
-       style="fill:#ffdbaa;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m 172.40001,857.81873 c -10.2753,0 -18.60304,8.32772 -18.60304,18.60304 0,10.27529 8.32773,18.60299 18.60304,18.60299 10.27529,0 18.60304,-8.3277 18.60304,-18.60299 0,-10.27532 -8.32775,-18.60304 -18.60304,-18.60304 z m -0.0181,5.25549 3.99385,3.58396 0,-0.63484 4.47601,0 0,4.65279 7.11976,6.38853 -5.19925,0 0,10.64746 -6.58936,0 c 2.05154,-8.09285 -9.60588,-8.24095 -7.56979,0 l -6.58941,0 0,-10.66357 -5.19117,0 7.77069,-6.98315 7.77867,-6.9912 z"
-       id="path4438"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985"
-       width="21.574326"
-       height="116.65201"
-       x="493.13559"
-       y="698.59619"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-1"
-       width="21.574326"
-       height="116.65201"
-       x="623.87598"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-7"
-       width="21.574326"
-       height="116.65201"
-       x="602.08594"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-4"
-       width="21.574326"
-       height="116.65201"
-       x="580.29578"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-0"
-       width="21.574326"
-       height="116.65201"
-       x="558.5058"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-9"
-       width="21.574326"
-       height="116.65201"
-       x="536.7157"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-48"
-       width="21.574326"
-       height="116.65201"
-       x="514.92572"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808"
-       width="10.292826"
-       height="74.191048"
-       x="509.52786"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-8"
-       width="10.292826"
-       height="74.191048"
-       x="618.59375"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3598879;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-2"
-       width="10.292826"
-       height="74.191048"
-       x="596.86438"
-       y="698.55487"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-4"
-       width="10.292826"
-       height="74.191048"
-       x="574.94446"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-5"
-       width="10.292826"
-       height="74.191048"
-       x="531.44775"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.49955568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3849"
-       width="53.496593"
-       height="31.268999"
-       x="619.32892"
-       y="661.31006"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <text
-       xml:space="preserve"
-       style="font-size:40.1701889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="279.05289"
-       y="554.19562"
-       id="text4467"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316"><tspan
-         sodipodi:role="line"
-         id="tspan4469"
-         x="279.05289"
-         y="554.19562"
-         style="font-size:28.11912918px;stroke:none">Play the note that forms this interval:</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32.53785706px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffdbaa;fill-opacity:1;stroke:none;font-family:Sans"
-       x="575.55554"
-       y="617.27942"
-       id="text4471"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316"><tspan
-         sodipodi:role="line"
-         id="tspan4473"
-         x="575.55554"
-         y="617.27942"
-         style="fill:#ffdbaa;stroke:none">Tonic: D#</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32.53785706px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffdbaa;fill-opacity:1;stroke:none;font-family:Sans"
-       x="278.18771"
-       y="617.29523"
-       id="text4475"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316"><tspan
-         sodipodi:role="line"
-         id="tspan4477"
-         x="278.18771"
-         y="617.29523">Interval: 2M</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:26.35566139px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="159.50407"
-       y="505.96094"
-       id="text4479"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316"><tspan
-         sodipodi:role="line"
-         id="tspan4481"
-         x="159.50407"
-         y="505.96094">12345</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:26.35566139px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffdbaa;fill-opacity:1;stroke:none;font-family:Sans"
-       x="161.50079"
-       y="476.67545"
-       id="text4483"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316"><tspan
-         sodipodi:role="line"
-         id="tspan4485"
-         x="161.50079"
-         y="476.67545">Level 2</tspan></text>
     <rect
        style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-opacity:1"
        id="rect4539-7"
@@ -345,317 +149,8 @@
        x="-97.73098"
        y="825.82007" />
     <g
-       id="g4730"
-       style="fill:#805215"
-       transform="matrix(1.5306425,0,0,1.5306425,-185.44854,-284.54635)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4575"
-         d="m 650.00715,481.77593 -7.94643,38.30357 22.32143,-0.0893 -8.66072,-38.30357 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4577"
-         d="m 649.9625,481.68664 3.16965,-0.98214 2.67857,0.98214 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4583"
-         d="m 643.84643,520.16879 -0.13393,0.625 0.22322,0.66964 0.49107,0.40178 0.66964,0.13393 0.80357,-0.3125 0.3125,-0.58035 0.0446,-0.58036 -0.22322,-0.35714 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4587"
-         d="m 660.62399,520.06702 -0.11049,0.52086 0.11049,0.4893 0.37092,0.50507 0.48929,0.21308 0.70237,0.008 0.44194,-0.39459 0.31567,-0.51296 0.0553,-0.44195 -0.26043,-0.43405 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <path
-       style="fill:#d4a76a;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 810.77613,457.14444 6.95783,-0.0484 7.63428,34.9824 -21.79152,0.2899 z"
-       id="path4579"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <g
-       id="g4736"
-       style="fill:#553100"
-       transform="matrix(1.5306425,0,0,1.5306425,-185.44854,-284.54635)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4589"
-         d="m 647.44466,507.51114 0.44194,-2.27284 10.6066,0 0.50507,2.08344 z"
-         style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4591"
-         d="m 651.61153,505.17517 0.44195,-20.58186 2.33597,0 0.44195,20.51872 z"
-         style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <g
-       id="g3248">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4593"
-         d="m 813.5192,495.33659 -10e-6,-35.99291 1.58226,0 0,35.99292 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:nodetypes="ccccc" />
-      <path
-         sodipodi:nodetypes="ccccc"
-         inkscape:connector-curvature="0"
-         id="path4595"
-         d="m 811.72061,464.20186 5.17942,2e-5 -0.69442,3.89875 -3.66252,0 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <path
-       style="fill:#ffdbaa;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 801.28015,492.30808 25.89793,-0.13669 4.44159,19.20136 -34.43946,0.0683 z"
-       id="path4581"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffe3c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.42237437000000000;stroke-opacity:1"
-       id="rect4676"
-       width="176.59727"
-       height="151.90096"
-       x="281.93347"
-       y="662.80573"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteTesterScoreBg.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <g
-       id="g4669"
-       transform="matrix(1.5306425,0,0,1.5306425,-225.17756,-617.17445)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteTesterScoreBg.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316">
-      <path
-         sodipodi:nodetypes="ccccc"
-         transform="translate(0,308.2677)"
-         inkscape:connector-curvature="0"
-         id="path4620"
-         d="m 349.10714,563.55877 0,29.28571 79.75,0.17857 L 428.5,563.73734 z"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         sodipodi:nodetypes="cc"
-         transform="translate(0,308.2677)"
-         inkscape:connector-curvature="0"
-         id="path4622"
-         d="m 348.92857,571.23734 79.75,0"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path4622-3"
-         d="m 349.375,886.82647 79.75,0"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path4622-6"
-         d="m 349.01786,893.79075 79.75,0"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-    <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.53064251px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 330.50034,774.40596 3.55327,-1.09332 c 2.2241,-4.52743 -0.47005,-6.75725 -3.40621,-7.73638 -3.64774,-0.21707 -3.87431,1.57735 -5.15016,4.31088 -0.62958,8.79761 9.13428,9.81746 14.02295,5.61213 2.56672,-2.88803 3.83911,-4.41385 3.00662,-9.29319 -1.72506,-10.5691 -5.48521,-21.43438 -8.19986,-29.79285 -4.916,-24.63454 0.54944,-40.02344 6.64458,-28.55249 5.34745,16.10152 -15.75966,24.44734 -18.91168,32.49496 -3.60228,6.42254 -1.85687,18.68718 7.76755,22.46496 10.5058,3.75818 16.99833,-3.2132 19.53263,-12.19433 1.11904,-7.37612 -4.17917,-12.70121 -11.61647,-11.75315 -11.18546,2.18164 -9.34058,18.48773 -9.34668,9.3302 7.8921,-14.99794 21.43418,-4.44396 15.24403,7.66818 -5.05143,6.99963 -16.91693,4.21011 -18.88048,-3.60526 -1.04781,-9.70182 3.37932,-15.1959 10.43847,-22.23473 7.7582,-8.29595 11.82704,-17.03379 10.0612,-24.50452 -1.87081,-4.43782 -3.50311,-5.48252 -6.83322,-6.01325 -4.07807,0.97976 -6.5855,5.2837 -7.73702,10.65984 -0.7598,4.77243 -0.29784,9.03247 0.0838,13.8031 0.63777,4.46438 0.46813,9.35132 1.9133,14.6231 l 4.64659,14.48645 1.36665,6.01325 c 1.20259,3.6081 1.34078,6.74092 0.81998,10.38649 -1.82555,4.24907 -4.50889,5.82212 -9.01985,4.91993 z"
-       id="path4649"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccccccccc"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteTesterScoreBg.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <path
-       style="fill:#ffdbaa;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m 890.84127,857.82657 c -10.27419,0 -18.61323,8.33902 -18.61323,18.61324 0,10.27416 8.33904,18.58495 18.61323,18.58495 10.27418,0 18.61325,-8.31079 18.61325,-18.58495 0,-10.27422 -8.33907,-18.61324 -18.61325,-18.61324 z m 0.76261,2.99391 c 4.78863,5.20065 9.27717,10.41869 14.06584,15.61933 -4.78867,5.20059 -9.27721,10.39042 -14.06584,15.59103 l 0,-5.22524 -10.70472,0 0,-20.73161 10.70472,0 0,-5.25351 z"
-       id="path4704"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <g
        id="g4711"
        transform="matrix(0,1,-1,0,1147.8498,653.79496)" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path4759"
-       sodipodi:cx="657.85712"
-       sodipodi:cy="194.09448"
-       sodipodi:rx="6.4285712"
-       sodipodi:ry="6.4285712"
-       d="m 664.28569,194.09448 c 0,3.5504 -2.87817,6.42857 -6.42857,6.42857 -3.55041,0 -6.42857,-2.87817 -6.42857,-6.42857 0,-3.5504 2.87816,-6.42857 6.42857,-6.42857 3.5504,0 6.42857,2.87817 6.42857,6.42857 z"
-       transform="matrix(1.4285998,0,0,1.4285998,-87.274479,195.53386)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\timeCounter.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path4759-4"
-       sodipodi:cx="657.85712"
-       sodipodi:cy="194.09448"
-       sodipodi:rx="6.4285712"
-       sodipodi:ry="6.4285712"
-       d="m 664.28569,194.09448 c 0,3.5504 -2.87817,6.42857 -6.42857,6.42857 -3.55041,0 -6.42857,-2.87817 -6.42857,-6.42857 0,-3.5504 2.87816,-6.42857 6.42857,-6.42857 3.5504,0 6.42857,2.87817 6.42857,6.42857 z"
-       transform="matrix(1.4285998,0,0,1.4285998,-67.376125,195.34253)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\whiteDot.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path4759-1"
-       sodipodi:cx="657.85712"
-       sodipodi:cy="194.09448"
-       sodipodi:rx="6.4285712"
-       sodipodi:ry="6.4285712"
-       d="m 664.28569,194.09448 c 0,3.5504 -2.87817,6.42857 -6.42857,6.42857 -3.55041,0 -6.42857,-2.87817 -6.42857,-6.42857 0,-3.5504 2.87816,-6.42857 6.42857,-6.42857 3.5504,0 6.42857,2.87817 6.42857,6.42857 z"
-       transform="matrix(1.4285998,0,0,1.4285998,-67.376125,215.24104)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\timeCounter.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path4759-9"
-       sodipodi:cx="657.85712"
-       sodipodi:cy="194.09448"
-       sodipodi:rx="6.4285712"
-       sodipodi:ry="6.4285712"
-       d="m 664.28569,194.09448 c 0,3.5504 -2.87817,6.42857 -6.42857,6.42857 -3.55041,0 -6.42857,-2.87817 -6.42857,-6.42857 0,-3.5504 2.87816,-6.42857 6.42857,-6.42857 3.5504,0 6.42857,2.87817 6.42857,6.42857 z"
-       transform="matrix(1.4285998,0,0,1.4285998,-87.274479,215.43236)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\timeCounter.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-17"
-       width="21.574326"
-       height="116.65201"
-       x="645.68964"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-1-4"
-       width="21.574326"
-       height="116.65201"
-       x="776.43005"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-7-0"
-       width="21.574326"
-       height="116.65201"
-       x="754.64001"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-4-9"
-       width="21.574326"
-       height="116.65201"
-       x="732.84985"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-0-4"
-       width="21.574326"
-       height="116.65201"
-       x="711.05988"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-9-8"
-       width="21.574326"
-       height="116.65201"
-       x="689.26978"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3393268;stroke-opacity:1"
-       id="rect2985-48-8"
-       width="21.574326"
-       height="116.65201"
-       x="667.4798"
-       y="698.54047"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-24"
-       width="10.292826"
-       height="74.191048"
-       x="662.08191"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-8-5"
-       width="10.292826"
-       height="74.191048"
-       x="771.14783"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3598879;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-2-5"
-       width="10.292826"
-       height="74.191048"
-       x="749.41846"
-       y="698.55487"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-4-1"
-       width="10.292826"
-       height="74.191048"
-       x="727.49854"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.36002469;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3808-5-7"
-       width="10.292826"
-       height="74.191048"
-       x="684.00183"
-       y="698.55505"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\noteOfInterval.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
     <g
        id="g3344"
        transform="translate(13.462741,3.2123712)">
@@ -1843,96 +1338,348 @@
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeIconBig.png"
        inkscape:export-xdpi="89.08316"
        inkscape:export-ydpi="89.08316" />
-    <rect
-       style="fill:none;stroke:none"
-       id="rect3306"
-       width="46.214481"
-       height="75.761444"
-       x="966.46344"
-       y="435.4115"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <g
-       id="g4730-1"
-       style="fill:#805215"
-       transform="matrix(1.5306425,0,0,1.5306425,-9.8989892,-291.57279)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4575-2"
-         d="m 650.00715,481.77593 -7.94643,38.30357 22.32143,-0.0893 -8.66072,-38.30357 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4577-5"
-         d="m 649.9625,481.68664 3.16965,-0.98214 2.67857,0.98214 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4583-0"
-         d="m 643.84643,520.16879 -0.13393,0.625 0.22322,0.66964 0.49107,0.40178 0.66964,0.13393 0.80357,-0.3125 0.3125,-0.58035 0.0446,-0.58036 -0.22322,-0.35714 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4587-9"
-         d="m 660.62399,520.06702 -0.11049,0.52086 0.11049,0.4893 0.37092,0.50507 0.48929,0.21308 0.70237,0.008 0.44194,-0.39459 0.31567,-0.51296 0.0553,-0.44195 -0.26043,-0.43405 z"
-         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <path
-       style="fill:#d4a76a;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 986.32568,450.118 6.95783,-0.0484 7.63429,34.9824 -21.79152,0.2899 z"
-       id="path4579-4"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
-    <g
-       id="g4736-7"
-       style="fill:#553100"
-       transform="matrix(1.5306425,0,0,1.5306425,-9.8989892,-291.57279)"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeBack.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4589-8"
-         d="m 647.44466,507.51114 0.44194,-2.27284 10.6066,0 0.50507,2.08344 z"
-         style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4591-3"
-         d="m 651.61153,505.17517 0.44195,-20.58186 2.33597,0 0.44195,20.51872 z"
-         style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <g
-       transform="translate(175.54955,-7.0264363)"
-       id="g3248-5"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metroLine.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4593-1"
-         d="m 813.5192,495.33659 -10e-6,-35.99291 1.58226,0 0,35.99292 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:nodetypes="ccccc" />
-      <path
-         sodipodi:nodetypes="ccccc"
-         inkscape:connector-curvature="0"
-         id="path4595-2"
-         d="m 811.72061,464.20186 5.17942,2e-5 -0.69442,3.89875 -3.66252,0 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <path
-       style="fill:#ffdbaa;fill-opacity:1;stroke:#000000;stroke-width:0.3061285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 976.82971,485.28164 25.89789,-0.13669 4.4416,19.20136 -34.43943,0.0683 z"
-       id="path4581-0"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\metronomeFront.png"
-       inkscape:export-xdpi="89.08316"
-       inkscape:export-ydpi="89.08316" />
+    <image
+       y="421.54486"
+       x="118.81991"
+       id="image4095"
+       xlink:href="data:image/png;base64,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
+HSoi8v/z+zKsjPnXggAAAABJRU5ErkJggg==
+"
+       height="502"
+       width="817" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="283.85287"
+       y="554.35699"
+       id="text4102"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4104"
+         x="283.85287"
+         y="554.35699"
+         style="font-size:28px">Which chord is this one?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="301.52042"
+       y="607.82184"
+       id="text4102-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4104-1"
+         x="301.52042"
+         y="607.82184"
+         style="font-size:28px">Adim7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="431.66373"
+       y="606.64081"
+       id="text4102-5-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4104-1-2"
+         x="431.66373"
+         y="606.64081"
+         style="font-size:28px">Bbm7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="563.99365"
+       y="606.64081"
+       id="text4102-5-4-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4104-1-2-3"
+         x="563.99365"
+         y="606.64081"
+         style="font-size:28px">CMaj9</tspan></text>
   </g>
 </svg>

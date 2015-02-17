@@ -52,12 +52,13 @@ class QuestionsGenerator
         for ($i = 0; $i < $numberOfQuestions; $i++) {
             if (!isset($_GET['questionType'])) {
                 // A random question type is picked from the pool
-                $question = $questionsPool[rand(0,$questionsPoolCount-1)];
+                $question = $questionsPool[rand(0, $questionsPoolCount - 1)];
             } else {
                 // TODO...
                 $questionType = $_GET['questionType'];
             }
-            switch (/*$question['questionType']*/'notesOfChord') {
+            switch ( /*$question['questionType']*/
+            'chordOfNotes') {
                 case 'notesOfChord':
                     $questions[] = $this->notesOfChordQuestion($knowledge, $question['skill']);
                     break;
@@ -128,6 +129,7 @@ class QuestionsGenerator
     /**
      * The notes of a random chord are shown and the player must guess which chord it is.
      * @param $knowledge
+     * @param $skill
      * @return array
      */
     public function chordOfNotesQuestion($knowledge, $skill)
@@ -140,25 +142,27 @@ class QuestionsGenerator
         $chord = $knowledge->getRandomChord();
         list($tonic, $chordType) = $knowledge->getTonicAndTypeOfChord($chord);
         $notes = $knowledge->getNotesChord($chord);
-        shuffle($notes); // The notes are randomly ordered
+        //shuffle($notes); // The notes are randomly ordered
         $chordQuestion['questionElement'] = implode(',', $notes);
-        $allChordTypes = $knowledge->getAllChordTypes();
+        // Chords
+        $wrongAnswers = $knowledge->getWrongChords($notes, 3);
         $chordQuestion['expected'] = $tonic . ',' . $chordType;
-        $chordQuestion['shown'] = implode(',', $notes) . ',' . implode(',', $allChordTypes);
+        $chordQuestion['shown'] = implode(',', $wrongAnswers);
         return $chordQuestion;
     }
 
     /**
      * Two random notes are shown, and the user must say which interval they form
      * @param $knowledge
+     * @param $skill
      * @return array
      */
     public function intervalOfNotesQuestion($knowledge, $skill)
     {
         $tonic = $knowledge->getRandomNote();
         // No alterations on the tonic for the basic skill
-        if($skill == 0){
-            $tonic = substr($tonic,0,1);
+        if ($skill == 0) {
+            $tonic = substr($tonic, 0, 1);
         }
         $interval = $knowledge->getRandomInterval();
         $intervalNote = $knowledge->getNoteInterval($tonic, $interval);
@@ -183,8 +187,8 @@ class QuestionsGenerator
     {
         $tonic = $knowledge->getRandomNote();
         // No alterations on the tonic for the basic skill
-        if($skill == 0){
-            $tonic = substr($tonic,0,1);
+        if ($skill == 0) {
+            $tonic = substr($tonic, 0, 1);
         }
         $interval = $knowledge->getRandomInterval();
         $intervalNote = $knowledge->getNoteInterval($tonic, $interval);

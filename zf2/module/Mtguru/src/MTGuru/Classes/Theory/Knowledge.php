@@ -338,7 +338,30 @@ class Knowledge
     }
 
     /**
+     * It returns an array of N chords that contain one or more of the given notes, but also some other
+     * different notes. None of the returned chords can be formed with the given notes.
+     * @param $notes
+     * @param $quantity
+     */
+    public function getWrongChords($notes, $quantity = 3)
+    {
+        $possibleChords = $this->getAllPossibleChords($notes, false);
+        $wrongChords = array();
+        $numNotes = count($notes);
+        $index = 0;
+        while ($index < $quantity) {
+            $chord = $this->getRandomChord($notes[rand(0, $numNotes - 1)]);
+            if (!in_array($chord, $possibleChords)) {
+                $wrongChords[$index] = $chord;
+                $index += 1;
+            }
+        }
+        return $wrongChords;
+    }
+
+    /**
      * It returns a random chord
+     * @param null $note
      * @return string
      */
     public function getRandomChord($note = null)

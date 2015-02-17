@@ -30,7 +30,7 @@ function showFeedback(message) {
  */
 function goHome() {
     'use strict';
-    $('.mainGame').children().fadeOut(500); 
+    $('.mainGame').children().fadeOut(500);
     $('.loading').fadeIn(300);
     window.location = baseUrl;
 }
@@ -114,25 +114,37 @@ function useSharps() {
  */
 function notesOfChord() {
     'use strict';
-    var questionDiv = $(".genericQuestion"),
-        i,
-        newDiv,
-        shown = (questions[currentQuestion].shown).split(",");
-
+    var questionDiv = $(".genericQuestion");
+    
     // The note tester is shown for the user to tell the answer notes
     $('.noteTesterWrapper').fadeIn(300);
     noteTester.resetNotes();
     noteTester.useSharps = useSharps();
-    questionDiv.find(".answerItems").empty();
-    /*
-     for (i = 0; i < shown.length; i += 1) {
-     newDiv = '<div class="answerItem" data-item="' + shown[i] + '">' + shown[i] + '</div>';
-     questionDiv.find(".answerItems").append(newDiv);
-     }*/
     currentQDiv = questionDiv;
-    questionDiv.find(".questionText").text(questions[currentQuestion].text);
-    questionDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
-    questionDiv.fadeIn(1000);
+    displayQuestion();
+}
+
+function displayQuestion(){
+    currentQDiv.find(".answerItems").empty();
+    currentQDiv.find(".questionText").text(questions[currentQuestion].text);
+    currentQDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
+    currentQDiv.fadeIn(1000);
+}
+
+function chordOfNotes() {
+    'use strict';
+    var chordNotes = questions[currentQuestion].questionElement.split(','),
+        numNotes = chordNotes.length,
+        expectedNotesOct = noteTester.notesIntoOctaves(chordNotes),
+        i;
+    currentQDiv = $(".genericQuestion");
+    // The note tester is shown for the user to see the notes of the chord
+    $('.noteTesterWrapper').fadeIn(300);
+    noteTester.resetNotes();
+    for (i = 0; i < numNotes; i += 1) {
+        noteTester.pushNote(expectedNotesOct[i]);
+    }
+    displayQuestion();
 }
 
 /**
@@ -180,11 +192,14 @@ function nextQuestionCont() {
 
     // In case a specific question type requires a special treatment, it will be performed here.
     switch (currentType) {
-        case 'notesOfChord':
-            notesOfChord();
-            break;
-        default:
-            genericQuestion();
+    case 'notesOfChord':
+        notesOfChord();
+        break;
+    case 'chordOfNotes':
+        chordOfNotes();
+        break;
+    default:
+        genericQuestion();
     }
 
     // Event listeners
