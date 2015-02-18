@@ -44,21 +44,25 @@ class QuestionsGenerator
             }
         }
 
+        // todo: remove this when the question is ready.
+        $questionType = 'chordOfNotes';
+
         $numberOfQuestions = 7; // There will be 7 random questions
         $knowledge = Knowledge::getInstance();
         $knowledge->readFiles();
         $this->knowledge = $knowledge;
         $questions = array();
+        // TODO: SKILL MANAGEMENT
+        $question = array();
+        $question['skill'] = 2;
         for ($i = 0; $i < $numberOfQuestions; $i++) {
             if (!isset($_GET['questionType'])) {
                 // A random question type is picked from the pool
                 $question = $questionsPool[rand(0, $questionsPoolCount - 1)];
             } else {
-                // TODO...
                 $questionType = $_GET['questionType'];
             }
-            switch ( /*$question['questionType']*/
-            'chordOfNotes') {
+            switch ($questionType) {
                 case 'notesOfChord':
                     $questions[] = $this->notesOfChordQuestion($knowledge, $question['skill']);
                     break;
@@ -146,7 +150,9 @@ class QuestionsGenerator
         $chordQuestion['questionElement'] = implode(',', $notes);
         // Chords
         $wrongAnswers = $knowledge->getWrongChords($notes, 3);
-        $chordQuestion['expected'] = $tonic . ',' . $chordType;
+        array_push($wrongAnswers, $chord);
+        shuffle($wrongAnswers);
+        $chordQuestion['expected'] = $chord;
         $chordQuestion['shown'] = implode(',', $wrongAnswers);
         return $chordQuestion;
     }

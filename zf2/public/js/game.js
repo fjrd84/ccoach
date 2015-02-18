@@ -2,6 +2,7 @@
 var questions, // Array with all the questions
     currentType = '',
     trainingQuestionType,
+    trainingMode = false,
     currentQuestion = -1, // Position of the current question in the array
     currentAnswer = 0,
     currentQDiv,
@@ -67,10 +68,20 @@ function updateCommon() {
 }
 
 /**
+ * It displays a generic question and generic answer items.
+ */
+function genericQuestion() {
+    currentQDiv = $(".genericQuestion");
+    displayQuestion();
+    displayAnswerItems();
+}
+
+
+/**
  * Used to display generic components for replying any question (only used if there's no specific
  * treatment needed for a question).
  */
-function genericQuestion() {
+function displayAnswerItems() {
     'use strict';
     var questionDiv = $(".genericQuestion"),
         i,
@@ -84,24 +95,21 @@ function genericQuestion() {
     }
     currentQDiv = questionDiv;
     updateCommon();
-    questionDiv.find(".questionText").text(questions[currentQuestion].text);
-    questionDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
-    //questionDiv.append("NOTES OF CHORD!!");
     questionDiv.fadeIn(1000);
 }
 
 /**
  * It tells if sharp notes are present among the right answers.
  */
-function useSharps() {
+function useSharps(notes) {
     'use strict';
-    var numAnswers = questions[currentQuestion].expected.length,
+    var numAnswers = notes.length,
         i;
     for (i = 0; i < numAnswers; i += 1) {
-        if (questions[currentQuestion].expected[i].indexOf('#') > -1) {
+        if (notes[i].indexOf('#') > -1) {
             return true;
         }
-        if (questions[currentQuestion].expected[i].indexOf('b') > -1) {
+        if (notes[i].indexOf('b') > -1) {
             return false;
         }
     }
@@ -112,26 +120,42 @@ function useSharps() {
 /**
  * Used to display a question about the notes of a chord.
  */
-function notesOfChord() {
+function questionNotesOfChord() {
     'use strict';
     var questionDiv = $(".genericQuestion");
-    
     // The note tester is shown for the user to tell the answer notes
     $('.noteTesterWrapper').fadeIn(300);
     noteTester.resetNotes();
-    noteTester.useSharps = useSharps();
+    noteTester.useSharps = useSharps(questions[currentQuestion].expected);
+    noteTester.addListeners();
     currentQDiv = questionDiv;
     displayQuestion();
 }
 
-function displayQuestion(){
+function shuffle(o) {
+    for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+/**
+ * It randomizes the order of the elements in a CSV string, with ',' as separator.
+ */
+function shuffleElements(elements) {
+    var elementsArray = elements.split(',');
+    elementsArray = shuffle(elementsArray);
+    return elementsArray.join();
+
+}
+
+function displayQuestion() {
+    'use strict';
     currentQDiv.find(".answerItems").empty();
     currentQDiv.find(".questionText").text(questions[currentQuestion].text);
-    currentQDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
+    currentQDiv.find(".questionElement").text(shuffleElements(questions[currentQuestion].questionElement));
     currentQDiv.fadeIn(1000);
 }
 
-function chordOfNotes() {
+function questionChordOfNotes() {
     'use strict';
     var chordNotes = questions[currentQuestion].questionElement.split(','),
         numNotes = chordNotes.length,
@@ -141,10 +165,12 @@ function chordOfNotes() {
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').fadeIn(300);
     noteTester.resetNotes();
+    noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
     for (i = 0; i < numNotes; i += 1) {
         noteTester.pushNote(expectedNotesOct[i]);
     }
     displayQuestion();
+    displayAnswerItems();
 }
 
 /**
@@ -192,22 +218,26 @@ function nextQuestionCont() {
 
     // In case a specific question type requires a special treatment, it will be performed here.
     switch (currentType) {
-    case 'notesOfChord':
-        notesOfChord();
-        break;
-    case 'chordOfNotes':
-        chordOfNotes();
-        break;
-    default:
-        genericQuestion();
+        case 'notesOfChord':
+            questionNotesOfChord();
+            break;
+        case 'chordOfNotes':
+            questionChordOfNotes();
+            break;
+        default:
+            genericQuestion();
     }
 
     // Event listeners
     $(".answerItem").click(function () {
-        addAnswer($(this).data("item"));
-        $(this).removeClass("answerItem");
-        $(this).addClass("answeredItem");
+        addAnswer($(this));
     });
+}
+
+function addAnswer(answerElement) {
+    'use strict';
+    var value = answerElement.data("item");
+    sendAnswer(value);
 }
 
 
@@ -278,6 +308,9 @@ function startGame() {
         getVars = "";
     } else {
         getVars = {"questionType": trainingQuestionType};
+        $('.yourPoints').empty();
+        $('.yourPoints').append('Training');
+        trainingMode = true;
     }
     $.get(baseUrl + '/mtguru/ajax/game', getVars, function (data) {
         // TODO: Handle errors in data
@@ -299,13 +332,15 @@ function processData(data) {
     'use strict';
     console.log(data);
     $('.loading').hide();
-    $('.yourLevel').append(data.user.level);
+    //$('.yourLevel').append(data.user.level);
     // Only the points of the current session will be displayed
     points = 0;//data.user.points;
     questions = data.questions;
     currentQuestion = -1;
     currentQDiv = null;
-    updatePoints();
+    if (!trainingMode) {
+        updatePoints();
+    }
     nextQuestion();
 }
 
@@ -340,7 +375,9 @@ function rightAnswer() {
         }
     }
     updateAnswers();
-    updatePoints();
+    if (!trainingMode) {
+        updatePoints();
+    }
     nextQuestion();
 }
 
@@ -360,7 +397,6 @@ function wrongAnswer() {
  */
 function tryAgain() {
     'use strict';
-    noteTester.resetNotes();
     $('.feedbackDiv').fadeOut(300);
 }
 
@@ -369,15 +405,89 @@ function tryAgain() {
  */
 function showSolution() {
     'use strict';
+    solutionShown = true;
+    switch (currentType) {
+        case 'notesOfChord':
+            showSolutionNotesOfChord();
+            break;
+        case 'chordOfNotes':
+            showSolutionChordOfNotes();
+            break;
+        default:
+            showSolutionGeneric();
+            break;
+    }
+    $('.feedbackDiv').fadeOut(300);
+}
+
+/**
+ * It shows the solution for a question of type 'notesOfChord'
+ */
+function showSolutionNotesOfChord() {
+    'use strict';
     var expectedNotes = questions[currentQuestion].expected.split(','),
         numNotes = expectedNotes.length,
         expectedNotesOct = noteTester.notesIntoOctaves(expectedNotes),
         i;
-    solutionShown = true;
-    $('.feedbackDiv').fadeOut(300);
     noteTester.resetNotes();
     for (i = 0; i < numNotes; i += 1) {
         noteTester.pushNote(expectedNotesOct[i]);
+    }
+}
+
+/**
+ * It shows the solution for a question of type 'chordOfNotes'
+ */
+function showSolutionChordOfNotes() {
+    $('.answerItem').each(function () {
+        if ($(this).data('item') == questions[currentQuestion].expected) {
+            $(this).addClass('answeredItem');
+        }
+    });
+
+}
+
+/**
+ * It shows the solution for a generic question.
+ */
+function showSolutionGeneric() {
+    'use strict';
+    // TODO
+}
+
+function sendAnswer(data) {
+    'use strict';
+    switch (currentType) {
+        case 'notesOfChord':
+            sendNotes();
+            break;
+        default:
+            sendData(data);
+            break;
+    }
+}
+
+function resetAnswer() {
+    'use strict';
+    switch (currentType) {
+        case 'notesOfChord':
+            noteTester.resetNotes();
+            break;
+        default:
+            // todo
+            break;
+    }
+}
+
+/**
+ * Used when only one element is expected as an answer.
+ */
+function sendData(data) {
+    'use strict';
+    if (data === questions[currentQuestion].expected) {
+        rightAnswer();
+    } else {
+        wrongAnswer();
     }
 }
 

@@ -5,9 +5,14 @@ var noteTester = {
     // Note: if allowEverything is set to true, the score may not show all the pressed notes.
     addListeners: function () {
         'use strict';
+        noteTester.removeListeners();
         $('#noteTesterPiano .note').click(function () {
             noteTester.pushKey($(this));
         });
+    },
+    removeListeners: function () {
+        'use strict';
+        $('#noteTesterPiano .note').off();
     },
     pushKey: function (keyObject) {
         'use strict';
@@ -168,45 +173,42 @@ var noteTester = {
         $('#noteTesterScore .note').removeClass('sharp');
     },
     // It returns the current notes without information about the octaves.
-    getNotesNoOctaves: function(){
+    getNotesNoOctaves: function () {
         'use strict';
         var notes = [],
             i = 0;
-        for(;i<noteTester.currentNotes.length; i += 1){
-            notes[i] = noteTester.currentNotes[i].replace(/\d+/g,'');
+        for (; i < noteTester.currentNotes.length; i += 1) {
+            notes[i] = noteTester.currentNotes[i].replace(/\d+/g, '');
         }
         return notes;
     },
     // It tells if the note1 is smaller than the note2 (C is smaller than D, etc.)
-    smallerNote: function(note1, note2){
+    smallerNote: function (note1, note2) {
         var notes = 'CDEFGAB', // Notes order
-            note1 = note1.substr(0,1),
-            note2 = note2.substr(0,1);
+            note1 = note1.substr(0, 1),
+            note2 = note2.substr(0, 1);
         return notes.indexOf(note1) < notes.indexOf(note2);
 
     },
     // It returns the given array of notes with information added about octaves
-    notesIntoOctaves: function(notes){
+    notesIntoOctaves: function (notes) {
         'use strict';
         var octave = 4,
             previousNote = notes[0],
             notesOct = [],
             numNotes = notes.length,
             i;
-        notesOct[0] = previousNote.substr(0,1) + octave.toString() + previousNote.substr(1);
-        if(numNotes === 1){
+        notesOct[0] = previousNote.substr(0, 1) + octave.toString() + previousNote.substr(1);
+        if (numNotes === 1) {
             return notesOct;
         }
-        for(i=1; i< numNotes; i+=1){
-            if(noteTester.smallerNote(notes[i], previousNote)){
+        for (i = 1; i < numNotes; i += 1) {
+            if (noteTester.smallerNote(notes[i], previousNote)) {
                 octave += 1;
             }
             previousNote = notes[i];
-            notesOct[i] = previousNote.substr(0,1) + octave.toString() + previousNote.substr(1);
+            notesOct[i] = previousNote.substr(0, 1) + octave.toString() + previousNote.substr(1);
         }
         return notesOct;
     }
 };
-
-noteTester.addListeners();
-noteTester.useSharps = false;

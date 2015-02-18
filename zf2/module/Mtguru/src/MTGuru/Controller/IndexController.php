@@ -66,7 +66,17 @@ class IndexController extends AbstractActionController
 
     public function gameAction()
     {
-        return new ViewModel();
+        $userManagement = new UserManagement($this->getServiceLocator());
+        $currentUser = $userManagement->getCurrentUser();
+        if ($currentUser == null) {
+            $this->redirect()->toRoute('login');
+            return;
+        }
+        $viewModel = new ViewModel();
+        $viewModel->setVariable('ident', $currentUser->getFullName());
+        $viewModel->setVariable('numPoints', $currentUser->getPoints());
+        $viewModel->setVariable('currentLevel', $currentUser->getLevel());
+        return $viewModel;
     }
 
     public function resultsAction()
