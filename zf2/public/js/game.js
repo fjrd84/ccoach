@@ -208,6 +208,7 @@ function questionScaleOfNotes() {
     $('#comboBoxWrapper').removeClass('hidden');
     $('#comboBoxWrapper').fadeIn(300);
     noteTester.resetNotes();
+    noteTester.allowEverything = true;
     noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
     noteTester.pushNotes(scaleNotes);
     displayQuestion(false); // In the american notation, the notes will NOT be randomized
@@ -626,7 +627,7 @@ function sendData(data) {
 function sendNotes() {
     'use strict';
     var answeredNotes = noteTester.getNotesNoOctaves(),
-        expectedNotes = questions[currentQuestion].expected.split(','),
+        expectedNotes = noteTester.normalizeNotes(questions[currentQuestion].expected.split(',')),
         noteIndex,
         i;
     if (answeredNotes.length !== expectedNotes.length) {

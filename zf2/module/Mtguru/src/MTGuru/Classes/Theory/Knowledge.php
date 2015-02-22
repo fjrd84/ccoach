@@ -159,13 +159,14 @@ class Knowledge
 
     /**
      * It returns the note for a given interval with a known tonic.
-     * todo: test Gb & 4J
+     * It processes it smartly, returning only existing notes on a keyboard, translating
+     * Fb into E, B# into C, etc.
      *
      * @param $tonic C, D, E, F...
      * @param $intervalType 3M, 4J, 7m...
      * @return string E, D#, Gb...
      */
-    public function getNoteInterval($tonic, $intervalType)
+    public function getNoteIntervalSmart($tonic, $intervalType)
     {
         $numIntervals = count($this->intervals);
         $distance = 0;
@@ -206,6 +207,51 @@ class Knowledge
         } elseif ($baseDistance - 1 == $distance) { // Double flat case (the previous note will be selected)
             $intervalNote = $this->notes[($tonicIndex + $intervalIndex - 1) % 7][0];
             return $intervalNote;
+        } else {
+            return -1; // it means something went wrong (obviously, it SHOULDN'T happen...)
+        }
+    }
+
+    /**
+     * It returns the note for a given interval with a known tonic.
+     * todo: test Gb & 4J; refactor with smart.
+     *
+     * @param $tonic C, D, E, F...
+     * @param $intervalType 3M, 4J, 7m...
+     * @return string E, D#, Gb...
+     */
+    public function getNoteInterval($tonic, $intervalType)
+    {
+        $numIntervals = count($this->intervals);
+        $distance = 0;
+        // The tone distance for this interval is looked up
+        for ($i = 0; $i < $numIntervals; $i++) {
+            if ($this->intervals[$i][0] === $intervalType) {
+                $distance = $this->intervals[$i][1];
+                break;
+            }
+        }
+        // If the interval is unknown, -1 is returned
+        if ($distance == 0) {
+            return -1;
+        }
+
+        $tonicIndex = $this->indexOfNote(substr($tonic, 0, 1));
+        $intervalIndex = substr($intervalType, 0, 1) - 1;
+        $intervalNote = $this->notes[($tonicIndex + $intervalIndex) % 7][0];
+        // The distance of the notes without alterations is calculated
+        $baseDistance = $this->getDistance($tonic, $intervalNote);
+        if ($baseDistance == $distance) {
+            return $intervalNote;
+        } elseif ($baseDistance - 0.5 == $distance) {
+            return $intervalNote . 'b';
+        } elseif ($baseDistance + 0.5 == $distance) {
+            return $intervalNote . '#';
+        } elseif ($baseDistance + 1 == $distance) {
+            return $intervalNote . '#';
+            return $intervalNote . '##';
+        } elseif ($baseDistance - 1 == $distance) {
+            return $intervalNote . 'bb';
         } else {
             return -1; // it means something went wrong (obviously, it SHOULDN'T happen...)
         }
@@ -356,7 +402,8 @@ class Knowledge
      * @param $skill
      * @return array
      */
-    public function getRandomIntervalNotes($skill){
+    public function getRandomIntervalNotes($skill)
+    {
         do {
             $tonic = $this->getRandomNote();
             $intervalNote = $this->getRandomNote($tonic);

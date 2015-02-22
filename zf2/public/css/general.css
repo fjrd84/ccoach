@@ -8,6 +8,51 @@
     -o-user-select: none;
 }
 
+#topUsers .topUsersTitle {
+    top: 10px;
+    position: absolute;
+    left: 44px;
+    -ms-transform: rotate(1deg); /* IE 9 */      
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */      
+    transform: rotate(1deg);
+}
+
+#topUsers .firstOne {
+    top: 42px;
+    position: absolute;
+    left: 47px;
+    -ms-transform: rotate(4deg); /* IE 9 */      
+    -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */      
+    transform: rotate(4deg);
+}
+
+#topUsers .secondOne {
+    top: 96px;
+    left: 40px;
+    position: absolute;
+    -ms-transform: rotate(-1deg); /* IE 9 */      
+    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */      
+    transform: rotate(-1deg);
+}
+
+#topUsers .thirdOne {
+    top: 126px;
+    position: absolute;
+    left: 27px;
+    -ms-transform: rotate(-1deg); /* IE 9 */      
+    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */      
+    transform: rotate(-1deg);
+}
+
+#topUsers .fourthOne {
+    top: 174px;
+    left: 45px;
+    position: absolute;
+    -ms-transform: rotate(-4deg); /* IE 9 */      
+    -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */      
+    transform: rotate(-4deg);
+}
+
 
 @font-face {
     font-family:"Digital7";
@@ -16,6 +61,14 @@
 
 .mainDiv *{
     font-family:'Digital7', sans-serif;
+}
+
+div#topUsers {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 210px;
+    height: 203px;
 }
 
 .loginMessages {
@@ -107,7 +160,7 @@ div#navText {
     cursor: default;
 }
 
-select.comboBox,  select.comboBox:focus {
+select.comboBox, Â select.comboBox:focus {
     color: white;
     background-color: black;
     font-size: 25px;

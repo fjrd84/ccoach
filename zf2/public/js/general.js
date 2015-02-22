@@ -1,4 +1,28 @@
 /*global $, baseUrl, jQuery, alert*/
+var allTimeScores = true,
+    flipTime = 5000;
+
+
+function flipHighScores(){
+    if(allTimeScores){
+        $('#topUsers .allTimes').fadeOut(200,function(){
+            $('#topUsers .thisWeek').fadeIn(300);
+        });
+    }else{
+        $('#topUsers .thisWeek').fadeOut(200,function(){
+            $('#topUsers .allTimes').fadeIn(300);
+        });
+    }
+    allTimeScores = !allTimeScores;
+    setTimeout(function(){
+        flipHighScores();
+    }, flipTime);
+}
+
+setTimeout(function(){
+    flipHighScores();
+}, flipTime);
+
 function showInfoText(text) {
     'use strict';
     $('#navText').empty();

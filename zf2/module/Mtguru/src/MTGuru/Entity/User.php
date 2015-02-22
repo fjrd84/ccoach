@@ -26,6 +26,9 @@ class User
     protected $points;
 
     /** @ORM\Column(type="integer") */
+    protected $pointsThisWeek;
+
+    /** @ORM\Column(type="integer") */
     protected $level;
 
     /** @ORM\OneToMany(targetEntity="Job", mappedBy="person", cascade={"remove"}) */
@@ -165,6 +168,38 @@ class User
         $result['points'] = $this->points;
         $result['level'] = $this->level;
         return $result;
+    }
+
+    /**
+     * @param mixed $pointsThisWeek
+     */
+    public function setPointsThisWeek($pointsThisWeek)
+    {
+        $this->pointsThisWeek = $pointsThisWeek;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPointsThisWeek()
+    {
+        return $this->pointsThisWeek;
+    }
+
+    /**
+     * @param mixed $userSkills
+     */
+    public function setUserSkills($userSkills)
+    {
+        $this->userSkills = $userSkills;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserSkills()
+    {
+        return $this->userSkills;
     }
 
 }

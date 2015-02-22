@@ -49,6 +49,24 @@ class UserManagement
     }
 
     /**
+     * It returns an array with information about the best performing users (overall).
+     * todo
+     */
+    public function getTopUsers(){
+        $allUsers = $this->objectManager->getRepository('MTGuru\Entity\User')->findBy(array(), array('points'=>'desc'));
+        return $allUsers;
+    }
+
+    /**
+     * It returns an array with information about the best performing users (this week).
+     * @return mixed
+     */
+    public function getTopUsersThisWeek(){
+        $allUsers = $this->objectManager->getRepository('MTGuru\Entity\User')->findBy(array(), array('pointsThisWeek'=>'desc'));
+        return $allUsers;
+    }
+
+    /**
      * It returns an array with the available question types for the current user.
      */
     public function getQuestionTypes()

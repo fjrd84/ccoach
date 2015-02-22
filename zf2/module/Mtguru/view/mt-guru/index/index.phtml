@@ -36,6 +36,23 @@
     </div>
     <div class="sideBar">
         <div id="navText"></div>
+        <div id="topUsers">
+            <div class="allTimes">
+                <div class="topUsersTitle">All Time High Scores</div>
+                <!-- There should always be at least four users in the database -->
+                <div class="firstOne"><?php echo $topUsers[0]->getFullName() . ' - ' . $topUsers[0]->getPoints(); ?></div>
+                <div class="secondOne"><?php echo $topUsers[1]->getFullName() . ' - ' . $topUsers[1]->getPoints(); ?></div>
+                <div class="thirdOne"><?php echo $topUsers[2]->getFullName() . ' - ' . $topUsers[2]->getPoints(); ?></div>
+                <div class="fourthOne"><?php echo $topUsers[3]->getFullName() . ' - ' . $topUsers[3]->getPoints(); ?></div>
+            </div>
+            <div class="thisWeek" style="display:none">
+                <div class="topUsersTitle">High Scores: this week</div>
+                <div class="firstOne"><?php echo $topUsersThisWeek[0]->getFullName() . ' - ' . $topUsersThisWeek[0]->getPointsThisWeek(); ?></div>
+                <div class="secondOne"><?php echo $topUsersThisWeek[1]->getFullName() . ' - ' . $topUsersThisWeek[1]->getPointsThisWeek(); ?></div>
+                <div class="thirdOne"><?php echo $topUsersThisWeek[2]->getFullName() . ' - ' . $topUsersThisWeek[2]->getPointsThisWeek(); ?></div>
+                <div class="fourthOne"><?php echo $topUsersThisWeek[3]->getFullName() . ' - ' . $topUsersThisWeek[3]->getPointsThisWeek(); ?></div>
+            </div>
+        </div>
         <a href="javascript:logoutMe()">
             <div class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
         </a>

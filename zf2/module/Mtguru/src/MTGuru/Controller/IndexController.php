@@ -35,11 +35,15 @@ class IndexController extends AbstractActionController
             return;
         }
         $questionTypes = $userManagement->getQuestionTypes();
+        $topUsers = $userManagement->getTopUsers();
+        $topUsersThisWeek = $userManagement->getTopUsersThisWeek();; // Until this information is ready, we'll use the same list for both
         $viewModel = new ViewModel();
         $viewModel->setVariable('ident', $currentUser->getFullName());
         $viewModel->setVariable('numPoints', $currentUser->getPoints());
         $viewModel->setVariable('currentLevel', $currentUser->getLevel());
         $viewModel->setVariable('questionTypes', $questionTypes);
+        $viewModel->setVariable('topUsers', $topUsers);
+        $viewModel->setVariable('topUsersThisWeek', $topUsersThisWeek);
 
         return $viewModel;
     }
