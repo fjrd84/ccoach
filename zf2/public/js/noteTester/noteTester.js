@@ -1,3 +1,4 @@
+/*global $, jQuery, alert*/
 var noteTester = {
     useSharps: true,
     currentNotes: [],
@@ -5,7 +6,7 @@ var noteTester = {
     // Note: if allowEverything is set to true, the score may not show all the pressed notes.
     addListeners: function () {
         'use strict';
-        noteTester.removeListeners();
+        this.removeListeners();
         $('#noteTesterPiano .note').click(function () {
             noteTester.pushKey($(this));
         });
@@ -24,12 +25,12 @@ var noteTester = {
             return;
         }
         note = keyObject.data('note');
-        if (!noteTester.useSharps) {
-            note = noteTester.sharpToFlat(note);
+        if (!this.useSharps) {
+            note = this.sharpToFlat(note);
         }
-        if (!noteTester.allowEverything) {
+        if (!this.allowEverything) {
             // The complementary note cannot be pressed at the same time 
-            noteTester.pullKey(noteTester.findComplementary(note));
+            this.pullKey(this.findComplementary(note));
         }
         noteNat = note.substr(0, 2);
         if (note.indexOf('b') > -1) {
@@ -37,15 +38,15 @@ var noteTester = {
         } else if (note.indexOf('#') > -1) {
             extraClass = '.sharp';
         }
-        noteTester.showNote(note);
+        this.showNote(note);
         // The note object is selected/unselected
         if (keyObject.hasClass('selected')) {
             keyObject.removeClass('selected');
-            noteTester.removeNote(note);
+            this.removeNote(note);
             $('#noteTesterScore .note.' + noteNat + extraClass).hide();
         } else {
             keyObject.addClass('selected');
-            noteTester.addNote(note);
+            this.addNote(note);
             $('#noteTesterScore .note.' + noteNat).addClass(extraClass.slice(1));
             $('#noteTesterScore .note.' + noteNat).show();
         }
@@ -54,13 +55,13 @@ var noteTester = {
         'use strict';
         var cssClass,
             noteNat = note.substr(0, 2),
-            noteSharp = noteTester.flatToSharp(note).replace('#', 'Sharp');
+            noteSharp = this.flatToSharp(note).replace('#', 'Sharp');
         if (note.indexOf('b') > -1) {
             cssClass = 'flat';
         } else if (note.indexOf('#') > -1) {
             cssClass = 'sharp';
         }
-        noteTester.removeNote(note);
+        this.removeNote(note);
         // On the piano only sharp notes are represented (thus the conversion to sharp)
         $('#noteTesterPiano .note.' + noteSharp).removeClass('selected');
         $('#noteTesterScore .note.' + noteNat).removeClass(cssClass);
@@ -73,13 +74,14 @@ var noteTester = {
         }
         if (note.indexOf('b') > -1) {
             return note.replace('b', '');
-        } else if (note.indexOf('#') > -1) {
-            return note.replace('#', '');
-        } else if (noteTester.useSharps) {
-            return note + '#';
-        } else {
-            return note + 'b';
         }
+        if (note.indexOf('#') > -1) {
+            return note.replace('#', '');
+        }
+        if (this.useSharps) {
+            return note + '#';
+        }
+        return note + 'b';
     },
     sharpToFlat: function (note) {
         'use strict';
@@ -137,13 +139,13 @@ var noteTester = {
     },
     addNote: function (note) {
         'use strict';
-        noteTester.currentNotes.push(note);
+        this.currentNotes.push(note);
     },
     removeNote: function (note) {
         'use strict';
-        var index = noteTester.currentNotes.indexOf(note);
+        var index = this.currentNotes.indexOf(note);
         if (index > -1) {
-            noteTester.currentNotes.splice(index, 1);
+            this.currentNotes.splice(index, 1);
         }
     },
     // It shows a note on the display panel
@@ -159,12 +161,22 @@ var noteTester = {
     // Used to simulate pressing a key on the keyboard for a specific note.
     pushNote: function (note) {
         'use strict';
-        var cssClass = (noteTester.flatToSharp(note)).replace('#', 'Sharp');
-        noteTester.pushKey($('#noteTesterPiano .note.' + cssClass));
+        var cssClass = (this.flatToSharp(note)).replace('#', 'Sharp');
+        this.pushKey($('#noteTesterPiano .note.' + cssClass));
+    },
+    // Used to simulate pressing a key on the keyboard for an array of notes.
+    pushNotes: function (notes) {
+        'use strict';
+        var octNotes = this.notesIntoOctaves(notes),
+            numNotes = notes.length,
+            i;
+        for (i = 0; i < numNotes; i += 1) {
+            this.pushNote(octNotes[i]);
+        }
     },
     resetNotes: function () {
         'use strict';
-        noteTester.currentNotes = [];
+        this.currentNotes = [];
         $('.note.selected').each(function () {
             $(this).removeClass('selected');
         });
@@ -176,17 +188,18 @@ var noteTester = {
     getNotesNoOctaves: function () {
         'use strict';
         var notes = [],
-            i = 0;
-        for (; i < noteTester.currentNotes.length; i += 1) {
-            notes[i] = noteTester.currentNotes[i].replace(/\d+/g, '');
+            i;
+        for (i = 0; i < this.currentNotes.length; i += 1) {
+            notes[i] = this.currentNotes[i].replace(/\d+/g, '');
         }
         return notes;
     },
     // It tells if the note1 is smaller than the note2 (C is smaller than D, etc.)
     smallerNote: function (note1, note2) {
-        var notes = 'CDEFGAB', // Notes order
-            note1 = note1.substr(0, 1),
-            note2 = note2.substr(0, 1);
+        'use strict';
+        var notes = 'CDEFGAB'; // Notes order
+        note1 = note1.substr(0, 1),
+        note2 = note2.substr(0, 1);
         return notes.indexOf(note1) < notes.indexOf(note2);
 
     },
@@ -203,7 +216,7 @@ var noteTester = {
             return notesOct;
         }
         for (i = 1; i < numNotes; i += 1) {
-            if (noteTester.smallerNote(notes[i], previousNote)) {
+            if (this.smallerNote(notes[i], previousNote)) {
                 octave += 1;
             }
             previousNote = notes[i];

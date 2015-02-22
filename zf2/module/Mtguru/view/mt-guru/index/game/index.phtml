@@ -7,7 +7,7 @@
                     <div class="questionText">Question text</div>
                     <div class="questionElement"></div>
                     <div id="answerItemsWrapper">
-                        <div class="answerItems">
+                        <div id="answerItems">
                             <div class="answerItem" data-item="CMaj7">CMaj7</div>
                         </div>
                     </div>
@@ -64,12 +64,30 @@
                 <div onclick="sendAnswer()" id="sendResults">SEND</div>
             </div>
         </div>
+        <div class="intervalSelectorWrapper" style="display:none">
+            <div class="intervalNum">
+                <div class="intervalNumElement" data-num="2">2</div>
+                <div class="intervalNumElement" data-num="3">3</div>
+                <div class="intervalNumElement" data-num="4">4</div>
+                <div class="intervalNumElement" data-num="5">5</div>
+                <div class="intervalNumElement" data-num="6">6</div>
+                <div class="intervalNumElement" data-num="7">7</div>
+            </div>
+            <div class="intervalType">
+                <div class="intervalTypeElement" data-type="-">-</div>
+                <div class="intervalTypeElement" data-type="m">m</div>
+                <div class="intervalTypeElement" data-type="J">J</div>
+                <div class="intervalTypeElement" data-type="M">M</div>
+                <div class="intervalTypeElement" data-type="+">+</div>
+            </div>
+            <div class="intervalDisplay"></div>
+        </div>
     </div>
     <div class="infoWrapper">
         <div class="yourPoints"></div>
         <div class="currentScale"></div>
         <div class="currentKey"></div>
-        <div class="yourLevel">Level <?php echo $currentLevel;?></div>
+        <div class="yourLevel">Level <?php echo $currentLevel; ?></div>
         <div class="timeCounter">
             <div class="metroBack"></div>
             <div class="metroFront"></div>
@@ -88,18 +106,22 @@
             <div onclick="showSolution()" class="buttonShowSolution">Show solution</div>
         </div>
     </div>
-    <div onclick="sendNotes()" class="nextButton"></div>
+    <div onclick="sendAnswer()" class="nextButton"></div>
     <div onclick="goHome()" class="homeButton"></div>
 </div>
 <script src="<?php echo $this->basePath() ?>/js/game.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->basePath() ?>/js/noteTester/noteTester.css">
 <script src="<?php echo $this->basePath() ?>/js/noteTester/noteTester.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->basePath() ?>/js/intervalSelector/intervalSelector.css">
+<script src="<?php echo $this->basePath() ?>/js/intervalSelector/intervalSelector.js"></script>
 <script>
     <?php
     if (isset($_GET['questionType'])) {
         echo 'var trainingQuestionType="' . $_GET['questionType'] . '";';
     }?>
-    startGame();
+    $(document).ready(function(){
+        startGame();
+    });
 </script>
 
 

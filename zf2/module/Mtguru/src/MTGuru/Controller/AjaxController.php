@@ -32,7 +32,7 @@ class AjaxController extends AbstractActionController
         $userManagement = new UserManagement($this->getServiceLocator());
         $currentUser = $userManagement->getCurrentUser();
         $questionsGenerator = new QuestionsGenerator($userManagement);
-        $question = $questionsGenerator->generateQuestion($this->translator);
+        $question = $questionsGenerator->generateQuestions($this->translator);
         //if ($request->isPost()) {
         //$response->setContent(\Zend\Json\Json::encode(array('response' => true, 'new_note_id' => "test")));
         $response->setContent($question);

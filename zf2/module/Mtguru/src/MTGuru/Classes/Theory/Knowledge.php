@@ -85,6 +85,7 @@ class Knowledge
     /**
      * It returns the notes of a given chord
      * @param $chord CMaj7, Em7, DM
+     * @return array|int
      */
     public function getNotesChord($chord)
     {
@@ -158,9 +159,11 @@ class Knowledge
 
     /**
      * It returns the note for a given interval with a known tonic.
+     * todo: test Gb & 4J
+     *
      * @param $tonic C, D, E, F...
      * @param $intervalType 3M, 4J, 7m...
-     * @return string C, D#, Gb...
+     * @return string E, D#, Gb...
      */
     public function getNoteInterval($tonic, $intervalType)
     {
@@ -209,9 +212,32 @@ class Knowledge
     }
 
     /**
+     * It returns the interval within the two given notes.
+     * @param $tonic
+     * @param $note
+     * @return int
+     */
+    public function getIntervalWithin($tonic, $note)
+    {
+        $tonicIndex = $this->indexOfNote(substr($tonic, 0, 1));
+        $noteIndex = $this->indexOfNote(substr($note, 0, 1));
+        $interval = ((7 + $noteIndex - $tonicIndex) % 7) + 1;
+        $distance = $this->getDistance($tonic, $note);
+        $intervalsCount = count($this->intervals);
+        for ($i = 0; $i < $intervalsCount; $i++) {
+            // Right intervals are considered all that match the tone distance
+            if ($distance == $this->intervals[$i][1] && strpos($this->intervals[$i][0], '' . $interval) > -1) {
+                return $this->intervals[$i][0];
+            }
+        }
+        return -1;
+    }
+
+
+    /**
      * It returns all possible intervals with the given notes (the first one as a tonic!)
      */
-    public function getIntervalsNotes($tonic, $note)
+    public function getAllPossibleIntervals($tonic, $note)
     {
         $intervals = array();
         $currentDistance = $this->getDistance($tonic, $note);
@@ -302,21 +328,49 @@ class Knowledge
     }
 
     /**
-     * It returns a random note
+     * It returns a random note, using the example note to use the same alterations (b or #).
+     * The returned note will be different from the example note.
+     * @param $exampleNote
      * @return string
      */
-    public function getRandomNote()
+    public function getRandomNote($exampleNote = '')
     {
         // TODO: Adapt to the new notes schema
-        $index = rand(0, 6); // random note
+        do {
+            $index = rand(0, 6); // random note
+            $note = $this->notes[$index][0];
+            // Repeat until the random note is different from the found note
+        } while (strpos($exampleNote, $note) > -1);
+        $kk = strpos($exampleNote, '#');
         $alteration = rand(0, 2); // random alteration
-        $note = $this->notes[$index][0];
-        if ($alteration == 0 && $note != "C" && $note != "F") {
+        if ($alteration == 0 && $note != "C" && $note != "F" && strpos($exampleNote, '#') == false) {
             return $note . "b";
-        } elseif ($alteration == 1 && $note != "E" && $note != "B") {
+        } elseif ($alteration == 1 && $note != "E" && $note != "B" && strpos($exampleNote, 'b') == false) {
             return $note . "#";
         }
         return $note;
+    }
+
+    /**
+     * It generates a random interval and returns its notes and type
+     * @param $skill
+     * @return array
+     */
+    public function getRandomIntervalNotes($skill){
+        do {
+            $tonic = $this->getRandomNote();
+            $intervalNote = $this->getRandomNote($tonic);
+            // No alterations on the tonic for the basic skill
+            if ($skill == 0) {
+                $tonic = substr($tonic, 0, 1);
+                $intervalNote = substr($intervalNote, 0, 1);
+            }
+            $interval = $this->getIntervalWithin($tonic, $intervalNote);
+            // If the interval is -1, it means that the random combination makes no sense,
+            // so a new combination is generated.
+        } while ($interval === -1);
+        $result = [$tonic, $intervalNote, $interval];
+        return $result;
     }
 
     /**
@@ -342,6 +396,7 @@ class Knowledge
      * different notes. None of the returned chords can be formed with the given notes.
      * @param $notes
      * @param $quantity
+     * @return array
      */
     public function getWrongChords($notes, $quantity = 3)
     {
@@ -536,7 +591,7 @@ class Knowledge
             for ($noteIndex = 0; $noteIndex < $numNotes; $noteIndex++) {
                 // Only intervals between different notes will be computed
                 if ($tonicIndex != $noteIndex) {
-                    $currentPossibleIntervals = $this->getIntervalsNotes($currentTonic, $notes[$noteIndex]);
+                    $currentPossibleIntervals = $this->getAllPossibleIntervals($currentTonic, $notes[$noteIndex]);
                     $possibleIntervalsWithTonicAndNote[$tonicIndex][$noteIndex] = $currentPossibleIntervals;
                     if (!isset($possibleIntervalsWithTonic[$tonicIndex])) {
                         $possibleIntervalsWithTonic[$tonicIndex] = "";

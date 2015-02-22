@@ -1,0 +1,49 @@
+.intervalSelectorWrapper{
+    position: absolute;
+    font-family: 'Digital7', sans-serif;
+    top: 139px;
+    left: 479px;
+    width: 190px; 
+    height: 81px;
+    color: #FFDBAA;
+    background-repeat: no-repeat;
+}
+
+.intervalType {
+    position: absolute;
+    top: -5px;
+    left: 100px;
+}
+
+.intervalTypeElement.selected {
+    color: white;
+}
+
+.intervalDisplay {
+    position: absolute;
+    width: 56px;
+    height: 35px;
+    color: white;
+    right: 0px;
+    font-size: 32px;
+    top: 25px;
+}
+
+.intervalNum {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 80px;
+}
+
+.intervalNumElement {
+    float: left;
+    width: 24px;
+    height: 31px;
+    font-family: 'Digital7', sans-serif;
+    font-size: 30px;
+}
+
+.intervalNumElement.selected {
+    color: white;
+}

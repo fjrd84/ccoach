@@ -57,6 +57,10 @@
     left: 334px;
 }
 
+.hidden{
+    display: none;
+}
+
 .mainDiv {
     background-color: black;
     width: 815px;
@@ -200,7 +204,7 @@ div#navText {
 div#answerItemsWrapper {
     position: absolute;
     left: 338px;
-    top: 51px;
+    top: 60px;
     width: 350px;
     height: 100px;
     text-align: center;
@@ -542,18 +546,21 @@ body{
 }
 
 .questionElement {
-    top: 64px;
-    left: 130px;
+    top: 66px;
+    text-align: left;
+    left: 128px;
     color: #ffdbaa;
     position: absolute;
-    font-size: 38px;
+    font-size: 33px;
+    max-width: 400px;
 }
 
 .questionText{
     position: absolute;
-    left: 130px;
+    text-align: left;
+    left: 128px;
     color: white;
-    top: 20px;
+    top: 16px;
     font-size: 20px;
     /* font-weight: bold; */
 }
