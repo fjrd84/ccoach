@@ -325,6 +325,8 @@ class QuestionsGenerator
     /**
      * The notes of a certain scale are asked.
      * @param $knowledge
+     * @param $skill
+     * @return array
      */
     public function notesOfScaleQuestion($knowledge, $skill)
     {
@@ -334,10 +336,11 @@ class QuestionsGenerator
         $allNotes = $knowledge->getAllNotes($notesScale);
         $question = array();
         $question['key'] = 'Key: ' . $tonic;
+        $question['pushedNotes'] = '';
         $question['mode'] = 'Scale: ' . $scale;
         $question['type'] = 'notesOfScale';
         $question['text'] = $this->translator->translate('questions_notesOfScale');
-        $question['questionElement'] = '';
+        $question['questionElement'] = 'Key: ' . $tonic . ' Scale: ' . $scale;
         $question['expected'] = implode(',', $notesScale);
         $question['shown'] = implode(',', $allNotes);
         return $question;
@@ -346,6 +349,8 @@ class QuestionsGenerator
     /**
      * The name of the scale for a given group of notes is asked
      * @param $knowledge
+     * @param $skill
+     * @return array
      */
     public function scaleOfNotesQuestion($knowledge, $skill)
     {
@@ -357,7 +362,7 @@ class QuestionsGenerator
         $question = array();
         $question['key'] = '';
         $question['mode'] = '';
-        $question['type'] = 'notesOfScale';
+        $question['type'] = 'scaleOfNotes';
         $question['text'] = $this->translator->translate('questions_scaleOfNotes');
         $question['questionElement'] = implode(',', $notesScale);
         $question['expected'] = $scale;

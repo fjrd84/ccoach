@@ -129,7 +129,14 @@ function questionNotesOfX() {
     $('.noteTesterWrapper').fadeIn(300);
     noteTester.resetNotes();
     noteTester.useSharps = useSharps(questions[currentQuestion].expected);
-    noteTester.pushNotes(pushedNotes);
+    if(currentType === 'notesOfScale'){
+        noteTester.allowEverything = true;
+    }else{
+        noteTester.allowEverything = false;
+    }
+    if(pushedNotes[0]!==""){
+        noteTester.pushNotes(pushedNotes);
+    }
     noteTester.addListeners();
     currentQDiv = questionDiv;
     displayQuestion();
@@ -186,6 +193,43 @@ function questionChordOfNotes() {
     noteTester.pushNotes(chordNotes);
     displayQuestion(true); // In the american notation, the notes will be randomized
     displayAnswerItems();
+}
+
+/**
+ * It displays a question of type 'chordOfNotes'.
+ */
+function questionScaleOfNotes() {
+    'use strict';
+    var scaleNotes = questions[currentQuestion].questionElement.split(',');
+    currentQDiv = $(".genericQuestion");
+    // The note tester is shown for the user to see the notes of the chord
+    $('.noteTesterWrapper').removeClass('hidden');
+    $('.noteTesterWrapper').fadeIn(300);
+    $('#comboBoxWrapper').removeClass('hidden');
+    $('#comboBoxWrapper').fadeIn(300);
+    noteTester.resetNotes();
+    noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
+    noteTester.pushNotes(scaleNotes);
+    displayQuestion(false); // In the american notation, the notes will NOT be randomized
+    //displayAnswerItems();
+    fillInCombobox();
+}
+
+/**
+ * It fills in the combobox with the current options.
+ * @param options
+ */
+function fillInCombobox(){
+    'use strict';
+    var questionDiv = $(".genericQuestion"),
+        i,
+        shown = (questions[currentQuestion].shown).split(","),
+        comboBox = $("#comboBoxWrapper .comboBox");
+    comboBox.empty();
+    comboBox.append('<option value="">'+'Select...'+'</option>')
+    for (i = 0; i < shown.length; i += 1) {
+        comboBox.append('<option value="'+shown[i]+'">'+shown[i]+'</option>')
+    }
 }
 
 /**
@@ -259,6 +303,7 @@ function nextQuestionCont() {
     switch (currentType) {
         case 'notesOfChord':
         case 'notesOfInterval':
+        case 'notesOfScale':
             questionNotesOfX();
             break;
         case 'chordOfNotes':
@@ -266,6 +311,9 @@ function nextQuestionCont() {
             break;
         case 'intervalOfNotes':
             questionIntervalOfNotes();
+            break;
+        case 'scaleOfNotes':
+            questionScaleOfNotes();
             break;
         default:
             genericQuestion();
@@ -311,6 +359,7 @@ function resetParameters() {
     $('.whiteDot1, .whiteDot2, .whiteDot3, .whiteDot4').fadeIn(300);
     $('.noteTesterWrapper').addClass('hidden')
     $('.intervalSelectorWrapper').addClass('hidden');
+    $('#comboBoxWrapper').addClass('hidden');
     solutionShown = false;
     attemptsCount = 0;
 }
@@ -455,6 +504,7 @@ function showSolution() {
     switch (currentType) {
         case 'notesOfChord':
         case 'notesOfInterval':
+        case 'notesOfScale':
             showSolutionNotesOfX();
             break;
         case 'chordOfNotes':
@@ -462,6 +512,9 @@ function showSolution() {
             break;
         case 'intervalOfNotes':
             showSolutionIntervalOfNotes();
+            break;
+        case 'scaleOfNotes':
+            showSolutionScaleOfNotes();
             break;
         default:
             showSolutionGeneric();
@@ -492,10 +545,17 @@ function showSolutionChordOfNotes() {
 }
 
 /**
- * It shows the solution for a question of type 'chordOfNotes'
+ * It shows the solution for a question of type 'intervalOfNotes'
  */
 function showSolutionIntervalOfNotes() {
     intervalSelector.selectInterval(questions[currentQuestion].expected);
+}
+
+/**
+ * It shows the solution for a question of type 'scaleOfNotes'
+ */
+function showSolutionScaleOfNotes() {
+    $('#comboBoxWrapper .comboBox').val(questions[currentQuestion].expected);
 }
 
 /**
@@ -511,10 +571,14 @@ function sendAnswer(data) {
     switch (currentType) {
         case 'notesOfChord':
         case 'notesOfInterval':
+        case 'notesOfScale':
             sendNotes();
             break;
         case 'intervalOfNotes':
             sendInterval();
+            break;
+        case 'scaleOfNotes':
+            sendScale();
             break;
         default:
             sendData(data);
@@ -531,6 +595,7 @@ function resetAnswer() {
     switch (currentType) {
         case 'notesOfChord':
         case 'notesOfInterval':
+        case 'notesOfScale':
             noteTester.resetNotes();
             noteTester.pushNotes(questions[currentQuestion].pushedNotes.split(','));
             break;
@@ -578,9 +643,17 @@ function sendNotes() {
     rightAnswer();
 }
 
+/**
+ * The currently seleted interval is sent an answer.
+ */
 function sendInterval(){
     'use strict';
     sendData(intervalSelector.getInterval());
+}
+
+function sendScale(){
+    'use strict';
+    sendData($('#comboBoxWrapper .comboBox').val());
 }
 
 //////////////////////////////////////////////////////////////////////////////////////

@@ -107,6 +107,19 @@ div#navText {
     cursor: default;
 }
 
+select.comboBox,  select.comboBox:focus {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    outline: rgb(128, 82, 21);
+}
+
+#comboBoxWrapper {
+    position: absolute;
+    top: 160px;
+    right: 138px;
+}
+
 .whiteDot1, .whiteDot2, .whiteDot3, .whiteDot4 {
     position: absolute;
     left: 50px;
