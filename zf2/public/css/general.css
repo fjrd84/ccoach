@@ -160,6 +160,17 @@ div#navText {
     cursor: default;
 }
 
+.exampleInline {
+    background-color: rgba(37, 22, 0, 0.76);
+    padding: 10px;
+}
+
+.extraInformation {
+    background-color: rgba(37, 22, 0, 0.76);
+    color: lightgrey;
+    padding: 10px;
+}
+
 .buttonContinue {
     bottom: 35px;
     position: absolute;
@@ -170,13 +181,18 @@ div#navText {
 .currentQuestionHelp {
     position: absolute;
     left: 35px;
-    top: 75px;
-    width: 745px;
-    height: 343px;
+    top: 76px;
+    width: 645px;
+    height: 316px;
     overflow: auto;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid white;
 }
 
 #displayHelp {
+    font-size: 22px;
     position: absolute;
     color: white;
     width: 815px;
@@ -185,7 +201,7 @@ div#navText {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-select.comboBox, Â select.comboBox:focus {
+select.comboBox, ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â select.comboBox:focus {
     color: white;
     background-color: black;
     font-size: 22px;

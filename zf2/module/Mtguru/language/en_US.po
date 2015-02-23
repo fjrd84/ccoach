@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MTGuru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-27 00:25+0100\n"
-"PO-Revision-Date: 2014-12-28 23:39+0100\n"
+"PO-Revision-Date: 2015-02-23 20:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
 "Language: en_US\n"
@@ -159,3 +159,12 @@ msgstr ""
 #: ../../MTGuru/view/mt-guru/index/training/index.phtml:19
 msgid "home_home"
 msgstr "Home"
+
+msgid "helpTitleintervalsHelp"
+msgstr "Intervals"
+
+msgid "helpTitlescalesHelp"
+msgstr "Scales"
+
+msgid "helpTitlechordsHelp"
+msgstr "Chords"

@@ -3,23 +3,23 @@ var allTimeScores = true,
     flipTime = 5000;
 
 
-function flipHighScores(){
-    if(allTimeScores){
-        $('#topUsers .allTimes').fadeOut(200,function(){
+function flipHighScores() {
+    if (allTimeScores) {
+        $('#topUsers .allTimes').fadeOut(200, function () {
             $('#topUsers .thisWeek').fadeIn(300);
         });
-    }else{
-        $('#topUsers .thisWeek').fadeOut(200,function(){
+    } else {
+        $('#topUsers .thisWeek').fadeOut(200, function () {
             $('#topUsers .allTimes').fadeIn(300);
         });
     }
     allTimeScores = !allTimeScores;
-    setTimeout(function(){
+    setTimeout(function () {
         flipHighScores();
     }, flipTime);
 }
 
-setTimeout(function(){
+setTimeout(function () {
     flipHighScores();
 }, flipTime);
 
@@ -84,7 +84,13 @@ function goPlay() {
     window.location = baseUrl + '/index/game';
 }
 
-function logoutMe(){
+function goTrain(questionType) {
+    'use strict';
+    $('.loadingMain').fadeIn(300);
+    window.location = baseUrl + '/index/game?questionType=' + questionType;
+}
+
+function logoutMe() {
     'use strict';
     $('.loadingMain').fadeIn(300);
     window.location = baseUrl + '/auth/logout';

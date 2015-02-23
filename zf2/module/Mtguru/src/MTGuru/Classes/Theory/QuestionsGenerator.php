@@ -137,7 +137,7 @@ class QuestionsGenerator
     {
         $question = array();
         $question['type'] = 'displayHelp';
-        $question['helpTitle'] = 'Help title - '.$helpPage; // todo: translate the help title for the current question type
+        $question['helpTitle'] = $this->translator->translate('helpTitle'.$helpPage); // todo: translate the help title for the current question type
         $question['helpPage'] = $helpPage;
         return $question;
     }

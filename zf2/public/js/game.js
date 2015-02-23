@@ -71,6 +71,7 @@ function updateCommon() {
  * It displays a generic question and generic answer items.
  */
 function genericQuestion() {
+    'use strict';
     currentQDiv = $(".genericQuestion");
     displayQuestion(false);
     displayAnswerItems();
