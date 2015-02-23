@@ -70,17 +70,18 @@ class QuestionsGenerator
                 $randomIndex = rand(0, $questionsPoolCount - 1);
                 $questionType = $questionsPool[$randomIndex]['questionType'];
                 $questionSkill = $questionsPool[$randomIndex]['skill'];
-                // If the skill is -1, the help page will be first displayed (only if it has not been displayed before for this question type)
-                if ($questionSkill == -1 && !in_array($questionType, $this->displayedHelp)) {
-                    $this->displayedHelp[] = $questionType;
-                    $questions[] = $this->displayHelp($questionType);
+                $helpPage = $this->getHelpPage($questionType);
+                // If the skill is -1, the help page will be first displayed (only if it has not been displayed before).
+                if ($questionSkill == -1 && !in_array($helpPage, $this->displayedHelp)) {
+                    $this->displayedHelp[] = $helpPage;
+                    $questions[] = $this->displayHelp($helpPage);
                 }
             } else {
                 // When training, the help page will always be displayed at the beginning
                 $questionType = $_GET['questionType'];
                 $questionSkill = 2; // Todo: get user skill for this question type
                 if ($i == 0) {
-                    $questions[] = $this->displayHelp($questionType);
+                    $questions[] = $this->displayHelp($this->getHelpPage($questionType));
                 }
             }
             switch ($questionType) {
@@ -129,14 +130,26 @@ class QuestionsGenerator
 
     /**
      * It creates an entry to tell the game to display a help page.
-     * @param $questionType
+     * @param $helpPage
      * @return array
      */
-    public function displayHelp($questionType){
+    public function displayHelp($helpPage)
+    {
         $question = array();
         $question['type'] = 'displayHelp';
-        $question['helpTitle'] = 'Help title'; // todo: translate the help title for the current question type
-        switch($questionType){
+        $question['helpTitle'] = 'Help title - '.$helpPage; // todo: translate the help title for the current question type
+        $question['helpPage'] = $helpPage;
+        return $question;
+    }
+
+    /**
+     * It returns the help page associated to a specific question type.
+     * @param $questionType
+     * @return string
+     */
+    public function getHelpPage($questionType)
+    {
+        switch ($questionType) {
             case 'notesOfChord':
             case 'chordOfNotes':
                 $helpPage = 'chordsHelp';
@@ -158,8 +171,7 @@ class QuestionsGenerator
                 $helpPage = 'intervalsHelp';
                 break;
         }
-        $question['helpPage'] = $helpPage;
-        return $question;
+        return $helpPage;
     }
 
     /**

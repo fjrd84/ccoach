@@ -247,6 +247,7 @@ function displayHelp() {
     counter = 9999999;
     $('.gameWrapper').fadeOut();
     $('#displayHelp').fadeIn(300);
+    $('#displayHelp .helpTitle').text(questions[currentQuestion].helpTitle);
     // Fill in help contents
     fillInHelp();
 }
