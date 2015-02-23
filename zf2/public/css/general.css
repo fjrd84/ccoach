@@ -27,7 +27,7 @@
 }
 
 #topUsers .secondOne {
-    top: 96px;
+    top: 95px;
     left: 40px;
     position: absolute;
     -ms-transform: rotate(-1deg); /* IE 9 */      
@@ -36,7 +36,7 @@
 }
 
 #topUsers .thirdOne {
-    top: 126px;
+    top: 125px;
     position: absolute;
     left: 27px;
     -ms-transform: rotate(-1deg); /* IE 9 */      
@@ -45,7 +45,7 @@
 }
 
 #topUsers .fourthOne {
-    top: 174px;
+    top: 173px;
     left: 45px;
     position: absolute;
     -ms-transform: rotate(-4deg); /* IE 9 */      
@@ -160,10 +160,35 @@ div#navText {
     cursor: default;
 }
 
+.buttonContinue {
+    bottom: 35px;
+    position: absolute;
+    width: 100%;
+    font-size: 35px;
+}
+
+.currentQuestionHelp {
+    position: absolute;
+    left: 35px;
+    top: 75px;
+    width: 745px;
+    height: 343px;
+    overflow: auto;
+}
+
+#displayHelp {
+    position: absolute;
+    color: white;
+    width: 815px;
+    height: 500px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
 select.comboBox, Â select.comboBox:focus {
     color: white;
     background-color: black;
-    font-size: 25px;
+    font-size: 22px;
     outline: rgb(128, 82, 21);
 }
 
@@ -222,10 +247,10 @@ select.comboBox, Â select.comboBox:focus {
     z-index: 4;
 }
 
-.feedbackMessage {
+.helpTitle {
     position: absolute;
-    left: 250px;
-    top: 60px;
+    top: 26px;
+    width: 100%;
     font-size: 30px;
     font-weight: bold;
 }
@@ -240,15 +265,15 @@ select.comboBox, Â select.comboBox:focus {
 .buttonTryagain {
     position: absolute;
     left: 100px;
-    top: 350px;
+    bottom: 35px;
     font-size: 30px;
     font-weight: bold;
 }
 
 .buttonShowSolution {
     position: absolute;
-    left: 460px;
-    top: 350px;
+    right: 80px;
+    bottom: 35px;
     font-size: 30px;
     font-weight: bold;
 }
@@ -612,12 +637,12 @@ body{
 }
 
 .questionElement {
-    top: 66px;
+    top: 70px;
     text-align: left;
     left: 128px;
     color: #ffdbaa;
     position: absolute;
-    font-size: 33px;
+    font-size: 28px;
     max-width: 400px;
 }
 
@@ -640,13 +665,14 @@ body{
 }
 
 .feedbackDiv{
+    color: white;
     position: absolute;
-    width: 760px;
-    left: 26px;
-    height: 453px;
-    top: 26px;
-    background-color: rgba(255, 255, 255, 0.71);
-    z-index: 5;
+    width: 815px;
+    left: 0px;
+    height: 500px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10;
 }
 
 {

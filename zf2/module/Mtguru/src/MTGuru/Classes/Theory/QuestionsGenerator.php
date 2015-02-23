@@ -13,6 +13,7 @@ class QuestionsGenerator
     private $userManagement;
     private $currentSkills;
     private $numberOfQuestions = 7;
+    private $displayedHelp = [];
 
     public function __construct($userManagement)
     {
@@ -68,10 +69,19 @@ class QuestionsGenerator
                 // A random question type is picked from the pool
                 $randomIndex = rand(0, $questionsPoolCount - 1);
                 $questionType = $questionsPool[$randomIndex]['questionType'];
-                $questionSkill = $questionsPool[$randomIndex]['questionType'];
+                $questionSkill = $questionsPool[$randomIndex]['skill'];
+                // If the skill is -1, the help page will be first displayed (only if it has not been displayed before for this question type)
+                if ($questionSkill == -1 && !in_array($questionType, $this->displayedHelp)) {
+                    $this->displayedHelp[] = $questionType;
+                    $questions[] = $this->displayHelp($questionType);
+                }
             } else {
+                // When training, the help page will always be displayed at the beginning
                 $questionType = $_GET['questionType'];
                 $questionSkill = 2; // Todo: get user skill for this question type
+                if ($i == 0) {
+                    $questions[] = $this->displayHelp($questionType);
+                }
             }
             switch ($questionType) {
                 case 'notesOfChord':
@@ -118,7 +128,44 @@ class QuestionsGenerator
     }
 
     /**
+     * It creates an entry to tell the game to display a help page.
+     * @param $questionType
+     * @return array
+     */
+    public function displayHelp($questionType){
+        $question = array();
+        $question['type'] = 'displayHelp';
+        $question['helpTitle'] = 'Help title'; // todo: translate the help title for the current question type
+        switch($questionType){
+            case 'notesOfChord':
+            case 'chordOfNotes':
+                $helpPage = 'chordsHelp';
+                break;
+            case 'notesOfInterval':
+            case 'intervalOfNotes':
+                $helpPage = 'intervalsHelp';
+                break;
+            case 'notesOfScale':
+            case 'scaleOfNotes':
+            case 'chordBelongsToScale':
+                $helpPage = 'scalesHelp';
+                break;
+            case 'degreeOfChord':
+            case 'chordOfDegree':
+                $helpPage = 'degreesHelp';
+                break;
+            default:
+                $helpPage = 'intervalsHelp';
+                break;
+        }
+        $question['helpPage'] = $helpPage;
+        return $question;
+    }
+
+    /**
+     * It creates a new question where the notes of a chord are asked.
      *
+     * E.g.:
      * key: 'C',
      * mode: 'ionian',
      * text: 'Tell me the notes of this chord',
@@ -129,6 +176,7 @@ class QuestionsGenerator
     public function notesOfChordQuestion($knowledge, $skill)
     {
         $chordQuestion = array();
+        $chordQuestion['helpPage'] = 'chordsHelp';
         $chordQuestion['key'] = '';
         $chordQuestion['mode'] = '';
         $chordQuestion['pushedNotes'] = '';
@@ -155,6 +203,7 @@ class QuestionsGenerator
         $chordQuestion = array();
         $chordQuestion['key'] = '';
         $chordQuestion['mode'] = '';
+        $chordQuestion['helpPage'] = 'chordsHelp';
         $chordQuestion['type'] = 'chordOfNotes';
         $chordQuestion['text'] = $this->translator->translate('questions_chordOfNotes');
         $chord = $knowledge->getRandomChord();
@@ -184,6 +233,7 @@ class QuestionsGenerator
         $intervalQuestion = array();
         $intervalQuestion['key'] = '';
         $intervalQuestion['mode'] = '';
+        $intervalQuestion['helpPage'] = 'intervalsHelp';
         $intervalQuestion['type'] = 'intervalOfNotes';
         $intervalQuestion['text'] = $this->translator->translate('questions_intervalOfNotes');
         $intervalQuestion['questionElement'] = $tonic . ',' . $intervalNote;
@@ -205,6 +255,7 @@ class QuestionsGenerator
         $intervalQuestion = array();
         $intervalQuestion['key'] = '';
         $intervalQuestion['mode'] = '';
+        $intervalQuestion['helpPage'] = 'intervalsHelp';
         $intervalQuestion['type'] = 'notesOfInterval';
         $intervalQuestion['text'] = $this->translator->translate('questions_notesOfInterval');
         $intervalQuestion['questionElement'] = 'Tonic: ' . $tonic . ', Interval: ' . $interval;
@@ -233,6 +284,7 @@ class QuestionsGenerator
         $question = array();
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
+        $question['helpPage'] = 'degreesHelp';
         $question['type'] = 'degreeOfChord';
         $question['text'] = $this->translator->translate('questions_degreeOfChord');
         $question['questionElement'] = 'Chord: ' . $randomChord;
@@ -245,6 +297,8 @@ class QuestionsGenerator
      * A scale and a degree are shown, and the user must specify which of the proposed chords
      * are a right choice for that degree in that scale.
      * @param $knowledge
+     * @param $skill
+     * @return array
      */
     public function chordOfDegreeQuestion($knowledge, $skill)
     {
@@ -280,6 +334,7 @@ class QuestionsGenerator
         $question = array();
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
+        $question['helpPage'] = 'degreesHelp';
         $question['type'] = 'chordOfDegree';
         $question['text'] = $this->translator->translate('questions_chordOfDegree');
         $question['questionElement'] = 'Degree: ' . $degree;
@@ -291,6 +346,8 @@ class QuestionsGenerator
     /**
      * A chord, a key and an scale are shown, and the user must say which degree it belongs to.
      * @param $knowledge
+     * @param $skill
+     * @return array
      */
     public function chordBelongsToScaleQuestion($knowledge, $skill)
     {
@@ -314,6 +371,7 @@ class QuestionsGenerator
         $question = array();
         $question['key'] = 'Key: ' . $tonic;
         $question['mode'] = 'Scale: ' . $scale;
+        $question['helpPage'] = 'scalesHelp';
         $question['type'] = 'chordBelongsToScale';
         $question['text'] = $this->translator->translate('questions_chordBelongsToScale');
         $question['questionElement'] = 'Chord: ' . $randomChord;
@@ -337,6 +395,7 @@ class QuestionsGenerator
         $question = array();
         $question['key'] = 'Key: ' . $tonic;
         $question['pushedNotes'] = '';
+        $question['helpPage'] = 'scalesHelp';
         $question['mode'] = 'Scale: ' . $scale;
         $question['type'] = 'notesOfScale';
         $question['text'] = $this->translator->translate('questions_notesOfScale');
@@ -362,6 +421,7 @@ class QuestionsGenerator
         $question = array();
         $question['key'] = '';
         $question['mode'] = '';
+        $question['helpPage'] = 'scalesHelp';
         $question['type'] = 'scaleOfNotes';
         $question['text'] = $this->translator->translate('questions_scaleOfNotes');
         $question['questionElement'] = implode(',', $notesScale);

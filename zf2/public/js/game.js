@@ -95,7 +95,7 @@ function displayAnswerItems() {
     }
     currentQDiv = questionDiv;
     updateCommon();
-    questionDiv.fadeIn(1000);
+    questionDiv.removeClass('hidden');
 }
 
 /**
@@ -126,15 +126,14 @@ function questionNotesOfX() {
         questionDiv = $(".genericQuestion");
     // The note tester is shown for the user to tell the answer notes
     $('.noteTesterWrapper').removeClass('hidden');
-    $('.noteTesterWrapper').fadeIn(300);
     noteTester.resetNotes();
     noteTester.useSharps = useSharps(questions[currentQuestion].expected);
-    if(currentType === 'notesOfScale'){
+    if (currentType === 'notesOfScale') {
         noteTester.allowEverything = true;
-    }else{
+    } else {
         noteTester.allowEverything = false;
     }
-    if(pushedNotes[0]!==""){
+    if (pushedNotes[0] !== "") {
         noteTester.pushNotes(pushedNotes);
     }
     noteTester.addListeners();
@@ -170,12 +169,12 @@ function displayQuestion(randomize) {
     randomize = randomize === undefined ? true : randomize;
     currentQDiv.find("#answerItems").empty();
     currentQDiv.find(".questionText").text(questions[currentQuestion].text);
-    if(randomize){
+    if (randomize) {
         currentQDiv.find(".questionElement").text(shuffleElements(questions[currentQuestion].questionElement));
-    }else{
+    } else {
         currentQDiv.find(".questionElement").text(questions[currentQuestion].questionElement);
     }
-    currentQDiv.fadeIn(1000);
+    currentQDiv.removeClass('hidden');
 }
 
 /**
@@ -187,7 +186,6 @@ function questionChordOfNotes() {
     currentQDiv = $(".genericQuestion");
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').removeClass('hidden');
-    $('.noteTesterWrapper').fadeIn(300);
     noteTester.resetNotes();
     noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
     noteTester.pushNotes(chordNotes);
@@ -204,9 +202,7 @@ function questionScaleOfNotes() {
     currentQDiv = $(".genericQuestion");
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').removeClass('hidden');
-    $('.noteTesterWrapper').fadeIn(300);
     $('#comboBoxWrapper').removeClass('hidden');
-    $('#comboBoxWrapper').fadeIn(300);
     noteTester.resetNotes();
     noteTester.allowEverything = true;
     noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
@@ -220,17 +216,49 @@ function questionScaleOfNotes() {
  * It fills in the combobox with the current options.
  * @param options
  */
-function fillInCombobox(){
+function fillInCombobox() {
     'use strict';
     var questionDiv = $(".genericQuestion"),
         i,
         shown = (questions[currentQuestion].shown).split(","),
         comboBox = $("#comboBoxWrapper .comboBox");
     comboBox.empty();
-    comboBox.append('<option value="">'+'Select...'+'</option>')
+    comboBox.append('<option value="">' + 'Select...' + '</option>')
     for (i = 0; i < shown.length; i += 1) {
-        comboBox.append('<option value="'+shown[i]+'">'+shown[i]+'</option>')
+        comboBox.append('<option value="' + shown[i] + '">' + shown[i] + '</option>')
     }
+}
+
+/**
+ * The help information for the current question is cloned and inserted into the help div.
+ */
+function fillInHelp() {
+    'use strict';
+    var helpPage = questions[currentQuestion].helpPage;
+    $('.currentQuestionHelp').empty();
+    $('#' + helpPage).clone().appendTo('.currentQuestionHelp');
+}
+
+/**
+ * It displays the help contents for a specified question type.
+ */
+function displayHelp() {
+    'use strict';
+    counter = 9999999;
+    $('.gameWrapper').fadeOut();
+    $('#displayHelp').fadeIn(300);
+    // Fill in help contents
+    fillInHelp();
+}
+
+/**
+ * It goes on to the next question after showing the initial help.
+ */
+function continuePlaying() {
+    'use strict';
+    $('#displayHelp').fadeOut(300, function () {
+        nextQuestion();
+    });
 }
 
 /**
@@ -242,9 +270,7 @@ function questionIntervalOfNotes() {
     currentQDiv = $(".genericQuestion");
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').removeClass('hidden');
-    $('.noteTesterWrapper').fadeIn(300);
     $('.intervalSelectorWrapper').removeClass('hidden');
-    $('.intervalSelectorWrapper').fadeIn(300);
     intervalSelector.resetSelector();
     intervalSelector.addListeners();
     noteTester.resetNotes();
@@ -255,50 +281,12 @@ function questionIntervalOfNotes() {
 }
 
 /**
- * It adds the given answer to the array of answers and checks if it is right.
- * @param answer
- */
-/*function addAnswerOld(answer) {
- 'use strict';
- if (currentAnswer === 0) {
- answers[currentQuestion] = [];
- if (questions[currentQuestion].expected.toString().indexOf(',') === -1) {
- rightAnswers = [];
- rightAnswers[0] = questions[currentQuestion].expected.toString();
- } else {
- rightAnswers = questions[currentQuestion].expected.split(",");
- }
- }
-
- //answers[currentQuestion][currentAnswer] = answer;
- answers[currentQuestion][0] = questions[currentQuestion].type;
- currentAnswer += 1;
- if ($.inArray(answer.toString(), rightAnswers) === -1) {
- // When a bad answer is given, we advance automatically to the next question
- // (but this one will be asked again later).
- answers[currentQuestion].push('0');
- showBad();
- questions[questions.length] = questions[currentQuestion];
- setTimeout(nextQuestion, delayAfter);
- return;
- }
- answers[currentQuestion].push('1');
- showGood();
- // When all the right answers have been given, the next question is shown.
- if (currentAnswer === rightAnswers.length) {
- setTimeout(nextQuestion, delayAfter);
- }
- }*/
-
-/**
- * It jumps into the next question (second part). 
+ * It jumps into the next question (second part).
  */
 function nextQuestionCont() {
     'use strict';
     counter = resetCounter;
     currentType = questions[currentQuestion].type;
-
-    $('.gameWrapper').fadeIn(300);
 
     // In case a specific question type requires a special treatment, it will be performed here.
     switch (currentType) {
@@ -316,14 +304,20 @@ function nextQuestionCont() {
         case 'scaleOfNotes':
             questionScaleOfNotes();
             break;
+        case 'displayHelp':
+            displayHelp();
+            break;
         default:
             genericQuestion();
     }
 
-    // Event listeners
-    $(".answerItem").click(function () {
-        addAnswer($(this));
-    });
+    if (currentType !== 'displayHelp') {
+        $('.gameWrapper').fadeIn(300);
+        // Event listeners
+        $(".answerItem").click(function () {
+            addAnswer($(this));
+        });
+    }
 }
 
 function addAnswer(answerElement) {
@@ -371,10 +365,10 @@ function resetParameters() {
 function nextQuestion() {
     'use strict';
 
-    // For a new question, the control parameters are reset.
-    resetParameters();
     // Answering tools are hidden
     $('.gameWrapper').fadeOut(300);
+    // For a new question, the control parameters are reset.
+    resetParameters();
 
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
@@ -486,6 +480,8 @@ function wrongAnswer() {
     console.log('wrong answer!');
     // todo: feedback info about the current question
     $('.feedbackDiv').fadeIn(300);
+    // Fill in help contents
+    fillInHelp();
 }
 
 /**
@@ -647,12 +643,12 @@ function sendNotes() {
 /**
  * The currently seleted interval is sent an answer.
  */
-function sendInterval(){
+function sendInterval() {
     'use strict';
     sendData(intervalSelector.getInterval());
 }
 
-function sendScale(){
+function sendScale() {
     'use strict';
     sendData($('#comboBoxWrapper .comboBox').val());
 }

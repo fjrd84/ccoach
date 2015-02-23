@@ -31,9 +31,9 @@ class IndexController extends AbstractActionController
         $userManagement = new UserManagement($this->getServiceLocator());
         $currentUser = $userManagement->getCurrentUser();
         if ($currentUser == null) {
-            $this->redirect()->toRoute('login');
-            return;
+            return $this->redirect()->toRoute('login');
         }
+
         $questionTypes = $userManagement->getQuestionTypes();
         $topUsers = $userManagement->getTopUsers();
         $topUsersThisWeek = $userManagement->getTopUsersThisWeek();; // Until this information is ready, we'll use the same list for both
@@ -44,6 +44,8 @@ class IndexController extends AbstractActionController
         $viewModel->setVariable('questionTypes', $questionTypes);
         $viewModel->setVariable('topUsers', $topUsers);
         $viewModel->setVariable('topUsersThisWeek', $topUsersThisWeek);
+
+
 
         return $viewModel;
     }
@@ -80,6 +82,11 @@ class IndexController extends AbstractActionController
         $viewModel->setVariable('ident', $currentUser->getFullName());
         $viewModel->setVariable('numPoints', $currentUser->getPoints());
         $viewModel->setVariable('currentLevel', $currentUser->getLevel());
+        // Create a model for the help pages
+        $helpPagesModel = new ViewModel();
+        // Set the help pages template. Todo: select the language!
+        $helpPagesModel->setTemplate('mt-guru/index/helpPageEn.phtml');
+        $viewModel->addChild($helpPagesModel, 'helpPage');
         return $viewModel;
     }
 

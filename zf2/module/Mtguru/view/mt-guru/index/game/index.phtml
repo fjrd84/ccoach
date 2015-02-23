@@ -3,19 +3,18 @@
     <div class="gameWrapper">
         <div class="gameContent">
             <div class="question">
-                <div class="question genericQuestion" style="display:none">
-                    <div class="questionText">Question text</div>
+                <div class="question genericQuestion hidden">
+                    <div class="questionText"></div>
                     <div class="questionElement"></div>
                     <div id="answerItemsWrapper">
                         <div id="answerItems">
-                            <div class="answerItem" data-item="CMaj7">CMaj7</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="noteTesterWrapper" style="display:none">
+        <div class="noteTesterWrapper hidden">
             <div id="noteTester">
                 <div id="noteTesterScore">
                     <div class="note C4" style="display:none"></div>
@@ -64,7 +63,7 @@
                 <div onclick="sendAnswer()" id="sendResults">SEND</div>
             </div>
         </div>
-        <div class="intervalSelectorWrapper" style="display:none">
+        <div class="intervalSelectorWrapper hidden">
             <div class="intervalNum">
                 <div class="intervalNumElement" data-num="2">2</div>
                 <div class="intervalNumElement" data-num="3">3</div>
@@ -99,14 +98,19 @@
         </div>
         <div class="remainingTime"></div>
         <div class="toastMessage" style="display:none">WELL DONE!!</div>
+        <div id="displayHelp" style="display:none">
+            <div class="helpTitle">Help</div>
+            <div class="currentQuestionHelp">Help for the current question...</div>
+            <div onclick="continuePlaying()" class="buttonContinue">Continue</div>
+        </div>
         <div class="feedbackDiv" style="display:none">
-            <div class="feedbackMessage">Feedback message</div>
-            <div class="feedbackText">Feedback text</div>
+            <div class="helpTitle">Sorry, that was wrong.</div>
+            <div class="currentQuestionHelp">Help for the current question...</div>
             <div onclick="tryAgain()" class="buttonTryagain">Try again</div>
             <div onclick="showSolution()" class="buttonShowSolution">Show solution</div>
         </div>
     </div>
-    <div id="comboBoxWrapper" style="display:none">
+    <div id="comboBoxWrapper" class="hidden">
         <select class="comboBox">
             <option value="0">Select...</option>
         </select>
@@ -114,6 +118,9 @@
     <div onclick="sendAnswer()" class="nextButton"></div>
     <div onclick="goHome()" class="homeButton"></div>
 </div>
+<?php
+echo $this->helpPage;
+?>
 <script src="<?php echo $this->basePath() ?>/js/game.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->basePath() ?>/js/noteTester/noteTester.css">
 <script src="<?php echo $this->basePath() ?>/js/noteTester/noteTester.js"></script>
@@ -128,6 +135,3 @@
         startGame();
     });
 </script>
-
-
-
