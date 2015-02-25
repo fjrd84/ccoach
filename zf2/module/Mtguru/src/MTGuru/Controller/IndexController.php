@@ -92,28 +92,19 @@ class IndexController extends AbstractActionController
 
     public function resultsAction()
     {
+        /**
+         * todo: save info in session and redirect
+         *
+             use Zend\Session\Container as SessionContainer;
+             $this->session = new SessionContainer('post_supply');
+             $this->session->ex = true;
+             var_dump($this->session->ex);
+         */
         $userManagement = new UserManagement($this->getServiceLocator());
         $answers = json_decode($_POST['answers']);
-        $numAnswers = count($answers);
-        $means = array();
-        for ($indexAnswer = 0; $indexAnswer < $numAnswers; $indexAnswer++) {
-            $questionType = $answers[$indexAnswer][0];
-            $numResults = count($answers[$indexAnswer]);
-            if (!isset($means[$questionType])) {
-                $means[$questionType] = array();
-                $means[$questionType]['questionType'] = $questionType;
-                $means[$questionType]['numAnswers'] = 0;
-                $means[$questionType]['right'] = 0;
-            }
-            for ($indexResult = 1; $indexResult < $numResults; $indexResult++) {
-                $means[$questionType]['numAnswers'] += 1;
-                $means[$questionType]['right'] += $answers[$indexAnswer][$indexResult];
-            }
-        }
-        foreach($means as $results){
-            $userManagement->addResults($results['questionType'],$results['numAnswers'],$results['right']);
-        }
-        $results = json_encode($means);
+        // The answers are added to the user profile, returning a JSON that describes the new
+        // punctuation.
+        $results = json_encode($userManagement->addResults($answers));
         $viewModel = new ViewModel();
         $viewModel->setVariable('results', $results);
         return $viewModel;

@@ -8,8 +8,6 @@ class UserManagement
     private $serviceLocator;
     private $currentUser;
     private $objectManager;
-    private $expertRate = 0.8;
-    private $mediumRate = 0.4;
 
     public function __construct($serviceLocator)
     {
@@ -122,37 +120,112 @@ class UserManagement
     /**
      * It adds the results of a game to the database and calculates the new skills,
      * points and level of the user.
-     * @param $questionType
-     * @param $numAnswers
-     * @param $answersRight
+     * @param $results
+     * @return int The information of the current session.
      */
-    public function addResults($questionType, $numAnswers, $answersRight)
+    public function addResults($results)
     {
+        $answersPerType = array();
+        $numAnswers = count($results);
+        $totalAttempts = 0;
+        $totalTime = 0;
+        // If the results seem to be hacked, they're not used
+        if($this->resultsHacked($results)){
+            return -1;
+        }
+        // The last question should be of type 'extraInformation'.
+        if($results[$numAnswers-1]->type != 'extraInformation'){
+            return -1;
+        }else{
+            $points = $results[$numAnswers-1]->points;
+        }
+        // The current user and its skills are retrieved.
         if ($this->currentUser == null) {
             $this->getCurrentUser();
         }
-
         $updatedSkills = $this->getUpdatedSkills();
-        foreach ($updatedSkills as $currentSkill) {
-            if ($currentSkill->getQuestionType()->getQuestionIdent() == $questionType) {
-                $currentPoints = $this->currentUser->getPoints() + $answersRight * 10;
-                $this->currentUser->setPoints($currentPoints);
-                $this->currentUser->setLevel($this->levelForPoints($currentPoints));
-                $currentAnswers = $currentSkill->getNumberOfAnswers() + $numAnswers;
-                $currentAnswersRight = $currentSkill->getNumberRight() + $answersRight;
-                $currentSkill->setNumberOfAnswers($currentAnswers);
-                $currentSkill->setNumberRight($currentAnswersRight);
-                if (($currentAnswersRight / $currentAnswers) > $this->expertRate) {
-                    $currentSkill->setCurrentSkill(2);
-                } elseif (($currentAnswersRight / $currentAnswers) > $this->mediumRate) {
-                    $currentSkill->setCurrentSkill(1);
-                } else {
-                    $currentSkill->setCurrentSkill(0);
-                }
-                $this->objectManager->flush();
-                return;
+        $initialUserPoints = $this->currentUser->getPoints();
+        $initialUserLevel = $this->currentUser->getLevel();
+
+        // The results of the session will be analyzed (summed up by type)
+        for($i = 0; $i < $numAnswers - 1; $i += 1){
+            if($results[$i]->solutionShown){
+                continue; // When the solution has been shown, the answer is not accounted.
             }
+            $currentType = $results[$i]->type;
+            if(!isset($answersPerType[$currentType])){
+                $answersPerType[$currentType] = array();
+                $answersPerType[$currentType]['attempts'] = 0;
+                $answersPerType[$currentType]['timeLeft'] = 0;
+                $answersPerType[$currentType]['numberOfAnswers'] = 0;
+            }
+            $totalAttempts += $results[$i]->attemptsCount;
+            $totalTime += $results[$i]->timeLeft/50;
+            $answersPerType[$currentType]['attempts'] += $results[$i]->attemptsCount;
+            $answersPerType[$currentType]['timeLeft'] += $results[$i]->timeLeft/50;
+            $answersPerType[$currentType]['numberOfAnswers'] += 1;
         }
+
+        // The total session points are calculated.
+        $sessionPoints = $points * (($totalTime)/($totalAttempts+1));
+        $finalUserPoints = $sessionPoints + $initialUserPoints;
+
+        // The user skills are now updated
+        foreach ($updatedSkills as $currentSkill) {
+            $questionType = $currentSkill->getQuestionType()->getQuestionIdent();
+            if(!isset($answersPerType[$questionType])){
+                continue; // There have not been right answers for this question type
+            }
+            $totalAnswers = $currentSkill->getNumberOfAnswers() + $answersPerType[$questionType]['numberOfAnswers'];
+            $currentSkill->setCurrentSkill($this->skillForRightAnswers($totalAnswers));
+            $currentSkill->setNumberOfAnswers($totalAnswers); // The number of right answers for the current skill is updated.
+        }
+
+        // Finally, the user profile is updated
+        $this->currentUser->setPoints($finalUserPoints);
+        // The user may have advanced to a new level
+        $this->currentUser->setLevel($this->levelForPoints($finalUserPoints));
+        // The last access of the user is updated.
+        $this->currentUser->updateLastAccess();
+        $this->objectManager->flush();
+
+        // The information of the session is returned
+        $sessionInfo = ['initialPoints' => $initialUserPoints,
+            'finalPoints' => $finalUserPoints,
+            'initialLevel' => $initialUserLevel,
+            'finalLevel' => $this->currentUser->getLevel(),
+            'gamePoints' => $points,
+            'totalTime' => $totalTime,
+            'totalRepetitions' => $totalAttempts,
+            'sessionPoints' => $sessionPoints];
+        return $sessionInfo;
+    }
+
+    /**
+     * It checks if the results seem to be hacked.
+     * @param $results
+     * @return bool
+     */
+    public function resultsHacked($results){
+        // Todo: add security check with a hash (for not repeating results!)
+        // Check if the time and number of points are within the limits
+        return false;
+    }
+
+    /**
+     * Returns a number between 0 and 2 determining the skill for a number of right answers
+     */
+    public function skillForRightAnswers($numAnswers){
+        if($numAnswers == 0){ // No right answers yet. The theory will be shown at the beginning.
+            return -1;
+        }
+        if($numAnswers<20){
+            return 0;
+        }
+        if($numAnswers<50){
+            return 1;
+        }
+        return 2;
     }
 
     /**

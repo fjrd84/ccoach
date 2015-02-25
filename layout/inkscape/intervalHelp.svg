@@ -859,6 +859,1368 @@
        is_visible="true"
        id="path-effect5964-74"
        effect="skeletal" />
+    <marker
+       inkscape:stockid="TriangleInS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInS-74"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4547-823"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(-0.2,-0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-63"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4556-03"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4396-5"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect4398-28"
+       is_visible="true"
+       pattern="m 5.4591289,312.19628 1,0"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6216">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6218" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6220" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6222">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6224" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6226" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6228">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6230" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6232" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6234">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6236" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6238" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6240">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6242" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6244" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6246">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6248" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6250" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6252">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6254" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6256" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6258">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6260" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6262" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6264">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6266" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6268" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6270">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6272" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6274" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6276">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6278" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6280" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6282">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6284" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6286" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6288">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6290" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6292" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6294">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6296" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6298" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6300">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6302" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6304" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6306">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6308" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6310" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6312">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6314" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6316" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6318">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6320" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6322" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6324">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6326" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6328" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6330">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6332" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6334" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6336">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6338" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6340"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6510" />
+      <feColorMatrix
+         id="feColorMatrix6512"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6514"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6342">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6344" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6346"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6516" />
+      <feColorMatrix
+         id="feColorMatrix6518"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6520"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6348">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6350" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6352"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6522" />
+      <feColorMatrix
+         id="feColorMatrix6524"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6526"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6354">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6356" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6358"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6528" />
+      <feColorMatrix
+         id="feColorMatrix6530"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6532"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6360">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6362" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6364"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6534" />
+      <feColorMatrix
+         id="feColorMatrix6536"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6538"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6366">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6368" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6370"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6540" />
+      <feColorMatrix
+         id="feColorMatrix6542"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6544"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6372">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6374" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6376"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6546" />
+      <feColorMatrix
+         id="feColorMatrix6548"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6550"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6378">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6380" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6382"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6552" />
+      <feColorMatrix
+         id="feColorMatrix6554"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6556"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6384">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6386" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6388"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6558" />
+      <feColorMatrix
+         id="feColorMatrix6560"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6562"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6390">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6392" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6394"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6564" />
+      <feColorMatrix
+         id="feColorMatrix6566"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6568"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6396">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6398" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6400" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6402">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6404" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6406" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6408">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6410" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6412" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6414">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6416" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6418" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6420">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6422" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6424" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6426">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6428" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6430" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6432">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6434" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6436" />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6438">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6440" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6442"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6570" />
+      <feColorMatrix
+         id="feColorMatrix6572"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6574"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6444">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6446" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6448"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6576" />
+      <feColorMatrix
+         id="feColorMatrix6578"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6580"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6450">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6452" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6454"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6582" />
+      <feColorMatrix
+         id="feColorMatrix6584"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6586"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6456">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6458" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6460"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6588" />
+      <feColorMatrix
+         id="feColorMatrix6590"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6592"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6462">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6464" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6466"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6594" />
+      <feColorMatrix
+         id="feColorMatrix6596"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6598"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6468">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6470" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6472"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6600" />
+      <feColorMatrix
+         id="feColorMatrix6602"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6604"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6474">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6476" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6478"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6606" />
+      <feColorMatrix
+         id="feColorMatrix6608"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6610"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6480">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6482" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6484"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6612" />
+      <feColorMatrix
+         id="feColorMatrix6614"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6616"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6486">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6488" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6490"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6618" />
+      <feColorMatrix
+         id="feColorMatrix6620"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6622"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6492">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6494" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6496"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6624" />
+      <feColorMatrix
+         id="feColorMatrix6626"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6628"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6498">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6500" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6502"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6630" />
+      <feColorMatrix
+         id="feColorMatrix6632"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6634"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB"
+       id="filter6504">
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         id="feColorMatrix6506" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="feColorMatrix6508" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -868,8 +2230,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="671.52356"
-     inkscape:cy="288.56922"
+     inkscape:cx="664.84697"
+     inkscape:cy="279.32056"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -896,57 +2258,72 @@
      id="layer1"
      transform="translate(0,-308.2677)">
     <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732;stroke-opacity:1"
+       style="fill:#ffffff;stroke:none;stroke-width:0.85100001000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:0.51832461;filter:url(#filter6504)"
+       id="rect6214"
+       width="366.78571"
+       height="179.28572"
+       x="469.28571"
+       y="397.66592"
+       transform="translate(0,308.2677)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732000000000;stroke-opacity:1;filter:url(#filter6498)"
        id="rect2985-1"
        width="43.148651"
        height="62.584957"
        x="750.05463"
        y="752.60754"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732000000000;stroke-opacity:1;filter:url(#filter6492)"
        id="rect2985-7"
        width="43.148651"
        height="62.584957"
        x="706.47455"
        y="752.60754"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732000000000;stroke-opacity:1;filter:url(#filter6486)"
        id="rect2985-4"
        width="43.148651"
        height="62.584957"
        x="662.89429"
        y="752.60754"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732000000000;stroke-opacity:1;filter:url(#filter6480)"
        id="rect2985-0"
        width="43.148651"
        height="62.584957"
        x="619.31427"
        y="752.60754"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732000000000;stroke-opacity:1;filter:url(#filter6474)"
        id="rect2985"
        width="43.148651"
        height="62.584957"
        x="488.57388"
        y="752.60754"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <g
-       id="g3516">
+       id="g3516"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6468)">
       <rect
          inkscape:export-ydpi="78.753075"
          inkscape:export-xdpi="78.753075"
@@ -969,55 +2346,55 @@
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35149732;stroke-opacity:1" />
     </g>
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025428;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025427999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter6462)"
        id="rect3808"
        width="27.399502"
        height="39.80423"
        x="518.03088"
        y="752.64691"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025428;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025427999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter6456)"
        id="rect3808-8"
        width="27.399502"
        height="39.80423"
        x="736.13916"
        y="752.64691"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43009079;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43009079000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter6450)"
        id="rect3808-2"
        width="27.399502"
        height="39.80423"
        x="692.55902"
        y="752.64685"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025428;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025427999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter6444)"
        id="rect3808-4"
        width="27.399502"
        height="39.80423"
        x="648.97888"
        y="752.64691"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025428;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.43025427999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter6438)"
        id="rect3808-5"
        width="27.399502"
        height="39.80423"
        x="561.81873"
        y="752.64691"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\notePickerBG.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <text
        xml:space="preserve"
        style="font-size:40.1701889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -1113,88 +2490,112 @@
        transform="matrix(0,1,-1,0,1147.8498,653.79496)" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6432)"
        x="535.59314"
        y="849.53571"
        id="text3550"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3552"
          x="535.59314"
          y="849.53571">D</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6426)"
        x="492.5"
        y="849.53571"
        id="text3554"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3556"
          x="492.5"
          y="849.53571">C</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6420)"
        x="580.03387"
        y="849.53571"
        id="text3558"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3560"
          x="580.03387"
          y="849.53571">E</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6414)"
        x="624.30865"
        y="849.53571"
        id="text3562"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3564"
          x="624.30865"
          y="849.53571">F</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6408)"
        x="665.24353"
        y="849.53571"
        id="text3566"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3568"
          x="665.24353"
          y="849.53571">G</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6402)"
        x="710.64136"
        y="849.53571"
        id="text3570"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3572"
          x="710.64136"
          y="849.53571">A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6396)"
        x="753.60748"
        y="849.53571"
        id="text3574"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3576"
          x="753.60748"
          y="849.53571">B</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6390)"
        x="518.57147"
        y="769.50507"
        id="text3578"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          x="518.57147"
          y="769.50507"
@@ -1202,106 +2603,137 @@
          style="font-size:20px;fill:#ffffff;fill-opacity:1">C#</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6384)"
        x="562.08588"
        y="769.50507"
        id="text4354"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4356"
          x="562.08588"
          y="769.50507">D#</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6378)"
        x="650.31049"
        y="769.50507"
        id="text4358"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4360"
          x="650.31049"
          y="769.50507">F#</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6372)"
        x="692.51855"
        y="769.50507"
        id="text4362"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4364"
          x="692.51855"
          y="769.50507">G#</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6366)"
        x="737.73932"
        y="769.50507"
        id="text4366"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4368"
          x="737.73932"
          y="769.50507">A#</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6360)"
        x="518.58124"
        y="787.87683"
        id="text4374"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4376"
          x="518.58124"
          y="787.87683">Db</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6354)"
        x="562.89642"
        y="787.87683"
        id="text4378"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4380"
          x="562.89642"
          y="787.87683">Eb</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6348)"
        x="649.22162"
        y="787.99402"
        id="text4382"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4384"
          x="649.22162"
          y="787.99402">Gb</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6342)"
        x="694.44238"
        y="787.87683"
        id="text4386"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4388"
          x="694.44238"
          y="787.87683">Ab</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6336)"
        x="737.27545"
        y="787.87683"
        id="text4390"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4392"
          x="737.27545"
          y="787.87683">Bb</tspan></text>
     <g
        id="g5644"
-       transform="translate(0.7142857,-0.54358754)">
+       transform="translate(0.7142857,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6330)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1325,7 +2757,11 @@
     </g>
     <g
        id="g5644-5"
-       transform="translate(23.931176,-0.54358754)">
+       transform="translate(23.931176,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6324)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1349,7 +2785,11 @@
     </g>
     <g
        id="g5644-5-1"
-       transform="translate(47.148013,-0.54358754)">
+       transform="translate(47.148013,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6318)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1373,7 +2813,11 @@
     </g>
     <g
        id="g5644-5-5"
-       transform="translate(100.71944,-0.54358754)">
+       transform="translate(100.71944,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6312)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1397,7 +2841,11 @@
     </g>
     <g
        id="g5644-5-8"
-       transform="translate(131.43373,-0.54358754)">
+       transform="translate(131.43373,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6306)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1421,7 +2869,11 @@
     </g>
     <g
        id="g5644-5-0"
-       transform="translate(154.71945,-0.54358754)">
+       transform="translate(154.71945,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6300)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1445,7 +2897,11 @@
     </g>
     <g
        id="g5644-5-06"
-       transform="translate(178.00516,-0.54358754)">
+       transform="translate(178.00516,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6294)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1469,7 +2925,11 @@
     </g>
     <g
        id="g5644-5-4"
-       transform="translate(201.29085,-0.54358754)">
+       transform="translate(201.29085,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6288)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1493,7 +2953,11 @@
     </g>
     <g
        id="g5644-5-84"
-       transform="translate(224.57654,-0.54358754)">
+       transform="translate(224.57654,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6282)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1517,7 +2981,11 @@
     </g>
     <g
        id="g5644-5-3"
-       transform="translate(247.8623,-0.54358754)">
+       transform="translate(247.8623,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6276)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1541,7 +3009,11 @@
     </g>
     <g
        id="g5966"
-       transform="translate(3.3528134,190.35714)">
+       transform="translate(3.3528134,190.35714)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6270)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1565,7 +3037,11 @@
     </g>
     <g
        id="g5966-6"
-       transform="translate(46.719378,190.39948)">
+       transform="translate(46.719378,190.39948)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6264)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1588,20 +3064,26 @@
            sodipodi:role="line">1T</tspan></text>
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.85100001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInS);marker-end:url(#TriangleOutS)"
+       style="fill:none;stroke:#000000;stroke-width:0.85100001000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInS);marker-end:url(#TriangleOutS);filter:url(#filter6258)"
        d="m 606.38626,852.20506 c 2.50651,2.29914 5.90674,3.60381 9.30785,3.57143 3.31511,-0.0316 6.60618,-1.33043 9.04931,-3.57143"
        id="path4394-0-3"
        inkscape:path-effect="#path-effect6165;#path-effect6167"
        inkscape:original-d="m 606.38626,852.20506 c 0,0 6.24833,3.57143 9.30785,3.57143 3.05953,0 9.04931,-3.57143 9.04931,-3.57143"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="czc" />
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366" />
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6252)"
        x="609.91125"
        y="864.00378"
        id="text4400-71-5"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan4402-7-1"
          x="609.91125"
@@ -1609,7 +3091,11 @@
          style="font-size:9px">0.5T</tspan></text>
     <g
        id="g5966-9"
-       transform="translate(133.45249,190.04234)">
+       transform="translate(133.45249,190.04234)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6246)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1633,7 +3119,11 @@
     </g>
     <g
        id="g5966-3"
-       transform="translate(176.81906,191.11377)">
+       transform="translate(176.81906,191.11377)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6240)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1657,7 +3147,11 @@
     </g>
     <g
        id="g5966-68"
-       transform="translate(220.1856,192.1852)">
+       transform="translate(220.1856,192.1852)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6234)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1681,7 +3175,11 @@
     </g>
     <g
        id="g5966-38"
-       transform="translate(263.55212,191.47092)">
+       transform="translate(263.55212,191.47092)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6228)">
       <path
          sodipodi:nodetypes="czc"
          inkscape:connector-curvature="0"
@@ -1705,14 +3203,45 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;filter:url(#filter6222)"
        x="796.06586"
        y="849.53571"
        id="text3554-6"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"><tspan
          sodipodi:role="line"
          id="tspan3556-8"
          x="796.06586"
          y="849.53571">C</tspan></text>
+    <g
+       id="g5644-5-1-0"
+       transform="translate(70.362298,-0.54358713)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\intervalDistances.png"
+       inkscape:export-xdpi="147.08366"
+       inkscape:export-ydpi="147.08366"
+       style="filter:url(#filter6216)">
+      <path
+         sodipodi:nodetypes="czc"
+         inkscape:connector-curvature="0"
+         inkscape:original-d="m 508.31627,748.43362 c 0,0 6.24832,-3.57143 9.30785,-3.57143 3.05953,0 9.0493,3.57143 9.0493,3.57143"
+         inkscape:path-effect="#path-effect4396;#path-effect4398"
+         id="path4394-2-6-7"
+         d="m 508.31627,748.43362 c 2.50651,-2.29914 5.90674,-3.60381 9.30785,-3.57143 3.31511,0.0316 6.60618,1.33043 9.0493,3.57143"
+         style="fill:none;stroke:#000000;stroke-width:0.85100001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInS);marker-end:url(#TriangleOutS)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4400-7-8-2"
+         y="741.64789"
+         x="508.39157"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:9px"
+           y="741.64789"
+           x="508.39157"
+           id="tspan4402-6-5-2"
+           sodipodi:role="line">0.5T</tspan></text>
+    </g>
   </g>
 </svg>

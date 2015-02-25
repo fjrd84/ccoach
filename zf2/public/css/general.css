@@ -63,6 +63,22 @@
     font-family:'Digital7', sans-serif;
 }
 
+.homeButton.results {
+    left: 390px;
+    bottom: 30px;
+    position: absolute;
+}
+
+#results #mytable {
+    width: 100%;
+    padding: 13px 157px;
+}
+
+#results table {
+    color: white;
+    font-size: 45px;
+}
+
 div#topUsers {
     position: absolute;
     left: 0px;
@@ -201,7 +217,7 @@ div#navText {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-select.comboBox, ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â select.comboBox:focus {
+select.comboBox, ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â select.comboBox:focus {
     color: white;
     background-color: black;
     font-size: 22px;
@@ -681,6 +697,7 @@ body{
 }
 
 .feedbackDiv{
+    font-size: 22px;
     color: white;
     position: absolute;
     width: 815px;

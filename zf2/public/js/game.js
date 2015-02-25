@@ -44,6 +44,17 @@ function finishRound() {
     var form = document.createElement("form"),
         element1 = document.createElement("input");
 
+    form.className = 'hidden';
+
+    $('.mainGame').children().fadeOut(500);
+    $('.loading').fadeIn(300);
+
+    // The extra information is added before sending the information to the server.
+    var answerInfo = {};
+    answerInfo.type = 'extraInformation';
+    answerInfo.points = points;
+    answers.push(answerInfo);
+
     form.method = "POST";
     form.action = baseUrl + '/mtguru/index/results';
 
@@ -55,6 +66,17 @@ function finishRound() {
 
     form.submit();
 }
+
+/**
+ * This function has just been created to test the finish round.
+ */
+function testFinishRound(){
+    answers = [{"type":"scaleOfNotes","questionElement":"Bb,C,D,E,F,G,A","solutionShown":true,"attemptsCount":1,"timeLeft":74},{"type":"scaleOfNotes","questionElement":"F#,G#,A#,B#,C#,D#,E#","solutionShown":true,"attemptsCount":1,"timeLeft":90},{"type":"chordOfNotes","questionElement":"C,Eb,Gb,Bb","solutionShown":false,"attemptsCount":0,"timeLeft":82},{"type":"scaleOfNotes","questionElement":"C,D,E,F,G,A,Bb","solutionShown":false,"attemptsCount":0,"timeLeft":77},{"type":"notesOfScale","questionElement":"Key: Bb Scale: aeolian","solutionShown":true,"attemptsCount":1,"timeLeft":86},{"type":"chordOfNotes","questionElement":"F#,A#,C#,E#","solutionShown":false,"attemptsCount":0,"timeLeft":75},{"type":"chordOfNotes","questionElement":"E,G,Bb","solutionShown":false,"attemptsCount":0,"timeLeft":83}];
+    points = 40;
+    finishRound();
+}
+
+
 
 /**
  * It updates the common fields for every question.
@@ -374,9 +396,11 @@ function nextQuestion() {
 
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
-        alert('finished!');
-        startGame();
-        //finishRound();
+        if(trainingMode){
+            goHome();
+        }else{
+            finishRound();
+        }
         return;
     }
 

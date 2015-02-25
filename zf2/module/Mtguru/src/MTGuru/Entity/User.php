@@ -31,6 +31,9 @@ class User
     /** @ORM\Column(type="integer") */
     protected $level;
 
+    /** @ORM\Column(type="datetime", nullable=true) */
+    protected $lastAccess;
+
     /** @ORM\OneToMany(targetEntity="Job", mappedBy="person", cascade={"remove"}) */
     //protected $jobs;
 
@@ -42,6 +45,30 @@ class User
     {
         //$this->jobs = new ArrayCollection();
         $this->userSkills = new ArrayCollection();
+    }
+
+    /**
+     * It updates the lastAccess field of the current user.
+     */
+    public function updateLastAccess()
+    {
+        $this->setLastAccess(new \DateTime());
+    }
+
+    /**
+     * @param mixed $lastAccess
+     */
+    public function setLastAccess($lastAccess)
+    {
+        $this->lastAccess = $lastAccess;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastAccess()
+    {
+        return $this->lastAccess;
     }
 
     public function getSkills()
