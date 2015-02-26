@@ -36,7 +36,7 @@ class IndexController extends AbstractActionController
 
         $questionTypes = $userManagement->getQuestionTypes();
         $topUsers = $userManagement->getTopUsers();
-        $topUsersThisWeek = $userManagement->getTopUsersThisWeek();; // Until this information is ready, we'll use the same list for both
+        $topUsersThisWeek = $userManagement->getTopUsersThisWeek();
         $viewModel = new ViewModel();
         $viewModel->setVariable('ident', $currentUser->getFullName());
         $viewModel->setVariable('numPoints', $currentUser->getPoints());
@@ -105,6 +105,9 @@ class IndexController extends AbstractActionController
         // The answers are added to the user profile, returning a JSON that describes the new
         // punctuation.
         $results = json_encode($userManagement->addResults($answers));
+        // The user's points of the week are now updated.
+        $userManagement->updateWeekPoints();
+        // With all the data now available, the view is shown.
         $viewModel = new ViewModel();
         $viewModel->setVariable('results', $results);
         return $viewModel;

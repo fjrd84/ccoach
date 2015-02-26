@@ -8,6 +8,7 @@
     -o-user-select: none;
 }
 
+
 #topUsers .topUsersTitle {
     top: 10px;
     position: absolute;
@@ -15,6 +16,13 @@
     -ms-transform: rotate(1deg); /* IE 9 */      
     -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */      
     transform: rotate(1deg);
+}
+
+#topUsers div {
+    max-width: 155px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 #topUsers .firstOne {
@@ -61,6 +69,29 @@
 
 .mainDiv *{
     font-family:'Digital7', sans-serif;
+}
+
+.newText {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#configTool {
+    width: 37px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('../img/configurationIcon.png');
+    position: absolute;
+    right: 36px;
+    top: 25px;
+}
+#configTool:hover{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }
 
 .homeButton.results {
@@ -217,7 +248,7 @@ div#navText {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-select.comboBox, ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â select.comboBox:focus {
+select.comboBox, ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â select.comboBox:focus {
     color: white;
     background-color: black;
     font-size: 22px;
@@ -505,21 +536,28 @@ div#answerItemsWrapper {
     /* background-color: white; */
     color: grey;
     width: 170px;
+    max-width: 170px;
     height: 14px;
-    margin: 0 0 0 5px;
+    left: 10px;
+    margin: 0 0 0 0px;
     padding: 6px;
     position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
 .trainingTypeButton a {
     color: rgb(49, 49, 49);
     text-decoration: none;
-    line-height: 10px;
+    line-height: 15px;
     width: inherit;
     height: inherit;
     position: relative;
     display: block;
+    max-width: 163px;
+    text-overflow: ellipsis;  overflow: hidden;  white-space: nowrap;
 }
 
 .bottomRight{
@@ -566,9 +604,13 @@ div#answerItemsWrapper {
 
     font-size: 27px;
     position: absolute;
-    width: 280px;
+    width: 267px;
+    max-width: 267px;
     left: 120px;
     z-index: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .points{
@@ -576,9 +618,13 @@ div#answerItemsWrapper {
 
     font-size: 20px;
     top: 152px;
-    width: 300px;
-    left: -70px;
+    text-align: left;
+    max-width: 365px;
+    left: 20px;
     z-index: 2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .level{

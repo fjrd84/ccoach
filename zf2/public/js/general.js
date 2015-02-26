@@ -62,6 +62,14 @@ $('.homeTraining').mouseenter(function () {
         $('#navText .newText').fadeOut('50');
     });
 
+$('#configTool').mouseenter(function () {
+    'use strict';
+    showInfoText('Configuration!');
+}).mouseleave(function () {
+        'use strict';
+        $('#navText .newText').fadeOut('50');
+    });
+
 function showTraining() {
     'use strict';
     $('.home').fadeOut(300, function () {
