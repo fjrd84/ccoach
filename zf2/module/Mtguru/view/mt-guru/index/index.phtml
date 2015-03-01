@@ -4,18 +4,14 @@
         <div class="loadingMain" style="display:none;"></div>
         <div class="front">
             <div class="home">
-                <div class="welcome">
+                <div class="welcome fitText">
                     <?php echo $ident; ?>
                 </div>
-                <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
-                <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
-                <a href="javascript:goPlay()">
-                    <div class="homePlay"></div><?php /*echo $this->translate('home_play') */ ?></a>
-
+                <div class="points fitText"><?php echo $this->translate('points') . $numPoints; ?></div>
+                <div class="level fitText"><?php echo $this->translate('level') . $currentLevel; ?></div>
+                <div onclick="goPlay()" class="homePlay"></div><?php /*echo $this->translate('home_play') */ ?>
                 <div class="loadingTraining"></div>
-                <a href="javascript:showTraining()"><?php /*echo $this->basePath() ?>/mtguru/index/training*/ ?>
-                    <div class="homeTraining"><?php /*echo $this->translate('home_training'); */ ?></div>
-                </a>
+                <div onclick="showTraining()" class="homeTraining"><?php /*echo $this->translate('home_training'); */ ?></div>
             </div>
         </div>
         <div class="back">
@@ -24,7 +20,7 @@
                 //$questionTypes = $_SESSION['questionTypes'];
                 $numQuestionTypes = count($questionTypes);
                 for ($questionTypeIndex = 0; $questionTypeIndex < $numQuestionTypes; $questionTypeIndex++) {
-                    echo '<div class="trainingTypeButton">';
+                    echo '<div class="trainingTypeButton fitText">';
                     echo '<a href="javascript:goTrain(\'' . $questionTypes[$questionTypeIndex]->getQuestionIdent() . '\');' . '">' . $this->translate($questionTypes[$questionTypeIndex]->getQuestionIdent()) . '</a>';
                     echo '</div>';
                 }
@@ -39,27 +35,27 @@
         <div id="navText"></div>
         <div id="topUsers">
             <div class="allTimes">
-                <div class="topUsersTitle">All Time High Scores</div>
+                <div class="topUsersTitle fitText">All Time High Scores</div>
                 <!-- There should always be at least four users in the database -->
                 <div
-                    class="firstOne"><?php echo $topUsers[0]->getFullName() . ' - ' . $topUsers[0]->getPoints(); ?></div>
+                    class="firstOne fitText"><?php echo $topUsers[0]->getFullName() . ' - ' . $topUsers[0]->getPoints(); ?></div>
                 <div
-                    class="secondOne"><?php echo $topUsers[1]->getFullName() . ' - ' . $topUsers[1]->getPoints(); ?></div>
+                    class="secondOne fitText"><?php echo $topUsers[1]->getFullName() . ' - ' . $topUsers[1]->getPoints(); ?></div>
                 <div
-                    class="thirdOne"><?php echo $topUsers[2]->getFullName() . ' - ' . $topUsers[2]->getPoints(); ?></div>
+                    class="thirdOne fitText"><?php echo $topUsers[2]->getFullName() . ' - ' . $topUsers[2]->getPoints(); ?></div>
                 <div
-                    class="fourthOne"><?php echo $topUsers[3]->getFullName() . ' - ' . $topUsers[3]->getPoints(); ?></div>
+                    class="fourthOne fitText"><?php echo $topUsers[3]->getFullName() . ' - ' . $topUsers[3]->getPoints(); ?></div>
             </div>
             <div class="thisWeek" style="display:none">
-                <div class="topUsersTitle">High Scores: this week</div>
+                <div class="topUsersTitle fitText">High Scores: this week</div>
                 <div
-                    class="firstOne"><?php echo $topUsersThisWeek[0]->getFullName() . ' - ' . $topUsersThisWeek[0]->getPointsThisWeek(); ?></div>
+                    class="firstOne fitText"><?php echo $topUsersThisWeek[0]->getFullName() . ' - ' . $topUsersThisWeek[0]->getPointsThisWeek(); ?></div>
                 <div
-                    class="secondOne"><?php echo $topUsersThisWeek[1]->getFullName() . ' - ' . $topUsersThisWeek[1]->getPointsThisWeek(); ?></div>
+                    class="secondOne fitText"><?php echo $topUsersThisWeek[1]->getFullName() . ' - ' . $topUsersThisWeek[1]->getPointsThisWeek(); ?></div>
                 <div
-                    class="thirdOne"><?php echo $topUsersThisWeek[2]->getFullName() . ' - ' . $topUsersThisWeek[2]->getPointsThisWeek(); ?></div>
+                    class="thirdOne fitText"><?php echo $topUsersThisWeek[2]->getFullName() . ' - ' . $topUsersThisWeek[2]->getPointsThisWeek(); ?></div>
                 <div
-                    class="fourthOne"><?php echo $topUsersThisWeek[3]->getFullName() . ' - ' . $topUsersThisWeek[3]->getPointsThisWeek(); ?></div>
+                    class="fourthOne fitText"><?php echo $topUsersThisWeek[3]->getFullName() . ' - ' . $topUsersThisWeek[3]->getPointsThisWeek(); ?></div>
             </div>
         </div>
         <a href="javascript:logoutMe()">

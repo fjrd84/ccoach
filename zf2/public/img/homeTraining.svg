@@ -10,8 +10,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
+   width="423.61288"
+   height="278.80573"
    id="svg4110"
    version="1.1"
    inkscape:version="0.48.5 r10040"
@@ -78,16 +78,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="117.80569"
-     inkscape:cy="457.85657"
+     inkscape:cx="-52.53073"
+     inkscape:cy="75.473707"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="1352"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata4115">
     <rdf:RDF>
@@ -96,16 +100,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-170.33642,-391.17361)">
     <path
-       style="fill:#553100;stroke:#000000;stroke-width:0.97000003000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.76328504"
+       style="fill:#553100;fill-opacity:0.76328502;stroke:#000000;stroke-width:0.97000003px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 176.36429,392.35147 -5.54287,270.90714 7.62144,0.69286 2.07856,-272.29286 z"
        id="path4656"
        inkscape:connector-curvature="0"
@@ -129,7 +134,7 @@
        inkscape:export-xdpi="78.753075"
        inkscape:export-ydpi="78.753075" />
     <path
-       style="fill:#553100;fill-opacity:0.12077295;stroke:#000000;stroke-width:0.97000003000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#553100;fill-opacity:0.12077296;stroke:#000000;stroke-width:0.97000003px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 183.29286,644.20503 11.43214,13.85715 379.68571,3.46429 13.85715,-12.47144 0.34643,-244.23213 -3.11786,-3.46429 -392.85001,-2.425 -4.50356,3.81071 z"
        id="path4662"
        inkscape:connector-curvature="0"
@@ -137,7 +142,7 @@
        inkscape:export-xdpi="78.753075"
        inkscape:export-ydpi="78.753075" />
     <path
-       style="fill:#553100;stroke:#000000;stroke-width:0.97000003000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.53140098"
+       style="fill:#553100;fill-opacity:0.53140097;stroke:#000000;stroke-width:0.97000003px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 586.88215,656.67647 -2.425,0.69285 -1.03929,3.11786 1.38571,2.77143 2.77143,0.69286 2.77143,-1.38571 0,-3.11786 z"
        id="path4660"
        inkscape:connector-curvature="0"
@@ -260,49 +265,6 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeTraining.png"
-       inkscape:export-xdpi="78.753075"
-       inkscape:export-ydpi="78.753075" />
-    <rect
-       style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-7"
-       width="50"
-       height="50"
-       x="-106.81664"
-       y="333.67355" />
-    <rect
-       style="fill:#ffdbaa;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-4"
-       width="50"
-       height="50"
-       x="-106.81664"
-       y="411.69958" />
-    <rect
-       style="fill:#d4a76a;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-0"
-       width="50"
-       height="50"
-       x="-106.81664"
-       y="489.72552" />
-    <rect
-       style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-9"
-       width="50"
-       height="50"
-       x="-106.81664"
-       y="567.75153" />
-    <rect
-       style="fill:#aa7939;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-48"
-       width="50"
-       height="50"
-       x="-106.81664"
-       y="645.7774" />
-    <path
-       style="fill:#805215;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m -75.538161,767.82844 c -6.91618,0 -12.52148,5.60529 -12.52148,12.52147 0,6.91618 5.60529,12.52148 12.52148,12.52148 6.91618,0 12.52147,-5.6053 12.52147,-12.52148 0,-6.91618 -5.60529,-12.52147 -12.52147,-12.52147 z m -0.0122,3.53739 2.68824,2.41233 0,-0.42731 3.01272,0 0,3.13175 4.79224,4.30004 -3.49955,0 0,7.16669 -4.43522,0 c 1.38087,-5.44721 -6.46562,-5.5469 -5.09515,0 l -4.43525,0 0,-7.17755 -3.49411,0 5.23035,-4.70025 5.23573,-4.7057 z"
-       id="path4438"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeIcon.png"
        inkscape:export-xdpi="78.753075"
        inkscape:export-ydpi="78.753075" />
   </g>

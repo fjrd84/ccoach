@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="239.81129"
+   height="271.35272"
+   id="svg11975"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Documento nuevo 20">
+  <defs
+     id="defs11977">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4188"
+       id="linearGradient5362"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.26783155,0,0,0.49919413,625.39173,707.19454)"
+       x1="325.91794"
+       y1="111.8367"
+       x2="325.91794"
+       y2="188.99748" />
+    <linearGradient
+       id="linearGradient4188">
+      <stop
+         id="stop4190"
+         offset="0"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dcc7ab;stop-opacity:1;"
+         offset="0.5"
+         id="stop4196" />
+      <stop
+         id="stop4192"
+         offset="1"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4188"
+       id="radialGradient5358"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.92821995,0,0,0.91824948,-65.182425,536.81231)"
+       cx="806.73071"
+       cy="265.4744"
+       fx="806.73071"
+       fy="265.4744"
+       r="22.398602" />
+    <linearGradient
+       id="linearGradient11879">
+      <stop
+         id="stop11881"
+         offset="0"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dcc7ab;stop-opacity:1;"
+         offset="0.5"
+         id="stop11883" />
+      <stop
+         id="stop11885"
+         offset="1"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4188"
+       id="radialGradient5408"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.088447,0,-26.703673)"
+       cx="307.84375"
+       cy="301.91711"
+       fx="307.84375"
+       fy="301.91711"
+       r="20.72291" />
+    <linearGradient
+       id="linearGradient11888">
+      <stop
+         id="stop11890"
+         offset="0"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dcc7ab;stop-opacity:1;"
+         offset="0.5"
+         id="stop11892" />
+      <stop
+         id="stop11894"
+         offset="1"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4188"
+       id="radialGradient5364"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.088447,0,-26.703673)"
+       cx="307.84375"
+       cy="301.91711"
+       fx="307.84375"
+       fy="301.91711"
+       r="20.72291" />
+    <linearGradient
+       id="linearGradient11897">
+      <stop
+         id="stop11899"
+         offset="0"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dcc7ab;stop-opacity:1;"
+         offset="0.5"
+         id="stop11901" />
+      <stop
+         id="stop11903"
+         offset="1"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4188"
+       id="radialGradient5366"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.088447,0,-26.703673)"
+       cx="307.84375"
+       cy="301.91711"
+       fx="307.84375"
+       fy="301.91711"
+       r="20.72291" />
+    <linearGradient
+       id="linearGradient11906">
+      <stop
+         id="stop11908"
+         offset="0"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dcc7ab;stop-opacity:1;"
+         offset="0.5"
+         id="stop11910" />
+      <stop
+         id="stop11912"
+         offset="1"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       r="20.72291"
+       fy="301.91711"
+       fx="307.84375"
+       cy="301.91711"
+       cx="307.84375"
+       gradientTransform="matrix(1,0,0,1.088447,0,-26.703673)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient11973"
+       xlink:href="#linearGradient4188"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="178.86348"
+     inkscape:cy="141.03037"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1111"
+     inkscape:window-height="706"
+     inkscape:window-x="1550"
+     inkscape:window-y="128"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata11980">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-277.23005,-305.24742)">
+    <g
+       id="g5370"
+       transform="translate(-369.67905,-231.39986)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+       inkscape:export-xdpi="78.753075"
+       inkscape:export-ydpi="78.753075">
+      <path
+         inkscape:export-ydpi="78.753075"
+         inkscape:export-xdpi="78.753075"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\navBar.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4030-5"
+         d="m 872.90156,753.86656 -216.60673,0 -0.28614,53.95605 216.89287,0 z"
+         style="opacity:0.89912283;fill:url(#linearGradient5362);fill-opacity:1;stroke:#000000;stroke-width:0.3760359px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         inkscape:export-ydpi="78.753075"
+         inkscape:export-xdpi="78.753075"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\navBar.png"
+         y="762.7691"
+         x="712.21191"
+         height="37.284851"
+         width="151.87953"
+         id="rect3189"
+         style="fill:#000000;stroke:#000000;stroke-width:0.55291492;stroke-miterlimit:100;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="78.753075"
+         inkscape:export-xdpi="78.753075"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\navBar.png"
+         sodipodi:nodetypes="czcccc"
+         inkscape:connector-curvature="0"
+         id="path3187-3-2"
+         d="m 686.11157,760.50676 c -3.37853,-0.27623 -9.67234,-0.25589 -13.86523,2.52094 -4.19283,2.77673 -7.47209,8.19681 -8.82327,13.445 -1.20411,13.50083 3.03713,19.82931 15.54584,23.94893 11.13288,2.03314 22.39348,-4.95248 24.78912,-14.7055 1.88886,-12.0422 -5.36162,-23.75018 -17.64646,-25.20936 z"
+         style="opacity:0.64912283;fill:url(#radialGradient5358);fill-opacity:1;stroke:#000000;stroke-width:0.75317395;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <g
+         inkscape:export-ydpi="78.753075"
+         inkscape:export-xdpi="78.753075"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\navBar.png"
+         style="opacity:0.82017547;fill:url(#radialGradient11973);fill-opacity:1"
+         transform="matrix(0.52797177,0,0,0.52797177,521.1085,621.18029)"
+         id="g4226-7">
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#radialGradient5364);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.8208192;stroke-miterlimit:100;stroke-opacity:1;stroke-dasharray:none"
+           d="m 300.40625,284.84375 c -7.53699,2.97739 -12.875,10.31561 -12.875,18.90625 0,11.22129 9.09121,20.3125 20.3125,20.3125 11.22129,0 20.3125,-9.09121 20.3125,-20.3125 0,-8.59319 -5.3383,-15.93757 -12.875,-18.90625 l -0.9375,5.59375 c 4.91751,2.40957 8.3125,7.46739 8.3125,13.3125 0,8.18032 -6.63218,14.8125 -14.8125,14.8125 -8.18032,0 -14.8125,-6.63218 -14.8125,-14.8125 0,-5.84511 3.39499,-10.90293 8.3125,-13.3125 l -0.9375,-5.59375 z"
+           id="path4198-0" />
+        <rect
+           style="fill:url(#radialGradient5366);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.83764124;stroke-miterlimit:100;stroke-opacity:1;stroke-dasharray:none"
+           id="rect4224-9"
+           width="6.9017606"
+           height="24.414598"
+           x="304.39285"
+           y="279.78015" />
+      </g>
+    </g>
+    <g
+       id="g3367"
+       transform="matrix(0.41758526,0.00168088,-0.00168088,0.41758526,-61.088137,134.7903)"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+       inkscape:export-xdpi="78.753075"
+       inkscape:export-ydpi="78.753075">
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="path2998"
+         d="m 1276.7252,811.32199 -412.17597,11.29376 -17.79433,53.66833 0.93121,15.51599 7.534,61.99157 480.13049,-31.57231 6.9129,-68.34733 -1.6166,-1.06291 z"
+         style="fill:#aa7939;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3003"
+         d="m 863.7758,879.78509 6.25934,60.28507 452.85186,-28.3325 2.0313,-52.81809 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3005"
+         d="M 1339.4954,851.61721 C 848.95157,874.9261 848.95157,874.9261 848.95157,874.9261"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3021"
+         d="m 1317.2893,789.37596 -73.383,-35.79028 -397.51806,37.66095 49.43219,43.71432"
+         style="fill:#d4a76a;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3007"
+         d="m 848.04544,824.13947 50.10054,54.10815 7.87878,-0.41181 70.30514,-6.58882 5.46302,6.64342 286.49138,-33.30069 3.8981,-8.42785 45.9551,-5.38082 0.1645,-41.45287 -48.81,5.27103 -5.4631,-6.64342 -286.90312,25.4219 -6.23159,13.34181 -63.19501,7.57707 -12.10643,-1.1804 -47.76705,-40.43695 z"
+         style="fill:#d4a76a;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3009"
+         d="m 981.76525,822.84869 1.61988,50.81407 62.48127,-7.60451 -1.0159,-47.93159 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3011"
+         d="m 1064.5886,825.31907 0.2747,30.03274 16.4988,-1.50995 0.4665,-30.71905 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3013"
+         d="m 1104.3943,812.55362 -0.3567,46.44918 60.34,-7.68686 -0.4669,-43.6216 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3015"
+         d="m 1183.7038,813.45923 -1.1254,29.26408 15.8399,-2.9649 1.1254,-29.26408 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3017"
+         d="m 1215.6307,801.1056 -0.3018,45.02166 49.5513,-5.95734 0.9332,-42.85293 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3023"
+         d="m 813.67489,732.75113 6.86338,81.75273 518.73733,-12.93207 1.537,-77.14076 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3025"
+         d="m 832.67187,740.62985 4.69458,63.79897 489.36345,-11.20245 -0.4944,-61.49299 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path3027"
+         d="m 825.28794,646.22338 -4.42678,4.8099 2.36708,74.93712 5.46302,6.64342 -3.26714,-82.32923 z"
+         style="fill:#553100;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3029"
+         d="m 825.61626,645.28829 515.38814,-0.19421 -1.5242,76.80926 -510.78894,10.71048 z"
+         style="fill:#553100;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3031"
+         d="m 835.33438,652.81016 3.65143,72.33662 495.75979,-10.24166 0.3292,-64.32057 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3033"
+         d="m 1334.718,678.44856 -22.8951,19.1343 -14.1378,14.46738 -9.7181,11.06328 23.7462,-4.09047 10.322,-8.18081 10.3769,-9.60832 6.6983,-6.89053 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3035"
+         d="m 837.25628,714.35805 15.20851,-5.13363 15.04382,-0.85108 20.34207,-8.51027 13.781,-5.18853 24.87167,-14.76939"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3037"
+         d="m 837.14641,698.62792 8.7847,-5.38067 6.45127,-0.46671"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3039"
+         d="m 839.28776,717.29543 18.11852,12.13381 11.39268,1.15295 18.72241,-3.56886 18.69495,-2.8551 22.70301,4.44717 11.58483,-3.84336 23.71871,-3.37672"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3067"
+         d="m 849.14187,405.3008 0.98863,85.81566 28.1112,31.10327 470.7509,8.09654 36.2917,-32.91536 0.3291,-82.90575 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3073"
+         d="m 1385.2568,498.11466 -534.44,-6.25698"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3069"
+         d="m 864.48771,415.18354 1.7023,67.25796 503.63869,7.9317 -0.2748,-67.20306 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3071"
+         d="m 1365.189,425.14672 2.9924,33.71132 -1.8941,30.66415 -500.81104,-7.10814 -1.67486,-67.97172 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3061"
+         d="m 880.76712,475.13914 500.83868,43.56471 -2.9096,75.65835 -502.15637,-27.88946"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3059"
+         d="m 1377.9549,595.04852 -132.8137,33.49224 -371.84054,-15.0149 2.47052,-45.65306 -4.33782,-91.66298 9.27886,0.35685 1.64748,87.27062 -5.84731,3.3492 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3041"
+         d="m 913.84755,600.07411 -50.84152,2.33365 0.76873,17.18508 4.31,-0.54905 -0.9059,4.96886 -3.56879,-0.13725 2.16879,17.95375 51.58273,-3.01995 1.18047,6.47872 294.61734,-2.96601 6.1218,-10.48678 60.1204,-1.97679 9.3063,-0.35692 32.9976,15.56529 5.7101,0.21959 1.2353,-13.53396 -1.4001,-0.76866 0.1098,-2.85503 2.1413,0.0824 0.5215,-13.5614 -34.0958,-24.18528 -6.314,-3.10207 -4.9963,-0.19215 -64.4853,3.95338 -4.6669,-8.75725 -297.71936,9.28003 z"
+         style="fill:#ffdbaa;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="path3053"
+         d="m 1052.2068,608.25433 1.208,24.35012 23.5815,0.19207 0.3293,-27.15025 -8.6474,0.0262 -0.247,26.79469 0.1233,-26.61507 -16.0334,0.52297 z"
+         style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3055"
+         d="m 1092.0458,606.40899 -64.4063,1.75 -0.125,18.21875 64.4063,-1.625 0.125,-18.34375 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3063"
+         d="m 890.2382,489.08484 0.82385,71.51305 477.88855,26.9562 1.6743,-62.1244 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3065"
+         d="m 900.06611,493.75168 0.9611,67.94427 464.38199,25.00714 2.9922,-22.04415 -1.1256,-26.4914 -3.2394,-8.70235 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3075"
+         d="m 841.92327,741.70046 -2.1961,19.93032 1.42759,18.64006 2.99235,15.12617 1.23538,5.05121 479.23351,-8.01796 1.8119,-9.93772 -0.2199,-50.04541 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3077"
+         d="m 1287.9667,630.18773 0.3292,-45.73542"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3043"
+         d="m 920.38117,597.46613 0.41196,45.0491 53.66911,-1.51008 -1.12572,-45.07656 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3081"
+         d="m 1120.086,819.03222 0.097,23.75987 5.9011,4.27054 14.7529,-2.46534 -0.5048,-26.30278 -5.5178,-1.09675 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3079"
+         d="m 1126.1036,820.27455 14.2093,-1.47535 1e-4,26.28339 -14.2287,1.98004 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3083"
+         d="m 1127.113,820.31337 -7.027,-1.28115"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3085"
+         d="m 895.18256,831.61187 2.25194,46.58797"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3902"
+         d="m 1288.132,628.87495 31.7381,15.87862 -351.77809,-0.38684 245.73219,-2.17509 5.9787,-10.88995 z"
+         style="fill:#ffdbaa;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3045"
+         d="m 990.21966,603.0112 0.98841,30.06019 17.15763,-0.055 -0.2197,-31.46025 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3047"
+         d="m 1027.4176,639.46761 64.4029,-1.8121 0.3293,-45.73542 -64.4304,2.52586 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3049"
+         d="m 1111.2016,598.37129 0.9335,31.48771 18.5852,-8e-5 0.5489,-32.86032 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         inkscape:connector-curvature="0"
+         id="path3051"
+         d="m 1148.7288,589.09229 -1.2077,49.99051 64.4029,-1.81209 1.2626,-51.41803 z"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3055-1"
+         d="m 973.67077,609.62774 -53.09375,1.4375 0,7.1875 0.0937,11.34375 2.0625,-0.59375 51.375,-1.28125 -0.4375,-18.09375 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3055-0"
+         d="m 1212.7645,603.12774 -64.4062,1.75 -0.4688,18.46875 64.4063,-1.625 0.4687,-18.59375 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3055-9"
+         d="m 1008.202,608.69024 -17.78123,0.46875 0.59375,18.125 17.31248,-0.4375 -0.125,-18.15625 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3049-4"
+         d="m 1131.1395,605.34649 -19.7187,0.53125 0.5625,18.375 18.8437,-0.5 0.3125,-18.40625 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3017-5"
+         d="m 1265.5458,810.34649 -50,5.09375 -0.125,18.59375 49.7187,-5.25 0.4063,-18.4375 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3015-5"
+         d="m 1199.2958,817.09649 -15.7813,1.625 -0.75,18.75 15.8125,-1.65625 0.7188,-18.71875 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3013-1"
+         d="m 1164.0458,820.69024 -59.75,6.09375 -0.1563,19 60.125,-6.34375 -0.2187,-18.75 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3011-7"
+         d="m 1081.7333,829.09649 -17.0938,1.75 0.1563,19.09375 16.6562,-1.75 0.2813,-19.09375 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="62.889961"
+         inkscape:export-xdpi="62.889961"
+         inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
+         id="path3009-1"
+         d="m 1045.1708,832.81524 -62.87503,6.4375 0.625,19.34375 62.65623,-6.625 -0.4062,-19.15625 z"
+         style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

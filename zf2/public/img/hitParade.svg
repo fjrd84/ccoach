@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
+   width="572.93848"
+   height="549.49084"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
@@ -25,16 +25,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="470.19989"
-     inkscape:cy="606.10048"
+     inkscape:cx="391.38327"
+     inkscape:cy="274.6522"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="1352"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -43,14 +47,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-78.816621,-171.42306)">
     <path
        style="fill:#aa7939;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 542.36693,577.94425 -412.17597,11.29376 -17.79433,53.66833 0.93121,15.51599 7.534,61.99157 480.13045,-31.57231 6.91289,-68.34733 -1.6166,-1.06291 z"
@@ -274,11 +279,12 @@
        inkscape:export-ydpi="62.889961" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 357.6875 373.03125 L 293.28125 374.78125 L 293.15625 393 L 357.5625 391.375 L 357.6875 373.03125 z "
+       d="m 357.6875,373.03125 -64.40625,1.75 -0.125,18.21875 64.40625,-1.625 0.125,-18.34375 z"
        id="path3055"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 155.87993,255.7071 0.82385,71.51305 477.88853,26.9562 1.67433,-62.1244 z"
@@ -352,41 +358,6 @@
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
        inkscape:export-ydpi="62.889961" />
-    <rect
-       style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-7"
-       width="50"
-       height="50"
-       x="-122.9848"
-       y="332.89896" />
-    <rect
-       style="fill:#ffdbaa;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-4"
-       width="50"
-       height="50"
-       x="-122.9848"
-       y="410.92496" />
-    <rect
-       style="fill:#d4a76a;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-0"
-       width="50"
-       height="50"
-       x="-122.9848"
-       y="488.95087" />
-    <rect
-       style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-9"
-       width="50"
-       height="50"
-       x="-122.9848"
-       y="566.97687" />
-    <rect
-       style="fill:#aa7939;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       id="rect4539-48"
-       width="50"
-       height="50"
-       x="-122.9848"
-       y="645.00281" />
     <path
        style="fill:#ffdbaa;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 553.77368,395.49721 31.73812,15.87862 -351.77806,-0.38684 245.73216,-2.17509 5.97875,-10.88995 z"
@@ -429,66 +400,75 @@
        inkscape:export-ydpi="62.889961" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 239.3125 376.25 L 186.21875 377.6875 L 186.21875 384.875 L 186.3125 396.21875 L 188.375 395.625 L 239.75 394.34375 L 239.3125 376.25 z "
+       d="m 239.3125,376.25 -53.09375,1.4375 0,7.1875 0.0937,11.34375 2.0625,-0.59375 51.375,-1.28125 -0.4375,-18.09375 z"
        id="path3055-1"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 478.40625 369.75 L 414 371.5 L 413.53125 389.96875 L 477.9375 388.34375 L 478.40625 369.75 z "
+       d="M 478.40625,369.75 414,371.5 l -0.46875,18.46875 64.40625,-1.625 0.46875,-18.59375 z"
        id="path3055-0"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 273.84375 375.3125 L 256.0625 375.78125 L 256.65625 393.90625 L 273.96875 393.46875 L 273.84375 375.3125 z "
+       d="m 273.84375,375.3125 -17.78125,0.46875 0.59375,18.125 17.3125,-0.4375 -0.125,-18.15625 z"
        id="path3055-9"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 396.78125 371.96875 L 377.0625 372.5 L 377.625 390.875 L 396.46875 390.375 L 396.78125 371.96875 z "
+       d="M 396.78125,371.96875 377.0625,372.5 l 0.5625,18.375 18.84375,-0.5 0.3125,-18.40625 z"
        id="path3049-4"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 531.1875 576.96875 L 481.1875 582.0625 L 481.0625 600.65625 L 530.78125 595.40625 L 531.1875 576.96875 z "
+       d="m 531.1875,576.96875 -50,5.09375 -0.125,18.59375 49.71875,-5.25 0.40625,-18.4375 z"
        id="path3017-5"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 464.9375 583.71875 L 449.15625 585.34375 L 448.40625 604.09375 L 464.21875 602.4375 L 464.9375 583.71875 z "
+       d="m 464.9375,583.71875 -15.78125,1.625 -0.75,18.75 15.8125,-1.65625 0.71875,-18.71875 z"
        id="path3015-5"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 429.6875 587.3125 L 369.9375 593.40625 L 369.78125 612.40625 L 429.90625 606.0625 L 429.6875 587.3125 z "
+       d="m 429.6875,587.3125 -59.75,6.09375 -0.15625,19 60.125,-6.34375 -0.21875,-18.75 z"
        id="path3013-1"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 347.375 595.71875 L 330.28125 597.46875 L 330.4375 616.5625 L 347.09375 614.8125 L 347.375 595.71875 z "
+       d="m 347.375,595.71875 -17.09375,1.75 0.15625,19.09375 16.65625,-1.75 0.28125,-19.09375 z"
        id="path3011-7"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:#805215;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 310.8125 599.4375 L 247.9375 605.875 L 248.5625 625.21875 L 311.21875 618.59375 L 310.8125 599.4375 z "
+       d="m 310.8125,599.4375 -62.875,6.4375 0.625,19.34375 62.65625,-6.625 -0.40625,-19.15625 z"
        id="path3009-1"
        inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\hitParade.png"
        inkscape:export-xdpi="62.889961"
-       inkscape:export-ydpi="62.889961" />
+       inkscape:export-ydpi="62.889961"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

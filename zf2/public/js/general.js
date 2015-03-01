@@ -2,15 +2,22 @@
 var allTimeScores = true,
     flipTime = 5000;
 
+$(document).ready(function () {
+    'use strict';
+    fitText($('.fitText'));
+});
 
 function flipHighScores() {
+    'use strict';
     if (allTimeScores) {
         $('#topUsers .allTimes').fadeOut(200, function () {
             $('#topUsers .thisWeek').fadeIn(300);
+            fitText($('.fitText'));
         });
     } else {
         $('#topUsers .thisWeek').fadeOut(200, function () {
             $('#topUsers .allTimes').fadeIn(300);
+            fitText($('.fitText'));
         });
     }
     allTimeScores = !allTimeScores;
@@ -20,14 +27,16 @@ function flipHighScores() {
 }
 
 setTimeout(function () {
+    'use strict';
     flipHighScores();
 }, flipTime);
 
 function showInfoText(text) {
     'use strict';
     $('#navText').empty();
-    $('#navText').append('<div class="newText" style="display:none">' + text + '</div>');
+    $('#navText').append('<div class="newText fitText" style="display:none">' + text + '</div>');
     $('#navText .newText').fadeIn('300');
+    fitText($('.fitText'));
 }
 
 $('.homeLogout').mouseenter(function () {
@@ -74,6 +83,7 @@ function showTraining() {
     'use strict';
     $('.home').fadeOut(300, function () {
         $('.trainingView').fadeIn(600);
+        fitText($('.fitText'));
     });
     //$('#homeContainer').flip();
 }
@@ -82,6 +92,7 @@ function showHome() {
     'use strict';
     $('.trainingView').fadeOut(300, function () {
         $('.home').fadeIn(600);
+        fitText($('.fitText'));
     });
     //$('#homeContainer').flip();
 }

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="resultsPage.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="578.4363"
+     inkscape:cy="341.92474"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="1352"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.95769507;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4491"
+       width="821.70483"
+       height="505.19626"
+       x="117.2718"
+       y="422.14035" />
+    <path
+       style="fill:#ffdbaa;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 552.21737,859.83904 c -10.2753,0 -18.60304,8.32772 -18.60304,18.60304 0,10.27529 8.32773,18.60299 18.60304,18.60299 10.27529,0 18.60304,-8.3277 18.60304,-18.60299 0,-10.27532 -8.32775,-18.60304 -18.60304,-18.60304 z m -0.0181,5.25549 3.99385,3.58396 0,-0.63484 4.47601,0 0,4.65279 7.11976,6.38853 -5.19925,0 0,10.64746 -6.58936,0 c 2.05154,-8.09285 -9.60588,-8.24095 -7.56979,0 l -6.58941,0 0,-10.66357 -5.19117,0 7.77069,-6.98315 7.77867,-6.9912 z"
+       id="path4438"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeIconBig.png"
+       inkscape:export-xdpi="78.753075"
+       inkscape:export-ydpi="78.753075" />
+    <text
+       xml:space="preserve"
+       style="font-size:40.1701889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="173.99704"
+       y="545.10425"
+       id="text4467"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="545.10425"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan4181">        $sessionInfo = ['initialPoints' =&gt; $initialUserPoints,</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="580.25317"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3054">            'finalPoints' =&gt; $finalUserPoints,</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="615.4021"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3056">            'initialLevel' =&gt; $initialUserLevel,</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="650.55096"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3058">            'finalLevel' =&gt; $this-&gt;currentUser-&gt;getLevel(),</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="685.69989"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3060">            'gamePoints' =&gt; $points,</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="720.84882"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3062">            'totalTime' =&gt; $totalTime,</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="755.99774"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3064">            'totalRepetitions' =&gt; $totalAttempts,</tspan><tspan
+         sodipodi:role="line"
+         x="173.99704"
+         y="791.14661"
+         style="font-size:28.11912918px;stroke:none"
+         id="tspan3066">            'sessionPoints' =&gt; $sessionPoints];</tspan></text>
+    <rect
+       style="fill:#553100;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4539-7"
+       width="50"
+       height="50"
+       x="-97.73098"
+       y="513.71625" />
+    <rect
+       style="fill:#ffdbaa;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4539-4"
+       width="50"
+       height="50"
+       x="-97.73098"
+       y="591.74231" />
+    <rect
+       style="fill:#d4a76a;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4539-0"
+       width="50"
+       height="50"
+       x="-97.73098"
+       y="669.76825" />
+    <rect
+       style="fill:#805215;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4539-9"
+       width="50"
+       height="50"
+       x="-97.73098"
+       y="747.79419" />
+    <rect
+       style="fill:#aa7939;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4539-48"
+       width="50"
+       height="50"
+       x="-97.73098"
+       y="825.82007" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -47.10595,919.58568 c -2.66763,0.13766 -4.95048,2.04608 -5.24553,4.85714 -0.21412,2.89342 2.93318,4.56232 6.29018,3.24107 3.52173,-1.50553 4.52153,-4.173 3.44196,-5.90625 -1.26908,-1.71256 -2.88603,-2.27456 -4.48661,-2.19196 z m 0.33929,1.11607 c 0.64946,0.01 1.46979,0.22515 2.55357,1.07589 2.10005,3.92094 -4.63236,7.54154 -6.5,4.0625 -1.21683,-2.43865 1.09006,-5.18578 3.94643,-5.13839 z"
+       id="path4651"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="scccscccc" />
+    <g
+       id="g4663"
+       transform="matrix(0.81,0,0,0.81,-429.54076,211.7406)">
+      <path
+         sodipodi:nodetypes="ccccc"
+         transform="translate(0,308.2677)"
+         inkscape:connector-curvature="0"
+         id="path4655"
+         d="m 381.25,556.46059 2.07972,-0.69896 -0.0523,16.6855 -2.02741,0.61418 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         transform="translate(0,308.2677)"
+         inkscape:connector-curvature="0"
+         id="path4657"
+         d="m 379.82143,559.83428 7.6894,-1.9898 -0.0108,2.48467 -7.67857,1.98979 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         transform="translate(0,308.2677)"
+         inkscape:connector-curvature="0"
+         id="path4659"
+         d="m 379.82143,567.79346 7.51083,-1.9898 -0.0108,2.48467 -7.51083,1.9898 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         transform="translate(0,308.2677)"
+         inkscape:connector-curvature="0"
+         id="path4661"
+         d="m 384.46429,555.4848 1.90115,-0.64218 0.0631,16.62237 -1.78571,0.56821 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g4711"
+       transform="matrix(0,1,-1,0,1147.8498,653.79496)" />
+  </g>
+</svg>

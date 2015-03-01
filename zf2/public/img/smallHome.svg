@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25.04295"
+   height="25.0429"
+   id="svg8786"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Documento nuevo 18">
+  <defs
+     id="defs8788" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="11.742688"
+     inkscape:cy="12.707093"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="504"
+     inkscape:window-height="406"
+     inkscape:window-x="1467"
+     inkscape:window-y="231"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata8791">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-667.47852,-1062.6979)">
+    <path
+       style="fill:#805215;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 680,1062.6979 c -6.91618,0 -12.52148,5.6052 -12.52148,12.5214 0,6.9162 5.60529,12.5215 12.52148,12.5215 6.91618,0 12.52147,-5.6053 12.52147,-12.5215 0,-6.9162 -5.60529,-12.5214 -12.52147,-12.5214 z m -0.0122,3.5373 2.68824,2.4124 0,-0.4273 3.01272,0 0,3.1317 4.79224,4.3001 -3.49955,0 0,7.1666 -4.43522,0 c 1.38087,-5.4472 -6.46562,-5.5469 -5.09515,0 l -4.43525,0 0,-7.1775 -3.49411,0 5.23035,-4.7003 5.23573,-4.7057 z"
+       id="path4438"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\S4L\VM\default\s4l\layout\inkscape\export\homeIcon.png"
+       inkscape:export-xdpi="78.753075"
+       inkscape:export-ydpi="78.753075" />
+  </g>
+</svg>
