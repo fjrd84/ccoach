@@ -1,4 +1,4 @@
-<div class="mainGame">
+<div class="mainDiv">
     <div class="loading"></div>
     <div class="gameWrapper">
         <div class="gameContent">
@@ -58,9 +58,11 @@
                     <div class="note A5Sharp" data-note="A5#"></div>
                     <div class="note B5" data-note="B5"></div>
                 </div>
-                <div onclick="resetAnswer()" id="resetNotes">RESET</div>
-                <div id="noteTesterFeedback"></div>
-                <div onclick="sendAnswer()" id="sendResults">SEND</div>
+                <div class="pianoControllers">
+                    <!--div onclick="resetAnswer()" id="resetNotes">RESET</div-->
+                    <div onclick="resetAnswer()" id="noteTesterFeedback"></div>
+                    <!--div onclick="sendAnswer()" id="sendResults">SEND</div-->
+                </div>
             </div>
         </div>
         <div class="intervalSelectorWrapper hidden">

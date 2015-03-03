@@ -99,12 +99,14 @@ function showHome() {
 
 function goPlay() {
     'use strict';
+    $('.mainDiv *').fadeOut();
     $('.loadingMain').fadeIn(300);
     window.location = baseUrl + '/index/game';
 }
 
 function goTrain(questionType) {
     'use strict';
+    $('.mainDiv *').fadeOut();
     $('.loadingMain').fadeIn(300);
     window.location = baseUrl + '/index/game?questionType=' + questionType;
 }
