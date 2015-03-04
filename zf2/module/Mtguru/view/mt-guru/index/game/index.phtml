@@ -1,124 +1,126 @@
-<div class="mainDiv">
-    <div class="loading"></div>
-    <div class="gameWrapper">
-        <div class="gameContent">
-            <div class="question">
-                <div class="question genericQuestion hidden">
-                    <div class="questionText"></div>
-                    <div class="questionElement"></div>
-                    <div id="answerItemsWrapper">
-                        <div id="answerItems">
+<div class="mainWrapper">
+    <div class="mainDiv">
+        <div class="loading"></div>
+        <div class="gameWrapper">
+            <div class="gameContent">
+                <div class="question">
+                    <div class="question genericQuestion hidden">
+                        <div class="questionText"></div>
+                        <div class="questionElement"></div>
+                        <div id="answerItemsWrapper">
+                            <div id="answerItems">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="noteTesterWrapper hidden">
-            <div id="noteTester">
-                <div id="noteTesterScore">
-                    <div class="note C4" style="display:none"></div>
-                    <div class="note D4" style="display:none"></div>
-                    <div class="note E4" style="display:none"></div>
-                    <div class="note F4" style="display:none"></div>
-                    <div class="note G4" style="display:none"></div>
-                    <div class="note A4" style="display:none"></div>
-                    <div class="note B4" style="display:none"></div>
-                    <div class="note C5" style="display:none"></div>
-                    <div class="note D5" style="display:none"></div>
-                    <div class="note E5" style="display:none"></div>
-                    <div class="note F5" style="display:none"></div>
-                    <div class="note G5" style="display:none"></div>
-                    <div class="note A5" style="display:none"></div>
-                    <div class="note B5" style="display:none"></div>
-                </div>
-                <div id="noteTesterPiano">
-                    <div class="note C4" data-note="C4"></div>
-                    <div class="note C4Sharp" data-note="C4#"></div>
-                    <div class="note D4" data-note="D4"></div>
-                    <div class="note D4Sharp" data-note="D4#"></div>
-                    <div class="note E4" data-note="E4"></div>
-                    <div class="note F4" data-note="F4"></div>
-                    <div class="note F4Sharp" data-note="F4#"></div>
-                    <div class="note G4" data-note="G4"></div>
-                    <div class="note G4Sharp" data-note="G4#"></div>
-                    <div class="note A4" data-note="A4"></div>
-                    <div class="note A4Sharp" data-note="A4#"></div>
-                    <div class="note B4" data-note="B4"></div>
-                    <div class="note C5" data-note="C5"></div>
-                    <div class="note C5Sharp" data-note="C5#"></div>
-                    <div class="note D5" data-note="D5"></div>
-                    <div class="note D5Sharp" data-note="D5#"></div>
-                    <div class="note E5" data-note="E5"></div>
-                    <div class="note F5" data-note="F5"></div>
-                    <div class="note F5Sharp" data-note="F5#"></div>
-                    <div class="note G5" data-note="G5"></div>
-                    <div class="note G5Sharp" data-note="G5#"></div>
-                    <div class="note A5" data-note="A5"></div>
-                    <div class="note A5Sharp" data-note="A5#"></div>
-                    <div class="note B5" data-note="B5"></div>
-                </div>
-                <div class="pianoControllers">
-                    <!--div onclick="resetAnswer()" id="resetNotes">RESET</div-->
-                    <div onclick="resetAnswer()" id="noteTesterFeedback"></div>
-                    <!--div onclick="sendAnswer()" id="sendResults">SEND</div-->
+            <div class="noteTesterWrapper hidden">
+                <div id="noteTester">
+                    <div id="noteTesterScore">
+                        <div class="note C4" style="display:none"></div>
+                        <div class="note D4" style="display:none"></div>
+                        <div class="note E4" style="display:none"></div>
+                        <div class="note F4" style="display:none"></div>
+                        <div class="note G4" style="display:none"></div>
+                        <div class="note A4" style="display:none"></div>
+                        <div class="note B4" style="display:none"></div>
+                        <div class="note C5" style="display:none"></div>
+                        <div class="note D5" style="display:none"></div>
+                        <div class="note E5" style="display:none"></div>
+                        <div class="note F5" style="display:none"></div>
+                        <div class="note G5" style="display:none"></div>
+                        <div class="note A5" style="display:none"></div>
+                        <div class="note B5" style="display:none"></div>
+                    </div>
+                    <div id="noteTesterPiano">
+                        <div class="note C4" data-note="C4"></div>
+                        <div class="note C4Sharp" data-note="C4#"></div>
+                        <div class="note D4" data-note="D4"></div>
+                        <div class="note D4Sharp" data-note="D4#"></div>
+                        <div class="note E4" data-note="E4"></div>
+                        <div class="note F4" data-note="F4"></div>
+                        <div class="note F4Sharp" data-note="F4#"></div>
+                        <div class="note G4" data-note="G4"></div>
+                        <div class="note G4Sharp" data-note="G4#"></div>
+                        <div class="note A4" data-note="A4"></div>
+                        <div class="note A4Sharp" data-note="A4#"></div>
+                        <div class="note B4" data-note="B4"></div>
+                        <div class="note C5" data-note="C5"></div>
+                        <div class="note C5Sharp" data-note="C5#"></div>
+                        <div class="note D5" data-note="D5"></div>
+                        <div class="note D5Sharp" data-note="D5#"></div>
+                        <div class="note E5" data-note="E5"></div>
+                        <div class="note F5" data-note="F5"></div>
+                        <div class="note F5Sharp" data-note="F5#"></div>
+                        <div class="note G5" data-note="G5"></div>
+                        <div class="note G5Sharp" data-note="G5#"></div>
+                        <div class="note A5" data-note="A5"></div>
+                        <div class="note A5Sharp" data-note="A5#"></div>
+                        <div class="note B5" data-note="B5"></div>
+                    </div>
+                    <div class="pianoControllers">
+                        <!--div onclick="resetAnswer()" id="resetNotes">RESET</div-->
+                        <div onclick="resetAnswer()" id="noteTesterFeedback"></div>
+                        <!--div onclick="sendAnswer()" id="sendResults">SEND</div-->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="intervalSelectorWrapper hidden">
-            <div class="intervalNum">
-                <div class="intervalNumElement" data-num="2">2</div>
-                <div class="intervalNumElement" data-num="3">3</div>
-                <div class="intervalNumElement" data-num="4">4</div>
-                <div class="intervalNumElement" data-num="5">5</div>
-                <div class="intervalNumElement" data-num="6">6</div>
-                <div class="intervalNumElement" data-num="7">7</div>
+            <div class="intervalSelectorWrapper hidden">
+                <div class="intervalNum">
+                    <div class="intervalNumElement" data-num="2">2</div>
+                    <div class="intervalNumElement" data-num="3">3</div>
+                    <div class="intervalNumElement" data-num="4">4</div>
+                    <div class="intervalNumElement" data-num="5">5</div>
+                    <div class="intervalNumElement" data-num="6">6</div>
+                    <div class="intervalNumElement" data-num="7">7</div>
+                </div>
+                <div class="intervalType">
+                    <div class="intervalTypeElement" data-type="d">d</div>
+                    <div class="intervalTypeElement" data-type="m">m</div>
+                    <div class="intervalTypeElement" data-type="P">P</div>
+                    <div class="intervalTypeElement" data-type="M">M</div>
+                    <div class="intervalTypeElement" data-type="A">A</div>
+                </div>
+                <div class="intervalDisplay"></div>
             </div>
-            <div class="intervalType">
-                <div class="intervalTypeElement" data-type="d">d</div>
-                <div class="intervalTypeElement" data-type="m">m</div>
-                <div class="intervalTypeElement" data-type="P">P</div>
-                <div class="intervalTypeElement" data-type="M">M</div>
-                <div class="intervalTypeElement" data-type="A">A</div>
+        </div>
+        <div class="infoWrapper">
+            <div class="yourPoints"></div>
+            <div class="currentScale"></div>
+            <div class="currentKey"></div>
+            <div class="yourLevel">Level <?php echo $currentLevel; ?></div>
+            <div class="timeCounter">
+                <div class="metroBack"></div>
+                <div class="metroFront"></div>
+                <div class="metroLine"></div>
+                <div class="whiteDot1"></div>
+                <div class="whiteDot2"></div>
+                <div class="whiteDot3"></div>
+                <div class="whiteDot4"></div>
             </div>
-            <div class="intervalDisplay"></div>
+            <div class="remainingTime"></div>
+            <div class="toastMessage" style="display:none">WELL DONE!!</div>
+            <div id="displayHelp" style="display:none">
+                <div class="helpTitle">Help</div>
+                <div class="currentQuestionHelp">Help for the current question...</div>
+                <div onclick="continuePlaying()" class="buttonContinue">Continue</div>
+            </div>
+            <div class="feedbackDiv" style="display:none">
+                <div class="helpTitle">Sorry, that was wrong.</div>
+                <div class="currentQuestionHelp">Help for the current question...</div>
+                <div onclick="tryAgain()" class="buttonTryagain">Try again</div>
+                <div onclick="showSolution()" class="buttonShowSolution">Show solution</div>
+            </div>
         </div>
+        <div id="comboBoxWrapper" class="hidden">
+            <select class="comboBox">
+                <option value="0">Select...</option>
+            </select>
+        </div>
+        <div onclick="sendAnswer()" class="nextButton"></div>
+        <div onclick="goHome()" class="homeButton"></div>
     </div>
-    <div class="infoWrapper">
-        <div class="yourPoints"></div>
-        <div class="currentScale"></div>
-        <div class="currentKey"></div>
-        <div class="yourLevel">Level <?php echo $currentLevel; ?></div>
-        <div class="timeCounter">
-            <div class="metroBack"></div>
-            <div class="metroFront"></div>
-            <div class="metroLine"></div>
-            <div class="whiteDot1"></div>
-            <div class="whiteDot2"></div>
-            <div class="whiteDot3"></div>
-            <div class="whiteDot4"></div>
-        </div>
-        <div class="remainingTime"></div>
-        <div class="toastMessage" style="display:none">WELL DONE!!</div>
-        <div id="displayHelp" style="display:none">
-            <div class="helpTitle">Help</div>
-            <div class="currentQuestionHelp">Help for the current question...</div>
-            <div onclick="continuePlaying()" class="buttonContinue">Continue</div>
-        </div>
-        <div class="feedbackDiv" style="display:none">
-            <div class="helpTitle">Sorry, that was wrong.</div>
-            <div class="currentQuestionHelp">Help for the current question...</div>
-            <div onclick="tryAgain()" class="buttonTryagain">Try again</div>
-            <div onclick="showSolution()" class="buttonShowSolution">Show solution</div>
-        </div>
-    </div>
-    <div id="comboBoxWrapper" class="hidden">
-        <select class="comboBox">
-            <option value="0">Select...</option>
-        </select>
-    </div>
-    <div onclick="sendAnswer()" class="nextButton"></div>
-    <div onclick="goHome()" class="homeButton"></div>
 </div>
 <?php
 echo $this->helpPage;
@@ -133,7 +135,7 @@ echo $this->helpPage;
     if (isset($_GET['questionType'])) {
         echo 'var trainingQuestionType="' . $_GET['questionType'] . '";';
     }?>
-    $(document).ready(function(){
+    $(document).ready(function () {
         startGame();
     });
 </script>

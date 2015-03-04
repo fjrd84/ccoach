@@ -1,8 +1,8 @@
 .container{
-    margin-top:80px;
 }
 .mainDiv{
     padding-top: 715px;
     max-width: 1280px;
     max-height: 0px;
+    /* left: 18%; */
 }
