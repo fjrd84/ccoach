@@ -4,7 +4,7 @@ var allTimeScores = true,
 
 $(document).ready(function () {
     'use strict';
-    fitText($('.fitText'));
+    //fitText($('.fitText'));
 });
 
 function flipHighScores() {
@@ -12,12 +12,12 @@ function flipHighScores() {
     if (allTimeScores) {
         $('#topUsers .allTimes').fadeOut(200, function () {
             $('#topUsers .thisWeek').fadeIn(300);
-            fitText($('.fitText'));
+            //fitText($('.fitText'));
         });
     } else {
         $('#topUsers .thisWeek').fadeOut(200, function () {
             $('#topUsers .allTimes').fadeIn(300);
-            fitText($('.fitText'));
+            //fitText($('.fitText'));
         });
     }
     allTimeScores = !allTimeScores;
@@ -36,7 +36,7 @@ function showInfoText(text) {
     $('#navText').empty();
     $('#navText').append('<div class="newText fitText" style="display:none">' + text + '</div>');
     $('#navText .newText').fadeIn('300');
-    fitText($('.fitText'));
+    //fitText($('.fitText'));
 }
 
 $('.homeLogout').mouseenter(function () {
@@ -83,7 +83,7 @@ function showTraining() {
     'use strict';
     $('.home').fadeOut(300, function () {
         $('.trainingView').fadeIn(600);
-        fitText($('.fitText'));
+        //fitText($('.fitText'));
     });
     //$('#homeContainer').flip();
 }
@@ -92,7 +92,7 @@ function showHome() {
     'use strict';
     $('.trainingView').fadeOut(300, function () {
         $('.home').fadeIn(600);
-        fitText($('.fitText'));
+        //fitText($('.fitText'));
     });
     //$('#homeContainer').flip();
 }
@@ -116,3 +116,16 @@ function logoutMe() {
     $('.loadingMain').fadeIn(300);
     window.location = baseUrl + '/auth/logout';
 }
+
+function adjustFont(){
+    'use strict';
+    var newSize = $(window).width()/40;
+    newSize = Math.floor(newSize);
+    $('body').css('font-size', newSize+'px');
+}
+
+$(window).resize(function(){
+    adjustFont();
+});
+
+adjustFont();

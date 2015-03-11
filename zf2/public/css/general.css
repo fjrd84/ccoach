@@ -65,7 +65,7 @@ span.centerHelper {
     height: 12%;
     width: 100%;
     position: absolute;
-    left: 27px;
+    left: 11%;
     -ms-transform: rotate(-1deg); /* IE 9 */      
     -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */      
     transform: rotate(-1deg);
@@ -151,8 +151,8 @@ span.centerHelper {
 
 div#topUsers {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 79%;
     height: 66%;
     font-size: 0.8em;
@@ -226,7 +226,7 @@ div#topUsers {
 div#navText {
     position: absolute;
     height: 10%;
-    font-size: 20px;
+    font-size: 100%;
     top: 82%;
     left: 28%;
     width: 62%;
@@ -663,12 +663,12 @@ div#answerItemsWrapper {
 }
 
 .welcome{
-    top: 21%;
+    top: 20%;
 
-    font-size: 1em;
+    font-size: 140%;
     position: absolute;
     width: 47%;
-    height: 10%;
+    /* height: 10%; */
     max-width: 47%;
     left: 48%;
     z-index: 2;
@@ -694,7 +694,8 @@ div#answerItemsWrapper {
 
 .level{
     position: absolute;  
-    top: 20%;  
+    font-size: 116%;
+    top: 21%;  
 
     height: 10%;
     text-align: left;
