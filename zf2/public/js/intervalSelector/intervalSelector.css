@@ -1,18 +1,21 @@
 .intervalSelectorWrapper{
     position: absolute;
+    font-size: 65%;
     font-family: 'Digital7', sans-serif;
-    top: 139px;
-    left: 366px;
-    width: 190px; 
-    height: 81px;
+    top: 33.1%;
+    left: 40.9%;
+    width: 19%; 
+    height: 20%;
     color: #FFDBAA;
+    z-index: 3;
     background-repeat: no-repeat;
 }
 
 .intervalType {
     position: absolute;
-    top: -5px;
-    left: 100px;
+    top: 15%;
+    font-size: 90%;
+    left: 54%;
 }
 
 .intervalTypeElement.selected {
@@ -21,27 +24,30 @@
 
 .intervalDisplay {
     position: absolute;
-    width: 56px;
+    width: 5%;
     height: 35px;
     color: white;
     right: 0px;
-    font-size: 32px;
-    top: 25px;
+    font-size: 190%;
+    top: 67%;
 }
 
 .intervalNum {
     position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 80px;
+    left: 4%;
+    top: 12%;
+    /* padding-top: 10%; */
+    width: 45%;
 }
 
 .intervalNumElement {
+    padding: 1%;
+    position: relative;
     float: left;
-    width: 24px;
-    height: 31px;
+    width: 30%;
+    /* height: 5%; */
     font-family: 'Digital7', sans-serif;
-    font-size: 30px;
+    font-size: 260%;
 }
 
 .intervalNumElement.selected {

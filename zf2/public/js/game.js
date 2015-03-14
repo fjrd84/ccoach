@@ -679,23 +679,10 @@ function sendScale() {
     sendData($('#comboBoxWrapper .comboBox').val());
 }
 
-function adjustFont(){
-    'use strict';
-    var newSize = $(window).width()/40;
-    newSize = Math.floor(newSize);
-    $('body').css('font-size', newSize+'px');
-}
-
 //////////////////////////////////////////////////////////////////////////////////////
-
-$(window).resize(function(){
-    adjustFont();
-});
 
 // Timer events
 setInterval(function () {
     'use strict';
     timerDown();
 }, 500);
-
-adjustFont();

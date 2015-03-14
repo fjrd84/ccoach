@@ -28,11 +28,11 @@ CREATE TABLE `gamesession` (
   PRIMARY KEY (`id`),
   KEY `IDX_1D6329D464B64DCC` (`userId`),
   CONSTRAINT `FK_1D6329D464B64DCC` FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `gamesession` */
 
-insert  into `gamesession`(`id`,`userId`,`points`,`accessTime`) values (1,3,273,'2015-02-26 22:32:07'),(2,3,273,'2015-02-26 22:33:52'),(3,3,273,'2015-02-26 22:39:24'),(4,3,273,'2015-02-26 22:40:04'),(5,3,273,'2015-02-26 23:10:42');
+insert  into `gamesession`(`id`,`userId`,`points`,`accessTime`) values (1,3,273,'2015-02-26 22:32:07'),(2,3,273,'2015-02-26 22:33:52'),(3,3,273,'2015-02-26 22:39:24'),(4,3,273,'2015-02-26 22:40:04'),(5,3,273,'2015-02-26 23:10:42'),(6,3,0,'2015-03-13 20:57:02'),(7,3,0,'2015-03-14 01:13:07'),(8,3,512,'2015-03-14 01:25:38');
 
 /*Table structure for table `logintable` */
 
@@ -81,7 +81,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`fullName`,`userId`,`points`,`level`,`pointsThisWeek`,`lastAccess`) values (3,'Javi Donado','javi',52427,8,1365,'2015-02-26 23:10:42'),(5,'Paco','paco',0,1,234,'2015-02-26 22:40:04'),(6,'Lolo','lolo',432,1,34,NULL),(7,'Moloco','moloco',1143,1,543,NULL),(8,'Krokako','krokako',334,1,213,'2015-02-26 22:40:04'),(9,'Moneino','moneino',665,1,443,NULL);
+insert  into `user`(`id`,`fullName`,`userId`,`points`,`level`,`pointsThisWeek`,`lastAccess`) values (3,'Javi Donado','javi',16312,5,1877,'2015-03-14 01:25:38'),(5,'Paco','paco',0,1,234,'2015-02-26 22:40:04'),(6,'Lolo','lolo',432,1,34,NULL),(7,'Moloco','moloco',1143,1,543,NULL),(8,'Krokako','krokako',334,1,213,'2015-02-26 22:40:04'),(9,'Moneino','moneino',665,1,443,NULL);
 
 /*Table structure for table `userskill` */
 
@@ -98,11 +98,11 @@ CREATE TABLE `userskill` (
   KEY `IDX_3AA97502268B6C3E` (`questionTypeId`),
   CONSTRAINT `FK_3AA97502268B6C3E` FOREIGN KEY (`questionTypeId`) REFERENCES `questiontype` (`id`),
   CONSTRAINT `FK_3AA9750264B64DCC` FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `userskill` */
 
-insert  into `userskill`(`id`,`currentSkill`,`numberOfAnswers`,`userId`,`questionTypeId`) values (1,1,24,3,1),(2,0,0,3,2),(3,0,0,3,3),(4,1,24,3,4),(5,0,0,3,5),(6,1,24,3,6),(7,0,0,3,7),(8,-1,0,3,8);
+insert  into `userskill`(`id`,`currentSkill`,`numberOfAnswers`,`userId`,`questionTypeId`) values (1,1,27,3,1),(2,0,0,3,2),(3,0,1,3,3),(4,1,24,3,4),(5,0,1,3,5),(6,1,25,3,6);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

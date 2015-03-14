@@ -120,7 +120,7 @@ function logoutMe() {
 function adjustFont(){
     'use strict';
     var newSize = $(window).width()/40;
-    newSize = Math.floor(newSize);
+    //newSize = Math.floor(newSize);
     $('body').css('font-size', newSize+'px');
 }
 

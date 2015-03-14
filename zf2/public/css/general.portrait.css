@@ -4,6 +4,60 @@ html{
     overflow:auto;
 }
 
+body{
+    background-color: black;
+}
+
+.container{
+    font-size:200%;
+}
+
+.nextButton{
+    top: 56%;
+    width: 14.5%;
+    height: 9.4%;
+    right: 4%;
+}
+
+.buttonTryagain{
+    top: 92.4%;
+    left: 5%;
+    font-size: 100%;
+}
+
+.buttonShowSolution{
+    font-size: 100%;
+    right: 5%;
+    top: 92.4%;
+}
+
+.homeButton{
+    top:3%;
+    width: 10%;
+    left: 48.1%;
+    height: 5%;
+}
+
+.helpTitle{
+    top: 2%;
+    /* left: 4%; */
+    width: 100%;
+    font-size: 90%;
+    /* text-align: left; */
+}
+
+.buttonContinue {
+    bottom: 0%;
+    font-size: 120%;
+    left: 36%;
+    width: 33%;
+}
+
+.currentQuestionHelp {
+    top: 8%;
+    height: 75%;
+}
+
 .homeContainer {
     position: absolute;
     width: 97.079755%;
@@ -12,12 +66,17 @@ html{
     margin-left: 1%;
 }
 
+.trainingView{
+    /* font-size: 200%; */
+}
+
 .sideBar {
     position: absolute;
     margin: 0 0 0 4%;
     width: 89%;
     padding-top: 107.6%;
-    top: 42.4%;
+    top: 48.4%;
+    /* margin-top: 4%; */
     left: 1%;
     background-size: 100%;
     background-image: url('../img/hitParadeFull.svg');
@@ -27,8 +86,8 @@ html{
 .mainDiv {
     background-color: black;
     width: 99%;
-    padding-top: 193.979755%;
-    /* height: 500px; */
+    padding-top: 160.979755%;
+    height: 100%;
     margin: auto;
     position: relative;
 }
@@ -47,21 +106,129 @@ html{
 }
 
 .welcome {
-  font-size: 270%;
+  /* font-size: 270%; */
+  height: 20%;
 }
 
 .level {
-    font-size:220%;
+    /* font-size: 120%; */
 }
 
 .points{
-    font-size:200%;
+    /* font-size:200%; */
 }
 
 #topUsers{
-    font-size:250%!important;
+    font-size: 147%!important;
 }
 
 #navText{
-    font-size:300%!important;
+    font-size: 169%!important;
+    top: 80.3%!important;
+}
+
+.yourLevel{
+    top: 2%;
+    font-size: 100%;
+}
+
+.yourPoints {
+    top: 6%;
+    font-size: 100%;
+}
+
+.gameContent {
+    top: 11%;
+    width: 91%;
+    height: 36%;
+    left: 2%;
+}
+
+.questionElement {
+    width: 100%;
+}
+
+.timeCounter {
+    width: 21%;
+    padding-top: 14.2%;
+    top: 0.8%;
+    right: 3%;
+}
+
+.noteTesterWrapper {
+      width: 93%;    
+      left: 4%;
+      top: 51%;
+      padding-top: 57%;
+}
+
+#noteTesterScore {
+    /* top: 5px; */
+    bottom: 50%;
+    left: 0%;
+}
+
+#noteTesterPiano {
+    top: 60%;
+    height: 51%;
+    width: 100%;
+    left: 0%;
+}
+
+#noteTesterFeedback {
+    left: 50%;
+    top: 20%;
+}
+
+.pianoControllers {
+    left: 0;
+    top: 18%;
+    height: 13.6%;
+    width: 100%;
+}
+
+.toastMessage{
+    width: 100%;
+    
+    left: 0;
+    height: 40%;
+    top: 30%;
+    line-height: 720%;
+}
+
+.intervalSelectorWrapper{
+    width: 61%;
+    top: 27.4%;
+    left: 40%;
+}
+
+.intervalDisplay{
+    top: 155%;   
+    left: 24%;
+}
+
+.intervalNumElement{
+    font-size:450%;
+}
+
+.intervalType{
+    font-size:150%;
+}
+
+.intervalNum{
+    height: 100%;
+}
+
+.intervalNumElement{
+    margin-top: 1%;
+}
+
+#comboBoxWrapper{
+    width: 93%;
+    left: 4%;
+    top: 45%;
+}
+
+.comboBox {
+    width: 100%;
 }
