@@ -8,6 +8,206 @@
     -o-user-select: none;
 }
 
+.sendAMessageIcon {
+    position: absolute;
+    top: 73%;
+    width: 38%;
+    left: 30.6%;
+}
+
+.sendAMessagePic {
+    background-image: url('../img/messageIcon.svg');
+    padding-top: 21%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 19.7%;
+}
+
+.sendAMessageText {
+    position: absolute;
+    padding-top: 4%;
+    margin-left: 2%;
+}
+
+.sendAMessageText {
+    left: 21%;
+}
+
+.aboutMeText {
+    width: 76%;
+    padding-top: 5%;
+    position: absolute;
+}
+
+.aboutMePic {
+    background-image: url('../img/meIcon.svg');
+    width: 23.1%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 24%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.aboutMeIcon {
+    position: absolute;
+    top: 64%;
+    left: 31.2%;
+    width: 36%;
+}
+
+.personalProjectText {
+    position: absolute;
+    top: 57%;
+    left: 31.4%;
+    width: 38%;
+}
+
+.endIconsText {
+    padding-top: 8%;
+}
+
+.scalesIcon {
+    background-image: url('../img/scalesIcon.svg');    background-size: 100%;    width: 25%;    position: absolute;    top: 0;    
+    left: 77%;    text-align: center;    padding-top: 28%;    background-repeat: no-repeat;
+}
+
+.chordsIcon {
+    background-image: url('../img/chordsIcon.svg');    background-size: 100%;    
+    width: 25%;
+    position: absolute;    top: 0;    
+    left: 39%;    text-align: center;    padding-top: 28%;    background-repeat: no-repeat;
+}
+
+.iconsBox {
+    position: absolute;
+    top: 41%;
+    padding-top: 10%;
+    /* background-color: blue; */
+    left: 34%;
+    width: 30.7%;
+    text-align: right;
+}
+
+.explanationText {
+    position: absolute;
+    top: 31.5%;
+    text-align: center;
+    width: 48%;
+    left: 24.9%;
+}
+
+.signUpSection {
+    position: absolute;
+    top: 14.1%;
+    width: 31%;
+    padding-top: 21%;
+    background-image: url('../img/homeCassetteTransparent.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 34%;
+    text-align: center;
+}
+
+.headerText {
+    font-size: 200%;
+    position: absolute;
+    top: 5.5%;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+}
+
+.loginWrapper {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    text-align: right;
+}
+
+.lightBrownColor {
+    color: #ffdbaa;
+    display: inline;
+}
+
+.brownColor {
+    color: #d4a76a;
+    display: inline;
+}
+
+.intervalsIcon {
+    background-image: url('../img/intervalsIcon.svg');
+    background-size: 100%;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 28%;
+    background-repeat: no-repeat;
+}
+
+.mediumText {
+    font-size: 130%;
+}
+
+.testItText {
+    top: 54%;
+    position: absolute;
+    width: 100%;
+}
+
+.orText {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+.signUpText {
+    position: absolute;
+    top: 13%;
+    width: 100%;
+    text-align: center;
+}
+
+.smallText {
+    font-size: 80%;
+}
+
+.homeContents {
+    color: white;
+    font-size: 80%;
+    position: relative;
+    padding-top: 122%;
+    margin: auto;
+    width: 100%;
+    margin-top: 3%;
+}
+
+input.submitButton {
+    margin: 0.4%;
+    float: left;
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 43.1%!important;
+}
+
+input[type="submit"] {}
+
+fieldset.noBoders {
+    border: none;
+}
+
+.homePageWrapper {
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+    background-color: black;
+}
+
 .mainWrapper {
     display: table-cell;      height: 100%;      
     width: 100%;
@@ -115,6 +315,26 @@ span.centerHelper {
     height: 100%;
 }
 
+#logoutTool{
+    background-image: url('../img/powerButtonIcon.svg');
+    background-repeat: no-repeat;
+    width: 3.6%;
+    height: 8%;
+    background-size: 100%;
+    position: absolute;
+    top: 2.8%;
+    left: 1.8%;
+}
+
+#logoutTool:hover{
+    background-image: url('../img/powerButtonIconIvory.svg');
+    background-size: 100%;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; 
+    -webkit-animation: fadein 1s;
+    -o-animation: fadein 1s; 
+}
+
 #configTool {
     width: 5%;
     padding-top: 5%;
@@ -159,22 +379,44 @@ div#topUsers {
 }
 
 .loginMessages {
-    background-color: white;
-    width: 310px;
-    padding: 5px;
+    background-color: black;
+    width: 100%;
+    text-align: right;
+    color: white;
+    font-size: 50%;
+    /* padding: 5px; */
+    position: relative;
 }
 
 .loginForm label {
     float: left;
-    clear: both;
-    width: 240px;
+    margin: 5px;
+    width: 31%;
+    /* clear: both; */
+    /* width: 240px; */
+    font-size: 50%;
 }
 
 .loginForm {
-    padding: 5px;
-    width: 310px;
-    min-height: 120px;
-    background-color: white;
+    top: 0;
+    width: 100%;
+    /* padding-top: 5.2%; */
+    background-color: black;
+    color: white;
+    border-bottom: solid darkgrey 1px;
+}
+
+.loginForm input {
+    font-size: 80%;
+    max-width: 58%;
+}
+
+.loginForm form {
+    position: relative;
+    top: 1%;
+    font-size: 160%;
+    width: 100%;
+    /* display: table; */
 }
 
 .homeContainer {
@@ -466,31 +708,23 @@ div#answerItemsWrapper {
 
 .homeLogout{
     position: absolute;
-    background-image: url('../img/powerOffTr.png');
-    width: 40px;
-    height: 40px;
-    left: 7%;
-    /* background-color: blue; */
-    top: 81%;
+    opacity: 0;
+    width: 9.5%;
+    height: 10%;
+    left: 10.5%;
+    background-size: 100%;
+    top: 81.7%;
     background-repeat: no-repeat;
-    /* -webkit-transition: background-image 0.6s linear; 
-    -moz-transition: background-image 0.6s linear;
-    -ms-transition: background-image 0.6s linear;
-    -o-transition: background-image 0.6s linear;
-     transition: background-image 0.6s linear; */
 }
 
 .homeLogout:hover{
     background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-    background-position: 11px 10px;
-    background-image: url('../img/powerOff.png');
-    -webkit-transition: background-image 0.6s linear;
-    -moz-transition: background-image 0.6s linear;
-    -ms-transition: background-image 0.6s linear;
-    -o-transition: background-image 0.6s linear;
-    transition: background-image 0.6s linear;
+    opacity: 0.5;
+    background-image: url('../img/powerButtonIconBlue.svg');
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
 }
 
 .homeTraining {
@@ -504,9 +738,9 @@ div#answerItemsWrapper {
     top: 27.2%;
     left: 56.7%;
     animation: fadein 1s;
-    -moz-animation: fadein 1s; /* Firefox */
-    -webkit-animation: fadein 1s; /* Safari and Chrome */
-    -o-animation: fadein 1s; /* Opera */
+    -moz-animation: fadein 1s; 
+    -webkit-animation: fadein 1s;
+    -o-animation: fadein 1s; 
     z-index: 1;
 }
 
@@ -705,8 +939,8 @@ div#answerItemsWrapper {
 }
 
 html{
-    height: 100%;
-    overflow: hidden;
+    height: 98%;
+    /* overflow: hidden; */
 }
 
 body{
@@ -791,7 +1025,7 @@ body{
     left: 0;
     top: 0;
     background-repeat: no-repeat;
-    background-position: 50% 45%;
+    background-position: 50% 50%;
 }
 
 .question{

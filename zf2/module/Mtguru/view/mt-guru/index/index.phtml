@@ -1,6 +1,7 @@
 <div class="mainWrapper">
     <div class="mainDiv sevenSegText">
         <div onclick="configTool()" id="configTool"></div>
+        <div onclick="logoutMe()" id="logoutTool"></div>
         <div id="homeContainer" class="homeContainer">
             <div class="front">
                 <div class="home">
@@ -59,9 +60,7 @@
                         class="fourthOne fitText"><?php echo $topUsersThisWeek[3]->getFullName() . ' - ' . $topUsersThisWeek[3]->getPointsThisWeek(); ?></div>
                 </div>
             </div>
-            <a href="javascript:logoutMe()">
-                <div class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
-            </a>
+                <div onclick="logoutMe()" class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
         </div>
     </div>
 </div>

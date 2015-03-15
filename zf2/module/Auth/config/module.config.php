@@ -24,7 +24,7 @@ return array(
             'login' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    'route'    => '/auth',
+                    'route'    => '/home',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Auth\Controller',
                         'controller'    => 'Auth',

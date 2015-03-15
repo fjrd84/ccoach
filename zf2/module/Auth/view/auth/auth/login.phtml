@@ -7,29 +7,97 @@ $actionUrl = $this->url(
     )
 );
 
-if ($this->messages) {
-    echo '<div class="loginMessages">';
-    echo '<ul>';
-    foreach ($this->messages as $message) {
-        echo '<li>' . $message . '</li>';
-    }
-    echo '</ul>';
-    echo '</div>';
-}
 ?>
-
-<div class="loginForm">
-    <form action="<?php echo $actionUrl ?>" method="POST" name="User" id="User">
-        <fieldset><label><span>Username:</span><input type="text" name="username" required="required" value=""
-                                                      hvkeyboarddefined="true"
-                                                      data-cip-id="cIPJQ342845639"></label><label><span>Password:</span><input
-                    type="password" name="password" required="required" value="" hvkeyboarddefined="true"
-                    data-cip-id="cIPJQ342845640"></label><label><span>Remember Me ?:</span><input type="hidden"
-                                                                                                  name="rememberme"
-                                                                                                  value="0"><input
-                    type="checkbox" name="rememberme" value="1"></label><input style="float:left" type="submit"
-                                                                               name="submit"
-                                                                               value="Submit">
-        </fieldset>
-    </form>
+<div class="homePageWrapper">
+    <div class="loginForm">
+        <form action="<?php echo $actionUrl ?>" method="POST" name="User" id="User">
+            <fieldset class="noBoders">
+                <label><span>Username:</span>
+                    <input type="text" name="username" required="required" value=""
+                           hvkeyboarddefined="true"
+                           data-cip-id="cIPJQ342845639">
+                </label>
+                <label>
+                    <span>Password:</span>
+                    <input type="password" name="password" required="required" value="" hvkeyboarddefined="true"
+                           data-cip-id="cIPJQ342845640">
+                </label>
+                <label style="display:none"><span>Remember Me ?:</span>
+                    <input type="hidden" name="rememberme" value="0">
+                    <input type="checkbox" name="rememberme" value="1"></label>
+                <input class="submitButton" type="submit" name="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+    <?php /*
+    if ($this->messages) {
+        echo '<div class="loginMessages">';
+        echo '<ul>';
+        foreach ($this->messages as $message) {
+            echo '<li>' . $message . '</li>';
+        }
+        echo '</ul>';
+        echo '</div>';
+    }*/
+    ?>
+    <div class="homeContents">
+        <div class="homeContent mainScreen">
+            <div class="loginWrapper">
+                <div class="smallText">If you already have an account...</div>
+                <div onclick="showLogIn()" class="logInText mediumText lightBrownColor">Log in</div>
+            </div>
+            <div class="headerText">
+                <div class="lightBrownColor">Welcome to the <div class="brownColor">Cassette Coach</div>!!</div>
+            </div>
+            <div class="signUpSection">
+                <div class="mediumText signUpText" onclick="signUp()">Sign up for free</div>
+                <div class="mediumText orText">Or</div>
+                <div class="mediumText testItText" onclick="guestUser()">Test it as a guest</div>
+            </div>
+            <div class="explanationText">
+                The <div class="brownColor">Cassette Coach </div>is a tool designed to help you learn the basics about <div class="lightBrownColor">music harmony</div>.<br><br>
+                With it you can learn:
+            </div>
+            <div class="iconsBox">
+                <div class="intervalsIcon brownColor">Intervals</div>
+                <div class="chordsIcon brownColor">Chords</div>
+                <div class="scalesIcon brownColor">Scales</div>
+                <div class="endIconsText rightAlignText">...and much more!!</div>
+            </div>
+            <div class="personalProjectText">The <div class="brownColor">Cassette Coach</div> is a personal project of <div class="lightBrownColor">F. Javier R. Donado</div>.</div>
+            <div onclick="aboutMe()" class="aboutMeIcon"><div class="aboutMeText">Click here if you want to know more <div class="lightBrownColor">about me</div>.</div><div class="aboutMePic"></div></div>
+            <div onclick="sendAMessage()" class="sendAMessageIcon"><div class="sendAMessagePic"></div><div class="sendAMessageText">Click here if you want to send me <div class="lightBrownColor">a message</div>.</div></div>
+        </div>
+        <div class="homeContent signUpScreen" style="display:none">
+            <div onclick="backHome('signUpScreen')">Back home</div>
+            User<br>
+            Password<br>
+            Email<br>
+            Sumbit<br>
+            By clicking on submit you agree with the terms and conditions.
+        </div>
+        <div class="homeContent aboutMeScreen" style="display:none">
+            <div onclick="backHome('aboutMeScreen')">Back home</div>
+            Information about F. Javier R. Donado <br><br>
+            Early years <br>
+            Computers and guitar playing<br>
+            Studies <br>
+            University Degree<br>
+            PFC<br><br>
+            Experience <br>
+            Technologies and languages I know<br>
+            Companies I've worked for<br>
+            Philosophy as a developer<br><br>
+            Hobbies and interests <br>
+            Pictures and trips<br>
+            Music<br>
+            Languages<br>
+            Design<br>
+        </div>
+        <div class="homeContent sendAMessageScreen" style="display:none">
+            <div onclick="backHome('sendAMessageScreen')">Back home</div>
+            Page for sending me a message.
+        </div>
+    </div>
 </div>
+<script src="<?php echo $this->basePath() ?>/js/home.js"></script>

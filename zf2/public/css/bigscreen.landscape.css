@@ -10,3 +10,7 @@
 body{
     font-size: 34px!important;
 }
+
+.homePageWrapper{
+      max-width: 1380px;
+}

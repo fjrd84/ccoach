@@ -22,7 +22,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        chdir(dirname(__DIR__). '/../../../..');
+        chdir(dirname(__DIR__) . '/../../../..');
         $serviceManager = Bootstrap::getServiceManager();
         $translator = $serviceManager->get('translator');
         $this->controller = new IndexController($translator);
@@ -40,9 +40,11 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
 
     public function testIndexActionCanBeAccessed()
     {
+        echo 'Llego...';
         $this->routeMatch->setParam('action', 'index');
         $result = $this->controller->dispatch($this->request);
         $response = $this->controller->getResponse();
+        echo 'And the code is... ' . $response->getStatusCode();
         $this->assertEquals(200, $response->getStatusCode());
     }
 
@@ -57,7 +59,8 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
     /**
      * @depends testKnowledgeCanBeLoaded
      */
-    public function testPossibleChords(){
+    public function testPossibleChords()
+    {
         $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // All possible chords tests
         $notes = array();
@@ -71,29 +74,30 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
         $notes[] = "F";
         $notes[] = "A";
         $CIonianChords = $knowledge->getAllPossibleChords($notes, false); // All chords of C ionian
-        $expectedArray = array( 0 => 'CM',
-                                1 => 'CMaj7',
-                                2 => 'Em',
-                                3 => 'Em7',
-                                4 => 'GM',
-                                5 => 'G7',
-                                6 => 'Bdim',
-                                7 => 'Bdim7',
-                                8 => 'Dm',
-                                9 => 'Dm7',
-                                10 => 'FM',
-                                11 => 'FMaj7',
-                                12 => 'Am',
-                                13 => 'Am7');
+        $expectedArray = array(0 => 'CM',
+            1 => 'CMaj7',
+            2 => 'Em',
+            3 => 'Em7',
+            4 => 'GM',
+            5 => 'G7',
+            6 => 'Bdim',
+            7 => 'Bdim7',
+            8 => 'Dm',
+            9 => 'Dm7',
+            10 => 'FM',
+            11 => 'FMaj7',
+            12 => 'Am',
+            13 => 'Am7');
         $differentElements = count(array_diff($CIonianChords, $expectedArray));
-        $this->assertTrue($differentElements===0);
+        $this->assertTrue($differentElements === 0);
     }
 
     /**
      * Tests the notes of a generated scale
      * @depends testKnowledgeCanBeLoaded
      */
-    public function testNotesChord(){
+    public function testNotesChord()
+    {
         $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Notes of chords tests
         $knowledge->getNotesChord('C#Maj7');
@@ -108,36 +112,38 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * Tests the notes of a generated scale
      * @depends testKnowledgeCanBeLoaded
      */
-    public function testNotesScale(){
+    public function testNotesScale()
+    {
         $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Notes scales tests
         $DbIonian = $knowledge->getNotesScale('Db', 'ionian');
-        $this->assertTrue(in_array('Eb',$DbIonian));
+        $this->assertTrue(in_array('Eb', $DbIonian));
         $fIonian = $knowledge->getNotesScale('F', 'ionian');
-        $this->assertTrue(in_array('Bb',$fIonian));
+        $this->assertTrue(in_array('Bb', $fIonian));
         $cIonian = $knowledge->getNotesScale('C', 'ionian');
         $dDorian = $knowledge->getNotesScale('D', 'dorian');
         $ePhrygian = $knowledge->getNotesScale('E', 'phrygian');
         // C ionian and D dorian have the same notes
         $differentElements = count(array_diff($cIonian, $dDorian));
-        $this->assertTrue($differentElements===0);
+        $this->assertTrue($differentElements === 0);
         $differentElements = count(array_diff($cIonian, $ePhrygian));
-        $this->assertTrue($differentElements===0);
+        $this->assertTrue($differentElements === 0);
     }
 
     /**
      * Tests some random intervals
      * @depends testKnowledgeCanBeLoaded
      */
-    public function testNoteInterval(){
+    public function testNoteInterval()
+    {
         $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Note intervals tests
-        $this->assertEquals($knowledge->getNoteInterval('C', '3m'),'Eb');
-        $this->assertEquals($knowledge->getNoteInterval('C', '3M'),'E');
-        $this->assertEquals($knowledge->getNoteInterval('C', '5J'),'G');
-        $this->assertEquals($knowledge->getNoteInterval('C', '7m'),'Bb');
-        $this->assertEquals($knowledge->getNoteInterval('C', '7M'),'B');
-        $this->assertEquals($knowledge->getNoteInterval('A', '4+'),'D#');
+        $this->assertEquals($knowledge->getNoteInterval('C', '3m'), 'Eb');
+        $this->assertEquals($knowledge->getNoteInterval('C', '3M'), 'E');
+        $this->assertEquals($knowledge->getNoteInterval('C', '5J'), 'G');
+        $this->assertEquals($knowledge->getNoteInterval('C', '7m'), 'Bb');
+        $this->assertEquals($knowledge->getNoteInterval('C', '7M'), 'B');
+        $this->assertEquals($knowledge->getNoteInterval('A', '4+'), 'D#');
 
     }
 
@@ -145,12 +151,13 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
      * Tests some random distances
      * @depends testKnowledgeCanBeLoaded
      */
-    public function testDistances(){
+    public function testDistances()
+    {
         $knowledge = \MTGuru\Classes\Theory\Knowledge::getInstance();
         // Distance Tests
-        $this->assertEquals($knowledge->getDistance("D", "A"),3.5);
-        $this->assertEquals($knowledge->getDistance("A", "D"),2.5);
-        $this->assertEquals($knowledge->getDistance("F", "B"),3);
+        $this->assertEquals($knowledge->getDistance("D", "A"), 3.5);
+        $this->assertEquals($knowledge->getDistance("A", "D"), 2.5);
+        $this->assertEquals($knowledge->getDistance("F", "B"), 3);
         $this->assertEquals($knowledge->getDistance("C", "C"), 0);
         $this->assertEquals($knowledge->getDistance("Eb", "E"), 0.5);
         $this->assertEquals($knowledge->getDistance("Db", "D#"), 1);

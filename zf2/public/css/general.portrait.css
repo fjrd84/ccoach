@@ -31,6 +31,8 @@ body{
     top: 92.4%;
 }
 
+
+
 .homeButton{
     top:3%;
     width: 10%;
@@ -103,6 +105,12 @@ body{
     right: 5%;
     top: 1%;
     z-index: 5;
+}
+
+#logoutTool{
+    top: 1.5%;
+    left: 4%;
+    width: 7.3%;
 }
 
 .welcome {
@@ -231,4 +239,9 @@ body{
 
 .comboBox {
     width: 100%;
+}
+
+.homeContents{
+    font-size: 50%;
+    padding-top: 188%;
 }
