@@ -15,7 +15,8 @@ class AuthController extends AbstractActionController
 
     protected $sl;
 
-    public function getServiceLocator(){
+    public function getServiceLocator()
+    {
         return $this->sl;
     }
 
@@ -26,9 +27,9 @@ class AuthController extends AbstractActionController
 
     public function getAuthService()
     {
-        if (! $this->authservice) {
+        if (!$this->authservice) {
             $this->authservice = $this->getServiceLocator()
-                                      ->get('AuthService');
+                ->get('AuthService');
         }
 
         return $this->authservice;
@@ -36,9 +37,9 @@ class AuthController extends AbstractActionController
 
     public function getSessionStorage()
     {
-        if (! $this->storage) {
+        if (!$this->storage) {
             $this->storage = $this->getServiceLocator()
-                                  ->get('Auth\Model\MyAuthStorage');
+                ->get('Auth\Model\MyAuthStorage');
         }
 
         return $this->storage;
@@ -46,9 +47,9 @@ class AuthController extends AbstractActionController
 
     public function getForm()
     {
-        if (! $this->form) {
-            $user       = new User();
-            $builder    = new AnnotationBuilder();
+        if (!$this->form) {
+            $user = new User();
+            $builder = new AnnotationBuilder();
             $this->form = $builder->createForm($user);
         }
 
@@ -62,17 +63,17 @@ class AuthController extends AbstractActionController
             return $this->redirect()->toRoute('success');
         }
 
-        $form       = $this->getForm();
+        $form = $this->getForm();
 
         return array(
-            'form'      => $form,
-            'messages'  => $this->flashmessenger()->getMessages()
+            'form' => $form,
+            'messages' => $this->flashmessenger()->getMessages()
         );
     }
 
     public function authenticateAction()
     {
-        $form       = $this->getForm();
+        $form = $this->getForm();
         $redirect = 'login';
 
         $request = $this->getRequest();
@@ -81,8 +82,8 @@ class AuthController extends AbstractActionController
             if ($form->isValid()) {
                 //check authentication...
                 $this->getAuthService()->getAdapter()
-                                       ->setIdentity($request->getPost('username'))
-                                       ->setCredential($request->getPost('password'));
+                    ->setIdentity($request->getPost('username'))
+                    ->setCredential($request->getPost('password'));
 
                 $result = $this->getAuthService()->authenticate();
                 foreach ($result->getMessages() as $message) {
@@ -93,9 +94,9 @@ class AuthController extends AbstractActionController
                 if ($result->isValid()) {
                     $redirect = 'index';
                     //check if it has rememberMe :
-                    if ($request->getPost('rememberme') == 1 ) {
+                    if ($request->getPost('rememberme') == 1) {
                         $this->getSessionStorage()
-                             ->setRememberMe(1);
+                            ->setRememberMe(1);
                         //set storage again
                         $this->getAuthService()->setStorage($this->getSessionStorage());
                     }
@@ -117,5 +118,61 @@ class AuthController extends AbstractActionController
         }
 
         return $this->redirect()->toRoute('login');
+    }
+
+    /**
+     * Action for creating a new user
+     * @return \Zend\Stdlib\ResponseInterface
+     */
+    public function newuserAction()
+    {
+        $error = false;
+        $messages = array();
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $userFullName = explode("@", $username, 2)[0];
+
+        if (!filter_var($username, FILTER_VALIDATE_EMAIL) || !isset($userFullName) || $userFullName == '') {
+            array_push($messages, "You must enter a valid e-mail address.");
+            $error = true;
+        }
+        if ($password == '' || $password == null) {
+            array_push($messages, "Your password cannot be empty.");
+            $error = true;
+        }
+
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+
+        $existingUser = $objectManager->createQuery(
+            'SELECT u FROM MTGuru\Entity\LoginTable u WHERE u.userName =  \'' . $username . '\'')->getResult();
+
+        if (count($existingUser) > 0) {
+            array_push($messages, "This user already exists.");
+            $error = true;
+        }
+
+        $response = $this->getResponse();
+
+        if (!$error) {
+            $newUser = new \MTGuru\Entity\LoginTable();
+            $newUser->setUserName($username);
+            $newUser->setPassword(md5($password));
+            $objectManager->persist($newUser);
+            $objectManager->flush();
+            $currentUser = new \MTGuru\Entity\User();
+            $currentUser->setUserId($username);
+            $currentUser->setFullName($userFullName);
+            $currentUser->setLevel(0);
+            $currentUser->setPoints(0);
+            $currentUser->setPointsThisWeek(0);
+            $objectManager->persist($currentUser);
+            $objectManager->flush();
+            $response->setContent('success');
+        } else {
+            $response->setContent(json_encode($messages));
+        }
+
+        return $response;
     }
 }

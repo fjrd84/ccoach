@@ -242,6 +242,11 @@ body{
 }
 
 .homeContents{
-    font-size: 50%;
-    padding-top: 188%;
+    font-size: 67%;
+    /* padding-top: 188%; */
+}
+
+.homeContentContainer {
+    width: 55%;
+    padding-top: 182%;
 }

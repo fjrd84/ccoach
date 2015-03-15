@@ -9,26 +9,6 @@ $actionUrl = $this->url(
 
 ?>
 <div class="homePageWrapper">
-    <div class="loginForm">
-        <form action="<?php echo $actionUrl ?>" method="POST" name="User" id="User">
-            <fieldset class="noBoders">
-                <label><span>Username:</span>
-                    <input type="text" name="username" required="required" value=""
-                           hvkeyboarddefined="true"
-                           data-cip-id="cIPJQ342845639">
-                </label>
-                <label>
-                    <span>Password:</span>
-                    <input type="password" name="password" required="required" value="" hvkeyboarddefined="true"
-                           data-cip-id="cIPJQ342845640">
-                </label>
-                <label style="display:none"><span>Remember Me ?:</span>
-                    <input type="hidden" name="rememberme" value="0">
-                    <input type="checkbox" name="rememberme" value="1"></label>
-                <input class="submitButton" type="submit" name="submit" value="Submit">
-            </fieldset>
-        </form>
-    </div>
     <?php /*
     if ($this->messages) {
         echo '<div class="loginMessages">';
@@ -46,35 +26,64 @@ $actionUrl = $this->url(
                 <div class="smallText">If you already have an account...</div>
                 <div onclick="showLogIn()" class="logInText mediumText lightBrownColor">Log in</div>
             </div>
-            <div class="headerText">
-                <div class="lightBrownColor">Welcome to the <div class="brownColor">Cassette Coach</div>!!</div>
+            <div class="homeContentContainer">
+                <div class="headerText">
+                    <div class="lightBrownColor">Welcome to the <div class="brownColor">Cassette Coach</div>!!
+                    </div>
+                </div>
+                <div class="signUpSection">
+                    <div class="mediumText signUpText" onclick="signUp()">Sign up for free</div>
+                    <div class="mediumText orText">Or</div>
+                    <div class="mediumText testItText" onclick="guestUser()">Test it as a guest</div>
+                </div>
+                <div class="explanationText">
+                    The
+                    <div class="brownColor">Cassette Coach</div>
+                    is a game designed to help you learn the basics about
+                    <div class="lightBrownColor">music harmony</div>.<br><br>
+                    With it you can learn:
+                </div>
+                <div class="iconsBox">
+                    <div class="intervalsBox"><div class="intervalsIcon"></div><div class="subText brownColor">Intervals</div></div>
+                    <div class="chordsBox"><div class="chordsIcon"></div><div class="subText brownColor">Chords</div></div>
+                    <div class="scalesBox"><div class="scalesIcon"></div><div class="subText brownColor">Scales</div></div>
+                    <div class="endIconsText rightAlignText">...and much more!!</div>
+                </div>
+                <div class="personalProjectText">The
+                    <div class="brownColor">Cassette Coach</div>
+                    is a personal project of
+                    <div class="lightBrownColor">F. Javier R. Donado</div>.
+                </div>
+                <div onclick="aboutMe()" class="aboutMeIcon">
+                    <div class="aboutMeText">Click here if you want to know more
+                        <div class="lightBrownColor">about me</div>.
+                    </div>
+                    <div class="aboutMePic"></div>
+                </div>
+                <div onclick="sendAMessage()" class="sendAMessageIcon">
+                    <div class="sendAMessagePic"></div>
+                    <div class="sendAMessageText">Click here if you want to send me
+                        <div class="lightBrownColor">an e-mail</div>.
+                    </div>
+                </div>
             </div>
-            <div class="signUpSection">
-                <div class="mediumText signUpText" onclick="signUp()">Sign up for free</div>
-                <div class="mediumText orText">Or</div>
-                <div class="mediumText testItText" onclick="guestUser()">Test it as a guest</div>
-            </div>
-            <div class="explanationText">
-                The <div class="brownColor">Cassette Coach </div>is a tool designed to help you learn the basics about <div class="lightBrownColor">music harmony</div>.<br><br>
-                With it you can learn:
-            </div>
-            <div class="iconsBox">
-                <div class="intervalsIcon brownColor">Intervals</div>
-                <div class="chordsIcon brownColor">Chords</div>
-                <div class="scalesIcon brownColor">Scales</div>
-                <div class="endIconsText rightAlignText">...and much more!!</div>
-            </div>
-            <div class="personalProjectText">The <div class="brownColor">Cassette Coach</div> is a personal project of <div class="lightBrownColor">F. Javier R. Donado</div>.</div>
-            <div onclick="aboutMe()" class="aboutMeIcon"><div class="aboutMeText">Click here if you want to know more <div class="lightBrownColor">about me</div>.</div><div class="aboutMePic"></div></div>
-            <div onclick="sendAMessage()" class="sendAMessageIcon"><div class="sendAMessagePic"></div><div class="sendAMessageText">Click here if you want to send me <div class="lightBrownColor">a message</div>.</div></div>
         </div>
         <div class="homeContent signUpScreen" style="display:none">
             <div onclick="backHome('signUpScreen')">Back home</div>
-            User<br>
+            Your e-mail<br>
+            <input class="user" type="text" name="user"><br>
             Password<br>
-            Email<br>
-            Sumbit<br>
+            <input class="pass" type="password" name="pass">
+            <div class="sendSignUp" onclick="sendSignUp()">Send!</div><br>
             By clicking on submit you agree with the terms and conditions.
+        </div>
+        <div class="homeContent logInScreen" style="display:none">
+            <div onclick="backHome('logInScreen')">Back home</div>
+            Your e-mail<br>
+            <input class="user" type="text" name="user"><br>
+            Password<br>
+            <input class="pass" type="password" name="pass">
+            <div class="sendSignUp" onclick="sendLogIn()">Send!</div><br>
         </div>
         <div class="homeContent aboutMeScreen" style="display:none">
             <div onclick="backHome('aboutMeScreen')">Back home</div>

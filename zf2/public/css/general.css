@@ -8,11 +8,44 @@
     -o-user-select: none;
 }
 
+.scalesBox {
+    width: 25%;
+    right: 0;
+    position: absolute;
+}
+
+.chordsBox {
+    width: 25%;
+    left: 38%;
+    height: 100%;
+    position: absolute;
+}
+
+.chordsIcon:hover {
+    background-image: url('../img/chordsIconInverted.svg');    -webkit-animation: fadein 0.4s;
+}
+
+.intervalsBox {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.homeContentContainer {
+    width: 37%;
+    margin: auto;
+    height: 100%;
+    position: relative;
+    top: 0;
+    padding-top: 122%;
+}
+
 .sendAMessageIcon {
     position: absolute;
-    top: 73%;
-    width: 38%;
-    left: 30.6%;
+    top: 80%;
+    width: 100%;
+    /* left: 30.6%; */
 }
 
 .sendAMessagePic {
@@ -22,6 +55,12 @@
     background-size: 100%;
     position: absolute;
     width: 19.7%;
+    -webkit-transition: all 0.4s;
+}
+
+.sendAMessagePic:hover {
+    transform: rotate(28deg);
+    -webkit-transition: all 0.4s;
 }
 
 .sendAMessageText {
@@ -35,17 +74,17 @@
 }
 
 .aboutMeText {
-    width: 76%;
-    padding-top: 5%;
+    width: 81%;
+    padding-top: 5.7%;
     position: absolute;
 }
 
 .aboutMePic {
     background-image: url('../img/meIcon.svg');
-    width: 23.1%;
+    width: 25%;
     background-repeat: no-repeat;
     background-size: 100%;
-    padding-top: 24%;
+    padding-top: 25%;
     position: absolute;
     top: 0;
     right: 0;
@@ -53,61 +92,78 @@
 
 .aboutMeIcon {
     position: absolute;
-    top: 64%;
-    left: 31.2%;
-    width: 36%;
+    top: 71%;
+    /* left: 31.2%; */
+    width: 100%;
 }
 
 .personalProjectText {
     position: absolute;
-    top: 57%;
-    left: 31.4%;
-    width: 38%;
+    top: 65%;
+    /* left: 31.4%; */
+    width: 100%;
 }
 
 .endIconsText {
-    padding-top: 8%;
+    padding-top: 40%;
 }
 
 .scalesIcon {
-    background-image: url('../img/scalesIcon.svg');    background-size: 100%;    width: 25%;    position: absolute;    top: 0;    
-    left: 77%;    text-align: center;    padding-top: 28%;    background-repeat: no-repeat;
+    background-image: url('../img/scalesIcon.svg');    background-size: 100%;    
+    width: 100%;    
+    position: relative;    top: 0;    
+    /* left: 77%; */    text-align: center;    
+    padding-top: 108%;    background-repeat: no-repeat;
+}
+
+.scalesIcon:hover {
+    background-image: url('../img/scalesIconInverted.svg');    -webkit-animation: fadein 0.4s;
 }
 
 .chordsIcon {
     background-image: url('../img/chordsIcon.svg');    background-size: 100%;    
-    width: 25%;
-    position: absolute;    top: 0;    
-    left: 39%;    text-align: center;    padding-top: 28%;    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;    top: 0;    
+    /* left: 39%; */    text-align: center;    
+    padding-top: 108%;    background-repeat: no-repeat;
 }
 
 .iconsBox {
     position: absolute;
-    top: 41%;
-    padding-top: 10%;
+    top: 48%;
+    padding-top: 0%;
     /* background-color: blue; */
-    left: 34%;
-    width: 30.7%;
+    /* left: 34%; */
+    width: 100%;
     text-align: right;
+}
+
+.iconInBox {
+    position: absolute;
+    clear: none;
+    float: left;
+    width: 25%;
+    height: 50%;
+    text-align: center;
 }
 
 .explanationText {
     position: absolute;
-    top: 31.5%;
+    top: 37.5%;
     text-align: center;
-    width: 48%;
-    left: 24.9%;
+    width: 146%;
+    left: -21%;
 }
 
 .signUpSection {
     position: absolute;
-    top: 14.1%;
-    width: 31%;
-    padding-top: 21%;
+    top: 15.5%;
+    width: 100%;
+    padding-top: 68%;
     background-image: url('../img/homeCassetteTransparent.svg');
     background-size: 100%;
     background-repeat: no-repeat;
-    left: 34%;
+    /* left: 34%; */
     text-align: center;
 }
 
@@ -115,8 +171,7 @@
     font-size: 200%;
     position: absolute;
     top: 5.5%;
-    left: 30%;
-    width: 40%;
+    width: 100%;
     text-align: center;
 }
 
@@ -137,16 +192,29 @@
     display: inline;
 }
 
+.subText {
+    position: absolute;
+    /* top: 106%; */
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .intervalsIcon {
     background-image: url('../img/intervalsIcon.svg');
     background-size: 100%;
-    position: absolute;
-    width: 25%;
+    position: relative;
+    width: 100%;
     top: 0;
-    left: 0;
+    /* left: 0; */
     text-align: center;
-    padding-top: 28%;
+    padding-top: 108%;
     background-repeat: no-repeat;
+}
+
+.intervalsIcon:hover {
+    background-image: url('../img/intervalsIconInverted.svg');
+    -webkit-animation: fadein 0.4s;
 }
 
 .mediumText {
@@ -157,6 +225,12 @@
     top: 54%;
     position: absolute;
     width: 100%;
+    -webkit-transition: font-size 0.5s;
+}
+
+.testItText:hover {
+    -webkit-transition: font-size 0.5s;
+    font-size: 140%;
 }
 
 .orText {
@@ -170,6 +244,12 @@
     top: 13%;
     width: 100%;
     text-align: center;
+    -webkit-transition: font-size 0.5s;
+}
+
+.signUpText:hover {
+    font-size: 140%;
+    -webkit-transition: font-size 0.5s;
 }
 
 .smallText {
@@ -180,7 +260,7 @@
     color: white;
     font-size: 80%;
     position: relative;
-    padding-top: 122%;
+    /* padding-top: 122%; */
     margin: auto;
     width: 100%;
     margin-top: 3%;
@@ -902,7 +982,7 @@ div#answerItemsWrapper {
     font-size: 140%;
     position: absolute;
     width: 47%;
-    /* height: 10%; */
+    height: 10%;
     max-width: 47%;
     left: 48%;
     z-index: 2;

@@ -39,6 +39,7 @@ class UserManagement
             $currentUser->setFullName($userId);
             $currentUser->setLevel(0);
             $currentUser->setPoints(0);
+            $currentUser->setPointsThisWeek(0);
             $this->objectManager->persist($currentUser);
             $this->objectManager->flush();
         }
