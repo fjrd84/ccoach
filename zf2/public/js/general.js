@@ -2,11 +2,6 @@
 var allTimeScores = true,
     flipTime = 5000;
 
-$(document).ready(function () {
-    'use strict';
-    
-});
-
 function flipHighScores() {
     'use strict';
     if (allTimeScores) {
@@ -121,13 +116,6 @@ function adjustFont() {
     var newSize = $(window).width() / 40;
     //newSize = Math.floor(newSize);
     $('body').css('font-size', newSize + 'px');
-}
-
-// Home functions /////////////////////////////////////////
-function backHome(fromClass){
-    $('.homeContent.'+fromClass).fadeOut(200, function (){
-        $('.homeContent.mainScreen').fadeIn(500);
-    });
 }
 
 ///////////////////////////////////////////

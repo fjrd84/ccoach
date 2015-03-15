@@ -8,6 +8,25 @@
     -o-user-select: none;
 }
 
+.logInScreen, .signUpScreen {
+    position: absolute;
+    top: 15.4%;
+    left: 31.4%;
+    height: 19%;
+    width: 37%;
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+.homePageFeedback {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 240%;
+    height: 4%;
+    top: 0;
+    background-color: rgba(139, 0, 0, 0.34);
+}
+
 .scalesBox {
     width: 25%;
     right: 0;

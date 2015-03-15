@@ -20,16 +20,12 @@ function guestUser() {
 
 function signUp() {
     'use strict';
-    $('.homeContent.mainScreen').fadeOut(200, function () {
-        $('.homeContent.signUpScreen').fadeIn(500);
-    });
+    $('.signUpScreen').fadeIn(300);
 }
 
 function showLogIn() {
     'use strict';
-    $('.homeContent.mainScreen').fadeOut(200, function () {
-        $('.homeContent.logInScreen').fadeIn(500);
-    });
+    $('.logInScreen').fadeIn(300);
 }
 
 function sendSignUp() {
@@ -38,10 +34,10 @@ function sendSignUp() {
         pass = $('.signUpScreen input.pass').val(),
         test = '';
     if(!validateEmail(username)){
-        alert('You must enter a valid email address.');
+        homeFeedback('You must enter a valid email address.');
         return;
     }else if(pass === ''){
-        alert('Your password cannot be empty.');
+        homeFeedback('Your password cannot be empty.');
         return;
     }
     test = username + pass;
@@ -55,6 +51,14 @@ function sendLogIn() {
     'use strict';
     var username = $('.logInScreen input.user').val(),
         pass = $('.logInScreen input.pass').val();
+    if(username === ''){
+        homeFeedback('Your e-mail cannot be empty.');
+        return;
+    }
+    if(pass === ''){
+        homeFeedback('Your password cannot be empty.');
+        return;
+    }
     /*$.post(baseUrl + '/home/newuser', { 'username': username, 'password': pass })
         .done(function (data) {
             alert("Data Loaded: " + data);
@@ -89,3 +93,30 @@ function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+
+function homeFeedback(text){
+    'use strict';
+    $('.homePageFeedback').empty();
+    $('.homePageFeedback').append(text);
+    $('.homePageFeedback').fadeIn(300);
+    setTimeout(function () {
+        $('.homePageFeedback').fadeOut(500);
+    }, 2000);
+}
+
+function closeBox(boxName){
+    $(boxName).fadeOut(300);
+}
+
+function backHome(fromClass){
+    $('.homeContent.'+fromClass).fadeOut(200, function (){
+        $('.homeContent.mainScreen').fadeIn(500);
+    });
+}
+
+$(document).ready(function () {
+    'use strict';
+    if(messages!=''){
+        homeFeedback(messages);
+    }
+});

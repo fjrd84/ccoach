@@ -1,31 +1,21 @@
 <?php
-
+/*
 $actionUrl = $this->url(
     'login/process',
     array(
         'action' => 'authenticate',
     )
-);
+);*/
 
 ?>
 <div class="homePageWrapper">
-    <?php /*
-    if ($this->messages) {
-        echo '<div class="loginMessages">';
-        echo '<ul>';
-        foreach ($this->messages as $message) {
-            echo '<li>' . $message . '</li>';
-        }
-        echo '</ul>';
-        echo '</div>';
-    }*/
-    ?>
     <div class="homeContents">
         <div class="homeContent mainScreen">
             <div class="loginWrapper">
                 <div class="smallText">If you already have an account...</div>
                 <div onclick="showLogIn()" class="logInText mediumText lightBrownColor">Log in</div>
             </div>
+            <div style="display:none" class="homePageFeedback">FeedbackText</div>
             <div class="homeContentContainer">
                 <div class="headerText">
                     <div class="lightBrownColor">Welcome to the <div class="brownColor">Cassette Coach</div>!!
@@ -68,8 +58,8 @@ $actionUrl = $this->url(
                 </div>
             </div>
         </div>
-        <div class="homeContent signUpScreen" style="display:none">
-            <div onclick="backHome('signUpScreen')">Back home</div>
+        <div class="signUpScreen" style="display:none">
+            <div onclick="closeBox('.signUpScreen')">Close</div>
             Your e-mail<br>
             <input class="user" type="text" name="user"><br>
             Password<br>
@@ -77,8 +67,8 @@ $actionUrl = $this->url(
             <div class="sendSignUp" onclick="sendSignUp()">Send!</div><br>
             By clicking on submit you agree with the terms and conditions.
         </div>
-        <div class="homeContent logInScreen" style="display:none">
-            <div onclick="backHome('logInScreen')">Back home</div>
+        <div class="logInScreen" style="display:none">
+            <div onclick="closeBox('.logInScreen')">Close</div>
             Your e-mail<br>
             <input class="user" type="text" name="user"><br>
             Password<br>
@@ -109,4 +99,13 @@ $actionUrl = $this->url(
         </div>
     </div>
 </div>
+<script>
+    var messages = '';
+    <?php
+    if ($this->messages) {
+        foreach ($this->messages as $message) {
+            echo 'messages+="' . $message . '; ";';
+        }
+    } ?>
+</script>
 <script src="<?php echo $this->basePath() ?>/js/home.js"></script>
