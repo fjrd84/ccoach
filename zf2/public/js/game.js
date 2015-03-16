@@ -316,6 +316,7 @@ function nextQuestionCont() {
     switch (currentType) {
         case 'notesOfChord':
         case 'notesOfInterval':
+        case 'notesOfDistance':
         case 'notesOfScale':
             questionNotesOfX();
             break;
@@ -526,6 +527,7 @@ function showSolution() {
     solutionShown = true;
     switch (currentType) {
         case 'notesOfChord':
+        case 'notesOfDistance':
         case 'notesOfInterval':
         case 'notesOfScale':
             showSolutionNotesOfX();
@@ -595,6 +597,7 @@ function sendAnswer(data) {
         case 'notesOfChord':
         case 'notesOfInterval':
         case 'notesOfScale':
+        case 'notesOfDistance':
             sendNotes();
             break;
         case 'intervalOfNotes':
