@@ -61,10 +61,13 @@ var noteTester = {
         } else if (note.indexOf('#') > -1) {
             cssClass = 'sharp';
         }
-        this.removeNote(note);
-        // On the piano only sharp notes are represented (thus the conversion to sharp)
-        $('#noteTesterPiano .note.' + noteSharp).removeClass('selected');
-        $('#noteTesterScore .note.' + noteNat).removeClass(cssClass);
+        // Only if the note is really pressed, it will be removed.
+        if($.inArray(note, this.currentNotes)>-1){
+            this.removeNote(note);
+            // On the piano only sharp notes are represented (thus the conversion to sharp)
+            $('#noteTesterPiano .note.' + noteSharp).removeClass('selected');
+            $('#noteTesterScore .note.' + noteNat).removeClass(cssClass);
+        }
     },
     // A complementary note should not be pressed at the same time (e.g.: C# and C, etc.)
     findComplementary: function (note) {
@@ -214,6 +217,8 @@ var noteTester = {
     },
     // It translates non existing notes such as Cb and G## into existing notes on the keyboard.
     normalizeNote: function (note) {
+        'use strict';
+        var note = note.trim();
         switch (note) {
             case 'B#':
                 return 'C';

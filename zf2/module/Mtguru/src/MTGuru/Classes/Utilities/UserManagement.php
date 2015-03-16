@@ -55,7 +55,7 @@ class UserManagement
     {
         $allUsers = $this->objectManager->getRepository('MTGuru\Entity\User')->findBy(array(), array('points' => 'desc'));
         $numUsers = count($allUsers);
-        for($i = 0; $i < 5 - $numUsers; $i += 1){
+        for ($i = 0; $i < 5 - $numUsers; $i += 1) {
             array_push($allUsers, new \MTGuru\Entity\User());
         }
         return $allUsers;
@@ -76,7 +76,7 @@ class UserManagement
             'SELECT u FROM MTGuru\Entity\User u WHERE u.lastAccess > ' . $aWeekAgo->format('Y-m-d') .
             ' ORDER BY u.pointsThisWeek DESC')->getResult();
         $numUsers = count($allUsers);
-        for($i = 0; $i < 5 - $numUsers; $i += 1){
+        for ($i = 0; $i < 5 - $numUsers; $i += 1) {
             array_push($allUsers, new \MTGuru\Entity\User());
         }
         return $allUsers;
@@ -95,6 +95,7 @@ class UserManagement
         $query = $queryBuilder->select(array('qt'))
             ->from('MTGuru\Entity\QuestionType', 'qt')
             ->where($queryBuilder->expr()->lte('qt.level', $this->currentUser->getLevel()))
+            ->orderBy('qt.level', 'ASC')
             ->getQuery();
         $questionTypes = $query->getResult();
         return $questionTypes;
@@ -159,6 +160,10 @@ class UserManagement
         // The current user and its skills are retrieved.
         if ($this->currentUser == null) {
             $this->getCurrentUser();
+        }
+        // No points will be added to the guest user.
+        if ($this->currentUser->getUserId() === 'guest') {
+            return;
         }
         $updatedSkills = $this->getUpdatedSkills();
         $initialUserPoints = $this->currentUser->getPoints();

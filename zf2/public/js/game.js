@@ -3,6 +3,7 @@ var questions, // Array with all the questions
     currentType = '',
     trainingQuestionType,
     trainingMode = false,
+    guestUser = false,
     currentQuestion = -1, // Position of the current question in the array
     currentAnswer = 0,
     currentQDiv,
@@ -149,6 +150,7 @@ function questionNotesOfX() {
         questionDiv = $(".genericQuestion");
     // The note tester is shown for the user to tell the answer notes
     $('.noteTesterWrapper').removeClass('hidden');
+    $('#noteTesterFeedback').removeClass('hidden');
     noteTester.resetNotes();
     noteTester.useSharps = useSharps(questions[currentQuestion].expected);
     if (currentType === 'notesOfScale') {
@@ -209,10 +211,29 @@ function questionChordOfNotes() {
     currentQDiv = $(".genericQuestion");
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').removeClass('hidden');
+    $('#noteTesterFeedback').removeClass('hidden');
     noteTester.resetNotes();
     noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
     noteTester.pushNotes(chordNotes);
     displayQuestion(true); // In the american notation, the notes will be randomized
+    displayAnswerItems();
+}
+
+/**
+ * It displays a question of type 'distanceOfNotes'.
+ */
+function questionDistanceOfNotes() {
+    'use strict';
+    var chordNotes = questions[currentQuestion].questionElement.split(',');
+    currentQDiv = $(".genericQuestion");
+    // The note tester is shown for the user to see the notes of the chord
+    $('.noteTesterWrapper').removeClass('hidden');
+    $('#noteTesterFeedback').addClass('hidden');
+    noteTester.removeListeners();
+    noteTester.resetNotes();
+    noteTester.useSharps = useSharps(questions[currentQuestion].questionElement);
+    noteTester.pushNotes(chordNotes);
+    displayQuestion(false); // In the american notation, the notes will NOT be randomized
     displayAnswerItems();
 }
 
@@ -225,6 +246,7 @@ function questionScaleOfNotes() {
     currentQDiv = $(".genericQuestion");
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').removeClass('hidden');
+    $('#noteTesterFeedback').removeClass('hidden');
     $('#comboBoxWrapper').removeClass('hidden');
     noteTester.resetNotes();
     noteTester.allowEverything = true;
@@ -294,6 +316,7 @@ function questionIntervalOfNotes() {
     currentQDiv = $(".genericQuestion");
     // The note tester is shown for the user to see the notes of the chord
     $('.noteTesterWrapper').removeClass('hidden');
+    $('#noteTesterFeedback').removeClass('hidden');
     $('.intervalSelectorWrapper').removeClass('hidden');
     intervalSelector.resetSelector();
     intervalSelector.addListeners();
@@ -319,6 +342,9 @@ function nextQuestionCont() {
         case 'notesOfDistance':
         case 'notesOfScale':
             questionNotesOfX();
+            break;
+        case 'distanceOfNotes':
+            questionDistanceOfNotes();
             break;
         case 'chordOfNotes':
             questionChordOfNotes();
@@ -397,7 +423,7 @@ function nextQuestion() {
 
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
-        if(trainingMode){
+        if(trainingMode || guestUser){
             goHome();
         }else{
             finishRound();
@@ -453,6 +479,9 @@ function processData(data) {
     // Only the points of the current session will be displayed
     points = 0;//data.user.points;
     questions = data.questions;
+    if(data.user.userId === 'guest'){
+        guestUser = true;
+    }
     currentQuestion = -1;
     currentQDiv = null;
     if (!trainingMode) {
@@ -533,6 +562,7 @@ function showSolution() {
             showSolutionNotesOfX();
             break;
         case 'chordOfNotes':
+        case 'distanceOfNotes':
             showSolutionChordOfNotes();
             break;
         case 'intervalOfNotes':
@@ -622,6 +652,7 @@ function resetAnswer() {
         case 'notesOfChord':
         case 'notesOfInterval':
         case 'notesOfScale':
+        case 'notesOfDistance':
             noteTester.resetNotes();
             noteTester.pushNotes(questions[currentQuestion].pushedNotes.split(','));
             break;

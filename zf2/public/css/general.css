@@ -8,6 +8,37 @@
     -o-user-select: none;
 }
 
+.termsAndConditions {
+    font-size: 68%;
+    cursor: pointer;
+}
+
+.closeWindow {
+    cursor: pointer;
+}
+
+.agreeTermsAndConditions {
+    cursor: pointer;
+}
+
+div#termsAndConditions {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.84);
+    z-index: 5;
+}
+
+.sendSignUp {
+    cursor: pointer;
+}
+
+div#results {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .logInScreen, .signUpScreen {
     position: absolute;
     top: 15.4%;
@@ -65,6 +96,7 @@
     top: 80%;
     width: 100%;
     /* left: 30.6%; */
+    cursor: pointer;
 }
 
 .sendAMessagePic {
@@ -114,6 +146,7 @@
     top: 71%;
     /* left: 31.2%; */
     width: 100%;
+    cursor: pointer;
 }
 
 .personalProjectText {
@@ -240,11 +273,16 @@
     font-size: 130%;
 }
 
+.logInText {
+    cursor: pointer;
+}
+
 .testItText {
     top: 54%;
     position: absolute;
     width: 100%;
     -webkit-transition: font-size 0.5s;
+    cursor: pointer;
 }
 
 .testItText:hover {
@@ -264,6 +302,7 @@
     width: 100%;
     text-align: center;
     -webkit-transition: font-size 0.5s;
+    cursor: pointer;
 }
 
 .signUpText:hover {
@@ -286,6 +325,7 @@
 }
 
 input.submitButton {
+    cursor: pointer;
     margin: 0.4%;
     float: left;
     color: black;
@@ -293,8 +333,6 @@ input.submitButton {
     border: none;
     font-size: 43.1%!important;
 }
-
-input[type="submit"] {}
 
 fieldset.noBoders {
     border: none;
@@ -415,6 +453,7 @@ span.centerHelper {
 }
 
 #logoutTool{
+    cursor: pointer;
     background-image: url('../img/powerButtonIcon.svg');
     background-repeat: no-repeat;
     width: 3.6%;
@@ -436,6 +475,7 @@ span.centerHelper {
 
 #configTool {
     width: 5%;
+    cursor: pointer;
     padding-top: 5%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -453,19 +493,20 @@ span.centerHelper {
 }
 
 .homeButton.results {
-    left: 390px;
-    bottom: 30px;
+    cursor: pointer;
+    left: 49%;
+    bottom: 5%;
     position: absolute;
 }
 
 #results #mytable {
     width: 100%;
-    padding: 13px 157px;
+    padding: 7% 21%;
 }
 
 #results table {
     color: white;
-    font-size: 45px;
+    font-size: 140%;
 }
 
 div#topUsers {
@@ -603,6 +644,7 @@ div#navText {
 }
 
 .buttonContinue {
+    cursor: pointer;
     bottom: 4%;
     position: absolute;
     width: 100%;
@@ -729,6 +771,7 @@ select.comboBox, select.comboBox:focus {
 }
 
 .buttonTryagain {
+    cursor: pointer;
     position: absolute;
     left: 15%;
     bottom: 6%;
@@ -737,6 +780,7 @@ select.comboBox, select.comboBox:focus {
 }
 
 .buttonShowSolution {
+    cursor: pointer;
     position: absolute;
     right: 15%;
     bottom: 6%;
@@ -814,6 +858,7 @@ div#answerItemsWrapper {
     background-size: 100%;
     top: 81.7%;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .homeLogout:hover{
@@ -827,6 +872,7 @@ div#answerItemsWrapper {
 }
 
 .homeTraining {
+    cursor: pointer;
     background-image: url('../img/allRolls.svg');
     background-repeat: no-repeat;
     width: 26.64625468%;
@@ -887,6 +933,7 @@ div#answerItemsWrapper {
 }
 
 .homePlay {
+    cursor: pointer;
     background-image: url('../img/allRolls.svg');
     background-repeat: no-repeat;
     background-size: 242.365857%;
@@ -922,6 +969,7 @@ div#answerItemsWrapper {
 @keyframes backspin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
 .trainingButtons {
+    cursor: pointer;
     text-align: center;
     float: left;
     /* position: absolute; */
@@ -932,6 +980,7 @@ div#answerItemsWrapper {
 }
 
 .trainingTypeButton {
+    cursor: pointer;
     float: left;
     color: grey;
     width: 44%;
@@ -977,11 +1026,13 @@ div#answerItemsWrapper {
 }
 
 .button{
+    cursor: pointer;
     margin: 15px 0 0 0;
     width: 140px;
 }
 
 .button a{
+    cursor: pointer;
     text-decoration: none;
     padding: 4px 10px 4px 10px;
     width: 155px;
@@ -1201,6 +1252,7 @@ body{
     /* min-height: 15%; */
     line-height: 100%;
     color: white;
+    cursor: pointer;
 }
 
 .answerItem:hover, .answerNote:hover, .answerDegree:hover, .answerArea:hover, .answerChord:hover{
@@ -1221,6 +1273,7 @@ body{
 }
 
 .nextButton{
+    cursor: pointer;
     position: absolute;
     width: 5%;
     padding-top: 5.1%;
@@ -1233,6 +1286,7 @@ body{
 }
 
 .homeButton{
+    cursor: pointer;
     position: absolute;
     width: 5%;
     background-repeat: no-repeat;

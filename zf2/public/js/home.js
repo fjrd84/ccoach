@@ -33,17 +33,23 @@ function sendSignUp() {
     var username = $('.signUpScreen input.user').val(),
         pass = $('.signUpScreen input.pass').val(),
         test = '';
-    if(!validateEmail(username)){
+    if (!validateEmail(username)) {
         homeFeedback('You must enter a valid email address.');
         return;
-    }else if(pass === ''){
+    } else if (pass === '') {
         homeFeedback('Your password cannot be empty.');
         return;
     }
     test = username + pass;
     $.post(baseUrl + '/home/newuser', { 'username': username, 'password': pass })
         .done(function (data) {
-            alert("Data Loaded: " + data);
+            data = data.replace('["','');
+            data = data.replace('"]','');
+            if(data==='success'){
+                sendLoginForm(username, pass);
+            }else{
+                homeFeedback(data);
+            }
         });
 }
 
@@ -51,22 +57,23 @@ function sendLogIn() {
     'use strict';
     var username = $('.logInScreen input.user').val(),
         pass = $('.logInScreen input.pass').val();
-    if(username === ''){
+    if (username === '') {
         homeFeedback('Your e-mail cannot be empty.');
         return;
     }
-    if(pass === ''){
+    if (pass === '') {
         homeFeedback('Your password cannot be empty.');
         return;
     }
     /*$.post(baseUrl + '/home/newuser', { 'username': username, 'password': pass })
-        .done(function (data) {
-            alert("Data Loaded: " + data);
-        });*/
+     .done(function (data) {
+     alert("Data Loaded: " + data);
+     });*/
     sendLoginForm(username, pass);
 }
 
-function sendLoginForm(username, pass){
+function sendLoginForm(username, pass) {
+    'use strict';
     var form = document.createElement("form"),
         element1 = document.createElement("input"),
         element2 = document.createElement("input"),
@@ -87,14 +94,18 @@ function sendLoginForm(username, pass){
     form.appendChild(element3);
     document.body.appendChild(form);
     form.submit();
+    $('.homePageWrapper *').fadeOut(300, function(){
+        $('.loadingMain').show();
+    });
 }
 
 function validateEmail(email) {
+    'use strict';
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
 
-function homeFeedback(text){
+function homeFeedback(text) {
     'use strict';
     $('.homePageFeedback').empty();
     $('.homePageFeedback').append(text);
@@ -104,19 +115,32 @@ function homeFeedback(text){
     }, 2000);
 }
 
-function closeBox(boxName){
+function closeBox(boxName) {
+    'use strict';
     $(boxName).fadeOut(300);
 }
 
-function backHome(fromClass){
-    $('.homeContent.'+fromClass).fadeOut(200, function (){
+function showTermsAndConditions() {
+    'use strict';
+    $('#termsAndConditions').fadeIn(500);
+}
+
+function closeTermsAndConditions() {
+    'use strict';
+    $('#termsAndConditions').fadeOut(300);
+}
+
+function backHome(fromClass) {
+    'use strict';
+    $('.homeContent.' + fromClass).fadeOut(200, function () {
         $('.homeContent.mainScreen').fadeIn(500);
     });
 }
 
 $(document).ready(function () {
     'use strict';
-    if(messages!=''){
+    if (messages !== '') {
         homeFeedback(messages);
     }
 });
+

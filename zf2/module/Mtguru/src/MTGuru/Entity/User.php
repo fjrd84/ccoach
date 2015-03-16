@@ -191,6 +191,7 @@ class User
     public function getUserParams()
     {
         $result = array();
+        $result['userId'] = $this->userId;
         $result['fullName'] = $this->fullName;
         $result['points'] = $this->points;
         $result['level'] = $this->level;

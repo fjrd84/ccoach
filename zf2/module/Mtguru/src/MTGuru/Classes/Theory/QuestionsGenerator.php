@@ -88,6 +88,9 @@ class QuestionsGenerator
                 case 'notesOfDistance':
                     $questions[] = $this->notesOfDistanceQuestion($knowledge, $questionSkill);
                     break;
+                case 'distanceOfNotes':
+                    $questions[] = $this->distanceOfNotesQuestion($knowledge, $questionSkill);
+                    break;
                 case 'notesOfChord':
                     $questions[] = $this->notesOfChordQuestion($knowledge, $questionSkill);
                     break;
@@ -153,6 +156,10 @@ class QuestionsGenerator
     public function getHelpPage($questionType)
     {
         switch ($questionType) {
+            case 'distanceOfNotes':
+            case 'notesOfDistance':
+                $helpPage = 'distancesHelp';
+                break;
             case 'notesOfChord':
             case 'chordOfNotes':
                 $helpPage = 'chordsHelp';
@@ -236,7 +243,7 @@ class QuestionsGenerator
     }
 
     /**
-     * Two random notes are shown, and the user must say which interval they form
+     * A note and a distance are shown. The user must guess which note has that distance with that note.
      * @param $knowledge
      * @param $skill
      * @return array
@@ -244,19 +251,40 @@ class QuestionsGenerator
     public function notesOfDistanceQuestion($knowledge, $skill)
     {
         list($tonic, $intervalNote, $interval) = $knowledge->getRandomIntervalNotes($skill);
-        $allIntervals = $knowledge->getAllIntervals();
         $distance = $knowledge->getDistance($tonic, $intervalNote);
         $intervalQuestion = array();
         $intervalQuestion['key'] = '';
         $intervalQuestion['mode'] = '';
-        $intervalQuestion['helpPage'] = 'intervalsHelp';
+        $intervalQuestion['helpPage'] = 'distancesHelp';
         $intervalQuestion['type'] = 'notesOfDistance';
         $intervalQuestion['pushedNotes'] = $tonic;
-        $intervalQuestion['text'] = $this->translator->translate('questions_distanceOfNotes');
-        $intervalQuestion['questionElement'] = $tonic . '; distance: ' . $distance;
+        $intervalQuestion['text'] = $this->translator->translate('questions_notesOfDistance');
+        $intervalQuestion['questionElement'] = 'Tonic: ' . $tonic . ', distance: ' . $distance;
         $intervalQuestion['expected'] = $tonic . ',' . $intervalNote;
-        $intervalQuestion['shown'] = implode(',', $allIntervals);
+        $intervalQuestion['shown'] = '';
         return $intervalQuestion;
+    }
+
+    /**
+     * Two notes are shown. The user must say which distance there's between them.
+     * @param $knowledge
+     * @param $skill
+     * @return array
+     */
+    public function distanceOfNotesQuestion($knowledge, $skill)
+    {
+        list($tonic, $intervalNote, $interval) = $knowledge->getRandomIntervalNotes($skill);
+        $distance = $knowledge->getDistance($tonic, $intervalNote);
+        $chordQuestion = array();
+        $chordQuestion['key'] = '';
+        $chordQuestion['mode'] = '';
+        $chordQuestion['helpPage'] = 'distancesHelp';
+        $chordQuestion['type'] = 'distanceOfNotes';
+        $chordQuestion['text'] = $this->translator->translate('questions_distanceOfNotes');
+        $chordQuestion['questionElement'] = $tonic . ', ' . $intervalNote;
+        $chordQuestion['expected'] = $distance;
+        $chordQuestion['shown'] = '0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5';
+        return $chordQuestion;
     }
 
     /**

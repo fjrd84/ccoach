@@ -28,11 +28,11 @@ CREATE TABLE `gamesession` (
   PRIMARY KEY (`id`),
   KEY `IDX_1D6329D464B64DCC` (`userId`),
   CONSTRAINT `FK_1D6329D464B64DCC` FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `gamesession` */
 
-insert  into `gamesession`(`id`,`userId`,`points`,`accessTime`) values (1,3,273,'2015-02-26 22:32:07'),(2,3,273,'2015-02-26 22:33:52'),(3,3,273,'2015-02-26 22:39:24'),(4,3,273,'2015-02-26 22:40:04'),(5,3,273,'2015-02-26 23:10:42'),(6,3,0,'2015-03-13 20:57:02'),(7,3,0,'2015-03-14 01:13:07'),(8,3,512,'2015-03-14 01:25:38');
+insert  into `gamesession`(`id`,`userId`,`points`,`accessTime`) values (1,3,273,'2015-02-26 22:32:07'),(2,3,273,'2015-02-26 22:33:52'),(3,3,273,'2015-02-26 22:39:24'),(4,3,273,'2015-02-26 22:40:04'),(5,3,273,'2015-02-26 23:10:42'),(6,3,0,'2015-03-13 20:57:02'),(7,3,0,'2015-03-14 01:13:07'),(8,3,512,'2015-03-14 01:25:38'),(9,3,273,'2015-03-14 13:13:59'),(10,14,127,'2015-03-15 23:13:34'),(11,14,326,'2015-03-15 23:23:25'),(15,3,254,'2015-03-16 22:25:46'),(16,3,122,'2015-03-16 23:24:15');
 
 /*Table structure for table `logintable` */
 
@@ -43,11 +43,11 @@ CREATE TABLE `logintable` (
   `userName` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 /*Data for the table `logintable` */
 
-insert  into `logintable`(`id`,`userName`,`password`) values (1,'javi','4a9c7bc7049492b1dd402265045948e0');
+insert  into `logintable`(`id`,`userName`,`password`) values (1,'javi','4a9c7bc7049492b1dd402265045948e0'),(6,'guest','084e0343a0486ff05530df6c705c8bb4'),(9,'paco@porras.es','4a9c7bc7049492b1dd402265045948e0'),(10,'maria_kuman@yahoo.de','ce8611dbc32f045588548c9dbfef1aeb'),(11,'cosquer@monguer.de','9f04f4d2341d5ea8be52e8d4b398ae68'),(12,'cosquer2@monguer.de','9f04f4d2341d5ea8be52e8d4b398ae68'),(13,'cosquer23@monguer.de','9f04f4d2341d5ea8be52e8d4b398ae68'),(14,'cosquerrer@mongo.de','449dbee947bc2f5d4b788d4235670c0d'),(15,'kokocroko@mosco.co','4c193eb3ec2ce5f02b29eba38621bea1');
 
 /*Table structure for table `questiontype` */
 
@@ -58,11 +58,11 @@ CREATE TABLE `questiontype` (
   `questionIdent` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `level` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `questiontype` */
 
-insert  into `questiontype`(`id`,`questionIdent`,`level`) values (1,'notesOfInterval',0),(2,'intervalOfNotes',1),(3,'notesOfChord',2),(4,'chordOfNotes',3),(5,'notesOfScale',4),(6,'scaleOfNotes',5),(7,'degreeOfChord',6),(8,'chordOfDegree',7),(9,'chordBelongsToScale',9);
+insert  into `questiontype`(`id`,`questionIdent`,`level`) values (1,'notesOfInterval',1),(2,'intervalOfNotes',1),(3,'notesOfChord',2),(4,'chordOfNotes',3),(5,'notesOfScale',4),(6,'scaleOfNotes',5),(7,'degreeOfChord',6),(8,'chordOfDegree',7),(9,'chordBelongsToScale',9),(10,'notesOfDistance',0),(11,'distanceOfNotes',0);
 
 /*Table structure for table `user` */
 
@@ -77,11 +77,11 @@ CREATE TABLE `user` (
   `pointsThisWeek` int(11) NOT NULL,
   `lastAccess` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`fullName`,`userId`,`points`,`level`,`pointsThisWeek`,`lastAccess`) values (3,'Javi Donado','javi',16312,5,1877,'2015-03-14 01:25:38'),(5,'Paco','paco',0,1,234,'2015-02-26 22:40:04'),(6,'Lolo','lolo',432,1,34,NULL),(7,'Moloco','moloco',1143,1,543,NULL),(8,'Krokako','krokako',334,1,213,'2015-02-26 22:40:04'),(9,'Moneino','moneino',665,1,443,NULL);
+insert  into `user`(`id`,`fullName`,`userId`,`points`,`level`,`pointsThisWeek`,`lastAccess`) values (3,'Javi Donado','javi',16961,5,2526,'2015-03-16 23:24:15'),(5,'Paco','paco',0,1,234,'2015-02-26 22:40:04'),(6,'Lolo','lolo',432,1,34,NULL),(7,'Moloco','moloco',1143,1,543,NULL),(8,'Krokako','krokako',334,1,213,'2015-02-26 22:40:04'),(9,'Moneino','moneino',665,1,443,NULL),(10,'guest','guest',0,0,0,'2015-03-16 22:15:55'),(13,'paco','paco@porras.es',0,0,0,NULL),(14,'maria_kuman','maria_kuman@yahoo.de',453,0,453,'2015-03-15 23:23:25'),(15,'cosquer','cosquer@monguer.de',0,0,0,NULL),(16,'cosquer2','cosquer2@monguer.de',0,0,0,NULL),(17,'cosquer23','cosquer23@monguer.de',0,0,0,NULL),(18,'cosquerrer','cosquerrer@mongo.de',0,0,0,NULL),(19,'kokocroko','kokocroko@mosco.co',0,0,0,NULL);
 
 /*Table structure for table `userskill` */
 
@@ -98,11 +98,11 @@ CREATE TABLE `userskill` (
   KEY `IDX_3AA97502268B6C3E` (`questionTypeId`),
   CONSTRAINT `FK_3AA97502268B6C3E` FOREIGN KEY (`questionTypeId`) REFERENCES `questiontype` (`id`),
   CONSTRAINT `FK_3AA9750264B64DCC` FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `userskill` */
 
-insert  into `userskill`(`id`,`currentSkill`,`numberOfAnswers`,`userId`,`questionTypeId`) values (1,1,27,3,1),(2,0,0,3,2),(3,0,1,3,3),(4,1,24,3,4),(5,0,1,3,5),(6,1,25,3,6);
+insert  into `userskill`(`id`,`currentSkill`,`numberOfAnswers`,`userId`,`questionTypeId`) values (1,1,28,3,1),(2,0,1,3,2),(3,0,3,3,3),(4,1,27,3,4),(5,0,2,3,5),(6,1,27,3,6),(7,-1,0,13,1),(8,-1,0,10,10),(9,0,14,14,10),(10,0,1,3,10),(11,0,1,3,11),(12,-1,0,14,11),(13,-1,0,10,11);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
