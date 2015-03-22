@@ -1,0 +1,55 @@
+<div class="loadingMain" style="display:none;"></div>
+<div class="radioPageWrapper">
+    <div class="radioHomeContents">
+        <div class="sectionSelectors">
+            <div id="selectorNeedle"></div>
+            <div id="channels"></div>
+            <div id="selectionFrame"></div>
+            <div onclick="openCV()" class="openCV"></div>
+            <div onclick="backToCassetteCoach()" class="backToCassetteCoach"></div>
+            <div onclick="showMyStory()" class="sectionSelector life active"></div>
+            <div onclick="showMyExperience()" class="sectionSelector experience"></div>
+            <div onclick="showMyHobbies()" class="sectionSelector hobbies"></div>
+        </div>
+        <div class="radioHomeContent mainScreen">
+            <div style="display:none" class="homePageFeedback">FeedbackText</div>
+            <div class="aboutMeContentContainer">
+                <div class="jDonadoSection">
+                    <div style="display: none" class="section experienceSection">
+                        <div class="chart uniChart">
+                            <div class="chartTitle">What I studied at the Uni</div>
+                            <canvas id="uniChart" width="400" height="400"></canvas>
+                            <div class="legend" id="uniChartLegend"></div>
+                        </div>
+                        <div class="chart workChart">
+                            <div class="chartTitle">What I did after that</div>
+                            <canvas id="workChart" width="400" height="400"></canvas>
+                            <div class="legend" id="workChartLegend"></div>
+                        </div>
+                        <div style="clear:both" class="chart sectorChart">
+                            <div class="chartTitle">In the following sectors</div>
+                            <canvas id="sectorChart" width="400" height="400"></canvas>
+                            <div class="legend" id="sectorChartLegend"></div>
+                        </div>
+                        <div class="chart langsChart">
+                            <div class="chartTitle">Mostly using this stuff</div>
+                            <div id="keyWordsContainer"><div id="keyWords"></div></div>
+                        </div>
+                    </div>
+                    <div class="section lifeSection">
+                        <img class="storyOfMyLife" src="<?php echo $this->basePath() ?>/img/storyOfMyLife.svg">
+                    </div>
+                    <div style="display: none" class="section hobbiesSection">
+                        <div id="takePictures">Pictures and trips</div>
+                        <div id="makeMusic">Music</div>
+                        <div id="makeStuff">Design, code...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="<?php echo $this->basePath() ?>/js/chartjs/Chart.js"></script>
+<script src="<?php echo $this->basePath() ?>/js/jdonado.js"></script>
+<script src="<?php echo $this->basePath() ?>/js/jqcloud/jqcloud.min.js"></script>
+<link rel="stylesheet" href="<?php echo $this->basePath() ?>/js/jqcloud/jqcloud.min.css">

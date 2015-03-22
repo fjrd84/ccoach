@@ -266,3 +266,28 @@ body{
 div#results{
     top: 10%;
 }
+
+.radioPageWrapper{
+    font-size: 50%;
+}
+
+#selectionFrame{
+    width: 92.3%;
+    left: 2.1%;
+    top: 19.7%;
+}
+
+#channels{
+    width: 91%;
+    top: 23.4%;
+    left: 2.9%;
+}
+
+#keyWordsContainer{
+    font-size: 10%;
+}
+
+
+div.jqcloud{
+    font-size: 261%!important;
+}

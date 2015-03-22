@@ -1,9 +1,8 @@
 /*global $, baseUrl, jQuery, alert*/
 function aboutMe() {
     'use strict';
-    $('.homeContent.mainScreen').fadeOut(200, function () {
-        $('.homeContent.aboutMeScreen').fadeIn(500);
-    });
+    showLoading();
+    window.location = baseUrl + '/home/jdonado';
 }
 
 function sendAMessage() {
@@ -15,7 +14,7 @@ function sendAMessage() {
 
 function guestUser() {
     'use strict';
-    sendLoginForm('guest', 'guest')
+    sendLoginForm('guest', 'guest');
 }
 
 function signUp() {
@@ -94,7 +93,12 @@ function sendLoginForm(username, pass) {
     form.appendChild(element3);
     document.body.appendChild(form);
     form.submit();
-    $('.homePageWrapper *').fadeOut(300, function(){
+    showLoading();
+}
+
+function showLoading() {
+    'use strict';
+    $('.homePageWrapper *').fadeOut(300, function() {
         $('.loadingMain').show();
     });
 }

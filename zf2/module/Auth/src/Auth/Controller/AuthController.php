@@ -175,4 +175,7 @@ class AuthController extends AbstractActionController
 
         return $response;
     }
+
+    public function jdonadoAction(){
+    }
 }
