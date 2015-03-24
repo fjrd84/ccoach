@@ -252,9 +252,20 @@ body{
 }
 
 .logInScreen, .signUpScreen{
-    width: 54.9%;
-    
+    width: 54.9%;    
     left: 22.6%;
+}
+
+.loginLabel{
+    font-size: 120%;
+}
+
+.sendSignUp {
+    font-size: 150%;
+}
+
+input.user, input.pass {
+    font-size: 130%;
 }
 
 #results #mytable{
@@ -269,6 +280,7 @@ div#results{
 
 .radioPageWrapper{
     font-size: 50%;
+    padding-top: 80%;
 }
 
 #selectionFrame{

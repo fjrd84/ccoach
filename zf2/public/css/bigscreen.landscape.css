@@ -4,13 +4,23 @@
     padding-top: 715px;
     max-width: 1280px;
     max-height: 0px;
-    /* left: 18%; */
+    box-shadow: 0px 0 205px 140px;
 }
 
 body{
     font-size: 34px!important;
+    background-color: rgb(60, 1, 1);
+    height: 100%;
+    background-image: url("../img/woodBg.jpg"), url("../img/bg2.png");
+    background-repeat: repeat-x, repeat;
 }
 
 .homePageWrapper{
       max-width: 1380px;
+      background-color: rgba(0, 0, 0, 0.67);
+      box-shadow: 0px 0 190px 35px;
+}
+
+.radioPageWrapper{
+    padding-top: 70%;
 }

@@ -57,32 +57,37 @@ $actionUrl = $this->url(
                         <div class="lightBrownColor">an e-mail</div>.
                     </div>
                 </div>
-                <div class="termsAndConditions" onclick="showTermsAndConditions()">By using this website you agree with its terms and conditions.</div>
+                <div class="termsAndConditions" onclick="showTermsAndConditions()">© 2015 F. Javier R. Donado. By using this website you agree with its terms and conditions.</div>
             </div>
         </div>
         <div class="signUpScreen" style="display:none">
-            <div class="closeWindow" onclick="closeBox('.signUpScreen')">Close</div>
-            Your e-mail<br>
-            <input class="user" type="email" name="user"><br>
-            Password<br>
-            <input class="pass" type="password" name="pass">
-            <div class="sendSignUp" onclick="sendSignUp()">Send!</div><br>
+            <div class="closeWindow" onclick="closeBox('.signUpScreen')"></div>
+            <form>
+                <div class="loginLabel">Your e-mail</div>
+                <input class="user" type="email" name="user">
+                <div class="loginLabel">Password</div>
+                <input class="pass" type="password" name="pass">
+                <div class="sendSignUp" onclick="sendSignUp()">Send!</div>
+            </form>
             <div class="agreeTermsAndConditions" onclick="showTermsAndConditions()">By using this website you agree with the terms and conditions.</div>
         </div>
         <div class="logInScreen" style="display:none">
-            <div class="closeWindow" onclick="closeBox('.logInScreen')">Close</div>
-            Your e-mail<br>
-            <input class="user" type="email" name="user"><br>
-            Password<br>
-            <input class="pass" type="password" name="pass">
-            <div class="sendSignUp" onclick="sendLogIn()">Send!</div><br>
+            <div class="closeWindow" onclick="closeBox('.logInScreen')"></div>
+            <form>
+                <div class="loginLabel">Your e-mail</div>
+                <input class="user" type="email" name="user">
+                <div class="loginLabel">Password</div>
+                <input class="pass" type="password" name="pass">
+                <div class="sendSignUp" onclick="sendLogIn()">Send!</div>
+                </form>
+            <br>
         </div>
         <div class="homeContent sendAMessageScreen" style="display:none">
             <div onclick="backHome('sendAMessageScreen')">Back home</div>
             Page for sending me a message.
         </div>
         <div id="termsAndConditions" style="display:none">
-            <div class="closeWindow" onclick="closeTermsAndConditions()">Close</div>
+            <div class="closeWindow" onclick="closeTermsAndConditions()"></div>
             <h2>
                 Web Site Terms and Conditions of Use
             </h2>

@@ -8,6 +8,34 @@
     -o-user-select: none;
 }
 
+input.user, input.pass {
+    width: 100%;
+    font-size: 150%;
+    margin: 2% 0 2% 0;
+}
+
+.loginLabel {
+    width: 100%;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 2%;
+    color: rgb(255, 219, 170);
+}
+
+.logInScreen form {
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+    padding-top: 0%;
+}
+
+.signUpScreen form {
+    /* background-color: blue; */
+    width: 100%;
+    height: 80%;
+    padding-top: 0%;
+}
+
 #channels {
     background-image: url('../img/channels.svg');    
     width: 92.7%;    position: absolute;    
@@ -93,7 +121,9 @@
     background-repeat: no-repeat;
     max-width: 1370px;
     margin: auto;
-    padding-top: 81%;
+    padding-top: 82%;
+    box-shadow: 0px 0 210px 85px;
+    background-color: black;
 }
 
 #flickrShow {
@@ -234,10 +264,26 @@ img.storyOfMyLife {
 
 .closeWindow {
     cursor: pointer;
+    width: 10%;
+    padding-top: 16%;
+    background-image: url('../img/closeButton2.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+}
+
+#termsAndConditions .closeWindow {
+    top: 1.5%;
 }
 
 .agreeTermsAndConditions {
     cursor: pointer;
+    position: absolute;
+    font-size: 80%;
+    bottom: 2%;
+    text-align: center;
 }
 
 div#termsAndConditions {
@@ -245,10 +291,17 @@ div#termsAndConditions {
     top: 0;
     background-color: rgba(0, 0, 0, 0.84);
     z-index: 5;
+    padding: 4%;
 }
 
 .sendSignUp {
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 180%;
+    font-weight: bold;
+    margin-top: 1%;
+    color: rgb(255, 219, 170);
 }
 
 div#results {
@@ -259,12 +312,19 @@ div#results {
 }
 
 .logInScreen, .signUpScreen {
+    border: 1px white solid;
     position: absolute;
-    top: 15.4%;
-    left: 31.4%;
+    padding: 1%;
+    top: 14.7%;
+    left: 30.5%;
     height: 19%;
     width: 37%;
     background-color: rgba(0, 0, 0, 0.74);
+}
+
+.signUpScreen{
+    height: 23%;
+    top: 13.6%;
 }
 
 .homePageFeedback {
@@ -589,6 +649,7 @@ fieldset.noBoders {
     height: 100%;
     /* background-image: url('../img/bg.png'); */
     background-color: black;
+    /* box-shadow: 0px 0 190px 35px; */
 }
 
 .mainWrapper {
@@ -837,6 +898,7 @@ div#topUsers {
     padding-top: 51%;
     position: relative;
     margin: auto;
+    /* box-shadow: 0px 0 205px 140px; */
 }
 
 .sideBar {
@@ -1340,9 +1402,9 @@ html{
 }
 
 body{
-    background-color: rgb(60, 1, 1);
+    background-color: black;
     height: 100%;
-    font-size: 15px;  
+    font-size: 15px;
 }
 
 .container{

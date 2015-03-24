@@ -24,6 +24,7 @@ function signUp() {
 
 function showLogIn() {
     'use strict';
+    closeBox('.signUpScreen');
     $('.logInScreen').fadeIn(300);
 }
 
