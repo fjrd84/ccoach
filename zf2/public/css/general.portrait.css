@@ -247,7 +247,7 @@ body{
 }
 
 .homeContentContainer {
-    width: 55%;
+    width: 61.8%;
     padding-top: 182%;
 }
 
@@ -302,4 +302,9 @@ div#results{
 
 div.jqcloud{
     font-size: 261%!important;
+}
+
+#termsAndConditions .closeWindow {
+  top: 0%;
+  width: 8%;
 }

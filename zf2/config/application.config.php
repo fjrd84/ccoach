@@ -5,7 +5,7 @@ return array(
         //'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
-        'MTGuru',
+        'Ccoach',
         'Auth',
     ),
 

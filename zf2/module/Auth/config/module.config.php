@@ -53,7 +53,7 @@ return array(
                 'options' => array(
                     'route'    => '/index',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'MTGuru\Controller',
+                        '__NAMESPACE__' => 'Ccoach\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),

@@ -189,7 +189,7 @@ function startGame() {
     } else {
         getVars = {"questionType": trainingQuestionType};
     }
-    $.get(baseUrl + '/mtguru/ajax/game', getVars, function (data) {
+    $.get(baseUrl + '/ccoach/ajax/game', getVars, function (data) {
         // TODO: Handle errors in data
         processData(JSON.parse(data));
     });

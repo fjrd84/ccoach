@@ -8,6 +8,10 @@
     -o-user-select: none;
 }
 
+.sendAMessageIcon a,Â .sendAMessageIcon a:link,Â .sendAMessageIcon a:visited {
+    color: white;
+}
+
 input.user, input.pass {
     width: 100%;
     font-size: 150%;
@@ -532,6 +536,11 @@ div#results {
 .brownColor {
     color: #d4a76a;
     display: inline;
+}
+
+span.betaText {
+    vertical-align: super;
+    font-size: 50%;
 }
 
 .subText {

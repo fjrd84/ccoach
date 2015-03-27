@@ -10,216 +10,268 @@ $actionUrl = $this->url(
 ?>
 <div class="loadingMain" style="display:none;"></div>
 <div class="homePageWrapper">
-    <div class="homeContents">
-        <div class="homeContent mainScreen">
-            <div class="loginWrapper">
-                <div class="smallText">If you already have an account...</div>
-                <div onclick="showLogIn()" class="logInText mediumText lightBrownColor">Log in</div>
-            </div>
-            <div style="display:none" class="homePageFeedback">FeedbackText</div>
-            <div class="homeContentContainer">
-                <div class="headerTextHome">
-                    <div class="lightBrownColor">Welcome to the <div class="brownColor">Cassette Coach</div>!!
-                    </div>
-                </div>
-                <div class="signUpSection">
-                    <div class="mediumText signUpText" onclick="signUp()">Sign up for free</div>
-                    <div class="mediumText orText">Or</div>
-                    <div class="mediumText testItText" onclick="guestUser()">Test it as a guest</div>
-                </div>
-                <div class="explanationText">
-                    The
-                    <div class="brownColor">Cassette Coach</div>
-                    is a game designed to help you learn the basics about
-                    <div class="lightBrownColor">music harmony</div>.<br><br>
-                    With it you can learn:
-                </div>
-                <div class="iconsBox">
-                    <div class="intervalsBox"><div class="intervalsIcon"></div><div class="subText brownColor">Intervals</div></div>
-                    <div class="chordsBox"><div class="chordsIcon"></div><div class="subText brownColor">Chords</div></div>
-                    <div class="scalesBox"><div class="scalesIcon"></div><div class="subText brownColor">Scales</div></div>
-                    <div class="endIconsText rightAlignText">...and much more!!</div>
-                </div>
-                <div class="personalProjectText">The
-                    <div class="brownColor">Cassette Coach</div>
-                    is a project designed and developed by
-                    <div class="lightBrownColor">F. Javier R. Donado</div>.
-                </div>
-                <div onclick="aboutMe()" class="aboutMeIcon">
-                    <div class="aboutMeText">Click here if you want to know more
-                        <div class="lightBrownColor">about me</div>.
-                    </div>
-                    <div class="aboutMePic"></div>
-                </div>
-                <div onclick="sendAMessage()" class="sendAMessageIcon">
-                    <div class="sendAMessagePic"></div>
-                    <div class="sendAMessageText">Click here if you want to send me
-                        <div class="lightBrownColor">an e-mail</div>.
-                    </div>
-                </div>
-                <div class="termsAndConditions" onclick="showTermsAndConditions()">© 2015 F. Javier R. Donado. By using this website you agree with its terms and conditions.</div>
+<div class="homeContents">
+<div class="homeContent mainScreen">
+    <div class="loginWrapper">
+        <div class="smallText">If you already have an account...</div>
+        <div onclick="showLogIn()" class="logInText mediumText lightBrownColor">Log in</div>
+    </div>
+    <div style="display:none" class="homePageFeedback">FeedbackText</div>
+    <div class="homeContentContainer">
+        <div class="headerTextHome">
+            <div class="lightBrownColor">Welcome to the <span class="brownColor">Cassette Coach<span class="betaText">BETA</span></span>!!
             </div>
         </div>
-        <div class="signUpScreen" style="display:none">
-            <div class="closeWindow" onclick="closeBox('.signUpScreen')"></div>
-            <form>
-                <div class="loginLabel">Your e-mail</div>
-                <input class="user" type="email" name="user">
-                <div class="loginLabel">Password</div>
-                <input class="pass" type="password" name="pass">
-                <div class="sendSignUp" onclick="sendSignUp()">Send!</div>
-            </form>
-            <div class="agreeTermsAndConditions" onclick="showTermsAndConditions()">By using this website you agree with the terms and conditions.</div>
+        <div class="signUpSection">
+            <div class="mediumText signUpText" onclick="signUp()">Sign up for free</div>
+            <div class="mediumText orText">Or</div>
+            <div class="mediumText testItText" onclick="guestUser()">Test it as a guest</div>
         </div>
-        <div class="logInScreen" style="display:none">
-            <div class="closeWindow" onclick="closeBox('.logInScreen')"></div>
-            <form>
-                <div class="loginLabel">Your e-mail</div>
-                <input class="user" type="email" name="user">
-                <div class="loginLabel">Password</div>
-                <input class="pass" type="password" name="pass">
-                <div class="sendSignUp" onclick="sendLogIn()">Send!</div>
-                </form>
-            <br>
+        <div class="explanationText">
+            The
+            <span class="brownColor">Cassette Coach<span class="betaText">BETA</span></span>
+            is a game designed to help you learn the basics about
+            <span class="lightBrownColor">music harmony</span>.<br><br>
+            With it you can learn:
         </div>
-        <div class="homeContent sendAMessageScreen" style="display:none">
-            <div onclick="backHome('sendAMessageScreen')">Back home</div>
-            Page for sending me a message.
+        <div class="iconsBox">
+            <div class="intervalsBox">
+                <div class="intervalsIcon"></div>
+                <div class="subText brownColor">Intervals</div>
+            </div>
+            <div class="chordsBox">
+                <div class="chordsIcon"></div>
+                <div class="subText brownColor">Chords</div>
+            </div>
+            <div class="scalesBox">
+                <div class="scalesIcon"></div>
+                <div class="subText brownColor">Scales</div>
+            </div>
+            <div class="endIconsText rightAlignText">...and much more!!</div>
         </div>
-        <div id="termsAndConditions" style="display:none">
-            <div class="closeWindow" onclick="closeTermsAndConditions()"></div>
-            <h2>
-                Web Site Terms and Conditions of Use
-            </h2>
-            <h3>
-                1. Terms
-            </h3>
-            <p>
-                By accessing this web site, you are agreeing to be bound by these
-                web site Terms and Conditions of Use, all applicable laws and regulations,
-                and agree that you are responsible for compliance with any applicable local
-                laws. If you do not agree with any of these terms, you are prohibited from
-                using or accessing this site. The materials contained in this web site are
-                protected by applicable copyright and trade mark law.
-            </p>
-
-            <h3>
-                2. Use License
-            </h3>
-
-            <ol type="a">
-                <li>
-                    Permission is granted to temporarily download one copy of the materials
-                    (information or software) on this web site for personal,
-                    non-commercial transitory viewing only. This is the grant of a license,
-                    not a transfer of title, and under this license you may not:
-
-                    <ol type="i">
-                        <li>modify or copy the materials;</li>
-                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                        <li>attempt to decompile or reverse engineer any software contained on this web site;</li>
-                        <li>remove any copyright or other proprietary notations from the materials; or</li>
-                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-                    </ol>
-                </li>
-                <li>
-                    This license shall automatically terminate if you violate any of these restrictions and may be terminated by F. Javier R. Donado at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
-                </li>
-            </ol>
-
-            <h3>
-                3. Disclaimer
-            </h3>
-
-            <ol type="a">
-                <li>
-                    The materials on this web site are provided "as is". F. Javier R. Donado makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, F. Javier R. Donado does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on his Internet web site or otherwise relating to such materials or on any sites linked to this site.
-                </li>
-            </ol>
-
-            <h3>
-                4. Limitations
-            </h3>
-
-            <p>
-                In no event shall F. Javier R. Donado or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on F. Javier R. Donado's Internet site, even if F. Javier R. Donado or a F. Javier R. Donado authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
-            </p>
-
-            <h3>
-                5. Revisions and Errata
-            </h3>
-
-            <p>
-                The materials appearing on this web site could include technical, typographical, or photographic errors. F. Javier R. Donado does not warrant that any of the materials on his web site are accurate, complete, or current. F. Javier R. Donado may make changes to the materials contained on his web site at any time without notice. F. Javier R. Donado does not, however, make any commitment to update the materials.
-            </p>
-
-            <h3>
-                6. Links
-            </h3>
-
-            <p>
-                F. Javier R. Donado has not reviewed all of the sites linked to his Internet web site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by F. Javier R. Donado of the site. Use of any such linked web site is at the user's own risk.
-            </p>
-
-            <h3>
-                7. Site Terms of Use Modifications
-            </h3>
-
-            <p>
-                F. Javier R. Donado may revise these terms of use for this web site at any time without notice. By using this web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
-            </p>
-
-            <h3>
-                8. Governing Law
-            </h3>
-
-            <p>
-                Any claim relating to this web site shall be governed by the laws of the State of Baden-Württemberg, Germany without regard to its conflict of law provisions.
-            </p>
-
-            <p>
-                General Terms and Conditions applicable to Use of a Web Site.
-            </p>
-
-
-
-            <h2>
-                Privacy Policy
-            </h2>
-
-            <p>
-                Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
-            </p>
-
-            <ul>
-                <li>
-                    Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
-                </li>
-                <li>
-                    We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.
-                </li>
-                <li>
-                    We will only retain personal information as long as necessary for the fulfillment of those purposes.
-                </li>
-                <li>
-                    We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
-                </li>
-                <li>
-                    Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
-                </li>
-                <li>
-                    We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
-                </li>
-                <li>
-                    We will make readily available to customers information about our policies and practices relating to the management of personal information.
-                </li>
-            </ul>
-
-            <p>
-                We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.
-            </p>
+        <div class="personalProjectText">The
+            <span class="brownColor">Cassette Coach<span class="betaText">BETA</span></span>
+            is a project designed and developed by
+            <span class="lightBrownColor">F. Javier R. Donado</span>.
+        </div>
+        <div onclick="aboutMe()" class="aboutMeIcon">
+            <div class="aboutMeText">Click here if you want to know more
+                <span class="lightBrownColor">about me</span>.
+            </div>
+            <div class="aboutMePic"></div>
+        </div>
+        <div class="sendAMessageIcon">
+            <a href="mailto:fjrd84@gmail.com?Subject=Cassette%20Coach" target="_top"">
+            <div class="sendAMessagePic"></div>
+            <div class="sendAMessageText">Click here if you want to send me
+                <span class="lightBrownColor">an e-mail</span>.
+            </div>
+            </a>
+        </div>
+        <div class="termsAndConditions" onclick="showTermsAndConditions()">© 2015 F. Javier R. Donado. By using this
+            website you agree with its terms and conditions.
         </div>
     </div>
+</div>
+<div class="signUpScreen" style="display:none">
+    <div class="closeWindow" onclick="closeBox('.signUpScreen')"></div>
+    <form>
+        <div class="loginLabel">Your e-mail</div>
+        <input class="user" type="email" name="user">
+
+        <div class="loginLabel">Password</div>
+        <input class="pass" type="password" name="pass">
+
+        <div class="sendSignUp" onclick="sendSignUp()">Send!</div>
+    </form>
+    <div class="agreeTermsAndConditions" onclick="showTermsAndConditions()">By using this website you agree with the
+        terms and conditions.
+    </div>
+</div>
+<div class="logInScreen" style="display:none">
+    <div class="closeWindow" onclick="closeBox('.logInScreen')"></div>
+    <form>
+        <div class="loginLabel">Your e-mail</div>
+        <input class="user" type="email" name="user">
+
+        <div class="loginLabel">Password</div>
+        <input class="pass" type="password" name="pass">
+
+        <div class="sendSignUp" onclick="sendLogIn()">Send!</div>
+    </form>
+    <br>
+</div>
+<div class="homeContent sendAMessageScreen" style="display:none">
+    <div onclick="backHome('sendAMessageScreen')">Back home</div>
+    Page for sending me a message.
+</div>
+<div id="termsAndConditions" style="display:none">
+    <div class="closeWindow" onclick="closeTermsAndConditions()"></div>
+    <h2>
+        Web Site Terms and Conditions of Use
+    </h2>
+
+    <h3>
+        1. Terms
+    </h3>
+
+    <p>
+        By accessing this web site, you are agreeing to be bound by these
+        web site Terms and Conditions of Use, all applicable laws and regulations,
+        and agree that you are responsible for compliance with any applicable local
+        laws. If you do not agree with any of these terms, you are prohibited from
+        using or accessing this site. The materials contained in this web site are
+        protected by applicable copyright and trade mark law.
+    </p>
+
+    <h3>
+        2. Use License
+    </h3>
+
+    <ol type="a">
+        <li>
+            Permission is granted to temporarily download one copy of the materials
+            (information or software) on this web site for personal,
+            non-commercial transitory viewing only. This is the grant of a license,
+            not a transfer of title, and under this license you may not:
+
+            <ol type="i">
+                <li>modify or copy the materials;</li>
+                <li>use the materials for any commercial purpose, or for any public display (commercial or
+                    non-commercial);
+                </li>
+                <li>attempt to decompile or reverse engineer any software contained on this web site;</li>
+                <li>remove any copyright or other proprietary notations from the materials; or</li>
+                <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+            </ol>
+        </li>
+        <li>
+            This license shall automatically terminate if you violate any of these restrictions and may be terminated by
+            F. Javier R. Donado at any time. Upon terminating your viewing of these materials or upon the termination of
+            this license, you must destroy any downloaded materials in your possession whether in electronic or printed
+            format.
+        </li>
+    </ol>
+
+    <h3>
+        3. Disclaimer
+    </h3>
+
+    <ol type="a">
+        <li>
+            The materials on this web site are provided "as is". F. Javier R. Donado makes no warranties, expressed or
+            implied, and hereby disclaims and negates all other warranties, including without limitation, implied
+            warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of
+            intellectual property or other violation of rights. Further, F. Javier R. Donado does not warrant or make
+            any representations concerning the accuracy, likely results, or reliability of the use of the materials on
+            his Internet web site or otherwise relating to such materials or on any sites linked to this site.
+        </li>
+    </ol>
+
+    <h3>
+        4. Limitations
+    </h3>
+
+    <p>
+        In no event shall F. Javier R. Donado or its suppliers be liable for any damages (including, without limitation,
+        damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use
+        the materials on F. Javier R. Donado's Internet site, even if F. Javier R. Donado or a F. Javier R. Donado
+        authorized representative has been notified orally or in writing of the possibility of such damage. Because some
+        jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or
+        incidental damages, these limitations may not apply to you.
+    </p>
+
+    <h3>
+        5. Revisions and Errata
+    </h3>
+
+    <p>
+        The materials appearing on this web site could include technical, typographical, or photographic errors. F.
+        Javier R. Donado does not warrant that any of the materials on his web site are accurate, complete, or current.
+        F. Javier R. Donado may make changes to the materials contained on his web site at any time without notice. F.
+        Javier R. Donado does not, however, make any commitment to update the materials.
+    </p>
+
+    <h3>
+        6. Links
+    </h3>
+
+    <p>
+        F. Javier R. Donado has not reviewed all of the sites linked to his Internet web site and is not responsible for
+        the contents of any such linked site. The inclusion of any link does not imply endorsement by F. Javier R.
+        Donado of the site. Use of any such linked web site is at the user's own risk.
+    </p>
+
+    <h3>
+        7. Site Terms of Use Modifications
+    </h3>
+
+    <p>
+        F. Javier R. Donado may revise these terms of use for this web site at any time without notice. By using this
+        web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
+    </p>
+
+    <h3>
+        8. Governing Law
+    </h3>
+
+    <p>
+        Any claim relating to this web site shall be governed by the laws of the State of Baden-Württemberg, Germany
+        without regard to its conflict of law provisions.
+    </p>
+
+    <p>
+        General Terms and Conditions applicable to Use of a Web Site.
+    </p>
+
+
+    <h2>
+        Privacy Policy
+    </h2>
+
+    <p>
+        Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand
+        how we collect, use, communicate and disclose and make use of personal information. The following outlines our
+        privacy policy.
+    </p>
+
+    <ul>
+        <li>
+            Before or at the time of collecting personal information, we will identify the purposes for which
+            information is being collected.
+        </li>
+        <li>
+            We will collect and use of personal information solely with the objective of fulfilling those purposes
+            specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned
+            or as required by law.
+        </li>
+        <li>
+            We will only retain personal information as long as necessary for the fulfillment of those purposes.
+        </li>
+        <li>
+            We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or
+            consent of the individual concerned.
+        </li>
+        <li>
+            Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary
+            for those purposes, should be accurate, complete, and up-to-date.
+        </li>
+        <li>
+            We will protect personal information by reasonable security safeguards against loss or theft, as well as
+            unauthorized access, disclosure, copying, use or modification.
+        </li>
+        <li>
+            We will make readily available to customers information about our policies and practices relating to the
+            management of personal information.
+        </li>
+    </ul>
+
+    <p>
+        We are committed to conducting our business in accordance with these principles in order to ensure that the
+        confidentiality of personal information is protected and maintained.
+    </p>
+</div>
+</div>
 </div>
 <script>
     var messages = '';

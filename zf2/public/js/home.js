@@ -127,6 +127,7 @@ function closeBox(boxName) {
 
 function showTermsAndConditions() {
     'use strict';
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     $('#termsAndConditions').fadeIn(500);
 }
 

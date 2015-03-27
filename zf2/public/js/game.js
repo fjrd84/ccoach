@@ -57,7 +57,7 @@ function finishRound() {
     answers.push(answerInfo);
 
     form.method = "POST";
-    form.action = baseUrl + '/mtguru/index/results';
+    form.action = baseUrl + '/ccoach/index/results';
 
     element1.value = JSON.stringify(answers);
     element1.name = 'answers';
@@ -455,7 +455,7 @@ function startGame() {
         $('.yourPoints').append('Training');
         trainingMode = true;
     }
-    $.get(baseUrl + '/mtguru/ajax/game', getVars, function (data) {
+    $.get(baseUrl + '/ccoach/ajax/game', getVars, function (data) {
         // TODO: Handle errors in data
         processData(JSON.parse(data));
     });

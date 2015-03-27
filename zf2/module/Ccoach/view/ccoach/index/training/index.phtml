@@ -1,0 +1,22 @@
+<div class="home">
+    <div class="welcome">
+        <?php echo $this->translate('home_welcome') . ' ' . $ident; ?>
+    </div>
+    <div class="points"><?php echo $this->translate('points') . $numPoints; ?></div>
+    <div class="level"><?php echo $this->translate('level') . $currentLevel; ?></div>
+    <div class="trainingButtons">
+        <?php
+        //$questionTypes = $_SESSION['questionTypes'];
+        $numQuestionTypes = count($questionTypes);
+        for ($questionTypeIndex = 0; $questionTypeIndex < $numQuestionTypes; $questionTypeIndex++) {
+            echo '<div class="trainingTypeButton">';
+            echo '<a href="' . $this->basePath() . '/ccoach/index/game?questionType=' . $questionTypes[$questionTypeIndex][0] . '">' . $this->translate($questionTypes[$questionTypeIndex][0]) . '</a>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+    <div class="button" style="clear:both">
+        <a href="<?php echo $this->basePath() ?>"><?php echo $this->translate('home_home') ?></a>
+    </div>
+</div>
+

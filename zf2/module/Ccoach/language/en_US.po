@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ccoach\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-27 00:25+0100\n"
+"PO-Revision-Date: 2015-03-16 23:06+0100\n"
+"Last-Translator: \n"
+"Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:85
+msgid "questions_notesOfChord"
+msgstr "Tell me the notes of this chord"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:107
+msgid "questions_chordOfNotes"
+msgstr "Which chord is formed by the following notes?"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:134
+msgid "questions_intervalOfNotes"
+msgstr "Which interval is formed by the following notes?"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:156
+msgid "questions_notesOfInterval"
+msgstr "Which note does this interval form with the given tonic?"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:181
+msgid "questions_degreeOfChord"
+msgstr "Tell me the degree of this chord"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:228
+msgid "questions_chordOfDegree"
+msgstr "Tell me the chords that belong to the following degree in the given scale"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:243
+msgid "questions_yes"
+msgstr "Yes"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:244
+msgid "questions_no"
+msgstr "No"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:262
+msgid "questions_chordBelongsToScale"
+msgstr "Does this chord belong to the scale?"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:283
+msgid "questions_notesOfScale"
+msgstr "Tell me the notes of this scale"
+
+#: ../../Ccoach/src/Ccoach/Classes/General/QuestionsGenerator.php:305
+msgid "questions_scaleOfNotes"
+msgstr "Which scale type belongs to the following sequence?"
+
+#: ../../Ccoach/view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:13
+msgid "The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:53 ../../Ccoach/view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:56 ../../Ccoach/view/error/404.phtml:80
+#: ../../Ccoach/view/error/index.phtml:11
+#: ../../Ccoach/view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:60 ../../Ccoach/view/error/404.phtml:84
+#: ../../Ccoach/view/error/index.phtml:15
+#: ../../Ccoach/view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:64 ../../Ccoach/view/error/404.phtml:88
+#: ../../Ccoach/view/error/index.phtml:19
+#: ../../Ccoach/view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:74 ../../Ccoach/view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: ../../Ccoach/view/error/404.phtml:103
+#: ../../Ccoach/view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: ../../Ccoach/view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: ../../Ccoach/view/layout/layout.phtml:12
+msgid "MT Guru"
+msgstr "MT Guru"
+
+#: ../../Ccoach/view/ccoach/index/index.phtml:3
+#: ../../Ccoach/view/ccoach/index/training/index.phtml:3
+msgid "home_welcome"
+msgstr "Welcome"
+
+#: ../../Ccoach/view/ccoach/index/index.phtml:5
+msgid "points"
+msgstr "Points: "
+
+#: ../../Ccoach/view/ccoach/index/index.phtml:6
+msgid "level"
+msgstr "Level: "
+
+#: ../../Ccoach/view/ccoach/index/index.phtml:8
+msgid "home_play"
+msgstr "Play!"
+
+#: ../../Ccoach/view/ccoach/index/index.phtml:11
+msgid "home_training"
+msgstr "Training!"
+
+#: ../../Ccoach/view/ccoach/index/index.phtml:14
+msgid "logout"
+msgstr ""
+
+#: ../../Ccoach/view/ccoach/index/training/index.phtml:19
+msgid "home_home"
+msgstr "Home"
+
+msgid "helpTitleintervalsHelp"
+msgstr "Intervals"
+
+msgid "helpTitlescalesHelp"
+msgstr "Scales"
+
+msgid "helpTitlechordsHelp"
+msgstr "Chords"
+
+msgid "helpTitledistancesHelp"
+msgstr "Distances"
+
+msgid "questions_distanceOfNotes"
+msgstr "Tell the distance between these two notes."
+
+msgid "questions_notesOfDistance"
+msgstr "Play the note that has the following distance with the tonic."

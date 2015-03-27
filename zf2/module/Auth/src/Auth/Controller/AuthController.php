@@ -145,7 +145,7 @@ class AuthController extends AbstractActionController
         $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
 
         $existingUser = $objectManager->createQuery(
-            'SELECT u FROM MTGuru\Entity\LoginTable u WHERE u.userName =  \'' . $username . '\'')->getResult();
+            'SELECT u FROM Ccoach\Entity\LoginTable u WHERE u.userName =  \'' . $username . '\'')->getResult();
 
         if (count($existingUser) > 0) {
             array_push($messages, "This user already exists.");
@@ -155,12 +155,12 @@ class AuthController extends AbstractActionController
         $response = $this->getResponse();
 
         if (!$error) {
-            $newUser = new \MTGuru\Entity\LoginTable();
+            $newUser = new \Ccoach\Entity\LoginTable();
             $newUser->setUserName($username);
             $newUser->setPassword(md5($password));
             $objectManager->persist($newUser);
             $objectManager->flush();
-            $currentUser = new \MTGuru\Entity\User();
+            $currentUser = new \Ccoach\Entity\User();
             $currentUser->setUserId($username);
             $currentUser->setFullName($userFullName);
             $currentUser->setLevel(0);
