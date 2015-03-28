@@ -171,7 +171,7 @@ var dataUni = [
 function backToCassetteCoach() {
     'use strict';
     showLoading();
-    window.location = baseUrl;
+    window.location = baseUrl + '/home';
 }
 
 function openCV() {

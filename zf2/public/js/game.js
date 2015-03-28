@@ -34,7 +34,7 @@ function goHome() {
     'use strict';
     $('.mainGame').children().fadeOut(500);
     $('.loading').fadeIn(300);
-    window.location = baseUrl;
+    window.location = baseUrl + '/index';
 }
 
 /**
@@ -71,12 +71,20 @@ function finishRound() {
 /**
  * This function has just been created to test the finish round.
  */
-function testFinishRound(){
-    answers = [{"type":"scaleOfNotes","questionElement":"Bb,C,D,E,F,G,A","solutionShown":true,"attemptsCount":1,"timeLeft":74},{"type":"scaleOfNotes","questionElement":"F#,G#,A#,B#,C#,D#,E#","solutionShown":true,"attemptsCount":1,"timeLeft":90},{"type":"chordOfNotes","questionElement":"C,Eb,Gb,Bb","solutionShown":false,"attemptsCount":0,"timeLeft":82},{"type":"scaleOfNotes","questionElement":"C,D,E,F,G,A,Bb","solutionShown":false,"attemptsCount":0,"timeLeft":77},{"type":"notesOfScale","questionElement":"Key: Bb Scale: aeolian","solutionShown":true,"attemptsCount":1,"timeLeft":86},{"type":"chordOfNotes","questionElement":"F#,A#,C#,E#","solutionShown":false,"attemptsCount":0,"timeLeft":75},{"type":"chordOfNotes","questionElement":"E,G,Bb","solutionShown":false,"attemptsCount":0,"timeLeft":83}];
+function testFinishRound() {
+    'use strict';
+    answers = [
+        {"type": "scaleOfNotes", "questionElement": "Bb,C,D,E,F,G,A", "solutionShown": true, "attemptsCount": 1, "timeLeft": 74},
+        {"type": "scaleOfNotes", "questionElement": "F#,G#,A#,B#,C#,D#,E#", "solutionShown": true, "attemptsCount": 1, "timeLeft": 90},
+        {"type": "chordOfNotes", "questionElement": "C,Eb,Gb,Bb", "solutionShown": false, "attemptsCount": 0, "timeLeft": 82},
+        {"type": "scaleOfNotes", "questionElement": "C,D,E,F,G,A,Bb", "solutionShown": false, "attemptsCount": 0, "timeLeft": 77},
+        {"type": "notesOfScale", "questionElement": "Key: Bb Scale: aeolian", "solutionShown": true, "attemptsCount": 1, "timeLeft": 86},
+        {"type": "chordOfNotes", "questionElement": "F#,A#,C#,E#", "solutionShown": false, "attemptsCount": 0, "timeLeft": 75},
+        {"type": "chordOfNotes", "questionElement": "E,G,Bb", "solutionShown": false, "attemptsCount": 0, "timeLeft": 83}
+    ];
     points = 40;
     finishRound();
 }
-
 
 
 /**
@@ -423,9 +431,9 @@ function nextQuestion() {
 
     currentQuestion += 1;
     if (currentQuestion >= questions.length) {
-        if(trainingMode || guestUser){
+        if (trainingMode || guestUser) {
             goHome();
-        }else{
+        } else {
             finishRound();
         }
         return;
@@ -479,7 +487,7 @@ function processData(data) {
     // Only the points of the current session will be displayed
     points = 0;//data.user.points;
     questions = data.questions;
-    if(data.user.userId === 'guest'){
+    if (data.user.userId === 'guest') {
         guestUser = true;
     }
     currentQuestion = -1;
