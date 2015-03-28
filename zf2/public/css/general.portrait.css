@@ -94,6 +94,22 @@ body{
     position: relative;
 }
 
+#configScreen {
+    height: 81%;
+}
+
+#configScreen .closeWindow {
+    width: 11%;
+}
+
+#configScreen .configHeader {
+    margin-top: 14%;
+}
+
+.inputFields .inputLabel {
+    width: 100%;
+}
+
 #configTool {
     width: 10%;
     padding-top: 10%;
@@ -247,17 +263,31 @@ body{
 }
 
 .homeContentContainer {
-    width: 61.8%;
+    width: 63.5%;
     padding-top: 182%;
 }
 
 .logInScreen, .signUpScreen{
-    width: 54.9%;    
-    left: 22.6%;
+    width: 61.9%;    
+    left: 18.3%;
+    height: 25%;
+    top: 15%;
 }
 
 .loginLabel{
     font-size: 120%;
+}
+
+.forgotPasswordScreen {
+    width: 64%;
+    left: 17%;
+}
+
+.logInScreen form {
+    margin-top: 7%;
+}
+
+.signUpScreen .loginLabel {
 }
 
 .sendSignUp {

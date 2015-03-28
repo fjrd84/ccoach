@@ -7,12 +7,12 @@ function flipHighScores() {
     if (allTimeScores) {
         $('#topUsers .allTimes').fadeOut(200, function () {
             $('#topUsers .thisWeek').fadeIn(300);
-            
+
         });
     } else {
         $('#topUsers .thisWeek').fadeOut(200, function () {
             $('#topUsers .allTimes').fadeIn(300);
-            
+
         });
     }
     allTimeScores = !allTimeScores;
@@ -31,7 +31,7 @@ function showInfoText(text) {
     $('#navText').empty();
     $('#navText').append('<div class="newText fitText" style="display:none">' + text + '</div>');
     $('#navText .newText').fadeIn('300');
-    
+
 }
 
 $('.homeLogout, #logoutTool').mouseenter(function () {
@@ -85,7 +85,7 @@ function showHome() {
     'use strict';
     $('.trainingView').fadeOut(300, function () {
         $('.home').fadeIn(600);
-        
+
     });
     //$('#homeContainer').flip();
 }
@@ -118,9 +118,25 @@ function adjustFont() {
     $('body').css('font-size', newSize + 'px');
 }
 
+function showConfigScreen() {
+    'use strict';
+    $('#configScreen').fadeIn();
+}
+
+function hideConfigScreen() {
+    'use strict';
+    $('#configScreen').fadeOut();
+}
+
+function updateMyInfo() {
+    'use strict';
+    hideConfigScreen();
+}
+
 ///////////////////////////////////////////
 
 $(window).resize(function () {
+    'use strict';
     adjustFont();
 });
 

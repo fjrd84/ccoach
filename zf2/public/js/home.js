@@ -43,11 +43,11 @@ function sendSignUp() {
     test = username + pass;
     $.post(baseUrl + '/home/newuser', { 'username': username, 'password': pass })
         .done(function (data) {
-            data = data.replace('["','');
-            data = data.replace('"]','');
-            if(data==='success'){
+            data = data.replace('["', '');
+            data = data.replace('"]', '');
+            if (data === 'success') {
                 sendLoginForm(username, pass);
-            }else{
+            } else {
                 homeFeedback(data);
             }
         });
@@ -97,9 +97,22 @@ function sendLoginForm(username, pass) {
     showLoading();
 }
 
+function forgotPassword() {
+    'use strict';
+    closeBox('.signUpScreen');
+    closeBox('.logInScreen');
+    $('.forgotPasswordScreen').fadeIn(300);
+}
+
+function sendForgotPassword() {
+    'use strict';
+    closeBox('.forgotPasswordScreen');
+}
+
+
 function showLoading() {
     'use strict';
-    $('.homePageWrapper *').fadeOut(300, function() {
+    $('.homePageWrapper *').fadeOut(300, function () {
         $('.loadingMain').show();
     });
 }
@@ -127,8 +140,9 @@ function closeBox(boxName) {
 
 function showTermsAndConditions() {
     'use strict';
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    $('#termsAndConditions').fadeIn(500);
+    $("html, body").animate({ scrollTop: 0 }, "slow", function(){
+        $('#termsAndConditions').fadeIn(500);
+    });
 }
 
 function closeTermsAndConditions() {

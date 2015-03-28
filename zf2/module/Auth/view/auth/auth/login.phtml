@@ -82,6 +82,8 @@ $actionUrl = $this->url(
         <div class="loginLabel">Password</div>
         <input class="pass" type="password" name="pass">
 
+        <div class="iForgot" onclick="forgotPassword()">I forgot my password.</div>
+
         <div class="sendSignUp" onclick="sendSignUp()">Send!</div>
     </form>
     <div class="agreeTermsAndConditions" onclick="showTermsAndConditions()">By using this website you agree with the
@@ -97,7 +99,19 @@ $actionUrl = $this->url(
         <div class="loginLabel">Password</div>
         <input class="pass" type="password" name="pass">
 
+        <div class="iForgot" onclick="forgotPassword()">I forgot my password.</div>
+
         <div class="sendSignUp" onclick="sendLogIn()">Send!</div>
+    </form>
+    <br>
+</div>
+<div class="forgotPasswordScreen" style="display:none">
+    <div class="closeWindow" onclick="closeBox('.forgotPasswordScreen')"></div>
+    <form>
+        <div class="loginLabel">Enter your e-mail</div>
+        <input class="user" type="email" name="user">
+
+        <div class="sendSignUp" onclick="sendForgotPassword()">Send!</div>
     </form>
     <br>
 </div>

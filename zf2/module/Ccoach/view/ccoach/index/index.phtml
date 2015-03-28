@@ -1,7 +1,30 @@
 <div class="mainWrapper">
     <div class="mainDiv sevenSegText">
-        <div onclick="configTool()" id="configTool"></div>
+        <div onclick="showConfigScreen()" id="configTool"></div>
         <div onclick="logoutMe()" id="logoutTool"></div>
+        <div id="configScreen" style="display:none">
+            <div class="closeWindow" onclick="hideConfigScreen()"></div>
+            <div class="configHeader">Account Configuration</div>
+            <div class="inputFields">
+                <div class="inputGroup">
+                    <div class="inputLabel">Full Name</div>
+                    <input type="text" name="fullName" id="fullNameInput">
+                </div>
+                <div class="inputGroup">
+                    <div class="inputLabel">E-Mail</div>
+                    <input type="email" name="email" id="emailInput">
+                </div>
+                <div class="inputGroup">
+                    <div class="inputLabel">Password</div>
+                    <input type="password" name="password" id="passwordInput">
+                </div>
+                <div class="inputGroup">
+                    <div class="inputLabel">Confirm Password</div>
+                    <input type="password" name="confirmPassword" id="confirmPasswordInput">
+                </div>
+            </div>
+            <div class="sendButton" onclick="updateMyInfo()">Save</div>
+        </div>
         <div id="homeContainer" class="homeContainer">
             <div class="front">
                 <div class="home">
@@ -60,7 +83,7 @@
                         class="fourthOne fitText"><?php echo $topUsersThisWeek[3]->getFullName() . ' - ' . $topUsersThisWeek[3]->getPointsThisWeek(); ?></div>
                 </div>
             </div>
-                <div onclick="logoutMe()" class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
+            <div onclick="logoutMe()" class="homeLogout"><?php /*echo $this->translate('logout')*/ ?></div>
         </div>
     </div>
 </div>
