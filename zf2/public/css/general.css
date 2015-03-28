@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-.sendAMessageIcon a,Ãƒâ€šÃ‚Â .sendAMessageIcon a:link,Ãƒâ€šÃ‚Â .sendAMessageIcon a:visited {
+.sendAMessageIcon a,ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:link,ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:visited {
     color: white;
 }
 
@@ -319,7 +319,7 @@ div#termsAndConditions {
     text-align: center;
     font-size: 180%;
     font-weight: bold;
-    margin-top: 1%;
+    margin-top: 3.7%;
     color: rgb(255, 219, 170);
 }
 
@@ -347,7 +347,7 @@ div#results {
 }
 
 .signUpScreen{
-    height: 24%;
+    height: 26%;
     top: 13.6%;
 }
 

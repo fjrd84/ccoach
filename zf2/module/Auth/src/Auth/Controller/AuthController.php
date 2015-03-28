@@ -176,6 +176,52 @@ class AuthController extends AbstractActionController
         return $response;
     }
 
-    public function jdonadoAction(){
+    public function jdonadoAction()
+    {
+    }
+
+    /**
+     * It sends an email to a user who forgot his/her password with a link to reset it.
+     * @return \Zend\Stdlib\ResponseInterface
+     */
+    public function forgotpassAction()
+    {
+        $error = false;
+        $messages = array();
+        $username = $_POST['username'];
+
+        $userFullName = explode("@", $username, 2)[0];
+
+        if (!filter_var($username, FILTER_VALIDATE_EMAIL) || !isset($userFullName) || $userFullName == '') {
+            array_push($messages, "You must enter a valid e-mail address.");
+            $error = true;
+        }
+        $response = $this->getResponse();
+        if (!$error) {
+            $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+            $existingUser = $objectManager->createQuery(
+                'SELECT u FROM Ccoach\Entity\LoginTable u WHERE u.userName =  \'' . $username . '\'')->getResult();
+            if (count($existingUser) == 0) {
+                $response->setContent('success');
+                return $response;
+            }
+            $md5hash = $existingUser[0]->getPassword();
+            $linkToNewPass = "http://www.cassettecoach.com/home/requestnewpass?user=".$username."&hash=".$md5hash;
+            // send email with pass
+            $msg = "Message automatically generated from CassetteCoach.com.\n Your email in Cassette Coach is " . $username .
+                ". \nIf you want to reset your password, visit the following URL:" .
+                $linkToNewPass . "\n. If you didn't request this message, just ignore it. \n\n Thank you for using Cassette Coach!";
+            // use wordwrap() if lines are longer than 70 characters
+            $msg = wordwrap($msg, 70);
+            // send email
+            mail($username,"Cassette Coach - Password",$msg);
+        } else {
+            $response->setContent(json_encode($messages));
+        }
+        return $response;
+    }
+
+    public function requestnewpassAction(){
+        // todo
     }
 }

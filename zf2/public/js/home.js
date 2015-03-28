@@ -106,6 +106,15 @@ function forgotPassword() {
 
 function sendForgotPassword() {
     'use strict';
+    var username = $('.forgotPasswordScreen input.user').val();
+    if (!validateEmail(username)) {
+        homeFeedback('You must enter a valid email address.');
+        return;
+    }
+    $.post(baseUrl + '/home/forgotpass', { 'username': username })
+        .done(function (data) {
+            homeFeedback('Check your email. If you don\'t receive a message, look up in the spam folder.');
+        });
     closeBox('.forgotPasswordScreen');
 }
 

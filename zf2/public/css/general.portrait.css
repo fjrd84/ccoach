@@ -270,7 +270,7 @@ body{
 .logInScreen, .signUpScreen{
     width: 61.9%;    
     left: 18.3%;
-    height: 25%;
+    height: 26%;
     top: 15%;
 }
 
@@ -292,6 +292,11 @@ body{
 
 .sendSignUp {
     font-size: 150%;
+    margin-top: 0%;
+}
+
+.logInScreen .sendSignUp {
+    margin-top: 3%;
 }
 
 input.user, input.pass {
