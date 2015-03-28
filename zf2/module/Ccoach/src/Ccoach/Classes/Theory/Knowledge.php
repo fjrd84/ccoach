@@ -29,11 +29,96 @@ class Knowledge
     }
 
     /**
-     * It reads the information in all the knowledge files
+     * The knowledge, formerly defined in files, will now be defined as local variables of this function,
+     * that will be parsed.
      */
-    public function readFiles()
+    public function loadKnowledge()
     {
-        echo __DIR__;
+        // All the theory knowledge will be defined here
+        $chords = "M 3M 5P\r\n" .
+            "m 3m 5P\r\n" .
+            "dim 3m 5d\r\n" .
+            "m7 3m 5P 7m\r\n" .
+            "7 3M 5P 7m\r\n" .
+            "Maj7 3M 5P 7M\r\n" .
+            "mMaj7 3m 5P 7M\r\n" .
+            "dim7 3m 5d 7m";
+        $distances = "C D 1\r\n".
+            "D E 1\r\n".
+            "E F 0.5\r\n".
+            "F G 1\r\n".
+            "G A 1\r\n".
+            "A B 1\r\n".
+            "B C 0.5";
+        $intervals = "2m 0.5\r\n".
+            "2M 1\r\n".
+            "3m 1.5\r\n".
+            "3M 2\r\n".
+            "4d 2\r\n".
+            "4P 2.5\r\n".
+            "4A 3\r\n".
+            "5d 3\r\n".
+            "5P 3.5\r\n".
+            "5A 4\r\n".
+            "6m 4\r\n".
+            "6M 4.5\r\n".
+            "7m 5\r\n".
+            "7M 5.5";
+        $notes = "C C# -1\r\n".
+            "D D# Db\r\n".
+            "E -1 Eb\r\n".
+            "F F# -1\r\n".
+            "G G# Gb\r\n".
+            "A A# Ab\r\n".
+            "B -1 Bb";
+        $questionTypes = "notesOfInterval\r\n".
+            "intervalOfNotes\r\n".
+            "notesOfChord\r\n".
+            "chordOfNotes\r\n".
+            "notesOfScale\r\n".
+            "scaleOfNotes\r\n".
+            "degreeOfChord\r\n".
+            "chordOfDegree\r\n".
+            "chordBelongsToScale";
+        $scales = "ionian 2M 3M 4P 5P 6M 7M\r\n".
+            "dorian 2M 3m 4P 5P 6M 7m\r\n".
+            "phrygian 2m 3m 4P 5P 6m 7m\r\n".
+            "lydian 2M 3M 4A 5P 6M 7M\r\n".
+            "myxolidian 2M 3M 4P 5P 6M 7m\r\n".
+            "aeolian 2M 3m 4P 5P 6m 7m\r\n".
+            "locrian 2m 3m 4P 5d 6m 7m";
+        $this->distances = $this->parseKnowledge($distances);
+        $this->intervals = $this->parseKnowledge($intervals);
+        $this->chords = $this->parseKnowledge($chords);
+        $this->notes = $this->parseKnowledge($notes);
+        $this->scales = $this->parseKnowledge($scales);
+        $this->questionTypes = $this->parseKnowledge($questionTypes);
+    }
+
+    /**
+     * It parses knowledge
+     * @param $data
+     * @return array
+     */
+    private function parseKnowledge($data)
+    {
+        $data = explode("\r\n", $data);
+        $numData = count($data);
+        $parsed = array();
+        for ($i = 0; $i < $numData; $i++) {
+            if ($data[$i] != "") {
+                $parsed[$i] = explode(" ", $data[$i]);
+            }
+        }
+        return $parsed;
+    }
+
+    /**
+     * It reads the information in all the knowledge files
+     * @deprecated
+     */
+    public function readKnowledgeFiles()
+    {
         $pathToFiles = '../../../../../../../knowledge/';
         $this->distances = $this->parseFile(__DIR__ . $pathToFiles . 'distances.txt');
         $this->intervals = $this->parseFile(__DIR__ . $pathToFiles . 'intervals.txt');
@@ -42,26 +127,6 @@ class Knowledge
         $this->scales = $this->parseFile(__DIR__ . $pathToFiles . 'scales.txt');
         $this->questionTypes = $this->parseFile(__DIR__ . $pathToFiles . 'questionTypes.txt');
     }
-
-    function getRandomQuestionType($level)
-    {
-        /*
-        More questions:
-        Which of the given notes does not belong to the scale?
-        Which scale sounds now?
-        Which chord/interval sounds now?
-        */
-        //$questionTypes[]='areaOfChord';
-        //$questionTypes[]='substitutionOfChord';
-        $index = rand(0, count($this->questionTypes) - 1);
-        return $this->questionTypes[$index][0];
-    }
-
-    function getQuestionTypes()
-    {
-        return $this->questionTypes;
-    }
-
 
     /**
      * It parses a knowledge file
@@ -81,6 +146,25 @@ class Knowledge
             }
         }
         return $parsed;
+    }
+
+    function getRandomQuestionType($level)
+    {
+        /*
+        More questions:
+        Which of the given notes does not belong to the scale?
+        Which scale sounds now?
+        Which chord/interval sounds now?
+        */
+        //$questionTypes[]='areaOfChord';
+        //$questionTypes[]='substitutionOfChord';
+        $index = rand(0, count($this->questionTypes) - 1);
+        return $this->questionTypes[$index][0];
+    }
+
+    function getQuestionTypes()
+    {
+        return $this->questionTypes;
     }
 
     /**

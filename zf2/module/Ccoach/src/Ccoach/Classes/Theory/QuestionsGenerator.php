@@ -61,7 +61,7 @@ class QuestionsGenerator
         }
 
         $knowledge = Knowledge::getInstance();
-        $knowledge->readFiles();
+        $knowledge->loadKnowledge();
         $this->knowledge = $knowledge;
         $questions = array();
         for ($i = 0; $i < $this->numberOfQuestions; $i++) {

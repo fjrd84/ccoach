@@ -51,7 +51,7 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
     public function testKnowledgeCanBeLoaded()
     {
         $knowledge = \Ccoach\Classes\Theory\Knowledge::getInstance();
-        $knowledge->readFiles();
+        $knowledge->loadKnowledge();
         $allQuestionTypes = $knowledge->getQuestionTypes();
         $this->assertFalse(empty($allQuestionTypes));
     }

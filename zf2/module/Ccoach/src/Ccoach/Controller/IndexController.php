@@ -53,7 +53,7 @@ class IndexController extends AbstractActionController
     public function trainingAction()
     {
         $knowledge = Knowledge::getInstance();
-        $knowledge->readFiles();
+        $knowledge->loadKnowledge();
         $questionTypes = $knowledge->getQuestionTypes($this->translator);
         $userManagement = new UserManagement($this->getServiceLocator());
         $currentUser = $userManagement->getCurrentUser();
