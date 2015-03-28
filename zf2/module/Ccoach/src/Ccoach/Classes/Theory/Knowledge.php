@@ -33,13 +33,14 @@ class Knowledge
      */
     public function readFiles()
     {
-        $pathToFiles = 'knowledge/';
-        $this->distances = $this->parseFile($pathToFiles . 'distances.txt');
-        $this->intervals = $this->parseFile($pathToFiles . 'intervals.txt');
-        $this->chords = $this->parseFile($pathToFiles . 'chords.txt');
-        $this->notes = $this->parseFile($pathToFiles . 'notes.txt');
-        $this->scales = $this->parseFile($pathToFiles . 'scales.txt');
-        $this->questionTypes = $this->parseFile($pathToFiles . 'questionTypes.txt');
+        echo __DIR__;
+        $pathToFiles = '../../../../../../../knowledge/';
+        $this->distances = $this->parseFile(__DIR__ . $pathToFiles . 'distances.txt');
+        $this->intervals = $this->parseFile(__DIR__ . $pathToFiles . 'intervals.txt');
+        $this->chords = $this->parseFile(__DIR__ . $pathToFiles . 'chords.txt');
+        $this->notes = $this->parseFile(__DIR__ . $pathToFiles . 'notes.txt');
+        $this->scales = $this->parseFile(__DIR__ . $pathToFiles . 'scales.txt');
+        $this->questionTypes = $this->parseFile(__DIR__ . $pathToFiles . 'questionTypes.txt');
     }
 
     function getRandomQuestionType($level)
