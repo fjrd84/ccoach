@@ -36,8 +36,8 @@ function sendSignUp() {
     if (!validateEmail(username)) {
         homeFeedback('You must enter a valid email address.');
         return;
-    } else if (pass === '') {
-        homeFeedback('Your password cannot be empty.');
+    } else if (pass.length < 5) {
+        homeFeedback('Your password must be at least 5 characters long.');
         return;
     }
     test = username + pass;

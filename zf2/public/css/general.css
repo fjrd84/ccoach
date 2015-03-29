@@ -8,6 +8,46 @@
     -o-user-select: none;
 }
 
+#newPassContainer form {
+    padding: 5%;
+}
+
+#newPassContainer .sendButton {
+    cursor: pointer;
+    color: #FFDBAA;
+    font-size: 150%;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 25%;
+}
+
+div#newPassContainer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.51);
+    position: absolute;
+    top: 10%;
+    width: 40%;
+    padding: 5% 5% 1% 5%;
+    text-align: center;
+    left: 25%;
+    border: 1px white solid;
+}
+
+#newPassContainer .inputLabel {
+    width: 40%;
+    clear: both;
+    float: left;
+    text-align: right;
+    padding: 2%;
+}
+
+#newPassContainer input {
+    font-size: 130%;
+    width: 47%;
+    float: left;
+}
+
 .configHeader {
     width: 100%;
     text-align: center;
@@ -23,7 +63,7 @@
     cursor: pointer;
 }
 
-.sendAMessageIcon a,ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:link,ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:visited {
+.sendAMessageIcon a,ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:link,ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:visited {
     color: white;
 }
 

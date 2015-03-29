@@ -1,0 +1,15 @@
+<div id="newPassContainer">
+    Enter your new password and click on send.
+    <form>
+        <div class="inputLabel">Password</div>
+        <input id="newPassword" type="password">
+
+        <div class="inputLabel">Password (retype)</div>
+        <input id="newPasswordRepeat" type="password">
+        <input type="hidden" value="<?php echo $username ?>" id="username">
+        <input type="hidden" value="<?php echo $hash ?>" id="hash">
+
+        <div onclick="sendNewPassword()" class="sendButton">Send</div>
+    </form>
+</div>
+<script src="<?php echo $this->basePath() ?>/js/newpass.js"></script>

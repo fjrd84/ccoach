@@ -4,6 +4,7 @@ namespace Auth\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Form\Annotation\AnnotationBuilder;
+use Zend\View\Model\ViewModel;
 
 use Auth\Model\User;
 
@@ -206,22 +207,59 @@ class AuthController extends AbstractActionController
                 return $response;
             }
             $md5hash = $existingUser[0]->getPassword();
-            $linkToNewPass = "http://www.cassettecoach.com/home/requestnewpass?user=".$username."&hash=".$md5hash;
+            $linkToNewPass = "http://www.cassettecoach.com/home/requestnewpass?user=" . $username . "&hash=" . $md5hash;
             // send email with pass
-            $msg = "Message automatically generated from CassetteCoach.com.\n Your email in Cassette Coach is " . $username .
-                ". \nIf you want to reset your password, visit the following URL:" .
-                $linkToNewPass . "\n. If you didn't request this message, just ignore it. \n\n Thank you for using Cassette Coach!";
+            $msg = "Message automatically generated from CassetteCoach.com.\n\nYour email in Cassette Coach is " . $username .
+                ".\n\nIf you want to reset your password, visit the following URL:\n\n" .
+                $linkToNewPass . "\n\nIf you didn't request this message, just ignore it. \n\n Thank you for using Cassette Coach!";
             // use wordwrap() if lines are longer than 70 characters
             $msg = wordwrap($msg, 70);
             // send email
-            mail($username,"Cassette Coach - Password",$msg);
+            mail($username, "Cassette Coach - Password", $msg);
         } else {
             $response->setContent(json_encode($messages));
         }
         return $response;
     }
 
-    public function requestnewpassAction(){
-        // todo
+    public function requestnewpassAction()
+    {
+        // When a new password is requested after clicking on the email link.
+        //"http://www.cassettecoach.com/home/requestnewpass?user=".$username."&hash=".$md5hash;
+        $username = $_GET['user'];
+        $hash = $_GET['hash'];
+        $viewModel = new ViewModel();
+        $viewModel->setVariable('username', $username);
+        $viewModel->setVariable('hash', $hash);
+        return $viewModel;
+    }
+
+    /**
+     * It updates the password of an existing user.
+     * @return \Zend\Stdlib\ResponseInterface
+     */
+    public function updatepassAction()
+    {
+        $username = $_POST['username'];
+        $hash = $_POST['hash'];
+        $newpass = $_POST['password'];
+        $response = $this->getResponse();
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        $existingUser = $objectManager->createQuery(
+            'SELECT u FROM Ccoach\Entity\LoginTable u WHERE u.userName =  \'' . $username . '\'')->getResult();
+        if (count($existingUser) == 0) {
+            $response->setContent('The information supplied is not correct.');
+            return $response;
+        }
+        $md5hash = $existingUser[0]->getPassword();
+        if ($md5hash !== $hash) {
+            $response->setContent('The information supplied is not correct.');
+            return $response;
+        }
+        $existingUser[0]->setPassword(md5($newpass));
+        $objectManager->persist($existingUser[0]);
+        $objectManager->flush();
+        $response->setContent('Password updated successfully.');
+        return $response;
     }
 }
