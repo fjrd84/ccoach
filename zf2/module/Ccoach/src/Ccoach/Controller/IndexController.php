@@ -38,15 +38,13 @@ class IndexController extends AbstractActionController
         $topUsers = $userManagement->getTopUsers();
         $topUsersThisWeek = $userManagement->getTopUsersThisWeek();
         $viewModel = new ViewModel();
+        $viewModel->setVariable('userid', $currentUser->getUserId());
         $viewModel->setVariable('ident', $currentUser->getFullName());
         $viewModel->setVariable('numPoints', $currentUser->getPoints());
         $viewModel->setVariable('currentLevel', $currentUser->getLevel());
         $viewModel->setVariable('questionTypes', $questionTypes);
         $viewModel->setVariable('topUsers', $topUsers);
         $viewModel->setVariable('topUsersThisWeek', $topUsersThisWeek);
-
-
-
         return $viewModel;
     }
 
@@ -111,6 +109,55 @@ class IndexController extends AbstractActionController
         $viewModel = new ViewModel();
         $viewModel->setVariable('results', $results);
         return $viewModel;
+    }
+
+    /**
+     * It updates the information for an existing user (e.g.: new full name, new email or new password).
+     * @return \Zend\Stdlib\ResponseInterface
+     */
+    public function updateinfoAction(){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $fullname = $_POST['fullname'];
+        $response = $this->getResponse();
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+
+        $userManagement = new UserManagement($this->getServiceLocator());
+        $currentUser = $userManagement->getCurrentUser();
+
+        // This issues must also be validated on the client side.
+        if (!filter_var($username, FILTER_VALIDATE_EMAIL) || !isset($fullname) || $fullname == '') {
+            $response->setContent('Invalid email or no user name provided.');
+            return $response;
+        }
+
+        $currentUserName = $currentUser->getUserId();
+        // New email address provided
+        if($username !== $currentUserName){
+            // If the email already exists...
+            $existingUser = $objectManager->createQuery(
+                'SELECT u FROM Ccoach\Entity\LoginTable u WHERE u.userName =  \'' . $username . '\'')->getResult();
+            if(count($existingUser)>0){
+                $response->setContent('The provided email is already in use.');
+                return $response;
+            }
+        }
+
+        $existingUser = $objectManager->createQuery(
+            'SELECT u FROM Ccoach\Entity\LoginTable u WHERE u.userName =  \'' . $currentUserName . '\'')->getResult();
+        // There must always be a user with this login. Otherwise it wouldn't be logged in.
+        // The information of the login table is updated
+        $existingUser[0]->setPassword(md5($password));
+        $existingUser[0]->setUserName($username);
+        $objectManager->persist($existingUser[0]);
+        // The information of the users table is updated
+        $currentUser->setFullName($fullname);
+        $currentUser->setUserId($username);
+        $objectManager->persist($currentUser);
+        $objectManager->flush();
+        $response->setContent('Information updated successfully.');
+        return $response;
+
     }
 
     /**

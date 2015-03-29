@@ -222,6 +222,10 @@ class AuthController extends AbstractActionController
         return $response;
     }
 
+    /**
+     * Shows a page for resetting the password of an existing user.
+     * @return ViewModel
+     */
     public function requestnewpassAction()
     {
         // When a new password is requested after clicking on the email link.
@@ -252,7 +256,7 @@ class AuthController extends AbstractActionController
             return $response;
         }
         $md5hash = $existingUser[0]->getPassword();
-        if ($md5hash !== $hash) {
+        if ($md5hash !== $hash) { // The supplied hash for the existing password must match the database.
             $response->setContent('The information supplied is not correct.');
             return $response;
         }

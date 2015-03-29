@@ -2,17 +2,18 @@
     <div class="mainDiv sevenSegText">
         <div onclick="showConfigScreen()" id="configTool"></div>
         <div onclick="logoutMe()" id="logoutTool"></div>
+        <div id="toaster" style="display:none"></div>
         <div id="configScreen" style="display:none">
             <div class="closeWindow" onclick="hideConfigScreen()"></div>
             <div class="configHeader">Account Configuration</div>
             <div class="inputFields">
                 <div class="inputGroup">
                     <div class="inputLabel">Full Name</div>
-                    <input type="text" name="fullName" id="fullNameInput">
+                    <input type="text" value="<?php echo $ident ?>" name="fullName" id="fullNameInput">
                 </div>
                 <div class="inputGroup">
                     <div class="inputLabel">E-Mail</div>
-                    <input type="email" name="email" id="emailInput">
+                    <input type="email" value="<?php echo $userid ?>" name="email" id="emailInput">
                 </div>
                 <div class="inputGroup">
                     <div class="inputLabel">Password</div>
@@ -22,6 +23,7 @@
                     <div class="inputLabel">Confirm Password</div>
                     <input type="password" name="confirmPassword" id="confirmPasswordInput">
                 </div>
+                <div class="afterChange">After changing your user information, you will have to log in again.</div>
             </div>
             <div class="sendButton" onclick="updateMyInfo()">Save</div>
         </div>

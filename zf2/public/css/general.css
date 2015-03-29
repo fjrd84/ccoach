@@ -63,7 +63,7 @@ div#newPassContainer {
     cursor: pointer;
 }
 
-.sendAMessageIcon a,ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:link,ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:visited {
+.sendAMessageIcon a,ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:link,ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .sendAMessageIcon a:visited {
     color: white;
 }
 
@@ -810,27 +810,29 @@ span.centerHelper {
     text-align: center;
     font-size: 200%;
     color: #FFDBAA;
+    cursor: pointer;
 }
 
 #configScreen .inputFields {
     margin-top: 3%;
-    margin-bottom: 4%;
+    margin-bottom: 1.5%;
 }
 
 .inputGroup {
     padding: 1%;
-    margin-left: 12%;
+    margin-left: 11%;
 }
 
 .inputFields input {
     clear: left;
     font-size: 150%;
+    width: 48%;
 }
 
 .inputFields .inputLabel {
     float: left;
     clear: left;
-    width: 36%;
+    width: 39%;
     font-size: 150%;
 }
 
@@ -847,6 +849,16 @@ span.centerHelper {
     height: 100%;
     top: 0;
     z-index: 10;
+}
+
+#configScreen * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.afterChange {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
 }
 
 .front {

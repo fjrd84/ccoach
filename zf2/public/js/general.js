@@ -128,9 +128,43 @@ function hideConfigScreen() {
     $('#configScreen').fadeOut();
 }
 
+function validateEmail(email) {
+    'use strict';
+    var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 function updateMyInfo() {
     'use strict';
-    hideConfigScreen();
+    var password = $('#passwordInput').val(),
+        username = $('#emailInput').val(),
+        fullname = $('#fullNameInput').val(),
+        confirmPass = $('#confirmPasswordInput').val();
+    if(!validateEmail(username)){
+        alert('You must enter a valid email address.');
+        return;
+    }
+    if (password.length < 5 || fullname.length < 5) {
+        alert('The password and your full name must be at least five characters long.');
+        return;
+    }
+    if (password !== confirmPass) {
+        alert('The entered passwords don\'t match. Please type the same password twice.');
+        return;
+    } 
+    sendUpdateInfo(username, password, fullname);
+}
+
+function sendUpdateInfo(username, password, fullname){
+    'use strict';
+        $.post(baseUrl + '/index/updateinfo', { 'username': username, 'password': password, 'fullname' : fullname })
+        .done(function (data) {
+            if(data.indexOf('success')>0){
+                logoutMe();
+            }else{
+                alert(data);
+            }
+        });
 }
 
 ///////////////////////////////////////////

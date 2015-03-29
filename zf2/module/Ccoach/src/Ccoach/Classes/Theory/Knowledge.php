@@ -493,7 +493,7 @@ class Knowledge
             $tonic = $this->getRandomNote();
             $intervalNote = $this->getRandomNote($tonic);
             // No alterations on the tonic for the basic skill
-            if ($skill == 0) {
+            if ($skill < 2) {
                 $tonic = substr($tonic, 0, 1);
                 $intervalNote = substr($intervalNote, 0, 1);
             }
