@@ -14,7 +14,7 @@ function sendAMessage() {
 
 function guestUser() {
     'use strict';
-    sendLoginForm('guest', 'guest');
+    sendLoginForm('guest@cassettecoach.com', '12341234');
 }
 
 function signUp() {

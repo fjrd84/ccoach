@@ -119,11 +119,18 @@ class IndexController extends AbstractActionController
         $username = $_POST['username'];
         $password = $_POST['password'];
         $fullname = $_POST['fullname'];
+
         $response = $this->getResponse();
         $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
 
         $userManagement = new UserManagement($this->getServiceLocator());
         $currentUser = $userManagement->getCurrentUser();
+        $currentUserName = $currentUser->getUserId();
+
+        if($currentUserName == 'guest@cassettecoach.com'){
+            $response->setContent('The information of the guest user cannot be modified.');
+            return $response;
+        }
 
         // This issues must also be validated on the client side.
         if (!filter_var($username, FILTER_VALIDATE_EMAIL) || !isset($fullname) || $fullname == '') {
@@ -131,7 +138,7 @@ class IndexController extends AbstractActionController
             return $response;
         }
 
-        $currentUserName = $currentUser->getUserId();
+
         // New email address provided
         if($username !== $currentUserName){
             // If the email already exists...
