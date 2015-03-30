@@ -162,7 +162,7 @@ class UserManagement
             $this->getCurrentUser();
         }
         // No points will be added to the guest user.
-        if ($this->currentUser->getUserId() === 'guest') {
+        if ($this->currentUser->getUserId() === 'guest@cassettecoach.com') {
             return;
         }
         $updatedSkills = $this->getUpdatedSkills();

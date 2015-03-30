@@ -19,6 +19,7 @@ var questions, // Array with all the questions
 ///// FUNCTION DEFINITIONS ////////////////////////////////////////////////////////////////////////////
 
 function showFeedback(message) {
+    'use strict';
     $('.toastMessage').empty();
     $('.toastMessage').append(message);
     $('.toastMessage').fadeIn(300);
@@ -180,6 +181,7 @@ function questionNotesOfX() {
  * @returns {*}
  */
 function shuffle(o) {
+    'use strict';
     for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
@@ -487,7 +489,7 @@ function processData(data) {
     // Only the points of the current session will be displayed
     points = 0;//data.user.points;
     questions = data.questions;
-    if (data.user.userId === 'guest') {
+    if (data.user.userId === 'guest@cassettecoach.com') {
         guestUser = true;
     }
     currentQuestion = -1;
