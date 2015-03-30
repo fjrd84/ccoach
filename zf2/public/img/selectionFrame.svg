@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="522.09375"
@@ -14,9 +15,28 @@
    id="svg4425"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="Documento nuevo 18">
+   sodipodi:docname="selectionFrame.svg">
   <defs
      id="defs4427">
+    <linearGradient
+       id="linearGradient5207">
+      <stop
+         style="stop-color:#d4a76a;stop-opacity:1;"
+         offset="0"
+         id="stop5209" />
+      <stop
+         id="stop5219"
+         offset="0.20021868"
+         style="stop-color:#5e421b;stop-opacity:1;" />
+      <stop
+         style="stop-color:#765933;stop-opacity:1;"
+         offset="0.69361472"
+         id="stop5221" />
+      <stop
+         id="stop5217"
+         offset="1"
+         style="stop-color:#d4a76a;stop-opacity:1;" />
+    </linearGradient>
     <inkscape:path-effect
        effect="spiro"
        id="path-effect3922"
@@ -53,6 +73,15 @@
        prop_units="false"
        vertical_pattern="false"
        fuse_tolerance="0" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5207"
+       id="linearGradient5213"
+       x1="480.24863"
+       y1="670.41931"
+       x2="479.58844"
+       y2="561.82794"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -61,9 +90,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="337.05013"
-     inkscape:cy="-9.3991455"
+     inkscape:zoom="1.979899"
+     inkscape:cx="278.13755"
+     inkscape:cy="3.1623195"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -84,7 +113,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -94,7 +123,7 @@
      id="layer1"
      transform="translate(-216.09375,-568.8125)">
     <path
-       style="fill:#d4a76a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-opacity:1"
+       style="fill:url(#linearGradient5213);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-opacity:1"
        d="m 737.6875,569.3125 -521.09375,2.875 1.09375,100.34375 518.90625,-2.125 1.09375,-101.09375 z m -5.40625,5.8125 -1.53125,84.59375 -505.4375,2.40625 c -1.08742,-25.99528 -1.16914,-52.02948 -0.25,-78.03125 0.0402,-1.13649 0.081,-2.2699 0.125,-3.40625 l 507.09375,-5.5625 z"
        id="path3782"
        inkscape:connector-curvature="0" />
