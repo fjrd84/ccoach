@@ -244,6 +244,10 @@ class UserManagement
 
     public function updateWeekPoints()
     {
+        // The current user and its skills are retrieved.
+        if ($this->currentUser == null) {
+            $this->getCurrentUser();
+        }
         $aWeekAgo = new \DateTime();
         $aWeekAgo->sub(new \DateInterval("P7D"));
         // Find the sessions of the last seven days
