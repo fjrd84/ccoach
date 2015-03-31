@@ -8,6 +8,79 @@
     -o-user-select: none;
 }
 
+a#bandcampIcon {
+    width: 7.5%;    
+    top: 49.1%;    
+    left: 36.2%;    background-repeat: no-repeat;    padding-top: 7.4%;    background-size: 100%;    
+    background-image: url('../img/bandcampIcon.svg');    position: absolute;
+}
+
+a#itunesIcon {
+    width: 8.6%;    
+    top: 48%;    
+    left: 27.6%;    background-repeat: no-repeat;    
+    padding-top: 7.8%;    background-size: 100%;    
+    background-image: url('../img/itunesIcon.svg');    position: absolute;
+}
+
+a#amazonIcon {
+    width: 8%;    top: 34%;    
+    left: 36%;    background-repeat: no-repeat;    padding-top: 7.4%;    background-size: 100%;    
+    background-image: url('../img/amazonIcon.svg');    position: absolute;
+}
+
+a#picturesIcon {
+    background-image: url('../img/myPicturesIcon.svg');
+    width: 37%;
+    top: 11.8%;
+    left: 53%;
+    background-repeat: no-repeat;
+    padding-top: 39%;
+    position: absolute;
+    background-size: 100%;
+}
+
+a#spotifyIcon {
+    width: 8%;
+    top: 34%;
+    left: 28%;
+    background-repeat: no-repeat;
+    padding-top: 7.4%;
+    background-size: 100%;
+    background-image: url('../img/spotifyIcon.svg');
+    position: absolute;
+}
+
+a#fractalFieldsIcon {
+    background-image: url('../img/fractalFieldsIcon.svg');
+    width: 20%;
+    top: 30%;
+    left: 6%;
+    padding-top: 17%;
+    height: 10%;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+div#picturesTitle {
+    position: absolute;
+    top: 73%;
+    width: 41.5%;
+    left: 19%;
+}
+
+.hobbiesTitle {
+    color: white;
+    text-align: center;
+}
+
+div#fractalFieldsTitle {
+    position: absolute;
+    top: 9%;
+    width: 56%;
+}
+
 #newPassContainer form {
     padding: 5%;
 }
