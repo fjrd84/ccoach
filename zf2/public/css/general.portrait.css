@@ -12,6 +12,10 @@ body{
     font-size:200%;
 }
 
+.inputFields * {
+    width: 92%!important;
+}
+
 .nextButton{
     top: 56%;
     width: 14.5%;
@@ -95,7 +99,7 @@ body{
 }
 
 #configScreen {
-    height: 81%;
+    /* height: 81%; */
 }
 
 #configScreen .closeWindow {
