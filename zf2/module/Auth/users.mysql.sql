@@ -6,4 +6,4 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (user_name, pass_word)
-    VALUES  ('samsonasik',  'e10adc3949ba59abbe56e057f20f883e');
+    VALUES  ('javi',  'e10adc3949ba59abbe56e057f20f883e');

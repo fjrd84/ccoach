@@ -15,7 +15,7 @@ MySQL - 5.6.20 : Database - ccoach
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`ccoach` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `db570633470`;
+USE `ccoach`;
 
 /*Table structure for table `gamesession` */
 
