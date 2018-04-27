@@ -3,9 +3,9 @@
 return array(
     'db' => array(
         'driver'         => 'Pdo',
-        'dsn'            => 'mysql:dbname=ccoach;host=localhost',
+        'dsn'            => 'mysql:dbname=ccoach;host=db',
         'user' => 'root',
-        'password' => 'sinfonier666'
+        'password' => 'someSecurePassword'
     ),
     'service_manager' => array(
         'factories' => array(

@@ -94,14 +94,14 @@ function goPlay() {
     'use strict';
     $('.mainDiv *').fadeOut();
     $('.loadingMain').fadeIn(300);
-    window.location = baseUrl + '/index/game';
+    window.location = baseUrl + '/ccoach/index/game';
 }
 
 function goTrain(questionType) {
     'use strict';
     $('.mainDiv *').fadeOut();
     $('.loadingMain').fadeIn(300);
-    window.location = baseUrl + '/index/game?questionType=' + questionType;
+    window.location = baseUrl + '/ccoach/index/game?questionType=' + questionType;
 }
 
 function logoutMe() {
@@ -157,7 +157,7 @@ function updateMyInfo() {
 
 function sendUpdateInfo(username, password, fullname){
     'use strict';
-        $.post(baseUrl + '/index/updateinfo', { 'username': username, 'password': password, 'fullname' : fullname })
+        $.post(baseUrl + '/ccoach/index/updateinfo', { 'username': username, 'password': password, 'fullname' : fullname })
         .done(function (data) {
             if(data.indexOf('success')>0){
                 logoutMe();

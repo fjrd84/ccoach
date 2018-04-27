@@ -35,7 +35,7 @@ function goHome() {
     'use strict';
     $('.mainGame').children().fadeOut(500);
     $('.loading').fadeIn(300);
-    window.location = baseUrl + '/index';
+    window.location = baseUrl + '/ccoach/index';
 }
 
 /**
