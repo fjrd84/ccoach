@@ -1,6 +1,23 @@
-# README #
+# the-cassette-coach
 
-Steps for the installation:
+This project is an old experiment of mine, where I had some background in Java and I wanted to learn more about javascript, css, php and Zend Framweork 2.
+
+It's a game to learn about music theory.
+
+## Run it using docker (recommended)
+
+In order to run it locally using docker, just run the following command:
+
+```
+docker-compose up -d
+```
+
+Open the app on `http://localhost:9090` and log in as:
+
+- User: javi
+- Password: 12341234
+
+## Local installation
 
 - Run php composer.phar install
 - Add SetEnv ZF2_PATH to the apache VirtualHost, pointing to the library of the zend framework you have just installed via composer
