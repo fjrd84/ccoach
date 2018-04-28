@@ -10,20 +10,31 @@ services:
       - "127.0.0.1:9090:80"
     depends_on:
       - db
+    networks:
+      - jdonado-nw
+    expose:
+      - 8888
+    environment:
+      - MYSQL_ROOT_PASSWORD=someSecurePassword
+      - VIRTUAL_HOST=ccoach.jdonado.com
+      - LETSENCRYPT_EMAIL=jdonado@jdonado.com
+      - LETSENCRYPT_HOST=ccoach.jdonado.com
   db:
     image: mysql:5.5
     container_name: ccoach_db
     restart: always
+    ports:
+      - "127.0.0.1:3306:3306"
     volumes:
       - ./datadir:/var/lib/mysql
       - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
       MYSQL_ROOT_PASSWORD: someSecurePassword
-  adminer:
-    image: adminer
-    container_name: ccoach_adminer
-    restart: always
-    ports:
-      - 9095:8080
-    depends_on:
-      - db
+    networks:
+      - jdonado-nw
+ 
+networks:
+  jdonado-nw:
+    external:
+      name: jdonado-nw
+
