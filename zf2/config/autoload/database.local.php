@@ -5,7 +5,7 @@ return array(
         'driver'         => 'Pdo',
         'dsn'            => 'mysql:dbname=ccoach;host=db',
         'user' => 'root',
-        'password' => 'someSecurePassword'
+        'password' => getenv('MYSQL_ROOT_PASSWORD')
     ),
     'service_manager' => array(
         'factories' => array(

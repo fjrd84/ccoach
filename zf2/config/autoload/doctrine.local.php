@@ -8,6 +8,6 @@ return array(
                     'host'     => 'db',
                     'port'     => '3306',
                     'user'     => 'root',
-                    'password' => 'someSecurePassword',
+                    'password' => getenv('MYSQL_ROOT_PASSWORD'),
                     'dbname'   => 'ccoach',
                 )))));
